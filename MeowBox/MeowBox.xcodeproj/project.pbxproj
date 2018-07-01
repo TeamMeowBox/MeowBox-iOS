@@ -17,6 +17,8 @@
 		227DF56B20E905FF00050EBC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227DF56A20E905FF00050EBC /* MainViewController.swift */; };
 		4DB532508B8F275F42924174 /* libPods-MeowBox.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E1D7ED5153B03B790B0D8904 /* libPods-MeowBox.a */; };
 		CC05673A20E8EC4B00AEDF24 /* Order.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC05673920E8EC4B00AEDF24 /* Order.storyboard */; };
+		CCB12E5B20E90C6B00C5D4B8 /* OrderWithInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB12E5A20E90C6B00C5D4B8 /* OrderWithInfoViewController.swift */; };
+		CCB12E5D20E90C8200C5D4B8 /* OrderWithoutInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB12E5C20E90C8200C5D4B8 /* OrderWithoutInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		227DF56A20E905FF00050EBC /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		6F03CE3F3C4107E59BCDF87A /* Pods-MeowBox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeowBox.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeowBox/Pods-MeowBox.release.xcconfig"; sourceTree = "<group>"; };
 		CC05673920E8EC4B00AEDF24 /* Order.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Order.storyboard; sourceTree = "<group>"; };
+		CCB12E5A20E90C6B00C5D4B8 /* OrderWithInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderWithInfoViewController.swift; sourceTree = "<group>"; };
+		CCB12E5C20E90C8200C5D4B8 /* OrderWithoutInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderWithoutInfoViewController.swift; sourceTree = "<group>"; };
 		E1D7ED5153B03B790B0D8904 /* libPods-MeowBox.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MeowBox.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -69,13 +73,13 @@
 		222B5DAD20E8BA26003F0A8C /* MeowBox */ = {
 			isa = PBXGroup;
 			children = (
+				CCB12E5E20E90D5B00C5D4B8 /* JangDta */,
 				222B5DAE20E8BA26003F0A8C /* AppDelegate.swift */,
 				222B5DC020E8BA45003F0A8C /* Storyboard */,
 				222B5DC220E8BA6C003F0A8C /* ViewController */,
 				222B5DC320E8BB10003F0A8C /* Util */,
 				222B5DB520E8BA28003F0A8C /* Assets.xcassets */,
 				222B5DBA20E8BA28003F0A8C /* Info.plist */,
-				CC05673920E8EC4B00AEDF24 /* Order.storyboard */,
 			);
 			path = MeowBox;
 			sourceTree = "<group>";
@@ -137,6 +141,16 @@
 				E1D7ED5153B03B790B0D8904 /* libPods-MeowBox.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CCB12E5E20E90D5B00C5D4B8 /* JangDta */ = {
+			isa = PBXGroup;
+			children = (
+				CC05673920E8EC4B00AEDF24 /* Order.storyboard */,
+				CCB12E5A20E90C6B00C5D4B8 /* OrderWithInfoViewController.swift */,
+				CCB12E5C20E90C8200C5D4B8 /* OrderWithoutInfoViewController.swift */,
+			);
+			path = JangDta;
 			sourceTree = "<group>";
 		};
 		DBFE84FBC72A87E1C3293C9B /* Pods */ = {
@@ -245,9 +259,11 @@
 			files = (
 				222B5DC820E8BB56003F0A8C /* ExtensionControl.swift in Sources */,
 				222B5DCC20E8BB99003F0A8C /* Order.swift in Sources */,
+				CCB12E5D20E90C8200C5D4B8 /* OrderWithoutInfoViewController.swift in Sources */,
 				222B5DCA20E8BB6F003F0A8C /* APIService.swift in Sources */,
 				222B5DAF20E8BA26003F0A8C /* AppDelegate.swift in Sources */,
 				227DF56B20E905FF00050EBC /* MainViewController.swift in Sources */,
+				CCB12E5B20E90C6B00C5D4B8 /* OrderWithInfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
