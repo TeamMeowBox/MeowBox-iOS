@@ -75,6 +75,14 @@ class MainViewController: UIViewController {
         self.navigationItem.title = self.title
     }
     
+    @IBAction func orderAction(_ sender: Any) {
+    
+        let orderVC = UIStoryboard(name: "Order", bundle: nil).instantiateViewController(withIdentifier: OrderWithInfoViewController.reuseIdentifier) as! OrderWithInfoViewController
+        
+        self.navigationController?.pushViewController(orderVC, animated: true)
+    }
+    
+    
     //MARK: 네비게이션 바 투명하게 하는 함수
     func setNavigationBar() {
         let bar: UINavigationBar! = self.navigationController?.navigationBar
