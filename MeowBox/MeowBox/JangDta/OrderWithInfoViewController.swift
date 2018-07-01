@@ -13,7 +13,9 @@ class OrderWithInfoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let bar: UINavigationBar! = self.navigationController?.navigationBar
+        
+        bar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
     }
 
     override func didReceiveMemoryWarning() {
