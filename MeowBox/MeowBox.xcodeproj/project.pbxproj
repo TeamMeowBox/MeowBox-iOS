@@ -76,13 +76,13 @@
 			isa = PBXGroup;
 			children = (
 				227DF56C20E908E200050EBC /* Kyeahen */,
+				CCB12E5E20E90D5B00C5D4B8 /* JangDta */,
 				222B5DAE20E8BA26003F0A8C /* AppDelegate.swift */,
 				222B5DC020E8BA45003F0A8C /* Storyboard */,
 				222B5DC220E8BA6C003F0A8C /* ViewController */,
 				222B5DC320E8BB10003F0A8C /* Util */,
 				222B5DB520E8BA28003F0A8C /* Assets.xcassets */,
 				222B5DBA20E8BA28003F0A8C /* Info.plist */,
-				CC05673920E8EC4B00AEDF24 /* Order.storyboard */,
 			);
 			path = MeowBox;
 			sourceTree = "<group>";
