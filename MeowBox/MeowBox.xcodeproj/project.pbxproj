@@ -15,6 +15,7 @@
 		222B5DCA20E8BB6F003F0A8C /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222B5DC920E8BB6F003F0A8C /* APIService.swift */; };
 		222B5DCC20E8BB99003F0A8C /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222B5DCB20E8BB99003F0A8C /* Order.swift */; };
 		227DF56B20E905FF00050EBC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227DF56A20E905FF00050EBC /* MainViewController.swift */; };
+		227DF56E20E9090F00050EBC /* MeowBoxDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 227DF56D20E9090F00050EBC /* MeowBoxDetail.storyboard */; };
 		4DB532508B8F275F42924174 /* libPods-MeowBox.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E1D7ED5153B03B790B0D8904 /* libPods-MeowBox.a */; };
 		CC05673A20E8EC4B00AEDF24 /* Order.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC05673920E8EC4B00AEDF24 /* Order.storyboard */; };
 /* End PBXBuildFile section */
@@ -31,6 +32,7 @@
 		222B5DC920E8BB6F003F0A8C /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		222B5DCB20E8BB99003F0A8C /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		227DF56A20E905FF00050EBC /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		227DF56D20E9090F00050EBC /* MeowBoxDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MeowBoxDetail.storyboard; sourceTree = "<group>"; };
 		6F03CE3F3C4107E59BCDF87A /* Pods-MeowBox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeowBox.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeowBox/Pods-MeowBox.release.xcconfig"; sourceTree = "<group>"; };
 		CC05673920E8EC4B00AEDF24 /* Order.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Order.storyboard; sourceTree = "<group>"; };
 		E1D7ED5153B03B790B0D8904 /* libPods-MeowBox.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MeowBox.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +71,7 @@
 		222B5DAD20E8BA26003F0A8C /* MeowBox */ = {
 			isa = PBXGroup;
 			children = (
+				227DF56C20E908E200050EBC /* Kyeahen */,
 				222B5DAE20E8BA26003F0A8C /* AppDelegate.swift */,
 				222B5DC020E8BA45003F0A8C /* Storyboard */,
 				222B5DC220E8BA6C003F0A8C /* ViewController */,
@@ -129,6 +132,14 @@
 				222B5DC720E8BB56003F0A8C /* ExtensionControl.swift */,
 			);
 			path = Function;
+			sourceTree = "<group>";
+		};
+		227DF56C20E908E200050EBC /* Kyeahen */ = {
+			isa = PBXGroup;
+			children = (
+				227DF56D20E9090F00050EBC /* MeowBoxDetail.storyboard */,
+			);
+			path = Kyeahen;
 			sourceTree = "<group>";
 		};
 		5B6BB643A15D22F89DAD7971 /* Frameworks */ = {
@@ -210,6 +221,7 @@
 			files = (
 				222B5DB920E8BA28003F0A8C /* LaunchScreen.storyboard in Resources */,
 				222B5DB620E8BA28003F0A8C /* Assets.xcassets in Resources */,
+				227DF56E20E9090F00050EBC /* MeowBoxDetail.storyboard in Resources */,
 				222B5DB420E8BA26003F0A8C /* Main.storyboard in Resources */,
 				CC05673A20E8EC4B00AEDF24 /* Order.storyboard in Resources */,
 			);

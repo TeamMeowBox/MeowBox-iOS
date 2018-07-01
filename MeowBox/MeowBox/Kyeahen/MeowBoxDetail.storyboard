@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="eWP-6i-fDR">
+            <objects>
+                <viewController id="Zak-XW-QEF" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Y84-nM-eXQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rFq-wp-tJS">
+                                <rect key="frame" x="0.0" y="412" width="375" height="255"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aoq-nK-Vx5">
+                                <rect key="frame" x="0.0" y="67" width="240" height="128"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rFq-wp-tJS" firstAttribute="leading" secondItem="ZoF-Wg-Y7V" secondAttribute="leading" id="83B-Ge-pnp"/>
+                            <constraint firstItem="aoq-nK-Vx5" firstAttribute="top" secondItem="Y84-nM-eXQ" secondAttribute="top" id="IqK-7B-0gU"/>
+                            <constraint firstItem="ZoF-Wg-Y7V" firstAttribute="trailing" secondItem="rFq-wp-tJS" secondAttribute="trailing" id="TVp-wa-uRB"/>
+                            <constraint firstItem="ZoF-Wg-Y7V" firstAttribute="bottom" secondItem="rFq-wp-tJS" secondAttribute="bottom" id="ax5-pp-ySW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZoF-Wg-Y7V"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oRE-RR-quh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-368.80000000000001" y="-803.74812593703155"/>
+        </scene>
+    </scenes>
+</document>
