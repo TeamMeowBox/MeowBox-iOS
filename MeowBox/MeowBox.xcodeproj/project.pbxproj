@@ -16,6 +16,7 @@
 		222B5DCA20E8BB6F003F0A8C /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222B5DC920E8BB6F003F0A8C /* APIService.swift */; };
 		222B5DCC20E8BB99003F0A8C /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222B5DCB20E8BB99003F0A8C /* Order.swift */; };
 		4DB532508B8F275F42924174 /* libPods-MeowBox.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E1D7ED5153B03B790B0D8904 /* libPods-MeowBox.a */; };
+		CC05673A20E8EC4B00AEDF24 /* Order.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC05673920E8EC4B00AEDF24 /* Order.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		222B5DC920E8BB6F003F0A8C /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		222B5DCB20E8BB99003F0A8C /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		6F03CE3F3C4107E59BCDF87A /* Pods-MeowBox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeowBox.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeowBox/Pods-MeowBox.release.xcconfig"; sourceTree = "<group>"; };
+		CC05673920E8EC4B00AEDF24 /* Order.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Order.storyboard; sourceTree = "<group>"; };
 		E1D7ED5153B03B790B0D8904 /* libPods-MeowBox.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MeowBox.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -73,6 +75,7 @@
 				222B5DC320E8BB10003F0A8C /* Util */,
 				222B5DB520E8BA28003F0A8C /* Assets.xcassets */,
 				222B5DBA20E8BA28003F0A8C /* Info.plist */,
+				CC05673920E8EC4B00AEDF24 /* Order.storyboard */,
 			);
 			path = MeowBox;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 				222B5DB920E8BA28003F0A8C /* LaunchScreen.storyboard in Resources */,
 				222B5DB620E8BA28003F0A8C /* Assets.xcassets in Resources */,
 				222B5DB420E8BA26003F0A8C /* Main.storyboard in Resources */,
+				CC05673A20E8EC4B00AEDF24 /* Order.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
