@@ -1,0 +1,6 @@
+module Pods_MeowBox {
+  umbrella header "Pods-MeowBox-umbrella.h"
+
+  export *
+  module * { export * }
+}
