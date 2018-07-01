@@ -90,7 +90,6 @@
 		222B5DC020E8BA45003F0A8C /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				222B5DB220E8BA26003F0A8C /* Main.storyboard */,
 				222B5DB720E8BA28003F0A8C /* LaunchScreen.storyboard */,
 			);
 			path = Storyboard;
@@ -99,7 +98,6 @@
 		222B5DC220E8BA6C003F0A8C /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				227DF56A20E905FF00050EBC /* MainViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -141,9 +139,27 @@
 		227DF56C20E908E200050EBC /* Kyeahen */ = {
 			isa = PBXGroup;
 			children = (
-				227DF56D20E9090F00050EBC /* MeowBoxDetail.storyboard */,
+				22A2809D20E92EE200CDC3B2 /* ViewController */,
+				22A2809E20E92EF600CDC3B2 /* Storyboard */,
 			);
 			path = Kyeahen;
+			sourceTree = "<group>";
+		};
+		22A2809D20E92EE200CDC3B2 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				227DF56A20E905FF00050EBC /* MainViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		22A2809E20E92EF600CDC3B2 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				222B5DB220E8BA26003F0A8C /* Main.storyboard */,
+				227DF56D20E9090F00050EBC /* MeowBoxDetail.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 		5B6BB643A15D22F89DAD7971 /* Frameworks */ = {
