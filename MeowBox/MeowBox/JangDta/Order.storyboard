@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Order With Info View Controller-->
         <scene sceneID="I2Q-el-kaq">
             <objects>
-                <viewController id="KBN-mz-GlR" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OrderWithInfoViewController" id="KBN-mz-GlR" customClass="OrderWithInfoViewController" customModule="MeowBox" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="puQ-GH-0Ag">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,7 +23,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8cr-HZ-RgE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-144" y="-98"/>
+            <point key="canvasLocation" x="-118" y="-58"/>
+        </scene>
+        <!--Order Without Info View Controller-->
+        <scene sceneID="yX8-w2-tAY">
+            <objects>
+                <viewController storyboardIdentifier="OrderWithoutInfoViewController" id="MFE-4J-UIE" customClass="OrderWithoutInfoViewController" customModule="MeowBox" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ivE-xa-atG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.99261754820000003" green="1" blue="0.35757589080000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="uAC-n7-FjV"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oa9-v9-qpW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-119" y="671"/>
         </scene>
     </scenes>
 </document>
