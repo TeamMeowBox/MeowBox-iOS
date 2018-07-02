@@ -77,9 +77,13 @@ class MainViewController: UIViewController {
     
     @IBAction func orderAction(_ sender: Any) {
     
-        let orderVC = UIStoryboard(name: "Order", bundle: nil).instantiateViewController(withIdentifier: OrderWithInfoViewController.reuseIdentifier) as! OrderWithInfoViewController
+        let orderNaviVC = UIStoryboard(name: "Order", bundle: nil).instantiateViewController(withIdentifier: "OrderWithInfoNavigationController")
         
-        self.navigationController?.pushViewController(orderVC, animated: true)
+        //let navigationController = UINavigationController(rootViewController: orderNaviVC)
+        
+        //self.present(navigationController, animated: true, completion: nil)
+        
+        self.present(orderNaviVC, animated: true, completion: nil)
     }
     
     
