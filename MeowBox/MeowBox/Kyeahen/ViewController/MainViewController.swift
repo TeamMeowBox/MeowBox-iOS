@@ -75,11 +75,12 @@ class MainViewController: UIViewController {
         self.navigationItem.title = self.title
     }
     
+    //MARK: 로그인 액션
     @IBAction func loginAction(_ sender: Any) {
         
-        let loginVC = UIStoryboard(name: "Sign", bundle: nil).instantiateViewController(withIdentifier: LoginViewController.reuseIdentifier) as! LoginViewController
+        let loginNaviVC = UIStoryboard(name: "Sign", bundle: nil).instantiateViewController(withIdentifier: "LoginNaviVC")
         
-        self.navigationController?.pushViewController(loginVC, animated: true)
+        self.present(loginNaviVC, animated: true, completion: nil)
     }
     
     
