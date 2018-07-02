@@ -18,14 +18,25 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var pwdTextField: UITextField!
     
+    @IBOutlet weak var loginBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         //navigation bar title color
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : #colorLiteral(red: 0.2980392157, green: 0.3058823529, blue: 0.3137254902, alpha: 1)]
+        
+        loginBtn.isUserInteractionEnabled = false
 
-        emptyCheck(tf: emailTextField, iv: emailImageView, icon1: #imageLiteral(resourceName: "email-icon-pink"), icon2: #imageLiteral(resourceName: "email-icon-gray"))
-        emptyCheck(tf: pwdTextField, iv: pwdImageView, icon1: #imageLiteral(resourceName: "password-icon-pink"), icon2: #imageLiteral(resourceName: "password-icon-gray"))
+        //textfield 채워지면 아이콘 변경
+        emailTextField.addTarget(self, action: #selector(emptyEmailCheck), for: .editingChanged)
+        pwdTextField.addTarget(self, action: #selector(emptyPwdCheck), for: .editingChanged)
+        
+        //textfield 채워지면 로그인 버튼 변경
+        emailTextField.addTarget(self, action: #selector(emptyCheck), for: .editingChanged)
+        pwdTextField.addTarget(self, action: #selector(emptyCheck), for: .editingChanged)
+        
         // Do any additional setup after loading the view.
     }
 
@@ -34,19 +45,53 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func emptyCheck(tf: UITextField, iv: UIImageView ,icon1: UIImage, icon2: UIImage) {
-        if tf.text == ""{ //텍스트필드 비어있으면 회색아이콘
-            iv.image = icon2
-        }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
         
-        else { //텍스트필드 안비어있으면 핑크 아이콘
-            iv.image = icon1
+        self.view.endEditing(true)
+    }
+    
+    //MARK: 이메일 공백 체크 함수
+    @objc func emptyEmailCheck() {
+        
+        if emailTextField.text == ""{
+            emailImageView.image = #imageLiteral(resourceName: "email-icon-gray")
+        }
+        else {
+            emailImageView.image = #imageLiteral(resourceName: "email-icon-pink.png")
+        }
+    }
+    
+    //MARK: 비밀번호 공백 체크 함수
+    @objc func emptyPwdCheck() {
+        
+        if pwdTextField.text == ""{
+            pwdImageView.image = #imageLiteral(resourceName: "password-icon-gray")
+        }
+        else {
+            pwdImageView.image = #imageLiteral(resourceName: "password-icon-pink")
+        }
+    }
+    
+    @objc func emptyCheck() {
+        if pwdTextField.text == "" || emailTextField.text == "" {
+            loginBtn.setImage(#imageLiteral(resourceName: "login-btn-gray"), for: UIControlState.normal)
+            loginBtn.isUserInteractionEnabled = false
+        }
+        else {
+            loginBtn.setImage(#imageLiteral(resourceName: "login-btn-pink"), for: UIControlState.normal)
+            loginBtn.isUserInteractionEnabled = true
         }
     }
     
     //MARK: 뒤로가기 액션
     @IBAction func dismissAction(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    //MARK: 로그인 액션
+    //TODO: 로그인 서버 통신
+    @IBAction func loginAction(_ sender: Any) {
+        
     }
     
     //MARK: 회원가입 액션
@@ -58,21 +103,3 @@ class LoginViewController: UIViewController {
     
 }
 
-//extension UITextField {
-//    func modifyClearButton(with image : UIImage) {
-//        let icon = UIImage()
-//
-//
-//        clearButton.setImage(image, for: .normal)
-//        clearButton.frame = CGRect(x: 0, y: 0, width: 15, height: 15)
-//        clearButton.contentMode = .scaleAspectFit
-//        clearButton.addTarget(self, action: #selector(UITextField.clear(_:)), for: .touchUpInside)
-//        rightView = clearButton
-//        rightViewMode = .whileEditing
-//    }
-//
-//    func clear(_ sender : AnyObject) {
-//        self.text = ""
-//        sendActions(for: .editingChanged)
-//    }
-//}

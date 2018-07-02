@@ -39,13 +39,31 @@ class SignInViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
+        
+        self.view.endEditing(true)
+    }
+    
+    //MARK: 필수 항목 공백 체크 함수
+    func emptyCheck() {
+        if nameTextField.text == "" || phoneTextField.text == "" || emailTextField.text == "" || pwdTextField.text == "" {
+            //팝업 및 버튼
+        }
+        else {
+            
+        }
+    }
+    
+    //MARK: 회원가입 액션
+    //TODO: 서버 통신
+    @IBAction func SignInAction(_ sender: Any) {
+        
+    }
     //MARK: 회원가입창 나가기 액션
     @IBAction func dismissAction(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
