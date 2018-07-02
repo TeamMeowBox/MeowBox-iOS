@@ -75,6 +75,16 @@ class MainViewController: UIViewController {
         self.navigationItem.title = self.title
     }
     
+    @IBAction func loginAction(_ sender: Any) {
+        
+        let loginVC = UIStoryboard(name: "Sign", bundle: nil).instantiateViewController(withIdentifier: LoginViewController.reuseIdentifier) as! LoginViewController
+        
+        self.navigationController?.pushViewController(loginVC, animated: true)
+    }
+    
+    
+    
+    //MARK: 주문하기 액션
     @IBAction func orderAction(_ sender: Any) {
     
         let orderNaviVC = UIStoryboard(name: "Order", bundle: nil).instantiateViewController(withIdentifier: "OrderWithInfoNavigationController")
