@@ -8,6 +8,8 @@
 
 import UIKit
 
+//TODO: 이미지뷰 로고 및 텍스트 필드 아이콘 넣기
+//TODO: 네비게이션바 투명한거 불투명으로 바꾸기
 class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -20,16 +22,11 @@ class LoginViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func signInAction(_ sender: Any) {
+        let signInNaviVC = UIStoryboard(name: "Sign", bundle: nil).instantiateViewController(withIdentifier: "SignInNaviVC")
+        
+        self.present(signInNaviVC, animated: true, completion: nil)
     }
-    */
-
+    
 }
