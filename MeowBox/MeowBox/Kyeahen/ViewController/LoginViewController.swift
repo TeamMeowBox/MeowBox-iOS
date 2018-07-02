@@ -35,11 +35,13 @@ class LoginViewController: UIViewController {
     }
     
     func emptyCheck(tf: UITextField, iv: UIImageView ,icon1: UIImage, icon2: UIImage) {
-        if tf.text == ""{
+        if tf.text == ""{ //텍스트필드 비어있으면 회색아이콘
             iv.image = icon2
         }
         
-       // tf.addTarget(self, action:d Selector(("textChanged:")), for: .editingChanged)
+        else { //텍스트필드 안비어있으면 핑크 아이콘
+            iv.image = icon1
+        }
     }
     
     //MARK: 뒤로가기 액션
