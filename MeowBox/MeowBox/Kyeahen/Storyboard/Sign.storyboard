@@ -308,7 +308,7 @@
                                 <rect key="frame" x="0.0" y="580" width="375" height="87"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hcT-bL-1Bo">
-                                        <rect key="frame" x="77" y="31" width="222" height="26"/>
+                                        <rect key="frame" x="76.5" y="31" width="222" height="26"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="da0-4k-AQ2">
                                                 <rect key="frame" x="0.0" y="0.0" width="156" height="26"/>
@@ -383,7 +383,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FSo-2X-8O4">
-                                <rect key="frame" x="54" y="484.5" width="265.5" height="48"/>
+                                <rect key="frame" x="55" y="484.5" width="265.5" height="48"/>
                                 <color key="backgroundColor" red="0.85490196078431369" green="0.54509803921568623" blue="0.54509803921568623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="BCe-tP-45E"/>
@@ -395,7 +395,7 @@
                                 </state>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zTA-K0-4QP">
-                                <rect key="frame" x="122.5" y="151.5" width="131" height="131"/>
+                                <rect key="frame" x="122" y="151.5" width="131" height="131"/>
                                 <color key="backgroundColor" red="0.85490196078431369" green="0.54509803921568623" blue="0.54509803921568623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="131" id="2iO-CY-0Zj"/>
