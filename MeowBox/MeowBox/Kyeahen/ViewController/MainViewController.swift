@@ -79,10 +79,6 @@ class MainViewController: UIViewController {
     
         let orderNaviVC = UIStoryboard(name: "Order", bundle: nil).instantiateViewController(withIdentifier: "OrderWithInfoNavigationController")
         
-        //let navigationController = UINavigationController(rootViewController: orderNaviVC)
-        
-        //self.present(navigationController, animated: true, completion: nil)
-        
         self.present(orderNaviVC, animated: true, completion: nil)
     }
     
