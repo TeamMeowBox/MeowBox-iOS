@@ -15,13 +15,13 @@
 		222B5DCA20E8BB6F003F0A8C /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222B5DC920E8BB6F003F0A8C /* APIService.swift */; };
 		222B5DCC20E8BB99003F0A8C /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222B5DCB20E8BB99003F0A8C /* Order.swift */; };
 		227DF56B20E905FF00050EBC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227DF56A20E905FF00050EBC /* MainViewController.swift */; };
-		227DF56E20E9090F00050EBC /* MeowBoxDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 227DF56D20E9090F00050EBC /* MeowBoxDetail.storyboard */; };
 		229BCBA720E9BAA1005E3B9F /* Sign.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 229BCBA620E9BAA1005E3B9F /* Sign.storyboard */; };
 		229BCBAB20E9BBC7005E3B9F /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229BCBAA20E9BBC7005E3B9F /* SignInViewController.swift */; };
 		229BCBAD20E9CD16005E3B9F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229BCBAC20E9CD16005E3B9F /* LoginViewController.swift */; };
 		22B9EF4720EA039D00A2A9FD /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22B9EF4420EA039D00A2A9FD /* Roboto-Medium.ttf */; };
 		22B9EF4820EA039D00A2A9FD /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22B9EF4520EA039D00A2A9FD /* Roboto-Bold.ttf */; };
 		22B9EF4920EA039D00A2A9FD /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22B9EF4620EA039D00A2A9FD /* Roboto-Regular.ttf */; };
+		22B9EF4B20EA07EC00A2A9FD /* MeowBox.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22B9EF4A20EA07EC00A2A9FD /* MeowBox.storyboard */; };
 		4DB532508B8F275F42924174 /* libPods-MeowBox.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E1D7ED5153B03B790B0D8904 /* libPods-MeowBox.a */; };
 		CC05673A20E8EC4B00AEDF24 /* Order.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC05673920E8EC4B00AEDF24 /* Order.storyboard */; };
 		CC5CE21B20E9C40D00FCE6AD /* OrderWithInfo3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5CE21A20E9C40D00FCE6AD /* OrderWithInfo3ViewController.swift */; };
@@ -44,13 +44,13 @@
 		222B5DC920E8BB6F003F0A8C /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		222B5DCB20E8BB99003F0A8C /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		227DF56A20E905FF00050EBC /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		227DF56D20E9090F00050EBC /* MeowBoxDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MeowBoxDetail.storyboard; sourceTree = "<group>"; };
 		229BCBA620E9BAA1005E3B9F /* Sign.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Sign.storyboard; sourceTree = "<group>"; };
 		229BCBAA20E9BBC7005E3B9F /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		229BCBAC20E9CD16005E3B9F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		22B9EF4420EA039D00A2A9FD /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		22B9EF4520EA039D00A2A9FD /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		22B9EF4620EA039D00A2A9FD /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		22B9EF4A20EA07EC00A2A9FD /* MeowBox.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MeowBox.storyboard; sourceTree = "<group>"; };
 		6F03CE3F3C4107E59BCDF87A /* Pods-MeowBox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeowBox.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeowBox/Pods-MeowBox.release.xcconfig"; sourceTree = "<group>"; };
 		CC05673920E8EC4B00AEDF24 /* Order.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Order.storyboard; sourceTree = "<group>"; };
 		CC5CE21A20E9C40D00FCE6AD /* OrderWithInfo3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderWithInfo3ViewController.swift; sourceTree = "<group>"; };
@@ -182,8 +182,8 @@
 			isa = PBXGroup;
 			children = (
 				222B5DB220E8BA26003F0A8C /* Main.storyboard */,
-				227DF56D20E9090F00050EBC /* MeowBoxDetail.storyboard */,
 				229BCBA620E9BAA1005E3B9F /* Sign.storyboard */,
+				22B9EF4A20EA07EC00A2A9FD /* MeowBox.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -283,8 +283,8 @@
 				229BCBA720E9BAA1005E3B9F /* Sign.storyboard in Resources */,
 				222B5DB620E8BA28003F0A8C /* Assets.xcassets in Resources */,
 				22B9EF4720EA039D00A2A9FD /* Roboto-Medium.ttf in Resources */,
-				227DF56E20E9090F00050EBC /* MeowBoxDetail.storyboard in Resources */,
 				222B5DB420E8BA26003F0A8C /* Main.storyboard in Resources */,
+				22B9EF4B20EA07EC00A2A9FD /* MeowBox.storyboard in Resources */,
 				22B9EF4920EA039D00A2A9FD /* Roboto-Regular.ttf in Resources */,
 				22B9EF4820EA039D00A2A9FD /* Roboto-Bold.ttf in Resources */,
 				CC05673A20E8EC4B00AEDF24 /* Order.storyboard in Resources */,
