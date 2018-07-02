@@ -1,29 +1,36 @@
 //
-//  MainViewController.swift
+//  MyPage1ViewController.swift
 //  MeowBox
 //
-//  Created by 김예은 on 2018. 7. 1..
+//  Created by 김예은 on 2018. 7. 3..
 //  Copyright © 2018년 yeen. All rights reserved.
 //
 
 import UIKit
 
-class MainViewController: UIViewController {
-    
+class MyPage1ViewController: UIViewController {
+
     @IBOutlet weak var leadingC: NSLayoutConstraint!
     @IBOutlet weak var trailingC: NSLayoutConstraint!
-    @IBOutlet weak var MainView: UIView!
+    @IBOutlet weak var myPageView: UIView!
     @IBOutlet weak var barButton: UIBarButtonItem!
     
-    var sideBarIsVisible = false //메뉴 상태 여부
+    
+    var sideBarIsVisible = false
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setNavigationBar()
+        
         self.navigationItem.backBarButtonItem = barButton
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        //navigation bar title&left bar item color
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : #colorLiteral(red: 0.2980392157, green: 0.3058823529, blue: 0.3137254902, alpha: 1)]
+        self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 0.2980392157, green: 0.3058823529, blue: 0.3137254902, alpha: 1)
+
+        // Do any additional setup after loading the view.
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -41,7 +48,6 @@ class MainViewController: UIViewController {
     
     //MARK: 사이드 바
     @IBAction func barButtonAction(_ sender: Any) {
-        
         if !sideBarIsVisible { //메뉴 보여줘야함
             leadingC.constant = 258
             trailingC.constant = -258
@@ -93,8 +99,24 @@ class MainViewController: UIViewController {
         self.present(loginNaviVC, animated: true, completion: nil)
     }
     
-    //MARK: 홈 액션(기준)
+    //MARK: 홈 액션
     @IBAction func homeAction(_ sender: Any) {
+        let mainNaviVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainNaviVC")
+        
+        self.present(mainNaviVC, animated: true, completion: nil)
+    }
+    
+    //MARK: 주문하기 액션
+    @IBAction func orderAction(_ sender: Any) {
+        
+        let orderNaviVC = UIStoryboard(name: "Order", bundle: nil).instantiateViewController(withIdentifier: "OrderWithInfoNavigationController")
+        
+        self.present(orderNaviVC, animated: true, completion: nil)
+    }
+    
+    
+    //MARK: 마이페이지 액션(기준)
+    @IBAction func myPageAction(_ sender: Any) {
         leadingC.constant = 0
         trailingC.constant = 0
         
@@ -111,20 +133,6 @@ class MainViewController: UIViewController {
         self.navigationItem.title = self.title
     }
     
-    //MARK: 주문하기 액션
-    @IBAction func orderAction(_ sender: Any) {
     
-        let orderNaviVC = UIStoryboard(name: "Order", bundle: nil).instantiateViewController(withIdentifier: "OrderWithInfoNavigationController")
-        
-        self.present(orderNaviVC, animated: true, completion: nil)
-    }
-    
-    //MARK: 마이페이지 액션
-    @IBAction func myPageAction(_ sender: Any) {
-        let myPageNaviVC = UIStoryboard(name: "MyPage", bundle: nil).instantiateViewController(withIdentifier: "MyPageNaviVC")
-        
-        self.present(myPageNaviVC, animated: true, completion: nil)
-    }
     
 }
-
