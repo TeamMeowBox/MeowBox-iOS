@@ -83,7 +83,23 @@ class MainViewController: UIViewController {
         self.present(loginNaviVC, animated: true, completion: nil)
     }
     
-    
+    //MARK: 홈 액션
+    @IBAction func homeAction(_ sender: Any) {
+        leadingC.constant = 0
+        trailingC.constant = 0
+        
+        
+        sideBarIsVisible = false
+        
+        UIView.animate(withDuration: 0.3, delay: 0.0, options: .curveEaseIn, animations: {
+            self.view.layoutIfNeeded()
+        }) { (animationComplete) in
+            print("SideBar close")
+        }
+        
+        self.navigationItem.leftBarButtonItem = self.barButton
+        self.navigationItem.title = self.title
+    }
     
     //MARK: 주문하기 액션
     @IBAction func orderAction(_ sender: Any) {
