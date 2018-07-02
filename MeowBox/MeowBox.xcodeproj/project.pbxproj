@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22109A8020EAAA3200E463C2 /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22109A7F20EAAA3200E463C2 /* MyPage.storyboard */; };
+		22109A8220EAAAFC00E463C2 /* MyPage1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22109A8120EAAAFC00E463C2 /* MyPage1ViewController.swift */; };
 		222B5DAF20E8BA26003F0A8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222B5DAE20E8BA26003F0A8C /* AppDelegate.swift */; };
 		222B5DB420E8BA26003F0A8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 222B5DB220E8BA26003F0A8C /* Main.storyboard */; };
 		222B5DB620E8BA28003F0A8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 222B5DB520E8BA28003F0A8C /* Assets.xcassets */; };
@@ -43,6 +45,8 @@
 
 /* Begin PBXFileReference section */
 		0725B72C78BF90D17ACFD95D /* Pods-MeowBox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeowBox.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MeowBox/Pods-MeowBox.debug.xcconfig"; sourceTree = "<group>"; };
+		22109A7F20EAAA3200E463C2 /* MyPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
+		22109A8120EAAAFC00E463C2 /* MyPage1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPage1ViewController.swift; sourceTree = "<group>"; };
 		222B5DAB20E8BA26003F0A8C /* MeowBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeowBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		222B5DAE20E8BA26003F0A8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		222B5DB320E8BA26003F0A8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -201,6 +205,7 @@
 				227DF56A20E905FF00050EBC /* MainViewController.swift */,
 				229BCBAA20E9BBC7005E3B9F /* SignInViewController.swift */,
 				229BCBAC20E9CD16005E3B9F /* LoginViewController.swift */,
+				22109A8120EAAAFC00E463C2 /* MyPage1ViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -211,6 +216,7 @@
 				222B5DB220E8BA26003F0A8C /* Main.storyboard */,
 				229BCBA620E9BAA1005E3B9F /* Sign.storyboard */,
 				22B9EF4A20EA07EC00A2A9FD /* MeowBox.storyboard */,
+				22109A7F20EAAA3200E463C2 /* MyPage.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -310,6 +316,7 @@
 				222B5DB920E8BA28003F0A8C /* LaunchScreen.storyboard in Resources */,
 				229407BC20EA182D00AB2B0C /* NotoSansCJKkr-Light.otf in Resources */,
 				229BCBA720E9BAA1005E3B9F /* Sign.storyboard in Resources */,
+				22109A8020EAAA3200E463C2 /* MyPage.storyboard in Resources */,
 				229407B920EA182D00AB2B0C /* NotoSansCJKkr-Black.otf in Resources */,
 				222B5DB620E8BA28003F0A8C /* Assets.xcassets in Resources */,
 				229407C020EA182D00AB2B0C /* NotoSansMonoCJKkr-Bold.otf in Resources */,
@@ -362,6 +369,7 @@
 				CCDD5E7820E945C100A989CB /* OrderWithInfo2ViewController.swift in Sources */,
 				CCB12E5D20E90C8200C5D4B8 /* OrderWithoutInfoViewController.swift in Sources */,
 				222B5DCA20E8BB6F003F0A8C /* APIService.swift in Sources */,
+				22109A8220EAAAFC00E463C2 /* MyPage1ViewController.swift in Sources */,
 				229BCBAB20E9BBC7005E3B9F /* SignInViewController.swift in Sources */,
 				222B5DAF20E8BA26003F0A8C /* AppDelegate.swift in Sources */,
 				227DF56B20E905FF00050EBC /* MainViewController.swift in Sources */,

@@ -66,7 +66,11 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="psp-AH-AEl">
-                                <rect key="frame" x="22" y="192.5" width="56" height="42"/>
+                                <rect key="frame" x="22" y="192.5" width="64" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="psp-AH-AEl" secondAttribute="height" multiplier="64.39:24.23" id="K0W-q9-z61"/>
+                                    <constraint firstAttribute="height" constant="24.23" id="XUa-Om-0n9"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="20"/>
                                 <state key="normal" title="로그인">
                                     <color key="titleColor" red="0.29803921568627451" green="0.30588235294117649" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -76,28 +80,47 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YQM-x8-fPL">
-                                <rect key="frame" x="22" y="340" width="135" height="42"/>
+                                <rect key="frame" x="22" y="304" width="133.5" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24.23" id="90L-5e-Ahx"/>
+                                    <constraint firstAttribute="width" secondItem="YQM-x8-fPL" secondAttribute="height" multiplier="134.87:24.23" id="9Ut-IJ-eP7"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="20"/>
                                 <state key="normal" title="미유박스 이야기">
                                     <color key="titleColor" red="0.29803921568627451" green="0.30588235294117649" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gxn-D3-2Lf">
-                                <rect key="frame" x="22" y="456.5" width="117" height="42"/>
+                                <rect key="frame" x="22" y="384.5" width="120.5" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Gxn-D3-2Lf" secondAttribute="height" multiplier="121.87:24.23" id="0nv-eo-qIn"/>
+                                    <constraint firstAttribute="height" constant="24.23" id="4C7-AQ-2ga"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="20"/>
                                 <state key="normal" title="미유박스 후기">
                                     <color key="titleColor" red="0.29803921568627451" green="0.30588235294117649" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qzS-8I-xI5">
-                                <rect key="frame" x="22" y="547.5" width="93" height="42"/>
+                                <rect key="frame" x="22" y="457.5" width="99" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="qzS-8I-xI5" secondAttribute="height" multiplier="99.87:24.23" id="LmC-xC-Lrf"/>
+                                    <constraint firstAttribute="height" constant="24.23" id="oWu-xi-6TD"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="20"/>
                                 <state key="normal" title="마이페이지">
                                     <color key="titleColor" red="0.29803921568627451" green="0.30588235294117649" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="myPageAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OoP-Vv-epe"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mkK-Gg-2Op">
-                                <rect key="frame" x="22" y="398" width="74" height="42"/>
+                                <rect key="frame" x="22" y="344" width="79" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24.23" id="GOm-gG-F8F"/>
+                                    <constraint firstAttribute="width" secondItem="mkK-Gg-2Op" secondAttribute="height" multiplier="79.87:24.23" id="i8H-0e-AnA"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="20"/>
                                 <state key="normal" title="주문하기">
                                     <color key="titleColor" red="0.29803921568627451" green="0.30588235294117649" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -107,7 +130,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Xh-H8-Ur9">
-                                <rect key="frame" x="22" y="281.5" width="30" height="42"/>
+                                <rect key="frame" x="22" y="263.5" width="19.5" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="5Xh-H8-Ur9" secondAttribute="height" multiplier="19.39:24.23" id="fpa-In-sGS"/>
+                                    <constraint firstAttribute="height" constant="24.23" id="pyp-j7-AWg"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="NotoSansCJKkr-Bold" family="Noto Sans CJK KR" pointSize="20"/>
                                 <state key="normal" title="홈">
                                     <color key="titleColor" red="0.29803921568627451" green="0.30588235294117649" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -123,30 +150,30 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="qzS-8I-xI5" firstAttribute="top" secondItem="Gxn-D3-2Lf" secondAttribute="bottom" constant="49.18" id="12I-Cg-Lvx"/>
-                            <constraint firstItem="Gxn-D3-2Lf" firstAttribute="top" secondItem="mkK-Gg-2Op" secondAttribute="bottom" constant="16.579999999999998" id="2WJ-pQ-2Q8"/>
-                            <constraint firstItem="qzS-8I-xI5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="22" id="AGa-tz-9Ub"/>
+                            <constraint firstItem="psp-AH-AEl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="22" id="1kg-K1-7KB"/>
                             <constraint firstItem="a6l-ZM-WsA" firstAttribute="top" secondItem="od5-hP-7pP" secondAttribute="bottom" constant="8" id="CO4-xD-n0s"/>
-                            <constraint firstItem="psp-AH-AEl" firstAttribute="top" secondItem="a6l-ZM-WsA" secondAttribute="bottom" constant="34.5" id="DiH-Gq-SVB"/>
+                            <constraint firstItem="YQM-x8-fPL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="22" id="D4P-Nj-OA5"/>
+                            <constraint firstItem="Gxn-D3-2Lf" firstAttribute="top" secondItem="mkK-Gg-2Op" secondAttribute="bottom" constant="16.579999999999998" id="LFa-6m-nYZ"/>
                             <constraint firstItem="qea-Rk-BfV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="224.31999999999999" id="MSe-cu-GJc"/>
-                            <constraint firstItem="psp-AH-AEl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="22" id="Oni-Bk-v1o"/>
+                            <constraint firstItem="5Xh-H8-Ur9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="22" id="NSC-fo-WMl"/>
                             <constraint firstItem="wDv-H1-77o" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="P7P-RS-6ec"/>
-                            <constraint firstItem="mkK-Gg-2Op" firstAttribute="top" secondItem="YQM-x8-fPL" secondAttribute="bottom" constant="16.18" id="QTr-Co-LeO"/>
-                            <constraint firstItem="YQM-x8-fPL" firstAttribute="top" secondItem="5Xh-H8-Ur9" secondAttribute="bottom" constant="16.579999999999998" id="RdX-ih-9hE"/>
-                            <constraint firstItem="5Xh-H8-Ur9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="22" id="XhT-zt-BzG"/>
-                            <constraint firstItem="5Xh-H8-Ur9" firstAttribute="top" secondItem="psp-AH-AEl" secondAttribute="bottom" constant="47.18" id="Y0W-ge-pBG"/>
-                            <constraint firstItem="mkK-Gg-2Op" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="22" id="c4o-Rl-xgb"/>
-                            <constraint firstItem="YQM-x8-fPL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="22" id="cNU-V2-KQr"/>
+                            <constraint firstItem="5Xh-H8-Ur9" firstAttribute="top" secondItem="psp-AH-AEl" secondAttribute="bottom" constant="47.18" id="Txc-cv-26E"/>
+                            <constraint firstItem="psp-AH-AEl" firstAttribute="top" secondItem="a6l-ZM-WsA" secondAttribute="bottom" constant="34.5" id="Vwg-Wq-Mx9"/>
+                            <constraint firstItem="YQM-x8-fPL" firstAttribute="top" secondItem="5Xh-H8-Ur9" secondAttribute="bottom" constant="16.579999999999998" id="XgI-mx-BB3"/>
+                            <constraint firstItem="mkK-Gg-2Op" firstAttribute="top" secondItem="YQM-x8-fPL" secondAttribute="bottom" constant="16.18" id="a8m-cH-aPQ"/>
+                            <constraint firstItem="mkK-Gg-2Op" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="22" id="avB-6S-ESV"/>
+                            <constraint firstItem="xZ8-Px-2zH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="by2-6u-MVq"/>
                             <constraint firstItem="xZ8-Px-2zH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dw6-3s-pKW"/>
                             <constraint firstItem="od5-hP-7pP" firstAttribute="top" secondItem="wDv-H1-77o" secondAttribute="bottom" constant="11" id="eL8-9E-SKY"/>
-                            <constraint firstItem="Gxn-D3-2Lf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="22" id="fEX-k7-TiZ"/>
                             <constraint firstItem="wDv-H1-77o" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="23" id="iKM-DR-9EW"/>
                             <constraint firstItem="a6l-ZM-WsA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="19.5" id="k9c-7h-6LI"/>
                             <constraint firstItem="xZ8-Px-2zH" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="kFC-yJ-Z5G"/>
+                            <constraint firstItem="Gxn-D3-2Lf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="22" id="luB-tb-1J3"/>
                             <constraint firstItem="qea-Rk-BfV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="pch-6X-GCW"/>
                             <constraint firstItem="od5-hP-7pP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="21" id="tQ9-hY-Z44"/>
+                            <constraint firstItem="qzS-8I-xI5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="22" id="tvE-lb-iek"/>
                             <constraint firstAttribute="trailing" secondItem="xZ8-Px-2zH" secondAttribute="trailing" id="uXG-Lt-RsR"/>
-                            <constraint firstItem="xZ8-Px-2zH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="vxx-Qi-RrX"/>
+                            <constraint firstItem="qzS-8I-xI5" firstAttribute="top" secondItem="Gxn-D3-2Lf" secondAttribute="bottom" constant="49.18" id="yQT-mD-V7e"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
