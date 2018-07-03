@@ -35,6 +35,10 @@
 		22B9EF4B20EA07EC00A2A9FD /* MeowBox.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22B9EF4A20EA07EC00A2A9FD /* MeowBox.storyboard */; };
 		9308BCA6A6E7FEDA2CAE42E1 /* Pods_MeowBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 287C0D40915BBAC2BD0D00E3 /* Pods_MeowBox.framework */; };
 		CC05673A20E8EC4B00AEDF24 /* Order.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC05673920E8EC4B00AEDF24 /* Order.storyboard */; };
+		CC44CBB420EB2174007466D8 /* Mypage2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC44CBB320EB2174007466D8 /* Mypage2.storyboard */; };
+		CC44CBB620EB21EB007466D8 /* SuggestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC44CBB520EB21EB007466D8 /* SuggestViewController.swift */; };
+		CC44CBB820EB2235007466D8 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC44CBB720EB2235007466D8 /* QuestionViewController.swift */; };
+		CC44CBBA20EB2307007466D8 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC44CBB920EB2307007466D8 /* SettingViewController.swift */; };
 		CC5CE21B20E9C40D00FCE6AD /* OrderWithInfo3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5CE21A20E9C40D00FCE6AD /* OrderWithInfo3ViewController.swift */; };
 		CC5CE21D20E9D28D00FCE6AD /* OrderWithInfo4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5CE21C20E9D28D00FCE6AD /* OrderWithInfo4ViewController.swift */; };
 		CC5CE21F20E9D3B500FCE6AD /* OrderCompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5CE21E20E9D3B500FCE6AD /* OrderCompleteViewController.swift */; };
@@ -76,6 +80,10 @@
 		287C0D40915BBAC2BD0D00E3 /* Pods_MeowBox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeowBox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F03CE3F3C4107E59BCDF87A /* Pods-MeowBox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeowBox.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeowBox/Pods-MeowBox.release.xcconfig"; sourceTree = "<group>"; };
 		CC05673920E8EC4B00AEDF24 /* Order.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Order.storyboard; sourceTree = "<group>"; };
+		CC44CBB320EB2174007466D8 /* Mypage2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mypage2.storyboard; sourceTree = "<group>"; };
+		CC44CBB520EB21EB007466D8 /* SuggestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestViewController.swift; sourceTree = "<group>"; };
+		CC44CBB720EB2235007466D8 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		CC44CBB920EB2307007466D8 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		CC5CE21A20E9C40D00FCE6AD /* OrderWithInfo3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderWithInfo3ViewController.swift; sourceTree = "<group>"; };
 		CC5CE21C20E9D28D00FCE6AD /* OrderWithInfo4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderWithInfo4ViewController.swift; sourceTree = "<group>"; };
 		CC5CE21E20E9D3B500FCE6AD /* OrderCompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCompleteViewController.swift; sourceTree = "<group>"; };
@@ -239,6 +247,10 @@
 				CC5CE21A20E9C40D00FCE6AD /* OrderWithInfo3ViewController.swift */,
 				CC5CE21C20E9D28D00FCE6AD /* OrderWithInfo4ViewController.swift */,
 				CC5CE21E20E9D3B500FCE6AD /* OrderCompleteViewController.swift */,
+				CC44CBB320EB2174007466D8 /* Mypage2.storyboard */,
+				CC44CBB520EB21EB007466D8 /* SuggestViewController.swift */,
+				CC44CBB720EB2235007466D8 /* QuestionViewController.swift */,
+				CC44CBB920EB2307007466D8 /* SettingViewController.swift */,
 			);
 			path = JangDta;
 			sourceTree = "<group>";
@@ -331,6 +343,7 @@
 				22B9EF4920EA039D00A2A9FD /* Roboto-Regular.ttf in Resources */,
 				229407BF20EA182D00AB2B0C /* NotoSansCJKkr-Medium.otf in Resources */,
 				22B9EF4820EA039D00A2A9FD /* Roboto-Bold.ttf in Resources */,
+				CC44CBB420EB2174007466D8 /* Mypage2.storyboard in Resources */,
 				CC05673A20E8EC4B00AEDF24 /* Order.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -392,6 +405,7 @@
 				CC5CE21D20E9D28D00FCE6AD /* OrderWithInfo4ViewController.swift in Sources */,
 				CC5CE21B20E9C40D00FCE6AD /* OrderWithInfo3ViewController.swift in Sources */,
 				CCDD5E7820E945C100A989CB /* OrderWithInfo2ViewController.swift in Sources */,
+				CC44CBBA20EB2307007466D8 /* SettingViewController.swift in Sources */,
 				CCB12E5D20E90C8200C5D4B8 /* OrderWithoutInfoViewController.swift in Sources */,
 				222B5DCA20E8BB6F003F0A8C /* APIService.swift in Sources */,
 				22109A8220EAAAFC00E463C2 /* MyPage1ViewController.swift in Sources */,
@@ -400,6 +414,8 @@
 				227DF56B20E905FF00050EBC /* MainViewController.swift in Sources */,
 				229BCBAD20E9CD16005E3B9F /* LoginViewController.swift in Sources */,
 				CC5CE21F20E9D3B500FCE6AD /* OrderCompleteViewController.swift in Sources */,
+				CC44CBB620EB21EB007466D8 /* SuggestViewController.swift in Sources */,
+				CC44CBB820EB2235007466D8 /* QuestionViewController.swift in Sources */,
 				CCB12E5B20E90C6B00C5D4B8 /* OrderWithInfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
