@@ -6,6 +6,7 @@ target 'MeowBox' do
     pod 'SwiftyJSON'
     pod 'Kingfisher'
     pod 'SelectionList'
+    pod 'UITextView+Placeholder'
 end
 
 post_install do |installer|
