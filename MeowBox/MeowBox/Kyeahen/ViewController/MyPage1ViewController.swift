@@ -90,7 +90,7 @@ class MyPage1ViewController: UIViewController {
         self.navigationItem.title = self.title
     }
     
-    //MARK: 로그인 액션
+    //MARK: 로그인 액션 - 사이드바
     @IBAction func loginAction(_ sender: Any) {
         
         let loginNaviVC = UIStoryboard(name: "Sign", bundle: nil).instantiateViewController(withIdentifier: "LoginNaviVC")
@@ -98,14 +98,14 @@ class MyPage1ViewController: UIViewController {
         self.present(loginNaviVC, animated: true, completion: nil)
     }
     
-    //MARK: 홈 액션
+    //MARK: 홈 액션 - 사이드바
     @IBAction func homeAction(_ sender: Any) {
         let mainNaviVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainNaviVC")
         
         self.present(mainNaviVC, animated: true, completion: nil)
     }
     
-    //MARK: 주문하기 액션
+    //MARK: 주문하기 액션 - 사이드바
     @IBAction func orderAction(_ sender: Any) {
         
         let orderNaviVC = UIStoryboard(name: "Order", bundle: nil).instantiateViewController(withIdentifier: "OrderWithInfoNavigationController")
@@ -113,7 +113,7 @@ class MyPage1ViewController: UIViewController {
         self.present(orderNaviVC, animated: true, completion: nil)
     }
     
-    //MARK: 마이페이지 액션(기준)
+    //MARK: 마이페이지 액션(기준) - 사이드바
     @IBAction func myPageAction(_ sender: Any) {
         leadingC.constant = 0
         trailingC.constant = 0
@@ -130,4 +130,32 @@ class MyPage1ViewController: UIViewController {
         self.navigationItem.leftBarButtonItem = self.barButton
         self.navigationItem.title = self.title
     }
+    
+    //MARK: 미유박스에 제안 액션
+    @IBAction func sugesstAction(_ sender: Any) {
+        
+        let suggestNaviVC = UIStoryboard(name: "Mypage2", bundle: nil).instantiateViewController(withIdentifier: "suggestionNavi")
+        
+        self.present(suggestNaviVC, animated: true, completion: nil)
+    }
+    
+    //MARK: 자주묻는 질문 액션
+    @IBAction func questionAction(_ sender: Any) {
+        
+        let questionNaviVC = UIStoryboard(name: "Mypage2", bundle: nil).instantiateViewController(withIdentifier: "questionNavi")
+        
+        self.present(questionNaviVC, animated: true, completion: nil)
+        
+    }
+    
+    //MARK: 설정 액션
+    @IBAction func settingAction(_ sender: Any) {
+        
+        let settionNaviVC = UIStoryboard(name: "Mypage2", bundle: nil).instantiateViewController(withIdentifier: "settingNavi")
+        
+        self.present(settionNaviVC, animated: true, completion: nil)
+        
+    }
+    
+    
 }
