@@ -9,6 +9,8 @@
 import UIKit
 
 class OrderWithInfo3ViewController: UIViewController {
+    
+    var parentVC : Order1ContainerViewController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,10 +20,11 @@ class OrderWithInfo3ViewController: UIViewController {
 
     
     @IBAction func goWithInfo4(_ sender: Any) {
-        let vc = UIStoryboard(name: "Order", bundle: nil).instantiateViewController(withIdentifier: "OrderWithInfo4ViewController") as! OrderWithInfo4ViewController
-        
-        self.navigationController?.pushViewController(vc, animated: true)
+        parentVC?.changeVC(num: 4)
     }
     
-
+    @IBAction func backWithInfo2(_ sender: Any) {
+        parentVC?.changeVC(num: 2)
+    }
+    
 }

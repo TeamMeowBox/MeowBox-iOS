@@ -252,7 +252,11 @@
                         <viewLayoutGuide key="safeArea" id="fuo-cH-7LU"/>
                     </view>
                     <navigationItem key="navigationItem" title="설정" id="zLV-nB-W9L">
-                        <barButtonItem key="rightBarButtonItem" image="x-btn" id="cEc-eV-XQK"/>
+                        <barButtonItem key="rightBarButtonItem" image="x-btn" id="cEc-eV-XQK">
+                            <connections>
+                                <action selector="dismissAction:" destination="iao-3P-pfX" id="eZd-42-aqG"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="clk-YV-XYD" userLabel="First Responder" sceneMemberID="firstResponder"/>
