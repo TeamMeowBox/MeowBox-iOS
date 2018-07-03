@@ -35,6 +35,7 @@
 		22B9EF4B20EA07EC00A2A9FD /* MeowBox.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22B9EF4A20EA07EC00A2A9FD /* MeowBox.storyboard */; };
 		9308BCA6A6E7FEDA2CAE42E1 /* Pods_MeowBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 287C0D40915BBAC2BD0D00E3 /* Pods_MeowBox.framework */; };
 		CC05673A20E8EC4B00AEDF24 /* Order.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC05673920E8EC4B00AEDF24 /* Order.storyboard */; };
+		CC4493BD20EBCBC60095D118 /* Order1ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4493BC20EBCBC60095D118 /* Order1ContainerViewController.swift */; };
 		CC44CBB420EB2174007466D8 /* Mypage2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC44CBB320EB2174007466D8 /* Mypage2.storyboard */; };
 		CC44CBB620EB21EB007466D8 /* SuggestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC44CBB520EB21EB007466D8 /* SuggestViewController.swift */; };
 		CC44CBB820EB2235007466D8 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC44CBB720EB2235007466D8 /* QuestionViewController.swift */; };
@@ -80,6 +81,7 @@
 		287C0D40915BBAC2BD0D00E3 /* Pods_MeowBox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeowBox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F03CE3F3C4107E59BCDF87A /* Pods-MeowBox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeowBox.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeowBox/Pods-MeowBox.release.xcconfig"; sourceTree = "<group>"; };
 		CC05673920E8EC4B00AEDF24 /* Order.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Order.storyboard; sourceTree = "<group>"; };
+		CC4493BC20EBCBC60095D118 /* Order1ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order1ContainerViewController.swift; sourceTree = "<group>"; };
 		CC44CBB320EB2174007466D8 /* Mypage2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mypage2.storyboard; sourceTree = "<group>"; };
 		CC44CBB520EB21EB007466D8 /* SuggestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestViewController.swift; sourceTree = "<group>"; };
 		CC44CBB720EB2235007466D8 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
@@ -251,6 +253,7 @@
 				CC44CBB520EB21EB007466D8 /* SuggestViewController.swift */,
 				CC44CBB720EB2235007466D8 /* QuestionViewController.swift */,
 				CC44CBB920EB2307007466D8 /* SettingViewController.swift */,
+				CC4493BC20EBCBC60095D118 /* Order1ContainerViewController.swift */,
 			);
 			path = JangDta;
 			sourceTree = "<group>";
@@ -405,6 +408,7 @@
 				222B5DC820E8BB56003F0A8C /* ExtensionControl.swift in Sources */,
 				222B5DCC20E8BB99003F0A8C /* Order.swift in Sources */,
 				CC5CE21D20E9D28D00FCE6AD /* OrderWithInfo4ViewController.swift in Sources */,
+				CC4493BD20EBCBC60095D118 /* Order1ContainerViewController.swift in Sources */,
 				CC5CE21B20E9C40D00FCE6AD /* OrderWithInfo3ViewController.swift in Sources */,
 				CCDD5E7820E945C100A989CB /* OrderWithInfo2ViewController.swift in Sources */,
 				CC44CBBA20EB2307007466D8 /* SettingViewController.swift in Sources */,
@@ -564,7 +568,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 7Y3DL2X5B3;
 				INFOPLIST_FILE = MeowBox/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -583,7 +587,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 7Y3DL2X5B3;
 				INFOPLIST_FILE = MeowBox/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

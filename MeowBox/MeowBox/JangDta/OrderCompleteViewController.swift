@@ -9,6 +9,8 @@
 import UIKit
 
 class OrderCompleteViewController: UIViewController {
+    
+    var parentVC : Order1ContainerViewController?
 
     override func viewDidLoad() {
         super.viewDidLoad()

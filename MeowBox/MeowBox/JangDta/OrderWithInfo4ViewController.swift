@@ -10,6 +10,8 @@ import UIKit
 import SelectionList
 
 class OrderWithInfo4ViewController: UIViewController {
+    
+    var parentVC : Order1ContainerViewController?
 
     @IBOutlet weak var selectionList: SelectionList!
     override func viewDidLoad() {
@@ -35,7 +37,11 @@ class OrderWithInfo4ViewController: UIViewController {
     }
     
     @IBAction func goPay(_ sender: Any) {
+        parentVC?.changeVC(num: 5)
     }
     
-
+    @IBAction func backWithInfo3(_ sender: Any) {
+        parentVC?.changeVC(num: 3)
+    }
+    
 }
