@@ -15,9 +15,7 @@ class MyPage1ViewController: UIViewController {
     @IBOutlet weak var myPageView: UIView!
     @IBOutlet weak var barButton: UIBarButtonItem!
     
-    
     var sideBarIsVisible = false
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -114,7 +112,6 @@ class MyPage1ViewController: UIViewController {
         self.present(orderNaviVC, animated: true, completion: nil)
     }
     
-    
     //MARK: 마이페이지 액션(기준)
     @IBAction func myPageAction(_ sender: Any) {
         leadingC.constant = 0
@@ -132,7 +129,4 @@ class MyPage1ViewController: UIViewController {
         self.navigationItem.leftBarButtonItem = self.barButton
         self.navigationItem.title = self.title
     }
-    
-    
-    
 }
