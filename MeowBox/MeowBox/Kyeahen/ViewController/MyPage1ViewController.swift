@@ -15,17 +15,20 @@ class MyPage1ViewController: UIViewController {
     @IBOutlet weak var myPageView: UIView!
     @IBOutlet weak var barButton: UIBarButtonItem!
 
-    
     var sideBarIsVisible = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
         self.navigationItem.backBarButtonItem = barButton
         
         //navigation bar title&left bar item color
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : #colorLiteral(red: 0.2980392157, green: 0.3058823529, blue: 0.3137254902, alpha: 1)]
         self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 0.2980392157, green: 0.3058823529, blue: 0.3137254902, alpha: 1)
+        
+        //navigation bar tint color
+        self.navigationController?.navigationBar.barTintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        
 
         // Do any additional setup after loading the view.
     }
@@ -38,9 +41,8 @@ class MyPage1ViewController: UIViewController {
     //MARK: 네비게이션 바 투명하게 하는 함수
     func setNavigationBar() {
         let bar: UINavigationBar! = self.navigationController?.navigationBar
-        
+
         bar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-        
         bar.shadowImage = UIImage()
         bar.backgroundColor = UIColor.clear
     }
@@ -55,14 +57,8 @@ class MyPage1ViewController: UIViewController {
             self.navigationItem.leftBarButtonItem = nil
             self.navigationItem.title = nil
             
-        }
-        else { //메뉴 숨겨야함
-            leadingC.constant = 0
-            trailingC.constant = 0
+            setNavigationBar()
             
-            sideBarIsVisible = false
-            self.navigationItem.leftBarButtonItem = self.barButton
-            self.navigationItem.title = title
         }
         
         UIView.animate(withDuration: 0.3, delay: 0.0, options: .curveEaseIn, animations: {
@@ -77,7 +73,6 @@ class MyPage1ViewController: UIViewController {
         leadingC.constant = 0
         trailingC.constant = 0
         
-        
         sideBarIsVisible = false
         
         UIView.animate(withDuration: 0.3, delay: 0.0, options: .curveEaseIn, animations: {
@@ -85,7 +80,10 @@ class MyPage1ViewController: UIViewController {
         }) { (animationComplete) in
             print("SideBar close")
         }
-        
+
+        //네비게이션바 투명 복원
+        self.navigationController?.navigationBar.shadowImage = UIColor( red: CGFloat(112/255.0), green: CGFloat(112/255.0), blue: CGFloat(112/255.0), alpha: CGFloat(0.2) ).as1ptImage()
+        self.navigationController?.navigationBar.barTintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         self.navigationItem.leftBarButtonItem = self.barButton
         self.navigationItem.title = self.title
     }
@@ -100,6 +98,7 @@ class MyPage1ViewController: UIViewController {
     
     //MARK: 홈 액션 - 사이드바
     @IBAction func homeAction(_ sender: Any) {
+        
         let mainNaviVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainNaviVC")
         
         self.present(mainNaviVC, animated: true, completion: nil)
@@ -118,7 +117,6 @@ class MyPage1ViewController: UIViewController {
         leadingC.constant = 0
         trailingC.constant = 0
         
-        
         sideBarIsVisible = false
         
         UIView.animate(withDuration: 0.3, delay: 0.0, options: .curveEaseIn, animations: {
@@ -127,6 +125,10 @@ class MyPage1ViewController: UIViewController {
             print("SideBar close")
         }
         
+        //네비게이션바 투명 복원
+        self.navigationController?.navigationBar.shadowImage = UIColor( red: CGFloat(112/255.0), green: CGFloat(112/255.0), blue: CGFloat(112/255.0), alpha: CGFloat(0.2) )
+            .as1ptImage()
+        self.navigationController?.navigationBar.barTintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         self.navigationItem.leftBarButtonItem = self.barButton
         self.navigationItem.title = self.title
     }
@@ -157,5 +159,20 @@ class MyPage1ViewController: UIViewController {
         
     }
     
+}
+
+//navigation bar bottom line color 지정해주기 위함.
+extension UIColor {
     
+    /// Converts this `UIColor` instance to a 1x1 `UIImage` instance and returns it.
+    ///
+    /// - Returns: `self` as a 1x1 `UIImage`.
+    func as1ptImage() -> UIImage {
+        UIGraphicsBeginImageContext(CGSize(width: 1, height: 1))
+        setFill()
+        UIGraphicsGetCurrentContext()?.fill(CGRect(x: 0, y: 0, width: 1, height: 1))
+        let image = UIGraphicsGetImageFromCurrentImageContext() ?? UIImage()
+        UIGraphicsEndImageContext()
+        return image
+    }
 }

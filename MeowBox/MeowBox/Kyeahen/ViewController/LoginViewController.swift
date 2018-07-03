@@ -27,6 +27,9 @@ class LoginViewController: UIViewController {
         //navigation bar title color
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : #colorLiteral(red: 0.2980392157, green: 0.3058823529, blue: 0.3137254902, alpha: 1)]
         
+        //navigation bar tint color
+        self.navigationController?.navigationBar.barTintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        
         loginBtn.isUserInteractionEnabled = false
 
         //textfield 채워지면 아이콘 변경

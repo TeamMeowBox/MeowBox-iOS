@@ -19,6 +19,7 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setNavigationBar()
         self.navigationItem.backBarButtonItem = barButton
         // Do any additional setup after loading the view, typically from a nib.
@@ -34,7 +35,7 @@ class MainViewController: UIViewController {
         let bar: UINavigationBar! = self.navigationController?.navigationBar
         
         bar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-        
+
         bar.shadowImage = UIImage()
         bar.backgroundColor = UIColor.clear
     }
@@ -51,14 +52,6 @@ class MainViewController: UIViewController {
             self.navigationItem.title = nil
             
         }
-        else { //메뉴 숨겨야함
-            leadingC.constant = 0
-            trailingC.constant = 0
-            
-            sideBarIsVisible = false
-            self.navigationItem.leftBarButtonItem = self.barButton
-            self.navigationItem.title = title
-        }
         
         UIView.animate(withDuration: 0.3, delay: 0.0, options: .curveEaseIn, animations: {
             self.view.layoutIfNeeded()
@@ -72,7 +65,6 @@ class MainViewController: UIViewController {
         leadingC.constant = 0
         trailingC.constant = 0
         
-        
         sideBarIsVisible = false
         
         UIView.animate(withDuration: 0.3, delay: 0.0, options: .curveEaseIn, animations: {
@@ -81,6 +73,7 @@ class MainViewController: UIViewController {
             print("SideBar close")
         }
         
+        //네비게이션바 복원
         self.navigationItem.leftBarButtonItem = self.barButton
         self.navigationItem.title = self.title
     }
@@ -98,7 +91,6 @@ class MainViewController: UIViewController {
         leadingC.constant = 0
         trailingC.constant = 0
         
-        
         sideBarIsVisible = false
         
         UIView.animate(withDuration: 0.3, delay: 0.0, options: .curveEaseIn, animations: {
@@ -107,12 +99,21 @@ class MainViewController: UIViewController {
             print("SideBar close")
         }
         
+        //네비게이션바 복원
         self.navigationItem.leftBarButtonItem = self.barButton
         self.navigationItem.title = self.title
     }
     
     //MARK: 주문하기 액션
+    //TODO: 팝업 예외 처리
     @IBAction func orderAction(_ sender: Any) {
+        
+        //if 로그인이 안되어있다면
+        //        let popUPVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AlertViewController") as! AlertViewController
+        //        self.addChildViewController(popUPVC)
+        //        popUPVC.view.frame = self.view.frame
+        //        self.view.addSubview(popUPVC.view)
+        //        popUPVC.didMove(toParentViewController: self)
     
         let orderNaviVC = UIStoryboard(name: "Order", bundle: nil).instantiateViewController(withIdentifier: "OrderWithInfoNavigationController")
         
