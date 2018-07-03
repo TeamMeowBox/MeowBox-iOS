@@ -7,13 +7,31 @@
 //
 
 import UIKit
+import SelectionList
 
 class OrderWithInfo4ViewController: UIViewController {
 
+    @IBOutlet weak var selectionList: SelectionList!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        selectionList.items = ["신용카드","휴대폰 결제"]
+        selectionList.isSelectionMarkTrailing = false
+        selectionList.selectionImage = #imageLiteral(resourceName: "radio-btn-selected")
+        selectionList.deselectionImage = #imageLiteral(resourceName: "radio-btn")
+        selectionList.selectedIndexes = [0]
+        selectionList.tableView.isScrollEnabled = false
+        selectionList.tableView.separatorColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        selectionList.addTarget(self, action: #selector(selectionChanged), for: .valueChanged)
+        selectionList.setupCell = { (cell: UITableViewCell, _: Int) in
+            cell.textLabel?.textColor = .gray
+        }
+    }
+    
+    @objc func selectionChanged() {
+        print(selectionList.selectedIndexes)
+        //            selectionList.items.append("\(selectionList.selectedIndexes)")
+        //            selectionList.selectedIndexes = [0, 2, 4]
     }
     
     @IBAction func goPay(_ sender: Any) {

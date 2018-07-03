@@ -706,7 +706,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="826"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UYs-B8-9ac">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="826"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="827"/>
                                         <subviews>
                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="order-four-step-pay" translatesAutoresizingMaskIntoConstraints="NO" id="eKn-s3-sWc">
                                                 <rect key="frame" x="187" y="22" width="172" height="26"/>
@@ -878,16 +878,21 @@
                                                 <color key="textColor" red="0.88225346800000004" green="0.51863366369999997" blue="0.52516168360000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FN5-8W-8Hu">
-                                                <rect key="frame" x="115" y="514" width="240" height="59"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FN5-8W-8Hu" customClass="SelectionList" customModule="SelectionList">
+                                                <rect key="frame" x="115" y="514" width="240" height="60"/>
                                                 <color key="backgroundColor" red="0.77920880960000005" green="0.77796026259999995" blue="0.79976926810000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="240" id="9xq-Cs-XFu"/>
-                                                    <constraint firstAttribute="height" constant="59" id="Svh-t4-rQa"/>
+                                                    <constraint firstAttribute="height" constant="60" id="Svh-t4-rQa"/>
                                                 </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="rowHeight">
+                                                        <real key="value" value="30"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jsQ-3j-349">
-                                                <rect key="frame" x="21" y="608" width="333" height="2"/>
+                                                <rect key="frame" x="21" y="609" width="333" height="2"/>
                                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="333" id="SFk-Li-dhn"/>
@@ -895,7 +900,7 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="수수료" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xnz-iu-prQ">
-                                                <rect key="frame" x="25" y="628" width="37" height="17"/>
+                                                <rect key="frame" x="25" y="629" width="37" height="17"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="37" id="2RZ-OB-TXs"/>
                                                     <constraint firstAttribute="height" constant="17" id="5mE-iN-WMc"/>
@@ -905,7 +910,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="총 할인금액" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2oC-St-i3Y">
-                                                <rect key="frame" x="25" y="653" width="65" height="17"/>
+                                                <rect key="frame" x="25" y="654" width="65" height="17"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="65" id="6Rt-aQ-gDv"/>
                                                     <constraint firstAttribute="height" constant="17" id="AdG-rH-3vZ"/>
@@ -915,7 +920,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 원" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yZl-M7-j4n">
-                                                <rect key="frame" x="244" y="628" width="110" height="17"/>
+                                                <rect key="frame" x="244" y="629" width="110" height="17"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="110" id="Dym-Te-mvT"/>
                                                     <constraint firstAttribute="height" constant="17" id="ffT-q5-viK"/>
@@ -925,7 +930,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 원" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uey-ch-VI1">
-                                                <rect key="frame" x="244" y="653" width="111" height="17"/>
+                                                <rect key="frame" x="244" y="654" width="111" height="17"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="111" id="Ckw-SB-E0D"/>
                                                     <constraint firstAttribute="height" constant="17" id="HTb-aR-aOw"/>
@@ -935,7 +940,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n2S-xG-kPV">
-                                                <rect key="frame" x="21" y="688" width="333" height="2"/>
+                                                <rect key="frame" x="21" y="689" width="333" height="2"/>
                                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="333" id="3ox-BX-RGG"/>
@@ -943,7 +948,7 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="총 결제금액" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tyz-Wg-Zsb">
-                                                <rect key="frame" x="21" y="708" width="83" height="22"/>
+                                                <rect key="frame" x="21" y="709" width="83" height="22"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="22" id="ADk-DW-5XL"/>
                                                     <constraint firstAttribute="width" constant="83" id="UCc-Ww-GfB"/>
@@ -953,7 +958,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 원" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wx0-ds-th3">
-                                                <rect key="frame" x="244" y="708" width="113" height="22"/>
+                                                <rect key="frame" x="244" y="709" width="113" height="22"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="22" id="0aJ-g6-a2r"/>
                                                     <constraint firstAttribute="width" constant="113" id="buM-E1-vmJ"/>
@@ -963,7 +968,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gf2-dG-2XW">
-                                                <rect key="frame" x="0.0" y="770" width="131" height="56"/>
+                                                <rect key="frame" x="0.0" y="771" width="131" height="56"/>
                                                 <color key="backgroundColor" red="0.94117647059999998" green="0.92941176469999998" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="131" id="QKg-dh-Woq"/>
@@ -975,7 +980,7 @@
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8rZ-WU-qjE">
-                                                <rect key="frame" x="131" y="770" width="244" height="56"/>
+                                                <rect key="frame" x="131" y="771" width="244" height="56"/>
                                                 <color key="backgroundColor" red="0.88225346800000004" green="0.51863366369999997" blue="0.52516168360000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="244" id="78n-S5-7QJ"/>
@@ -985,9 +990,6 @@
                                                 <state key="normal" title="                                     다음 →">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
-                                                <connections>
-                                                    <action selector="goPay:" destination="3c6-iP-qRG" eventType="touchUpInside" id="UbC-47-0no"/>
-                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1001,11 +1003,12 @@
                                             <constraint firstItem="Gf2-dG-2XW" firstAttribute="leading" secondItem="UYs-B8-9ac" secondAttribute="leading" id="5Jp-Su-PrM"/>
                                             <constraint firstItem="KHc-GD-Y4y" firstAttribute="leading" secondItem="9WW-cW-oAM" secondAttribute="trailing" constant="37" id="6fa-8U-5fg"/>
                                             <constraint firstItem="jsQ-3j-349" firstAttribute="top" secondItem="FN5-8W-8Hu" secondAttribute="bottom" constant="35" id="82E-wh-Exk"/>
+                                            <constraint firstItem="8rZ-WU-qjE" firstAttribute="centerY" secondItem="Gf2-dG-2XW" secondAttribute="centerY" id="8Tp-hU-SNm"/>
                                             <constraint firstItem="PFy-it-gYb" firstAttribute="leading" secondItem="9cE-A2-9LK" secondAttribute="trailing" constant="5" id="98R-qo-sp9"/>
                                             <constraint firstItem="n2S-xG-kPV" firstAttribute="centerX" secondItem="UYs-B8-9ac" secondAttribute="centerX" id="9UK-su-HwK"/>
                                             <constraint firstItem="2oC-St-i3Y" firstAttribute="top" secondItem="Xnz-iu-prQ" secondAttribute="bottom" constant="8" id="9Uo-5X-eeS"/>
+                                            <constraint firstItem="Gf2-dG-2XW" firstAttribute="top" secondItem="Tyz-Wg-Zsb" secondAttribute="bottom" constant="40" id="BOJ-XW-eMN"/>
                                             <constraint firstItem="9WW-cW-oAM" firstAttribute="top" secondItem="o3Z-ha-bpo" secondAttribute="bottom" constant="78" id="BqO-WQ-2wp"/>
-                                            <constraint firstItem="Gf2-dG-2XW" firstAttribute="top" secondItem="Tyz-Wg-Zsb" secondAttribute="bottom" constant="40" id="Bw1-vc-Dty"/>
                                             <constraint firstAttribute="trailing" secondItem="eKn-s3-sWc" secondAttribute="trailing" constant="16" id="C8j-me-HsN"/>
                                             <constraint firstItem="ZqQ-4d-Z9C" firstAttribute="leading" secondItem="e2y-mP-hW0" secondAttribute="leading" id="CYY-OU-6Dm"/>
                                             <constraint firstItem="eKn-s3-sWc" firstAttribute="top" secondItem="UYs-B8-9ac" secondAttribute="top" constant="22" id="CvB-xp-Zdv"/>
@@ -1020,7 +1023,6 @@
                                             <constraint firstItem="WFM-MT-oz8" firstAttribute="leading" secondItem="l3Q-fw-M2x" secondAttribute="trailing" constant="51" id="Pmj-9p-wB6"/>
                                             <constraint firstItem="e2y-mP-hW0" firstAttribute="top" secondItem="UYs-B8-9ac" secondAttribute="top" constant="72" id="Qjf-TV-6nZ"/>
                                             <constraint firstItem="jMg-ij-35r" firstAttribute="leading" secondItem="9cE-A2-9LK" secondAttribute="trailing" constant="51" id="RkI-Q5-sUP"/>
-                                            <constraint firstItem="8rZ-WU-qjE" firstAttribute="centerY" secondItem="Gf2-dG-2XW" secondAttribute="centerY" id="W6h-sV-gV9"/>
                                             <constraint firstItem="l3Q-fw-M2x" firstAttribute="top" secondItem="9WW-cW-oAM" secondAttribute="bottom" constant="40" id="Xsj-wh-55B"/>
                                             <constraint firstItem="o3Z-ha-bpo" firstAttribute="leading" secondItem="9cE-A2-9LK" secondAttribute="leading" id="YPD-ry-hyg"/>
                                             <constraint firstItem="PFy-it-gYb" firstAttribute="top" secondItem="9cE-A2-9LK" secondAttribute="top" id="YsY-Sg-TTB"/>
@@ -1076,6 +1078,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="LMy-Ky-1me"/>
                     <size key="freeformSize" width="375" height="890"/>
+                    <connections>
+                        <outlet property="selectionList" destination="FN5-8W-8Hu" id="9mJ-dA-csg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MBK-vN-Cid" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1163,7 +1168,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="07O-L6-oTw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-500" y="-58"/>
+            <point key="canvasLocation" x="-732" y="-58"/>
         </scene>
     </scenes>
     <resources>

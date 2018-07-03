@@ -1,4 +1,4 @@
-module Pods_MeowBox {
+framework module Pods_MeowBox {
   umbrella header "Pods-MeowBox-umbrella.h"
 
   export *
