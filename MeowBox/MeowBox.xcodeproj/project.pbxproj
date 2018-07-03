@@ -38,6 +38,8 @@
 		22B9EF4820EA039D00A2A9FD /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22B9EF4520EA039D00A2A9FD /* Roboto-Bold.ttf */; };
 		22B9EF4920EA039D00A2A9FD /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22B9EF4620EA039D00A2A9FD /* Roboto-Regular.ttf */; };
 		22B9EF4B20EA07EC00A2A9FD /* MeowBox.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22B9EF4A20EA07EC00A2A9FD /* MeowBox.storyboard */; };
+		22E8F7E820EBF70A00735276 /* WithdrawalPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E8F7E720EBF70A00735276 /* WithdrawalPopUpViewController.swift */; };
+		22E8F7EA20EBF90D00735276 /* WithdrawalSucessPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E8F7E920EBF90D00735276 /* WithdrawalSucessPopUpViewController.swift */; };
 		9308BCA6A6E7FEDA2CAE42E1 /* Pods_MeowBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 287C0D40915BBAC2BD0D00E3 /* Pods_MeowBox.framework */; };
 		CC05673A20E8EC4B00AEDF24 /* Order.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC05673920E8EC4B00AEDF24 /* Order.storyboard */; };
 		CC4493BD20EBCBC60095D118 /* Order1ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4493BC20EBCBC60095D118 /* Order1ContainerViewController.swift */; };
@@ -88,6 +90,8 @@
 		22B9EF4520EA039D00A2A9FD /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		22B9EF4620EA039D00A2A9FD /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		22B9EF4A20EA07EC00A2A9FD /* MeowBox.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MeowBox.storyboard; sourceTree = "<group>"; };
+		22E8F7E720EBF70A00735276 /* WithdrawalPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawalPopUpViewController.swift; sourceTree = "<group>"; };
+		22E8F7E920EBF90D00735276 /* WithdrawalSucessPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawalSucessPopUpViewController.swift; sourceTree = "<group>"; };
 		287C0D40915BBAC2BD0D00E3 /* Pods_MeowBox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeowBox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F03CE3F3C4107E59BCDF87A /* Pods-MeowBox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeowBox.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeowBox/Pods-MeowBox.release.xcconfig"; sourceTree = "<group>"; };
 		CC05673920E8EC4B00AEDF24 /* Order.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Order.storyboard; sourceTree = "<group>"; };
@@ -231,6 +235,8 @@
 				22A86ED520EBE84C00B17661 /* TicketCancelPopUpViewController.swift */,
 				22A86ED720EBEE4400B17661 /* LogoutPopUpViewController.swift */,
 				22A86ED920EBF09500B17661 /* LogoutSucessPopUpViewController.swift */,
+				22E8F7E720EBF70A00735276 /* WithdrawalPopUpViewController.swift */,
+				22E8F7E920EBF90D00735276 /* WithdrawalSucessPopUpViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -420,6 +426,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22E8F7E820EBF70A00735276 /* WithdrawalPopUpViewController.swift in Sources */,
 				222B5DC820E8BB56003F0A8C /* ExtensionControl.swift in Sources */,
 				222B5DCC20E8BB99003F0A8C /* Order.swift in Sources */,
 				CC5CE21D20E9D28D00FCE6AD /* OrderWithInfo4ViewController.swift in Sources */,
@@ -440,6 +447,7 @@
 				CC5CE21F20E9D3B500FCE6AD /* OrderCompleteViewController.swift in Sources */,
 				22A86EDA20EBF09500B17661 /* LogoutSucessPopUpViewController.swift in Sources */,
 				CC44CBB620EB21EB007466D8 /* SuggestViewController.swift in Sources */,
+				22E8F7EA20EBF90D00735276 /* WithdrawalSucessPopUpViewController.swift in Sources */,
 				CC44CBB820EB2235007466D8 /* QuestionViewController.swift in Sources */,
 				CCB12E5B20E90C6B00C5D4B8 /* OrderWithInfoViewController.swift in Sources */,
 				22A86ED420EBE13600B17661 /* OrderPagePopUpViewController.swift in Sources */,
