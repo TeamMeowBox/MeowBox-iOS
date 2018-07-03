@@ -163,7 +163,7 @@
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gmv-dN-EQz">
-                                <rect key="frame" x="22.5" y="376.5" width="330" height="1"/>
+                                <rect key="frame" x="21" y="376.5" width="330" height="1"/>
                                 <color key="backgroundColor" red="0.93725490196078431" green="0.92941176470588238" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="gmv-dN-EQz" secondAttribute="height" multiplier="330:1" id="aTd-C9-7mz"/>
@@ -181,9 +181,9 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7s5-xC-Gl1">
-                                <rect key="frame" x="144" y="319.5" width="215.5" height="26"/>
+                                <rect key="frame" x="144" y="319.5" width="208" height="26"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="7s5-xC-Gl1" secondAttribute="height" multiplier="215.57:26" id="Phv-OV-wnp"/>
+                                    <constraint firstAttribute="width" secondItem="7s5-xC-Gl1" secondAttribute="height" multiplier="208:26" id="Phv-OV-wnp"/>
                                     <constraint firstAttribute="height" constant="26" id="TZH-Jr-pXp"/>
                                 </constraints>
                                 <nil key="textColor"/>
@@ -191,10 +191,10 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7gR-o9-Fhx">
-                                <rect key="frame" x="144" y="405.5" width="216" height="26"/>
+                                <rect key="frame" x="144" y="405.5" width="208" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="26" id="7Kv-eM-Mho"/>
-                                    <constraint firstAttribute="width" secondItem="7gR-o9-Fhx" secondAttribute="height" multiplier="216.14:26" id="C5J-I7-NZw"/>
+                                    <constraint firstAttribute="width" secondItem="7gR-o9-Fhx" secondAttribute="height" multiplier="208:26" id="C5J-I7-NZw"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -255,11 +255,11 @@
                             <constraint firstItem="r1k-5w-7B8" firstAttribute="top" secondItem="6hu-Sg-jYF" secondAttribute="bottom" constant="28" id="iOg-ZI-4L8"/>
                             <constraint firstItem="6hu-Sg-jYF" firstAttribute="leading" secondItem="GjG-Z7-1ii" secondAttribute="leading" id="n2z-pu-1nk"/>
                             <constraint firstItem="Gb6-5Y-Qzh" firstAttribute="centerX" secondItem="bl4-py-ojH" secondAttribute="centerX" id="nMu-aG-7dK"/>
-                            <constraint firstItem="gmv-dN-EQz" firstAttribute="centerX" secondItem="bl4-py-ojH" secondAttribute="centerX" id="qhW-hR-vOI"/>
                             <constraint firstItem="Qm4-8w-OvZ" firstAttribute="top" secondItem="Mqq-G5-Kq0" secondAttribute="bottom" constant="10" id="rH4-B3-Ni2"/>
                             <constraint firstItem="6hu-Sg-jYF" firstAttribute="top" secondItem="eiZ-KF-UCj" secondAttribute="bottom" id="rMf-h7-V5g"/>
                             <constraint firstItem="RbZ-Bb-Hpy" firstAttribute="leading" secondItem="o3g-ie-1DF" secondAttribute="leading" id="sUu-oH-qGI"/>
                             <constraint firstItem="EAS-hq-dR0" firstAttribute="top" secondItem="r1k-5w-7B8" secondAttribute="top" id="z31-mQ-OuC"/>
+                            <constraint firstItem="gmv-dN-EQz" firstAttribute="leading" secondItem="bl4-py-ojH" secondAttribute="leading" constant="21" id="zmJ-ES-uQI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bl4-py-ojH"/>
                     </view>
@@ -468,7 +468,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aTO-2k-s2K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="984.79999999999995" y="-638.2308845577212"/>
+            <point key="canvasLocation" x="764" y="-638"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Sde-Cj-0dh">

@@ -29,6 +29,11 @@
 		229BCBA720E9BAA1005E3B9F /* Sign.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 229BCBA620E9BAA1005E3B9F /* Sign.storyboard */; };
 		229BCBAB20E9BBC7005E3B9F /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229BCBAA20E9BBC7005E3B9F /* SignInViewController.swift */; };
 		229BCBAD20E9CD16005E3B9F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 229BCBAC20E9CD16005E3B9F /* LoginViewController.swift */; };
+		22A86ED220EBD81D00B17661 /* LoginPopUp1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A86ED120EBD81D00B17661 /* LoginPopUp1ViewController.swift */; };
+		22A86ED420EBE13600B17661 /* OrderPagePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A86ED320EBE13600B17661 /* OrderPagePopUpViewController.swift */; };
+		22A86ED620EBE84C00B17661 /* TicketCancelPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A86ED520EBE84C00B17661 /* TicketCancelPopUpViewController.swift */; };
+		22A86ED820EBEE4400B17661 /* LogoutPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A86ED720EBEE4400B17661 /* LogoutPopUpViewController.swift */; };
+		22A86EDA20EBF09500B17661 /* LogoutSucessPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A86ED920EBF09500B17661 /* LogoutSucessPopUpViewController.swift */; };
 		22B9EF4720EA039D00A2A9FD /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22B9EF4420EA039D00A2A9FD /* Roboto-Medium.ttf */; };
 		22B9EF4820EA039D00A2A9FD /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22B9EF4520EA039D00A2A9FD /* Roboto-Bold.ttf */; };
 		22B9EF4920EA039D00A2A9FD /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22B9EF4620EA039D00A2A9FD /* Roboto-Regular.ttf */; };
@@ -73,6 +78,11 @@
 		229BCBA620E9BAA1005E3B9F /* Sign.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Sign.storyboard; sourceTree = "<group>"; };
 		229BCBAA20E9BBC7005E3B9F /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		229BCBAC20E9CD16005E3B9F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		22A86ED120EBD81D00B17661 /* LoginPopUp1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPopUp1ViewController.swift; sourceTree = "<group>"; };
+		22A86ED320EBE13600B17661 /* OrderPagePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderPagePopUpViewController.swift; sourceTree = "<group>"; };
+		22A86ED520EBE84C00B17661 /* TicketCancelPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketCancelPopUpViewController.swift; sourceTree = "<group>"; };
+		22A86ED720EBEE4400B17661 /* LogoutPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutPopUpViewController.swift; sourceTree = "<group>"; };
+		22A86ED920EBF09500B17661 /* LogoutSucessPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutSucessPopUpViewController.swift; sourceTree = "<group>"; };
 		22B9EF4420EA039D00A2A9FD /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		22B9EF4520EA039D00A2A9FD /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		22B9EF4620EA039D00A2A9FD /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
@@ -214,6 +224,11 @@
 				229BCBAA20E9BBC7005E3B9F /* SignInViewController.swift */,
 				229BCBAC20E9CD16005E3B9F /* LoginViewController.swift */,
 				22109A8120EAAAFC00E463C2 /* MyPage1ViewController.swift */,
+				22A86ED120EBD81D00B17661 /* LoginPopUp1ViewController.swift */,
+				22A86ED320EBE13600B17661 /* OrderPagePopUpViewController.swift */,
+				22A86ED520EBE84C00B17661 /* TicketCancelPopUpViewController.swift */,
+				22A86ED720EBEE4400B17661 /* LogoutPopUpViewController.swift */,
+				22A86ED920EBF09500B17661 /* LogoutSucessPopUpViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -407,18 +422,23 @@
 				CC5CE21D20E9D28D00FCE6AD /* OrderWithInfo4ViewController.swift in Sources */,
 				CC5CE21B20E9C40D00FCE6AD /* OrderWithInfo3ViewController.swift in Sources */,
 				CCDD5E7820E945C100A989CB /* OrderWithInfo2ViewController.swift in Sources */,
+				22A86ED220EBD81D00B17661 /* LoginPopUp1ViewController.swift in Sources */,
 				CC44CBBA20EB2307007466D8 /* SettingViewController.swift in Sources */,
 				CCB12E5D20E90C8200C5D4B8 /* OrderWithoutInfoViewController.swift in Sources */,
 				222B5DCA20E8BB6F003F0A8C /* APIService.swift in Sources */,
+				22A86ED620EBE84C00B17661 /* TicketCancelPopUpViewController.swift in Sources */,
 				22109A8220EAAAFC00E463C2 /* MyPage1ViewController.swift in Sources */,
 				229BCBAB20E9BBC7005E3B9F /* SignInViewController.swift in Sources */,
 				222B5DAF20E8BA26003F0A8C /* AppDelegate.swift in Sources */,
+				22A86ED820EBEE4400B17661 /* LogoutPopUpViewController.swift in Sources */,
 				227DF56B20E905FF00050EBC /* MainViewController.swift in Sources */,
 				229BCBAD20E9CD16005E3B9F /* LoginViewController.swift in Sources */,
 				CC5CE21F20E9D3B500FCE6AD /* OrderCompleteViewController.swift in Sources */,
+				22A86EDA20EBF09500B17661 /* LogoutSucessPopUpViewController.swift in Sources */,
 				CC44CBB620EB21EB007466D8 /* SuggestViewController.swift in Sources */,
 				CC44CBB820EB2235007466D8 /* QuestionViewController.swift in Sources */,
 				CCB12E5B20E90C6B00C5D4B8 /* OrderWithInfoViewController.swift in Sources */,
+				22A86ED420EBE13600B17661 /* OrderPagePopUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
