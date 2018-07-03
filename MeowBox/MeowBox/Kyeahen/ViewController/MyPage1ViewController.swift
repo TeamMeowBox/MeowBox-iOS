@@ -14,6 +14,7 @@ class MyPage1ViewController: UIViewController {
     @IBOutlet weak var trailingC: NSLayoutConstraint!
     @IBOutlet weak var myPageView: UIView!
     @IBOutlet weak var barButton: UIBarButtonItem!
+
     
     var sideBarIsVisible = false
     
