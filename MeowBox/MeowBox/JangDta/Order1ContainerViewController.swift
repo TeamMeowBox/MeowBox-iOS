@@ -51,32 +51,55 @@ class Order1ContainerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        container.addSubview(withInfoVC1.view)
+        add(asChildViewController: withInfoVC1)
         
     }
     
     func changeVC(num : Int){
         switch num {
         case 1:
-            container.addSubview(withInfoVC1.view)
+            add(asChildViewController: withInfoVC1)
             break
         case 2:
-            container.addSubview(withInfoVC2.view)
+            add(asChildViewController: withInfoVC2)
             break
         case 3:
-            container.addSubview(withInfoVC3.view)
+            add(asChildViewController: withInfoVC3)
             break
         case 4:
-            container.addSubview(withInfoVC4.view)
+            add(asChildViewController: withInfoVC4)
             break
         case 5:
-            container.addSubview(withInfoVC5.view)
+            add(asChildViewController: withInfoVC5)
             break
         default:
-            container.addSubview(withInfoVC1.view)
+            add(asChildViewController: withInfoVC1)
             break
         }
     }
-
+    
+    private func add(asChildViewController viewController: UIViewController) {
+        
+        // Add Child View as Subview
+        container.addSubview(viewController.view)
+        
+        // Configure Child View
+        viewController.view.frame = container.bounds
+        viewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        
+        // Notify Child View Controller
+        viewController.didMove(toParentViewController: self)
+    }
+    
+    private func remove(asChildViewController viewController: UIViewController) {
+        // Notify Child View Controller
+        viewController.willMove(toParentViewController: nil)
+        
+        // Remove Child View From Superview
+        viewController.view.removeFromSuperview()
+        
+        // Notify Child View Controller
+        viewController.removeFromParentViewController()
+    }
 
 }

@@ -11,7 +11,7 @@ import UIKit
 class OrderWithInfo2ViewController: UIViewController {
     
     var parentVC : Order1ContainerViewController?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,6 +23,10 @@ class OrderWithInfo2ViewController: UIViewController {
     }
     @IBAction func backWithInfo2(_ sender: Any) {
         parentVC?.changeVC(num: 1)
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
+        self.view.endEditing(true)
     }
     
 

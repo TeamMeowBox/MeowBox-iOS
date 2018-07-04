@@ -117,7 +117,11 @@
                         <viewLayoutGuide key="safeArea" id="oI4-Dn-eGC"/>
                     </view>
                     <navigationItem key="navigationItem" title="미유박스에 제안" id="WxN-FQ-HGR">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="x-btn" id="GEq-Ex-sSP"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="x-btn" id="GEq-Ex-sSP">
+                            <connections>
+                                <action selector="dismissAction:" destination="PDK-Tp-Sdy" id="oeh-ZR-hXQ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="detailSuggestionTextField" destination="pYb-Qw-rD4" id="6Jz-Th-Tjg"/>
@@ -139,7 +143,11 @@
                         <viewLayoutGuide key="safeArea" id="XLz-mo-B9l"/>
                     </view>
                     <navigationItem key="navigationItem" title="자주묻는 질문" id="jsP-AM-6yg">
-                        <barButtonItem key="rightBarButtonItem" image="x-btn" id="mwJ-LM-MuM"/>
+                        <barButtonItem key="rightBarButtonItem" image="x-btn" id="mwJ-LM-MuM">
+                            <connections>
+                                <action selector="dismissAction:" destination="tJM-kc-AeO" id="afa-by-QLb"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WO5-g9-IEc" userLabel="First Responder" sceneMemberID="firstResponder"/>
