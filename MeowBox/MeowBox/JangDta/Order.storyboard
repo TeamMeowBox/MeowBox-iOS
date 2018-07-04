@@ -1126,6 +1126,9 @@
                                 <state key="normal" title="홈으로 돌아가기">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="goHome:" destination="Kxv-B6-kIa" eventType="touchUpInside" id="S5J-Sx-zys"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aJP-no-HDa">
                                 <rect key="frame" x="87" y="141" width="201" height="152"/>
@@ -1155,7 +1158,7 @@
             </objects>
             <point key="canvasLocation" x="1004" y="984"/>
         </scene>
-        <!--Order1 Container View Controller-->
+        <!--주문하기-->
         <scene sceneID="VEc-ms-dte">
             <objects>
                 <viewController storyboardIdentifier="Order1ContainerViewController" id="ucZ-8F-Z0D" customClass="Order1ContainerViewController" customModule="MeowBox" customModuleProvider="target" sceneMemberID="viewController">
@@ -1171,7 +1174,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="mja-5n-coQ"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ZmZ-PS-B9d"/>
+                    <navigationItem key="navigationItem" title="주문하기" id="ZmZ-PS-B9d"/>
                     <connections>
                         <outlet property="container" destination="4vI-Kf-HK1" id="O6q-gv-gj8"/>
                         <segue destination="KBN-mz-GlR" kind="show" id="shC-3Y-WcO"/>
@@ -1185,13 +1188,19 @@
             </objects>
             <point key="canvasLocation" x="8.8000000000000007" y="-1129.385307346327"/>
         </scene>
-        <!--View Controller-->
+        <!--Order2 Container View Controller-->
         <scene sceneID="jIX-Ul-Q9c">
             <objects>
-                <viewController id="FSO-Wa-noY" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Order2ContainerViewController" id="FSO-Wa-noY" customClass="Order2ContainerViewController" customModule="MeowBox" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="j4x-F9-fLf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eFi-S0-1k8">
+                                <rect key="frame" x="67" y="269" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            </containerView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="DHp-zb-Xik"/>
                     </view>

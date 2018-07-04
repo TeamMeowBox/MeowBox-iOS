@@ -44,4 +44,8 @@ class OrderWithInfo4ViewController: UIViewController {
         parentVC?.changeVC(num: 3)
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
+        self.view.endEditing(true)
+    }
+    
 }
