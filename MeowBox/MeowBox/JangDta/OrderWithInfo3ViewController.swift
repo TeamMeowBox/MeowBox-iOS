@@ -12,6 +12,7 @@ class OrderWithInfo3ViewController: UIViewController {
     
     var parentVC : Order1ContainerViewController?
 
+    @IBOutlet weak var scrollView: UIScrollView!
     override func viewDidLoad() {
         super.viewDidLoad()
 

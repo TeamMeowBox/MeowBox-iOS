@@ -139,7 +139,102 @@
                     <view key="view" contentMode="scaleToFill" id="DjN-W6-Vab">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="J7q-iw-q7g">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="QuestionHeaderTableViewCell" rowHeight="70" id="0Qm-hQ-70Q" customClass="QuestionHeaderTableViewCell" customModule="MeowBox" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0Qm-hQ-70Q" id="e73-v6-pJP">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oa2-Y3-vnd">
+                                                    <rect key="frame" x="15" y="13" width="72" height="42"/>
+                                                    <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="28"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="oa2-Y3-vnd" firstAttribute="centerY" secondItem="e73-v6-pJP" secondAttribute="centerY" id="8ha-My-fHY"/>
+                                                <constraint firstItem="oa2-Y3-vnd" firstAttribute="leading" secondItem="e73-v6-pJP" secondAttribute="leading" constant="15" id="Biy-js-dBq"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="headerLabel" destination="oa2-Y3-vnd" id="ltW-Ov-oqT"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="QuestionTableViewCell" rowHeight="148" id="Afe-ea-PIn" customClass="QuestionTableViewCell" customModule="MeowBox" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="98" width="375" height="148"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Afe-ea-PIn" id="FgI-cd-gWh">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="147.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hbj-3l-V3l">
+                                                    <rect key="frame" x="15" y="12" width="305" height="36"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="305" id="iNE-Pr-YDa"/>
+                                                        <constraint firstAttribute="height" constant="36" id="unn-dV-5XX"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="15"/>
+                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" image="additional-explanation-arrow-btn" translatesAutoresizingMaskIntoConstraints="NO" id="3yN-Lc-LJW">
+                                                    <rect key="frame" x="348" y="26" width="12" height="8"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="12" id="dIO-ul-Inv"/>
+                                                        <constraint firstAttribute="height" constant="8" id="jP4-kn-9g5"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XqR-Zr-Tba">
+                                                    <rect key="frame" x="0.0" y="58" width="375" height="90"/>
+                                                    <color key="backgroundColor" red="0.94117647059999998" green="0.92941176469999998" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="14"/>
+                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Hbj-3l-V3l" firstAttribute="leading" secondItem="FgI-cd-gWh" secondAttribute="leading" constant="15" id="7uJ-Rn-40g"/>
+                                                <constraint firstItem="3yN-Lc-LJW" firstAttribute="centerY" secondItem="Hbj-3l-V3l" secondAttribute="centerY" id="9ej-lg-sWh"/>
+                                                <constraint firstItem="XqR-Zr-Tba" firstAttribute="leading" secondItem="FgI-cd-gWh" secondAttribute="leading" id="DqQ-ZS-GEf"/>
+                                                <constraint firstAttribute="trailing" secondItem="XqR-Zr-Tba" secondAttribute="trailing" id="Jde-01-9kX"/>
+                                                <constraint firstItem="XqR-Zr-Tba" firstAttribute="top" secondItem="Hbj-3l-V3l" secondAttribute="bottom" constant="10" id="MU6-95-h8X"/>
+                                                <constraint firstAttribute="bottom" secondItem="XqR-Zr-Tba" secondAttribute="bottom" id="QyU-rC-ryC"/>
+                                                <constraint firstItem="Hbj-3l-V3l" firstAttribute="top" secondItem="FgI-cd-gWh" secondAttribute="top" constant="12" id="o5Y-qL-lR7"/>
+                                                <constraint firstAttribute="trailing" secondItem="3yN-Lc-LJW" secondAttribute="trailing" constant="15" id="wCA-Rg-1QG"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="answerLabel" destination="XqR-Zr-Tba" id="Pdn-nI-wPR"/>
+                                            <outlet property="questionLabel" destination="Hbj-3l-V3l" id="2Cf-DV-qfm"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="QuestionFooterTableViewCell" id="aFa-RA-lgD" customClass="QuestionFooterTableViewCell" customModule="MeowBox" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="246" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aFa-RA-lgD" id="ldN-mp-6hC">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.94117647059999998" green="0.92941176469999998" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="J7q-iw-q7g" firstAttribute="bottom" secondItem="XLz-mo-B9l" secondAttribute="bottom" id="BLt-bK-d3I"/>
+                            <constraint firstItem="J7q-iw-q7g" firstAttribute="leading" secondItem="XLz-mo-B9l" secondAttribute="leading" id="XHR-5V-rX0"/>
+                            <constraint firstItem="J7q-iw-q7g" firstAttribute="top" secondItem="XLz-mo-B9l" secondAttribute="top" id="fUe-aT-T4i"/>
+                            <constraint firstItem="J7q-iw-q7g" firstAttribute="trailing" secondItem="XLz-mo-B9l" secondAttribute="trailing" id="g1H-1Q-b6g"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="XLz-mo-B9l"/>
                     </view>
                     <navigationItem key="navigationItem" title="자주묻는 질문" id="jsP-AM-6yg">
@@ -149,10 +244,13 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="J7q-iw-q7g" id="fIj-at-zMv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WO5-g9-IEc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3047" y="-153"/>
+            <point key="canvasLocation" x="3046" y="-153"/>
         </scene>
         <!--설정-->
         <scene sceneID="Bla-MX-LAs">
@@ -173,7 +271,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BDW-3g-Lh8">
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="BDW-3g-Lh8">
                                         <rect key="frame" x="309" y="15" width="49" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="onTintColor" red="0.96078431369999995" green="0.48627450979999998" blue="0.52156862749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -327,6 +425,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="additional-explanation-arrow-btn" width="12" height="8"/>
         <image name="setting-arrow-btn" width="8" height="12"/>
         <image name="x-btn" width="14" height="14"/>
     </resources>

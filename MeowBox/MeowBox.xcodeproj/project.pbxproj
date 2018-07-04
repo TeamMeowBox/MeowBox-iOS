@@ -48,6 +48,9 @@
 		CC44CBB620EB21EB007466D8 /* SuggestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC44CBB520EB21EB007466D8 /* SuggestViewController.swift */; };
 		CC44CBB820EB2235007466D8 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC44CBB720EB2235007466D8 /* QuestionViewController.swift */; };
 		CC44CBBA20EB2307007466D8 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC44CBB920EB2307007466D8 /* SettingViewController.swift */; };
+		CC54E41620EC9892007C5C4E /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC54E41520EC9892007C5C4E /* QuestionTableViewCell.swift */; };
+		CC54E41820ECA1DC007C5C4E /* QuestionHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC54E41720ECA1DC007C5C4E /* QuestionHeaderTableViewCell.swift */; };
+		CC54E41A20ECAE3F007C5C4E /* QuestionFooterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC54E41920ECAE3F007C5C4E /* QuestionFooterTableViewCell.swift */; };
 		CC5CE21B20E9C40D00FCE6AD /* OrderWithInfo3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5CE21A20E9C40D00FCE6AD /* OrderWithInfo3ViewController.swift */; };
 		CC5CE21D20E9D28D00FCE6AD /* OrderWithInfo4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5CE21C20E9D28D00FCE6AD /* OrderWithInfo4ViewController.swift */; };
 		CC5CE21F20E9D3B500FCE6AD /* OrderCompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5CE21E20E9D3B500FCE6AD /* OrderCompleteViewController.swift */; };
@@ -102,6 +105,9 @@
 		CC44CBB520EB21EB007466D8 /* SuggestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestViewController.swift; sourceTree = "<group>"; };
 		CC44CBB720EB2235007466D8 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		CC44CBB920EB2307007466D8 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		CC54E41520EC9892007C5C4E /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
+		CC54E41720ECA1DC007C5C4E /* QuestionHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		CC54E41920ECAE3F007C5C4E /* QuestionFooterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionFooterTableViewCell.swift; sourceTree = "<group>"; };
 		CC5CE21A20E9C40D00FCE6AD /* OrderWithInfo3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderWithInfo3ViewController.swift; sourceTree = "<group>"; };
 		CC5CE21C20E9D28D00FCE6AD /* OrderWithInfo4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderWithInfo4ViewController.swift; sourceTree = "<group>"; };
 		CC5CE21E20E9D3B500FCE6AD /* OrderCompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCompleteViewController.swift; sourceTree = "<group>"; };
@@ -278,6 +284,9 @@
 				CC44CBB920EB2307007466D8 /* SettingViewController.swift */,
 				CC4493BC20EBCBC60095D118 /* Order1ContainerViewController.swift */,
 				CC4493BE20EC5A930095D118 /* Order2ContainerViewController.swift */,
+				CC54E41520EC9892007C5C4E /* QuestionTableViewCell.swift */,
+				CC54E41720ECA1DC007C5C4E /* QuestionHeaderTableViewCell.swift */,
+				CC54E41920ECAE3F007C5C4E /* QuestionFooterTableViewCell.swift */,
 			);
 			path = JangDta;
 			sourceTree = "<group>";
@@ -429,10 +438,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC54E41A20ECAE3F007C5C4E /* QuestionFooterTableViewCell.swift in Sources */,
 				22E8F7E820EBF70A00735276 /* WithdrawalPopUpViewController.swift in Sources */,
 				222B5DC820E8BB56003F0A8C /* ExtensionControl.swift in Sources */,
 				222B5DCC20E8BB99003F0A8C /* Order.swift in Sources */,
 				CC5CE21D20E9D28D00FCE6AD /* OrderWithInfo4ViewController.swift in Sources */,
+				CC54E41820ECA1DC007C5C4E /* QuestionHeaderTableViewCell.swift in Sources */,
 				CC4493BD20EBCBC60095D118 /* Order1ContainerViewController.swift in Sources */,
 				CC5CE21B20E9C40D00FCE6AD /* OrderWithInfo3ViewController.swift in Sources */,
 				CCDD5E7820E945C100A989CB /* OrderWithInfo2ViewController.swift in Sources */,
@@ -453,6 +464,7 @@
 				CC44CBB620EB21EB007466D8 /* SuggestViewController.swift in Sources */,
 				22E8F7EA20EBF90D00735276 /* WithdrawalSucessPopUpViewController.swift in Sources */,
 				CC44CBB820EB2235007466D8 /* QuestionViewController.swift in Sources */,
+				CC54E41620EC9892007C5C4E /* QuestionTableViewCell.swift in Sources */,
 				CCB12E5B20E90C6B00C5D4B8 /* OrderWithInfoViewController.swift in Sources */,
 				22A86ED420EBE13600B17661 /* OrderPagePopUpViewController.swift in Sources */,
 			);

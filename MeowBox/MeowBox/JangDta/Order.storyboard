@@ -385,6 +385,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="Qca-lb-2m7"/>
                     <size key="freeformSize" width="375" height="1100"/>
+                    <connections>
+                        <outlet property="scrollView" destination="fYv-fm-Nb9" id="qN4-ed-4L5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dFh-Z4-aop" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -686,6 +689,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="gO9-gX-gXC"/>
                     <size key="freeformSize" width="375" height="1000"/>
+                    <connections>
+                        <outlet property="scrollView" destination="qTZ-HK-V8c" id="8gz-UR-HhU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xsk-YS-Hf0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1082,6 +1088,7 @@
                     <navigationItem key="navigationItem" id="LMy-Ky-1me"/>
                     <size key="freeformSize" width="375" height="890"/>
                     <connections>
+                        <outlet property="scrollView" destination="N2N-iK-7JC" id="Yv0-aE-MhZ"/>
                         <outlet property="selectionList" destination="FN5-8W-8Hu" id="9mJ-dA-csg"/>
                     </connections>
                 </viewController>

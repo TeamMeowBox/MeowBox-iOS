@@ -12,10 +12,15 @@ class OrderWithInfo2ViewController: UIViewController {
     
     var parentVC : Order1ContainerViewController?
     
+    @IBOutlet weak var scrollView: UIScrollView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        scrollView.setContentOffset(.zero, animated: true)
     }
 
     @IBAction func goWithInfo3(_ sender: Any) {

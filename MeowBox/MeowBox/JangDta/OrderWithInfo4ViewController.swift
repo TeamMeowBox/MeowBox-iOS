@@ -12,7 +12,8 @@ import SelectionList
 class OrderWithInfo4ViewController: UIViewController {
     
     var parentVC : Order1ContainerViewController?
-
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     @IBOutlet weak var selectionList: SelectionList!
     override func viewDidLoad() {
         super.viewDidLoad()
