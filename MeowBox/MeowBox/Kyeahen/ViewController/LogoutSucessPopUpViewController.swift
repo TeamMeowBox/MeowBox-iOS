@@ -28,7 +28,7 @@ class LogoutSucessPopUpViewController: UIViewController {
         
         logoutSucessBtn.clipsToBounds = true
         logoutSucessBtn.layer.cornerRadius = 5
-        logoutSucessBtn.layer.maskedCorners = [.layerMaxXMaxYCorner]
+        logoutSucessBtn.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
 
         // Do any additional setup after loading the view.
     }
