@@ -62,12 +62,15 @@ class Order1ContainerViewController: UIViewController {
             break
         case 2:
             add(asChildViewController: withInfoVC2)
+            withInfoVC2.scrollView.setContentOffset(.zero, animated: true)
             break
         case 3:
             add(asChildViewController: withInfoVC3)
+            withInfoVC3.scrollView.setContentOffset(.zero, animated: true)
             break
         case 4:
             add(asChildViewController: withInfoVC4)
+            withInfoVC4.scrollView.setContentOffset(.zero, animated: true)
             break
         case 5:
             add(asChildViewController: withInfoVC5)
