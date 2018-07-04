@@ -161,14 +161,22 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" red="0.36892167510000001" green="0.6970864604" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
+                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9mj-gf-PTc">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="psp-AH-AEl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="1kg-K1-7KB"/>
+                            <constraint firstItem="9mj-gf-PTc" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="7jE-Ra-8XJ"/>
+                            <constraint firstItem="9mj-gf-PTc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="BkD-lq-JOf"/>
                             <constraint firstItem="a6l-ZM-WsA" firstAttribute="top" secondItem="od5-hP-7pP" secondAttribute="bottom" constant="8" id="CO4-xD-n0s"/>
                             <constraint firstItem="YQM-x8-fPL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="21" id="D4P-Nj-OA5"/>
                             <constraint firstItem="fzp-45-W4k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="21" id="KeL-Be-7cr"/>
                             <constraint firstItem="Gxn-D3-2Lf" firstAttribute="top" secondItem="mkK-Gg-2Op" secondAttribute="bottom" constant="16.579999999999998" id="LFa-6m-nYZ"/>
+                            <constraint firstAttribute="trailing" secondItem="9mj-gf-PTc" secondAttribute="trailing" id="LG6-jT-JI9"/>
+                            <constraint firstItem="9mj-gf-PTc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="LvH-ho-NI6"/>
                             <constraint firstItem="qea-Rk-BfV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="224.31999999999999" id="MSe-cu-GJc"/>
                             <constraint firstItem="5Xh-H8-Ur9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="21" id="NSC-fo-WMl"/>
                             <constraint firstItem="wDv-H1-77o" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="P7P-RS-6ec"/>
@@ -205,6 +213,9 @@
                     <connections>
                         <outlet property="MainView" destination="xZ8-Px-2zH" id="YS2-tb-f9d"/>
                         <outlet property="barButton" destination="Ko4-RR-Qtb" id="MTn-0Z-b0k"/>
+                        <outlet property="hiddenImageView" destination="9mj-gf-PTc" id="bLZ-fA-86V"/>
+                        <outlet property="hiddenLeadingC" destination="BkD-lq-JOf" id="Ama-NK-j7a"/>
+                        <outlet property="hiddenTrailingC" destination="LG6-jT-JI9" id="0f1-05-Wkc"/>
                         <outlet property="leadingC" destination="dw6-3s-pKW" id="I6R-15-0mn"/>
                         <outlet property="trailingC" destination="uXG-Lt-RsR" id="4jT-Hb-cnS"/>
                     </connections>

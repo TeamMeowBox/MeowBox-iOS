@@ -12,14 +12,22 @@ class MyPage1ViewController: UIViewController {
 
     @IBOutlet weak var leadingC: NSLayoutConstraint!
     @IBOutlet weak var trailingC: NSLayoutConstraint!
+    @IBOutlet weak var hiddenLeadingC: NSLayoutConstraint!
+    @IBOutlet weak var hiddenTrailingC: NSLayoutConstraint!
+    
+    
     @IBOutlet weak var myPageView: UIView!
     @IBOutlet weak var barButton: UIBarButtonItem!
-
+    @IBOutlet weak var hiddenImageView: UIImageView!
+    
     var sideBarIsVisible = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
+        
+        hiddenImageView.isHidden = true
+        
         self.navigationItem.backBarButtonItem = barButton
         
         //navigation bar title&left bar item color
@@ -50,6 +58,11 @@ class MyPage1ViewController: UIViewController {
     //MARK: 사이드 바
     @IBAction func barButtonAction(_ sender: Any) {
         if !sideBarIsVisible { //메뉴 보여줘야함
+            
+            hiddenImageView.isHidden = false
+            hiddenLeadingC.constant = 258
+            hiddenTrailingC.constant = -258
+            
             leadingC.constant = 258
             trailingC.constant = -258
             
@@ -70,6 +83,9 @@ class MyPage1ViewController: UIViewController {
     
     //MARK: 사이드 바 내에 있는 BackBtn 액션
     @IBAction func sideBarBackAction(_ sender: Any) {
+        hiddenImageView.isHidden = true
+        hiddenLeadingC.constant = 0
+        hiddenTrailingC.constant = 0
         leadingC.constant = 0
         trailingC.constant = 0
         
@@ -132,6 +148,14 @@ class MyPage1ViewController: UIViewController {
         self.navigationItem.leftBarButtonItem = self.barButton
         self.navigationItem.title = self.title
     }
+    
+    //MARK: 내 계정 설정 액션
+    @IBAction func myAccountSettingAction(_ sender: Any) {
+        let myAccountNaviVC = UIStoryboard(name: "MyPage", bundle: nil).instantiateViewController(withIdentifier: "MyAccountNaviVC")
+        
+        self.present(myAccountNaviVC, animated: true, completion: nil)
+    }
+    
     
     //MARK: 미유박스에 제안 액션
     @IBAction func sugesstAction(_ sender: Any) {

@@ -12,6 +12,10 @@ class MainViewController: UIViewController {
     
     @IBOutlet weak var leadingC: NSLayoutConstraint!
     @IBOutlet weak var trailingC: NSLayoutConstraint!
+    @IBOutlet weak var hiddenLeadingC: NSLayoutConstraint!
+    @IBOutlet weak var hiddenTrailingC: NSLayoutConstraint!
+    
+    @IBOutlet weak var hiddenImageView: UIImageView!
     @IBOutlet weak var MainView: UIView!
     @IBOutlet weak var barButton: UIBarButtonItem!
     
@@ -20,6 +24,7 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        hiddenImageView.isHidden = true
         setNavigationBar()
         self.navigationItem.backBarButtonItem = barButton
         // Do any additional setup after loading the view, typically from a nib.
@@ -44,6 +49,11 @@ class MainViewController: UIViewController {
     @IBAction func barButtonAction(_ sender: Any) {
         
         if !sideBarIsVisible { //메뉴 보여줘야함
+            
+            hiddenImageView.isHidden = false
+            
+            hiddenLeadingC.constant = 258
+            hiddenTrailingC.constant = -258
             leadingC.constant = 258
             trailingC.constant = -258
             
@@ -62,6 +72,11 @@ class MainViewController: UIViewController {
     
     //MARK: 사이드 바 내에 있는 BackBtn 액션
     @IBAction func sideBarBackAction(_ sender: Any) {
+        
+        hiddenImageView.isHidden = true
+        
+        hiddenLeadingC.constant = 0
+        hiddenTrailingC.constant = 0
         leadingC.constant = 0
         trailingC.constant = 0
         

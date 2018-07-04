@@ -34,6 +34,7 @@
 		22A86ED620EBE84C00B17661 /* TicketCancelPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A86ED520EBE84C00B17661 /* TicketCancelPopUpViewController.swift */; };
 		22A86ED820EBEE4400B17661 /* LogoutPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A86ED720EBEE4400B17661 /* LogoutPopUpViewController.swift */; };
 		22A86EDA20EBF09500B17661 /* LogoutSucessPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22A86ED920EBF09500B17661 /* LogoutSucessPopUpViewController.swift */; };
+		22B1179D20EC5EE7006B8536 /* MyAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22B1179C20EC5EE7006B8536 /* MyAccountViewController.swift */; };
 		22B9EF4720EA039D00A2A9FD /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22B9EF4420EA039D00A2A9FD /* Roboto-Medium.ttf */; };
 		22B9EF4820EA039D00A2A9FD /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22B9EF4520EA039D00A2A9FD /* Roboto-Bold.ttf */; };
 		22B9EF4920EA039D00A2A9FD /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22B9EF4620EA039D00A2A9FD /* Roboto-Regular.ttf */; };
@@ -86,6 +87,7 @@
 		22A86ED520EBE84C00B17661 /* TicketCancelPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketCancelPopUpViewController.swift; sourceTree = "<group>"; };
 		22A86ED720EBEE4400B17661 /* LogoutPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutPopUpViewController.swift; sourceTree = "<group>"; };
 		22A86ED920EBF09500B17661 /* LogoutSucessPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutSucessPopUpViewController.swift; sourceTree = "<group>"; };
+		22B1179C20EC5EE7006B8536 /* MyAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountViewController.swift; sourceTree = "<group>"; };
 		22B9EF4420EA039D00A2A9FD /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		22B9EF4520EA039D00A2A9FD /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		22B9EF4620EA039D00A2A9FD /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
@@ -237,6 +239,7 @@
 				22A86ED920EBF09500B17661 /* LogoutSucessPopUpViewController.swift */,
 				22E8F7E720EBF70A00735276 /* WithdrawalPopUpViewController.swift */,
 				22E8F7E920EBF90D00735276 /* WithdrawalSucessPopUpViewController.swift */,
+				22B1179C20EC5EE7006B8536 /* MyAccountViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -442,6 +445,7 @@
 				229BCBAB20E9BBC7005E3B9F /* SignInViewController.swift in Sources */,
 				222B5DAF20E8BA26003F0A8C /* AppDelegate.swift in Sources */,
 				22A86ED820EBEE4400B17661 /* LogoutPopUpViewController.swift in Sources */,
+				22B1179D20EC5EE7006B8536 /* MyAccountViewController.swift in Sources */,
 				227DF56B20E905FF00050EBC /* MainViewController.swift in Sources */,
 				229BCBAD20E9CD16005E3B9F /* LoginViewController.swift in Sources */,
 				CC5CE21F20E9D3B500FCE6AD /* OrderCompleteViewController.swift in Sources */,
