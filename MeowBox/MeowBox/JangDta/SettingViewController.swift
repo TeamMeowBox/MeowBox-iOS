@@ -26,5 +26,12 @@ class SettingViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-
+    //MARK: 로그아웃 액션
+    @IBAction func logoutAction(_ sender: Any) {
+        
+        let logoutPopUp = UIStoryboard(name: "MyPage", bundle: nil).instantiateViewController(withIdentifier: "LogoutPopUpViewController")
+        
+        self.present(logoutPopUp, animated: true, completion: nil)
+    }
+    
 }

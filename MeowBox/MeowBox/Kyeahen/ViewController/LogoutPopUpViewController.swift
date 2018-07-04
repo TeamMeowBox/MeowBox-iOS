@@ -18,9 +18,9 @@ class LogoutPopUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.showAnimate()
+        //self.showAnimate()
         
-        logoutTextView.text = "배송일을 기준으로\n남은 박스가 취소됩니다!"
+        logoutTextView.text = "정말 로그아웃 하시나요?\n정말인가요?"
         
         logoutView.layer.borderColor = #colorLiteral(red: 0.8666666667, green: 0.8666666667, blue: 0.8666666667, alpha: 1)
         logoutView.layer.borderWidth = 1
@@ -69,6 +69,7 @@ class LogoutPopUpViewController: UIViewController {
     //MARK: 취소하기 액션
     @IBAction func closeAction(_ sender: Any) {
         self.removeAnimate()
+        self.dismiss(animated: true, completion: nil)
     }
     
     //MARK: 확인하기 액션

@@ -445,7 +445,6 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="yNo-7f-osL" firstAttribute="bottom" secondItem="gh8-jn-dqS" secondAttribute="bottom" id="J7R-w2-pK1"/>
                             <constraint firstItem="Cxc-ZY-GM0" firstAttribute="centerY" secondItem="gh8-jn-dqS" secondAttribute="centerY" id="SWf-mw-nFr"/>
@@ -523,10 +522,9 @@
                                         </connections>
                                     </button>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="TtX-CV-W4P">
-                                        <rect key="frame" x="78" y="68" width="163" height="46"/>
+                                        <rect key="frame" x="66.5" y="68" width="186" height="60"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="46" id="aRP-TV-qQ2"/>
-                                            <constraint firstAttribute="width" secondItem="TtX-CV-W4P" secondAttribute="height" multiplier="163.24:46" id="zSW-LA-pEq"/>
+                                            <constraint firstAttribute="width" secondItem="TtX-CV-W4P" secondAttribute="height" multiplier="170:55" id="zSW-LA-pEq"/>
                                         </constraints>
                                         <color key="textColor" red="0.29803921570000003" green="0.30588235289999999" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="16"/>
@@ -537,6 +535,7 @@
                                 <constraints>
                                     <constraint firstItem="TtX-CV-W4P" firstAttribute="top" secondItem="mCc-8m-QxC" secondAttribute="bottom" constant="15" id="46L-H1-LRz"/>
                                     <constraint firstAttribute="bottom" secondItem="dKR-zT-Qgo" secondAttribute="bottom" id="4N6-de-3qG"/>
+                                    <constraint firstItem="xpH-wt-c0N" firstAttribute="top" secondItem="TtX-CV-W4P" secondAttribute="bottom" constant="20" id="DEZ-RO-I4C"/>
                                     <constraint firstAttribute="height" constant="194" id="Gfm-Hi-i14"/>
                                     <constraint firstItem="mCc-8m-QxC" firstAttribute="top" secondItem="sLh-W3-Xld" secondAttribute="top" constant="27" id="M1x-rS-jfA"/>
                                     <constraint firstItem="TtX-CV-W4P" firstAttribute="centerX" secondItem="sLh-W3-Xld" secondAttribute="centerX" id="auB-QR-1gg"/>
@@ -548,7 +547,6 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="K6e-cg-yXW" firstAttribute="trailing" secondItem="b9I-Dt-3nl" secondAttribute="trailing" id="551-Kc-TLN"/>
                             <constraint firstItem="K6e-cg-yXW" firstAttribute="top" secondItem="Ggb-GP-EXu" secondAttribute="top" id="JJf-nc-zkV"/>
@@ -635,7 +633,6 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="FEn-r5-c1L" firstAttribute="centerX" secondItem="si1-A6-AMn" secondAttribute="centerX" id="4RB-nB-viX"/>
                             <constraint firstItem="SyP-rN-czn" firstAttribute="bottom" secondItem="si1-A6-AMn" secondAttribute="bottom" id="HS2-pd-PGA"/>
@@ -1111,7 +1108,6 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="APg-Cw-khs" firstAttribute="leading" secondItem="Pao-0h-PbO" secondAttribute="leading" id="5gK-ux-fuL"/>
                             <constraint firstItem="l5U-iX-x32" firstAttribute="centerY" secondItem="Pao-0h-PbO" secondAttribute="centerY" id="Gqb-ug-fi3"/>
@@ -1197,7 +1193,6 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="JzM-dU-HZg" firstAttribute="centerY" secondItem="Z6J-Bu-z6L" secondAttribute="centerY" id="IUD-qn-cEF"/>
                             <constraint firstItem="JzM-dU-HZg" firstAttribute="centerX" secondItem="Z6J-Bu-z6L" secondAttribute="centerX" id="P4W-59-C3f"/>
