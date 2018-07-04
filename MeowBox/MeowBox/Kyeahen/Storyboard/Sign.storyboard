@@ -462,6 +462,7 @@
                         <outlet property="emailImageView" destination="yo3-rk-mhk" id="452-2Q-S21"/>
                         <outlet property="emailTextField" destination="uTx-IM-5ov" id="cFM-u9-XaS"/>
                         <outlet property="loginBtn" destination="FSo-2X-8O4" id="Zbd-fg-94Q"/>
+                        <outlet property="logoImageView" destination="zTA-K0-4QP" id="aEZ-wD-inp"/>
                         <outlet property="pwdImageView" destination="Ux0-BI-KBW" id="M76-bT-7q4"/>
                         <outlet property="pwdTextField" destination="Czd-Fv-wAt" id="e6s-Uk-LhY"/>
                     </connections>

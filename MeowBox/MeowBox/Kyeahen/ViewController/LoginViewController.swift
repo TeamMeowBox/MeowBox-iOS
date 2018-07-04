@@ -17,8 +17,8 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var pwdTextField: UITextField!
-    
     @IBOutlet weak var loginBtn: UIButton!
+    @IBOutlet weak var logoImageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +39,10 @@ class LoginViewController: UIViewController {
         //textfield 채워지면 로그인 버튼 변경
         emailTextField.addTarget(self, action: #selector(emptyCheck), for: .editingChanged)
         pwdTextField.addTarget(self, action: #selector(emptyCheck), for: .editingChanged)
+        
+        //프로필 이미지 동그랗게
+        logoImageView.layer.masksToBounds = true
+        logoImageView.layer.cornerRadius = logoImageView.layer.frame.width/2
         
         // Do any additional setup after loading the view.
     }
