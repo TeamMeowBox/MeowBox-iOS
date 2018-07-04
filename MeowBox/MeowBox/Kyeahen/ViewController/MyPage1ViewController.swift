@@ -19,6 +19,8 @@ class MyPage1ViewController: UIViewController {
     @IBOutlet weak var myPageView: UIView!
     @IBOutlet weak var barButton: UIBarButtonItem!
     @IBOutlet weak var hiddenImageView: UIImageView!
+    @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var sideBarProfileImageView: UIImageView!
     
     var sideBarIsVisible = false
     
@@ -37,6 +39,12 @@ class MyPage1ViewController: UIViewController {
         //navigation bar tint color
         self.navigationController?.navigationBar.barTintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         
+        //프로필 이미지 동그랗게
+        profileImageView.layer.masksToBounds = true
+        profileImageView.layer.cornerRadius = profileImageView.layer.frame.width/2
+    
+        sideBarProfileImageView.layer.masksToBounds = true
+        sideBarProfileImageView.layer.cornerRadius = sideBarProfileImageView.layer.frame.width/2
 
         // Do any additional setup after loading the view.
     }

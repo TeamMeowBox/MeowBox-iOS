@@ -94,13 +94,12 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fzp-45-W4k">
-                                <rect key="frame" x="21" y="344.5" width="133.5" height="24"/>
+                                <rect key="frame" x="21" y="344.5" width="138.5" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24.23" id="1UI-7X-ZNa"/>
-                                    <constraint firstAttribute="width" secondItem="fzp-45-W4k" secondAttribute="height" multiplier="134.87:24.23" id="aSd-Z1-4Mp"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="20"/>
-                                <state key="normal" title="미유박스 이야기">
+                                <state key="normal" title="생일축하해! 박스">
                                     <color key="titleColor" red="0.29803921570000003" green="0.30588235289999999" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
@@ -111,7 +110,7 @@
                                     <constraint firstAttribute="height" constant="24.23" id="4C7-AQ-2ga"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="20"/>
-                                <state key="normal" title="미유박스 후기">
+                                <state key="normal" title="집사들의 후기">
                                     <color key="titleColor" red="0.29803921568627451" green="0.30588235294117649" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
@@ -169,11 +168,11 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="psp-AH-AEl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="1kg-K1-7KB"/>
+                            <constraint firstItem="fzp-45-W4k" firstAttribute="leading" secondItem="YQM-x8-fPL" secondAttribute="leading" id="4V3-Qq-DAr"/>
                             <constraint firstItem="9mj-gf-PTc" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="7jE-Ra-8XJ"/>
                             <constraint firstItem="9mj-gf-PTc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="BkD-lq-JOf"/>
                             <constraint firstItem="a6l-ZM-WsA" firstAttribute="top" secondItem="od5-hP-7pP" secondAttribute="bottom" constant="8" id="CO4-xD-n0s"/>
                             <constraint firstItem="YQM-x8-fPL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="21" id="D4P-Nj-OA5"/>
-                            <constraint firstItem="fzp-45-W4k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="21" id="KeL-Be-7cr"/>
                             <constraint firstItem="Gxn-D3-2Lf" firstAttribute="top" secondItem="mkK-Gg-2Op" secondAttribute="bottom" constant="16.579999999999998" id="LFa-6m-nYZ"/>
                             <constraint firstAttribute="trailing" secondItem="9mj-gf-PTc" secondAttribute="trailing" id="LG6-jT-JI9"/>
                             <constraint firstItem="9mj-gf-PTc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="LvH-ho-NI6"/>
@@ -183,7 +182,7 @@
                             <constraint firstItem="mkK-Gg-2Op" firstAttribute="top" secondItem="fzp-45-W4k" secondAttribute="bottom" constant="16.579999999999998" id="Pr4-Ig-p0b"/>
                             <constraint firstItem="5Xh-H8-Ur9" firstAttribute="top" secondItem="psp-AH-AEl" secondAttribute="bottom" constant="47.18" id="Txc-cv-26E"/>
                             <constraint firstItem="psp-AH-AEl" firstAttribute="top" secondItem="a6l-ZM-WsA" secondAttribute="bottom" constant="34.5" id="Vwg-Wq-Mx9"/>
-                            <constraint firstItem="fzp-45-W4k" firstAttribute="width" secondItem="fzp-45-W4k" secondAttribute="height" multiplier="134.87:24.23" id="XJ9-gR-A82"/>
+                            <constraint firstItem="fzp-45-W4k" firstAttribute="width" secondItem="fzp-45-W4k" secondAttribute="height" multiplier="140:24.23" id="XJ9-gR-A82"/>
                             <constraint firstItem="YQM-x8-fPL" firstAttribute="top" secondItem="5Xh-H8-Ur9" secondAttribute="bottom" constant="16.579999999999998" id="XgI-mx-BB3"/>
                             <constraint firstItem="fzp-45-W4k" firstAttribute="top" secondItem="YQM-x8-fPL" secondAttribute="bottom" constant="16.579999999999998" id="ZFR-uC-DCG"/>
                             <constraint firstItem="mkK-Gg-2Op" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="avB-6S-ESV"/>
@@ -217,6 +216,7 @@
                         <outlet property="hiddenLeadingC" destination="BkD-lq-JOf" id="Ama-NK-j7a"/>
                         <outlet property="hiddenTrailingC" destination="LG6-jT-JI9" id="0f1-05-Wkc"/>
                         <outlet property="leadingC" destination="dw6-3s-pKW" id="I6R-15-0mn"/>
+                        <outlet property="profileImage" destination="wDv-H1-77o" id="PnJ-JA-Yct"/>
                         <outlet property="trailingC" destination="uXG-Lt-RsR" id="4jT-Hb-cnS"/>
                     </connections>
                 </viewController>
@@ -250,9 +250,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jVz-hr-3j3">
+                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jVz-hr-3j3">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" red="0.85098039215686272" green="0.85098039215686272" blue="0.85098039215686272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uHH-PP-o3u">
                                 <rect key="frame" x="26" y="224.5" width="323" height="238"/>
@@ -365,9 +365,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ozr-4i-NuX">
+                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ozr-4i-NuX">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" red="0.85098039219999999" green="0.85098039219999999" blue="0.85098039219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jNN-mE-UJ0">
                                 <rect key="frame" x="26" y="224.5" width="323" height="238"/>

@@ -62,9 +62,6 @@ class MyAccountViewController: UIViewController {
         profileImageView.layer.masksToBounds = true
         profileImageView.layer.cornerRadius = profileImageView.layer.frame.width/2
         
-
-
-
         // Do any additional setup after loading the view.
     }
 

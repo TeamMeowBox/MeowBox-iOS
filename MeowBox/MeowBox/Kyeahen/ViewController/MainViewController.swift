@@ -19,6 +19,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var MainView: UIView!
     @IBOutlet weak var barButton: UIBarButtonItem!
     
+    @IBOutlet weak var profileImage: UIImageView!
     var sideBarIsVisible = false //메뉴 상태 여부
     
     override func viewDidLoad() {
@@ -27,6 +28,10 @@ class MainViewController: UIViewController {
         hiddenImageView.isHidden = true
         setNavigationBar()
         self.navigationItem.backBarButtonItem = barButton
+        
+        //프로필 이미지 동그랗게
+        profileImage.layer.masksToBounds = true
+        profileImage.layer.cornerRadius = profileImage.layer.frame.width/2
         // Do any additional setup after loading the view, typically from a nib.
     }
     
