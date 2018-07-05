@@ -22,8 +22,6 @@ class LogoutPopUpViewController: UIViewController {
         
         logoutTextView.text = "정말 로그아웃 하시나요?\n정말인가요?"
         
-        logoutView.layer.borderColor = #colorLiteral(red: 0.8666666667, green: 0.8666666667, blue: 0.8666666667, alpha: 1)
-        logoutView.layer.borderWidth = 1
         logoutView.layer.cornerRadius = 5
         
         logoutCloseBtn.clipsToBounds = true

@@ -29,7 +29,7 @@ class SettingViewController: UIViewController {
     //MARK: 로그아웃 액션
     @IBAction func logoutAction(_ sender: Any) {
         
-        let logoutPopUp = UIStoryboard(name: "MyPage", bundle: nil).instantiateViewController(withIdentifier: "LogoutPopUpViewController")
+        let logoutPopUp = UIStoryboard(name: "MyPage", bundle: nil).instantiateViewController(withIdentifier: LogoutPopUpViewController.reuseIdentifier) as! LogoutPopUpViewController
         
         self.addChildViewController(logoutPopUp)
         logoutPopUp.view.frame = self.view.frame
@@ -38,5 +38,19 @@ class SettingViewController: UIViewController {
         logoutPopUp.didMove(toParentViewController: self)
         
     }
+    
+    //MARK: 회원탈퇴 액션
+    @IBAction func withdrawalAction(_ sender: Any) {
+        
+        let withdrawalPopUp = UIStoryboard(name: "MyPage", bundle: nil).instantiateViewController(withIdentifier: WithdrawalPopUpViewController.reuseIdentifier) as! WithdrawalPopUpViewController
+        
+        self.addChildViewController(withdrawalPopUp)
+        withdrawalPopUp.view.frame = self.view.frame
+        self.view.addSubview(withdrawalPopUp.view)
+        
+        withdrawalPopUp.didMove(toParentViewController: self)
+        
+    }
+    
     
 }

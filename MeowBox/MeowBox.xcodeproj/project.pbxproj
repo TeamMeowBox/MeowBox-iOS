@@ -39,6 +39,7 @@
 		22B9EF4820EA039D00A2A9FD /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22B9EF4520EA039D00A2A9FD /* Roboto-Bold.ttf */; };
 		22B9EF4920EA039D00A2A9FD /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 22B9EF4620EA039D00A2A9FD /* Roboto-Regular.ttf */; };
 		22B9EF4B20EA07EC00A2A9FD /* MeowBox.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22B9EF4A20EA07EC00A2A9FD /* MeowBox.storyboard */; };
+		22BB241720EDCC0D00FD04E9 /* MyPageToSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BB241620EDCC0D00FD04E9 /* MyPageToSViewController.swift */; };
 		22BEB4F620EDC63D0030E81B /* MyPage1TicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BEB4F520EDC63D0030E81B /* MyPage1TicketViewController.swift */; };
 		22BEB4F820EDC6810030E81B /* MyPage1BoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22BEB4F720EDC6810030E81B /* MyPage1BoxViewController.swift */; };
 		22E8F7E820EBF70A00735276 /* WithdrawalPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E8F7E720EBF70A00735276 /* WithdrawalPopUpViewController.swift */; };
@@ -98,6 +99,7 @@
 		22B9EF4520EA039D00A2A9FD /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		22B9EF4620EA039D00A2A9FD /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
 		22B9EF4A20EA07EC00A2A9FD /* MeowBox.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MeowBox.storyboard; sourceTree = "<group>"; };
+		22BB241620EDCC0D00FD04E9 /* MyPageToSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageToSViewController.swift; sourceTree = "<group>"; };
 		22BEB4F520EDC63D0030E81B /* MyPage1TicketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPage1TicketViewController.swift; sourceTree = "<group>"; };
 		22BEB4F720EDC6810030E81B /* MyPage1BoxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPage1BoxViewController.swift; sourceTree = "<group>"; };
 		22E8F7E720EBF70A00735276 /* WithdrawalPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawalPopUpViewController.swift; sourceTree = "<group>"; };
@@ -251,6 +253,7 @@
 				22A86ED920EBF09500B17661 /* LogoutSucessPopUpViewController.swift */,
 				22E8F7E720EBF70A00735276 /* WithdrawalPopUpViewController.swift */,
 				22E8F7E920EBF90D00735276 /* WithdrawalSucessPopUpViewController.swift */,
+				22BB241620EDCC0D00FD04E9 /* MyPageToSViewController.swift */,
 				22B1179C20EC5EE7006B8536 /* MyAccountViewController.swift */,
 				22BEB4F520EDC63D0030E81B /* MyPage1TicketViewController.swift */,
 				22BEB4F720EDC6810030E81B /* MyPage1BoxViewController.swift */,
@@ -453,6 +456,7 @@
 				222B5DCC20E8BB99003F0A8C /* Order.swift in Sources */,
 				CC5CE21D20E9D28D00FCE6AD /* OrderWithInfo4ViewController.swift in Sources */,
 				CC54E41820ECA1DC007C5C4E /* QuestionHeaderTableViewCell.swift in Sources */,
+				22BB241720EDCC0D00FD04E9 /* MyPageToSViewController.swift in Sources */,
 				22BEB4F620EDC63D0030E81B /* MyPage1TicketViewController.swift in Sources */,
 				CC4493BD20EBCBC60095D118 /* Order1ContainerViewController.swift in Sources */,
 				CC5CE21B20E9C40D00FCE6AD /* OrderWithInfo3ViewController.swift in Sources */,

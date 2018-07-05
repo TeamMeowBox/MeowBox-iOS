@@ -21,9 +21,7 @@ class LogoutSucessPopUpViewController: UIViewController {
         self.showAnimate()
         
         logoutSucessTextView.text = "다음에 또 봐요!\n미유박스 또 찾아주세요."
-        
-        logoutSucessView.layer.borderColor = #colorLiteral(red: 0.8666666667, green: 0.8666666667, blue: 0.8666666667, alpha: 1)
-        logoutSucessView.layer.borderWidth = 1
+    
         logoutSucessView.layer.cornerRadius = 5
         
         logoutSucessBtn.clipsToBounds = true

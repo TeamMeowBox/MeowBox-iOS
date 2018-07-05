@@ -22,8 +22,6 @@ class TicketCancelPopUpViewController: UIViewController {
         
         ticketTextView.text = "배송일을 기준으로\n남은 박스가 취소됩니다!"
         
-        ticketView.layer.borderColor = #colorLiteral(red: 0.8666666667, green: 0.8666666667, blue: 0.8666666667, alpha: 1)
-        ticketView.layer.borderWidth = 1
         ticketView.layer.cornerRadius = 5
         
         ticketCloseBtn.clipsToBounds = true
