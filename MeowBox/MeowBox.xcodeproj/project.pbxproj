@@ -16,6 +16,7 @@
 		222B5DC820E8BB56003F0A8C /* ExtensionControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222B5DC720E8BB56003F0A8C /* ExtensionControl.swift */; };
 		222B5DCA20E8BB6F003F0A8C /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222B5DC920E8BB6F003F0A8C /* APIService.swift */; };
 		222B5DCC20E8BB99003F0A8C /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222B5DCB20E8BB99003F0A8C /* Order.swift */; };
+		2259035120EE6E3300094935 /* MeowBoxDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2259035020EE6E3300094935 /* MeowBoxDetailViewController.swift */; };
 		227DF56B20E905FF00050EBC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227DF56A20E905FF00050EBC /* MainViewController.swift */; };
 		229407B820EA182D00AB2B0C /* NotoSansCJKkr-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 229407AF20EA182800AB2B0C /* NotoSansCJKkr-Thin.otf */; };
 		229407B920EA182D00AB2B0C /* NotoSansCJKkr-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 229407B020EA182900AB2B0C /* NotoSansCJKkr-Black.otf */; };
@@ -81,6 +82,7 @@
 		222B5DC720E8BB56003F0A8C /* ExtensionControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionControl.swift; sourceTree = "<group>"; };
 		222B5DC920E8BB6F003F0A8C /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		222B5DCB20E8BB99003F0A8C /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		2259035020EE6E3300094935 /* MeowBoxDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeowBoxDetailViewController.swift; sourceTree = "<group>"; };
 		227DF56A20E905FF00050EBC /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		229407AF20EA182800AB2B0C /* NotoSansCJKkr-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Thin.otf"; sourceTree = "<group>"; };
 		229407B020EA182900AB2B0C /* NotoSansCJKkr-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Black.otf"; sourceTree = "<group>"; };
@@ -267,6 +269,7 @@
 				22B1179C20EC5EE7006B8536 /* MyAccountViewController.swift */,
 				22BEB4F520EDC63D0030E81B /* MyPage1TicketViewController.swift */,
 				22BEB4F720EDC6810030E81B /* MyPage1BoxViewController.swift */,
+				2259035020EE6E3300094935 /* MeowBoxDetailViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -503,6 +506,7 @@
 				CC4AD41F20EE1D0700C31E53 /* CheckTicketViewController.swift in Sources */,
 				CCB12E5B20E90C6B00C5D4B8 /* OrderWithInfoViewController.swift in Sources */,
 				22A86ED420EBE13600B17661 /* OrderPagePopUpViewController.swift in Sources */,
+				2259035120EE6E3300094935 /* MeowBoxDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
