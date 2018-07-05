@@ -186,7 +186,7 @@ class MainViewController: UIViewController,UICollectionViewDelegate,UICollection
     }
     
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-        let pageWidth = Float(345)
+        let pageWidth = Float(325)
         let targetXContentOffset = Float(targetContentOffset.pointee.x)
         let contentWidth = Float(collectionView!.contentSize.width  )
         var newPage = Float(self.pageControl.currentPage)

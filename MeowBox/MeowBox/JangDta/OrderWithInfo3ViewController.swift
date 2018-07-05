@@ -7,16 +7,27 @@
 //
 
 import UIKit
+import SelectionList
 
 class OrderWithInfo3ViewController: UIViewController {
+    @IBOutlet weak var box1View: UIView!
+    @IBOutlet weak var box2View: UIView!
+    @IBOutlet weak var box3View: UIView!
+    @IBOutlet weak var box4View: UIView!
+    @IBOutlet weak var changingLabel: UILabel!
     
     var parentVC : Order1ContainerViewController?
 
+    @IBOutlet weak var selectionList: SelectionList!
     @IBOutlet weak var scrollView: UIScrollView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        selectionListInit()
+        labelFontInit()
+        boxInit()
+        tapInit()
+        
     }
 
     
@@ -28,8 +39,95 @@ class OrderWithInfo3ViewController: UIViewController {
         parentVC?.changeVC(num: 2)
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
-        self.view.endEditing(true)
+    func boxInit(){
+        box1View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "big-card-box-pink.png"))
+        box2View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "card-box-white.png"))
+        box3View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "card-box-white.png"))
+        box4View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "card-box-white.png"))
     }
+    
+    private func selectionListInit(){
+        selectionList.items = ["7월 패키지 박스","고양이는 처음이지? 박스"]
+        selectionList.isSelectionMarkTrailing = false
+        selectionList.selectionImage = #imageLiteral(resourceName: "radio-btn-selected")
+        selectionList.deselectionImage = #imageLiteral(resourceName: "radio-btn")
+        selectionList.selectedIndexes = [0]
+        selectionList.tableView.isScrollEnabled = false
+        selectionList.tableView.separatorColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        selectionList.addTarget(self, action: #selector(selectionChanged), for: .valueChanged)
+        selectionList.setupCell = { (cell: UITableViewCell, _: Int) in
+            cell.textLabel?.textColor = .gray
+            
+            let font = UIFont(name:"NotoSansCJKkr-Regular" , size: 14)
+            let text = cell.textLabel?.text
+            
+            let attributedStr = NSMutableAttributedString(string: (cell.textLabel?.text)!)
+            
+            attributedStr.addAttribute(NSAttributedStringKey(rawValue: kCTFontAttributeName as String as String), value: font!, range: NSMakeRange(0,(text?.count)!))
+            
+            cell.textLabel?.attributedText = attributedStr
+        }
+    }
+    
+    @objc func selectionChanged() {
+        print("selected: \(selectionList.selectedIndex ?? 9999)")
+        box1View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "big-card-box-pink.png"))
+        box2View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "card-box-white.png"))
+        box3View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "card-box-white.png"))
+        box4View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "card-box-white.png"))
+    }
+    
+    func labelFontInit(){
+        let font = UIFont(name:"NotoSansCJKkr-Bold" , size: 28)
+        let text = changingLabel.text!
+        
+        let attributedStr = NSMutableAttributedString(string: changingLabel.text!)
+
+        attributedStr.addAttribute(NSAttributedStringKey(rawValue: kCTFontAttributeName as String as String), value: font!, range: (text as NSString).range(of:"기간"))
+            
+        changingLabel.attributedText = attributedStr
+    }
+    
+    func tapInit(){
+        
+        //box1View.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(select1View)))
+        box2View.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(select2View)))
+        box3View.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(select3View)))
+        box4View.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(select4View)))
+
+    }
+    
+//    @objc func select1View(){
+//        //selectionList.selectedIndexes = [0]
+//        box1View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "big-card-box-pink.png"))
+//        box2View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "card-box-white.png"))
+//        box3View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "card-box-white.png"))
+//        box4View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "card-box-white.png"))
+//    }
+    
+    @objc func select2View(){
+        selectionList.selectedIndexes = []
+        box1View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "big-card-box-white.png"))
+        box2View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "card-box-pink.png"))
+        box3View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "card-box-white.png"))
+        box4View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "card-box-white.png"))
+    }
+    
+    @objc func select3View(){
+        selectionList.selectedIndexes = []
+        box1View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "big-card-box-white.png"))
+        box2View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "card-box-white.png"))
+        box3View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "card-box-pink.png"))
+        box4View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "card-box-white.png"))
+    }
+    
+    @objc func select4View(){
+        selectionList.selectedIndexes = []
+        box1View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "big-card-box-white.png"))
+        box2View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "card-box-white.png"))
+        box3View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "card-box-white.png"))
+        box4View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "card-box-pink.png"))
+    }
+    
     
 }

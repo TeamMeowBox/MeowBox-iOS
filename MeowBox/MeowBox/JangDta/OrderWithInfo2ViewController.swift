@@ -13,9 +13,12 @@ class OrderWithInfo2ViewController: UIViewController {
     @IBOutlet weak var smallImage: UIImageView!
     @IBOutlet weak var mediumImage: UIImageView!
     @IBOutlet weak var largeImage: UIImageView!
+    @IBOutlet weak var specialTextView: UITextView!
     
     var parentVC : Order1ContainerViewController?
+    let datePicker = UIDatePicker()
     
+    @IBOutlet weak var birthTextField: UITextField!
     @IBOutlet weak var scrollView: UIScrollView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +31,11 @@ class OrderWithInfo2ViewController: UIViewController {
         mediumImage.addGestureRecognizer(tap2)
         largeImage.addGestureRecognizer(tap3)
         
+        specialTextView.layer.borderWidth = 1
+        specialTextView.layer.borderColor = #colorLiteral(red: 0.5999526381, green: 0.6000267267, blue: 0.5999273658, alpha: 1)
+        
+        addScrollViewEndEditing()
+        initDatePicker()
         selectSmall()
         
     }
@@ -57,10 +65,73 @@ class OrderWithInfo2ViewController: UIViewController {
         parentVC?.changeVC(num: 1)
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
-        self.view.endEditing(true)
+    func addScrollViewEndEditing(){
+        let singleTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(scrollTapMethod))
+        singleTapGestureRecognizer.numberOfTapsRequired = 1
+        singleTapGestureRecognizer.isEnabled = true
+        singleTapGestureRecognizer.cancelsTouchesInView = false
+        scrollView.addGestureRecognizer(singleTapGestureRecognizer)
     }
     
+    @objc func scrollTapMethod(sender: UITapGestureRecognizer) {
+        self.view.endEditing(true)
+    }
 
+    
+}
+
+extension OrderWithInfo2ViewController  {
+    
+    func initDatePicker(){
+        
+        datePicker.datePickerMode = .date
+        
+        let dateFormatter = DateFormatter()
+        
+        dateFormatter.dateFormat = "yyyy.MM.dd"
+        
+        guard let date = dateFormatter.date(from: "1996.01.29") else {
+            fatalError("포맷과 맞지 않아 데이터 변환이 실패했습니다")
+        }
+        
+        datePicker.date = date
+        
+        datePicker.maximumDate = Date()
+        
+        
+        setTextfieldView(textField: birthTextField, selector: #selector(selectedDatePicker), inputView: datePicker)
+    }
+    
+    func setTextfieldView(textField:UITextField, selector : Selector, inputView : Any){
+        
+        let bar = UIToolbar()
+        bar.sizeToFit()
+        
+        let doneButton = UIBarButtonItem(title: "확인", style: .done
+            , target: self, action: selector)
+        
+        bar.setItems([doneButton], animated: true)
+        textField.inputAccessoryView = bar
+        
+        if let tempView = inputView as? UIView {
+            textField.inputView = tempView
+        }
+        if let tempView = inputView as? UIControl {
+            textField.inputView = tempView
+        }
+        
+    }
+    
+    @objc func selectedDatePicker(){
+        
+        let dateformatter = DateFormatter()
+        dateformatter.dateFormat = "yyyy년 MM월 dd일"
+        
+        let date = dateformatter.string(from: datePicker.date)
+        
+        birthTextField.text = date
+        
+        view.endEditing(true)
+    }
     
 }
