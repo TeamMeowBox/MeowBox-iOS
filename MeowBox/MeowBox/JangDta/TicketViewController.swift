@@ -26,7 +26,21 @@ class TicketViewController: UIViewController,UITableViewDelegate,UITableViewData
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(checkTicketAction))
+        
+        usingTicketView.addGestureRecognizer(tap)
 
+    }
+    
+    @objc func checkTicketAction(){
+        let checkVC = UIStoryboard(name: "Mypage2", bundle: nil).instantiateViewController(withIdentifier: "CheckTicketViewController") as! CheckTicketViewController
+        
+        checkVC.myTicketName = usingTicketNameLabel.text!
+        checkVC.myTicketTerm = usingTicketTermLabel.text!
+        
+        self.navigationController?.pushViewController(checkVC, animated: true)
+        
     }
 
     @IBAction func dismissAction(_ sender: Any) {
