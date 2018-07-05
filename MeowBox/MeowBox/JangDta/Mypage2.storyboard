@@ -195,6 +195,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OY4-Mq-Jka">
                                 <rect key="frame" x="234" y="248" width="104" height="31"/>
                                 <state key="normal" image="cancel-btn"/>
+                                <connections>
+                                    <action selector="ticketCancelAction:" destination="NlZ-7O-yLq" eventType="touchUpInside" id="YQh-ed-hEi"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Lc0-HB-qHV">
                                 <rect key="frame" x="0.0" y="297" width="375" height="370"/>
@@ -642,6 +645,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="ToSView" destination="VbT-cP-ytK" id="bhq-TX-16v"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="clk-YV-XYD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

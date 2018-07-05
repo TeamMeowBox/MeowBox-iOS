@@ -47,6 +47,20 @@ class TicketViewController: UIViewController,UITableViewDelegate,UITableViewData
         self.dismiss(animated: true, completion: nil)
     }
     
+    //MARK: 정기권 취소 액션
+    @IBAction func ticketCancelAction(_ sender: Any) {
+        
+        let cancelPopUp = UIStoryboard(name: "MyPage", bundle: nil).instantiateViewController(withIdentifier: TicketCancelPopUpViewController.reuseIdentifier) as! TicketCancelPopUpViewController
+        
+        self.addChildViewController(cancelPopUp)
+        cancelPopUp.view.frame = self.view.frame
+        self.view.addSubview(cancelPopUp.view)
+        
+        cancelPopUp.didMove(toParentViewController: self)
+        
+    }
+    
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }

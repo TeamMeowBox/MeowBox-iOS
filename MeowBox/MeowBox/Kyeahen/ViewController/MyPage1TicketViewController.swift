@@ -7,14 +7,24 @@
 //
 
 import UIKit
+import GTProgressBar
 
 class MyPage1TicketViewController: UIViewController {
 
-    @IBOutlet weak var progressView: UIProgressView!
+
+    @IBOutlet weak var progressView: GTProgressBar!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //1
+        let newProgress: CGFloat = progressView.progress == 0.333 ? 0.0 : 0.333
+        progressView.animateTo(progress: newProgress)
+        
 
-        self.progressView.setProgress(0.5, animated: true)
+        //2
+//        let newProgress: CGFloat = progressView.progress == 0.67 ? 0.0 : 0.67
+//        progressView.animateTo(progress: newProgress)
+        
         // Do any additional setup after loading the view.
     }
 
