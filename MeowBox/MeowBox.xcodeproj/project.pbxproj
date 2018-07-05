@@ -52,6 +52,8 @@
 		CC44CBB620EB21EB007466D8 /* SuggestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC44CBB520EB21EB007466D8 /* SuggestViewController.swift */; };
 		CC44CBB820EB2235007466D8 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC44CBB720EB2235007466D8 /* QuestionViewController.swift */; };
 		CC44CBBA20EB2307007466D8 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC44CBB920EB2307007466D8 /* SettingViewController.swift */; };
+		CC4AD41F20EE1D0700C31E53 /* CheckTicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4AD41E20EE1D0700C31E53 /* CheckTicketViewController.swift */; };
+		CC4AD42120EE20A700C31E53 /* CheckTicketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4AD42020EE20A700C31E53 /* CheckTicketTableViewCell.swift */; };
 		CC54E41620EC9892007C5C4E /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC54E41520EC9892007C5C4E /* QuestionTableViewCell.swift */; };
 		CC54E41820ECA1DC007C5C4E /* QuestionHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC54E41720ECA1DC007C5C4E /* QuestionHeaderTableViewCell.swift */; };
 		CC54E41A20ECAE3F007C5C4E /* QuestionFooterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC54E41920ECAE3F007C5C4E /* QuestionFooterTableViewCell.swift */; };
@@ -116,6 +118,8 @@
 		CC44CBB520EB21EB007466D8 /* SuggestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestViewController.swift; sourceTree = "<group>"; };
 		CC44CBB720EB2235007466D8 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		CC44CBB920EB2307007466D8 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		CC4AD41E20EE1D0700C31E53 /* CheckTicketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckTicketViewController.swift; sourceTree = "<group>"; };
+		CC4AD42020EE20A700C31E53 /* CheckTicketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckTicketTableViewCell.swift; sourceTree = "<group>"; };
 		CC54E41520EC9892007C5C4E /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
 		CC54E41720ECA1DC007C5C4E /* QuestionHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionHeaderTableViewCell.swift; sourceTree = "<group>"; };
 		CC54E41920ECAE3F007C5C4E /* QuestionFooterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionFooterTableViewCell.swift; sourceTree = "<group>"; };
@@ -308,6 +312,8 @@
 				CC7DB55420EDE3CC00286E29 /* MainCollectionViewCell.swift */,
 				CC693A1020EE080E00DA0935 /* TicketViewController.swift */,
 				CC693A1220EE0BED00DA0935 /* TicketTableViewCell.swift */,
+				CC4AD41E20EE1D0700C31E53 /* CheckTicketViewController.swift */,
+				CC4AD42020EE20A700C31E53 /* CheckTicketTableViewCell.swift */,
 			);
 			path = JangDta;
 			sourceTree = "<group>";
@@ -467,6 +473,7 @@
 				CC54E41820ECA1DC007C5C4E /* QuestionHeaderTableViewCell.swift in Sources */,
 				22BB241720EDCC0D00FD04E9 /* MyPageToSViewController.swift in Sources */,
 				22BEB4F620EDC63D0030E81B /* MyPage1TicketViewController.swift in Sources */,
+				CC4AD42120EE20A700C31E53 /* CheckTicketTableViewCell.swift in Sources */,
 				CC4493BD20EBCBC60095D118 /* Order1ContainerViewController.swift in Sources */,
 				CC5CE21B20E9C40D00FCE6AD /* OrderWithInfo3ViewController.swift in Sources */,
 				CCDD5E7820E945C100A989CB /* OrderWithInfo2ViewController.swift in Sources */,
@@ -493,6 +500,7 @@
 				22E8F7EA20EBF90D00735276 /* WithdrawalSucessPopUpViewController.swift in Sources */,
 				CC44CBB820EB2235007466D8 /* QuestionViewController.swift in Sources */,
 				CC54E41620EC9892007C5C4E /* QuestionTableViewCell.swift in Sources */,
+				CC4AD41F20EE1D0700C31E53 /* CheckTicketViewController.swift in Sources */,
 				CCB12E5B20E90C6B00C5D4B8 /* OrderWithInfoViewController.swift in Sources */,
 				22A86ED420EBE13600B17661 /* OrderPagePopUpViewController.swift in Sources */,
 			);
