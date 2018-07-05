@@ -1074,6 +1074,7 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="nQB-6a-g9D" firstAttribute="top" secondItem="CHM-xU-OkD" secondAttribute="top" id="HbC-ah-Aus"/>
+                            <constraint firstItem="7rK-ZR-QvE" firstAttribute="leading" secondItem="CHM-xU-OkD" secondAttribute="leading" id="O5y-L6-cMa"/>
                             <constraint firstItem="nQB-6a-g9D" firstAttribute="leading" secondItem="CHM-xU-OkD" secondAttribute="leading" id="aCE-VR-Vx7"/>
                             <constraint firstItem="Th7-lZ-4Eg" firstAttribute="leading" secondItem="CHM-xU-OkD" secondAttribute="leading" id="atT-lt-JFc"/>
                             <constraint firstItem="VwA-zC-PTu" firstAttribute="leading" secondItem="CHM-xU-OkD" secondAttribute="leading" id="fj0-G0-f9o"/>
@@ -1148,7 +1149,7 @@
                                             <constraint firstAttribute="width" secondItem="Lva-6E-dOg" secondAttribute="height" multiplier="160.54:46" id="sr8-Er-UP7"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="15"/>
-                                        <state key="normal" title="확인 하기">
+                                        <state key="normal" title="확인하기">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
@@ -1171,10 +1172,9 @@
                                         </connections>
                                     </button>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Erv-xp-dtc">
-                                        <rect key="frame" x="78" y="68" width="163" height="46"/>
+                                        <rect key="frame" x="8" y="68" width="303" height="60"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="46" id="MBk-BC-OLC"/>
-                                            <constraint firstAttribute="width" secondItem="Erv-xp-dtc" secondAttribute="height" multiplier="163.24:46" id="Opx-gS-r9W"/>
+                                            <constraint firstAttribute="width" secondItem="Erv-xp-dtc" secondAttribute="height" multiplier="252.24:50" id="Opx-gS-r9W"/>
                                         </constraints>
                                         <color key="textColor" red="0.29803921570000003" green="0.30588235289999999" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="16"/>
@@ -1192,6 +1192,7 @@
                                     <constraint firstItem="URe-vd-RK7" firstAttribute="top" secondItem="l5U-iX-x32" secondAttribute="top" constant="27" id="kNi-ED-i43"/>
                                     <constraint firstAttribute="width" secondItem="l5U-iX-x32" secondAttribute="height" multiplier="318.94:194" id="m6l-ij-H7R"/>
                                     <constraint firstAttribute="trailing" secondItem="Lva-6E-dOg" secondAttribute="trailing" constant="0.5" id="qhG-1b-Tzt"/>
+                                    <constraint firstItem="Lva-6E-dOg" firstAttribute="top" secondItem="Erv-xp-dtc" secondAttribute="bottom" constant="20" id="ttm-4d-YD2"/>
                                     <constraint firstItem="Tga-3a-MyM" firstAttribute="leading" secondItem="l5U-iX-x32" secondAttribute="leading" id="zF3-P4-73Q"/>
                                 </constraints>
                             </view>
@@ -1403,6 +1404,7 @@
                             <constraint firstItem="eDG-1S-Lza" firstAttribute="leading" secondItem="L0f-aG-JYh" secondAttribute="leading" id="kts-mQ-ruc"/>
                             <constraint firstItem="0ZE-6a-ZDW" firstAttribute="leading" secondItem="eDG-1S-Lza" secondAttribute="leading" id="zzC-MM-KOh"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="u22-Hz-qdE"/>
                     </view>
                     <size key="freeformSize" width="375" height="211"/>
                 </viewController>
@@ -1449,8 +1451,89 @@
             </objects>
             <point key="canvasLocation" x="1784.8" y="-40.029985007496258"/>
         </scene>
+        <!--약관 및 개인정보 취급방침-->
+        <scene sceneID="1Se-04-rld">
+            <objects>
+                <viewController storyboardIdentifier="MyPageToSViewController" id="EnQ-3E-Iid" customClass="MyPageToSViewController" customModule="MeowBox" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UIV-ea-RDu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rlO-Rb-xrr">
+                                <rect key="frame" x="26" y="79.5" width="322.5" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="5AE-0C-YZq"/>
+                                    <constraint firstAttribute="width" secondItem="rlO-Rb-xrr" secondAttribute="height" multiplier="322:29.1" constant="23.73711340206188" id="zxQ-0D-NBF"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="이용약관"/>
+                                    <segment title="개인정보 취급방침"/>
+                                </segments>
+                                <color key="tintColor" red="0.85490196078431369" green="0.54509803921568623" blue="0.54509803921568623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="segAction:" destination="EnQ-3E-Iid" eventType="valueChanged" id="y8A-aI-6AD"/>
+                                </connections>
+                            </segmentedControl>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xCG-Cd-i6K">
+                                <rect key="frame" x="21" y="121.5" width="333" height="545"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="545" id="Exa-Bn-mF2"/>
+                                    <constraint firstAttribute="width" secondItem="xCG-Cd-i6K" secondAttribute="height" multiplier="333:545" id="vjN-1S-6td"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.ddjfjkdsfjlasdjflkjadfjaio;ewfjeiwofjsdkljfajwefijewiofjaweijfoi;ewjfaoewijfioewjfjaijfioewjfiaejfiejfioaejwfeifjaiew;jfioae;wjfi;oafjiojfeiowajfaeijfeijfae;fhioe</string>
+                                <color key="textColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.90980392156862744" green="0.90980392156862744" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="xCG-Cd-i6K" firstAttribute="centerX" secondItem="oPR-Vr-Eh1" secondAttribute="centerX" id="BCt-kE-jv4"/>
+                            <constraint firstItem="rlO-Rb-xrr" firstAttribute="top" secondItem="oPR-Vr-Eh1" secondAttribute="top" constant="15.4" id="IXM-ai-Wyy"/>
+                            <constraint firstItem="rlO-Rb-xrr" firstAttribute="centerX" secondItem="oPR-Vr-Eh1" secondAttribute="centerX" id="Pve-9f-tgg"/>
+                            <constraint firstItem="xCG-Cd-i6K" firstAttribute="top" secondItem="rlO-Rb-xrr" secondAttribute="bottom" constant="15" id="ric-sF-H9k"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="oPR-Vr-Eh1"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="약관 및 개인정보 취급방침" id="CAe-ue-QIv">
+                        <barButtonItem key="leftBarButtonItem" image="back-btn" id="CEH-sX-PEV">
+                            <color key="tintColor" red="0.29803921568627451" green="0.30588235294117649" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="x-btn" id="fIG-zu-0Yl">
+                            <color key="tintColor" red="0.29803921568627451" green="0.30588235294117649" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="ToSTextView" destination="xCG-Cd-i6K" id="Ugb-ff-nSL"/>
+                        <outlet property="myPageSegmentedControl" destination="rlO-Rb-xrr" id="QEP-VH-3iK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f2P-sg-BTL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3695" y="-143"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Cqe-M7-hb8">
+            <objects>
+                <navigationController storyboardIdentifier="MyPageToSNaviVC" automaticallyAdjustsScrollViewInsets="NO" id="6SG-Tx-RYO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fvs-zU-Y8w">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="EnQ-3E-Iid" kind="relationship" relationship="rootViewController" id="rQP-pQ-CWc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tr3-k6-VYc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2960.8000000000002" y="-142.57871064467767"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="back-btn" width="14" height="16"/>
         <image name="camera-icon" width="38" height="38"/>
         <image name="setting-icon" width="21" height="21"/>
         <image name="side-bar-back-btn" width="14" height="16"/>

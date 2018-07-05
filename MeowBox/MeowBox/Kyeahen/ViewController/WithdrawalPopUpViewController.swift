@@ -21,8 +21,7 @@ class WithdrawalPopUpViewController: UIViewController {
         self.showAnimate()
         
         withdrawalTextView.text = "회원 탈퇴시 모든 데이터가 소멸됩니다.\n정말 탈퇴하시겠습니까?"
-        withdrawalView.layer.borderColor = #colorLiteral(red: 0.8666666667, green: 0.8666666667, blue: 0.8666666667, alpha: 1)
-        withdrawalView.layer.borderWidth = 1
+        
         withdrawalView.layer.cornerRadius = 5
         
         closeBtn.clipsToBounds = true

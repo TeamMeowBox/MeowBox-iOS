@@ -47,6 +47,7 @@ class MyPage1ViewController: UIViewController {
         sideBarProfileImageView.layer.masksToBounds = true
         sideBarProfileImageView.layer.cornerRadius = sideBarProfileImageView.layer.frame.width/2
         
+        //container view
         setupView()
 
         // Do any additional setup after loading the view.
@@ -200,6 +201,8 @@ class MyPage1ViewController: UIViewController {
         
     }
     
+//MARK: container view
+    
     //MARK: 정기권
     private lazy var myPage1TicketViewController: MyPage1TicketViewController = {
         
@@ -245,6 +248,7 @@ class MyPage1ViewController: UIViewController {
         viewController.removeFromParentViewController()
     }
     
+    //TODO: 조건에 맞게 뷰 뿌리기
     @objc private func updateView() {
         
      add(asChildViewController: myPage1TicketViewController)

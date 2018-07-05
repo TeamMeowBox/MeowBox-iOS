@@ -22,8 +22,7 @@ class WithdrawalSucessPopUpViewController: UIViewController {
         
         self.showAnimate()
         withdrawalSucessTextView.text = "다음에 또 미유박스를\n찾아주세요:)"
-        withdrawalSucessView.layer.borderColor = #colorLiteral(red: 0.8666666667, green: 0.8666666667, blue: 0.8666666667, alpha: 1)
-        withdrawalSucessView.layer.borderWidth = 1
+
         withdrawalSucessView.layer.cornerRadius = 5
         
         okBtn.clipsToBounds = true

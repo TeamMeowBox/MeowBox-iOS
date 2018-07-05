@@ -355,6 +355,9 @@
                                 <state key="normal" title="미유박스를 탈퇴하려면 여기를 눌러주세요">
                                     <color key="titleColor" red="0.59995263809999999" green="0.60002672670000001" blue="0.59992736579999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="withdrawalAction:" destination="iao-3P-pfX" eventType="touchUpInside" id="IUg-HJ-V5j"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.94117647058823528" green="0.92941176470588238" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

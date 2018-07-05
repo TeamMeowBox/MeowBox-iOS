@@ -211,7 +211,7 @@ extension MyAccountViewController  {
     @objc func selectedDatePicker(){
         
         let dateformatter = DateFormatter()
-        dateformatter.dateFormat = "MM월 dd일 yyyy년"
+        dateformatter.dateFormat = "yyyy년 MM월 dd일"
         
         let date = dateformatter.string(from: datePicker.date)
         
