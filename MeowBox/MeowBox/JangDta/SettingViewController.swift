@@ -10,8 +10,13 @@ import UIKit
 
 class SettingViewController: UIViewController {
 
+    @IBOutlet weak var ToSView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let gesture = UITapGestureRecognizer(target: self, action:  #selector(self.TosCheckAction))
+        self.ToSView.addGestureRecognizer(gesture)
 
         // Do any additional setup after loading the view.
     }
@@ -19,6 +24,11 @@ class SettingViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @objc func TosCheckAction(sender : UITapGestureRecognizer) {
+        let ToSNaviVC = UIStoryboard(name: "MyPage", bundle: nil).instantiateViewController(withIdentifier: "ToSNaviVC")
+        self.present(ToSNaviVC, animated: true, completion: nil)
     }
     
 

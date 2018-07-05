@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.7.2)
+  - GTProgressBar (0.2.4)
   - Kingfisher (4.7.0)
   - SelectionList (1.1)
   - SwiftyJSON (4.1.0)
@@ -7,6 +8,7 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - GTProgressBar
   - Kingfisher
   - SelectionList
   - SwiftyJSON
@@ -15,6 +17,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - GTProgressBar
     - Kingfisher
     - SelectionList
     - SwiftyJSON
@@ -22,11 +25,12 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
+  GTProgressBar: 1d79e4a627e997263b612c7e6589126dfe5645b8
   Kingfisher: da6b005aa96d37698e3e4f1ccfe96a5b9bbf27d6
   SelectionList: c925d3cafcee48d65210894ffefebd768ebd5f37
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
   "UITextView+Placeholder": 77680995fcdd07c3f52ec92fe1150874a2ac89ff
 
-PODFILE CHECKSUM: 35ee8ddde133b6874a80f9a5a153474f2e4e7f22
+PODFILE CHECKSUM: 72f91dd8c9970f282770b8a6586250303353e48b
 
 COCOAPODS: 1.5.3

@@ -7,6 +7,7 @@ target 'MeowBox' do
     pod 'Kingfisher'
     pod 'SelectionList'
     pod 'UITextView+Placeholder'
+    pod 'GTProgressBar'
 end
 
 post_install do |installer|
