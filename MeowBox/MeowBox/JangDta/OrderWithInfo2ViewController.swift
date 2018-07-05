@@ -10,10 +10,14 @@ import UIKit
 
 class OrderWithInfo2ViewController: UIViewController {
     
+    var catName = ""
+    
     @IBOutlet weak var smallImage: UIImageView!
     @IBOutlet weak var mediumImage: UIImageView!
     @IBOutlet weak var largeImage: UIImageView!
     @IBOutlet weak var specialTextView: UITextView!
+    
+    @IBOutlet weak var changingLabel: UILabel!
     
     var parentVC : Order1ContainerViewController?
     let datePicker = UIDatePicker()
@@ -34,6 +38,9 @@ class OrderWithInfo2ViewController: UIViewController {
         specialTextView.layer.borderWidth = 1
         specialTextView.layer.borderColor = #colorLiteral(red: 0.5999526381, green: 0.6000267267, blue: 0.5999273658, alpha: 1)
         
+        catName = (parentVC?.myCatName)!
+        
+        labelFontInit()
         addScrollViewEndEditing()
         initDatePicker()
         selectSmall()
@@ -75,6 +82,18 @@ class OrderWithInfo2ViewController: UIViewController {
     
     @objc func scrollTapMethod(sender: UITapGestureRecognizer) {
         self.view.endEditing(true)
+    }
+    
+    func labelFontInit(){
+        let font = UIFont(name:"NotoSansCJKkr-Bold" , size: 28)
+        changingLabel.text = catName+"에 대해"
+        let text = changingLabel.text!
+        
+        let attributedStr = NSMutableAttributedString(string: changingLabel.text!)
+        
+        attributedStr.addAttribute(NSAttributedStringKey(rawValue: kCTFontAttributeName as String as String), value: font!, range: (text as NSString).range(of:catName))
+        
+        changingLabel.attributedText = attributedStr
     }
 
     

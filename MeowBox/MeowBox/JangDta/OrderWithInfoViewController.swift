@@ -12,13 +12,16 @@ class OrderWithInfoViewController: UIViewController {
     
     var parentVC : Order1ContainerViewController?
 
+    @IBOutlet weak var changingLabel: UILabel!
+    @IBOutlet weak var catNameTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        labelFontInit()
     }
 
 
     @IBAction func goWithInfo2(_ sender: Any) {
+        parentVC?.myCatName = catNameTextField.text!
         parentVC?.changeVC(num: 2)
     }
     
@@ -26,8 +29,16 @@ class OrderWithInfoViewController: UIViewController {
         self.view.endEditing(true)
     }
     
-    
-    
+    func labelFontInit(){
+        let font = UIFont(name:"NotoSansCJKkr-Bold" , size: 28)
+        let text = changingLabel.text!
+        
+        let attributedStr = NSMutableAttributedString(string: changingLabel.text!)
+        
+        attributedStr.addAttribute(NSAttributedStringKey(rawValue: kCTFontAttributeName as String as String), value: font!, range: (text as NSString).range(of:"이름"))
+        
+        changingLabel.attributedText = attributedStr
+    }
 
 
 

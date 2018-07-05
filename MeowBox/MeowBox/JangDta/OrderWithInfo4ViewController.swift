@@ -10,16 +10,24 @@ import UIKit
 import SelectionList
 
 class OrderWithInfo4ViewController: UIViewController {
+    @IBOutlet weak var beforeAddressView: UIView!
+    @IBOutlet weak var currentAddressView: UIView!
     
+    @IBOutlet weak var beforeRadioImage: UIImageView!
+    @IBOutlet weak var currentRadioImage: UIImageView!
     var parentVC : Order1ContainerViewController?
+    @IBOutlet weak var changingLabel: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!
     
     @IBOutlet weak var selectionList: SelectionList!
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         selectionListInit()
+        radioInit()
         addScrollViewEndEditing()
+        labelFontInit()
     }
     
     @objc func selectionChanged() {
@@ -59,5 +67,33 @@ class OrderWithInfo4ViewController: UIViewController {
     @objc func scrollTapMethod(sender: UITapGestureRecognizer) {
         self.view.endEditing(true)
     }
+    
+    func labelFontInit(){
+        let font = UIFont(name:"NotoSansCJKkr-Bold" , size: 28)
+        let text = changingLabel.text!
+        
+        let attributedStr = NSMutableAttributedString(string: changingLabel.text!)
+        
+        attributedStr.addAttribute(NSAttributedStringKey(rawValue: kCTFontAttributeName as String as String), value: font!, range: (text as NSString).range(of:"정보"))
+        
+        changingLabel.attributedText = attributedStr
+    }
+    
+    func radioInit(){
+        beforeAddressView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(selectBefore)))
+        currentAddressView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(selectCurrent)))
+    }
+    
+    @objc func selectBefore(){
+        beforeRadioImage.image = #imageLiteral(resourceName: "radio-btn-selected")
+        currentRadioImage.image = #imageLiteral(resourceName: "radio-btn")
+    }
+    
+    @objc func selectCurrent(){
+        currentRadioImage.image = #imageLiteral(resourceName: "radio-btn-selected")
+        beforeRadioImage.image = #imageLiteral(resourceName: "radio-btn")
+    }
+    
+    
     
 }
