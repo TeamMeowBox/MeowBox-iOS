@@ -17,7 +17,7 @@ class OrderWithInfo4ViewController: UIViewController {
     @IBOutlet weak var selectionList: SelectionList!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         selectionList.items = ["신용카드","휴대폰 결제"]
         selectionList.isSelectionMarkTrailing = false
         selectionList.selectionImage = #imageLiteral(resourceName: "radio-btn-selected")
