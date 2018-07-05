@@ -16,6 +16,7 @@ class MyPage1ViewController: UIViewController {
     @IBOutlet weak var hiddenTrailingC: NSLayoutConstraint!
     
     
+    @IBOutlet weak var myPageContainerView: UIView!
     @IBOutlet weak var myPageView: UIView!
     @IBOutlet weak var barButton: UIBarButtonItem!
     @IBOutlet weak var hiddenImageView: UIImageView!
@@ -45,6 +46,8 @@ class MyPage1ViewController: UIViewController {
     
         sideBarProfileImageView.layer.masksToBounds = true
         sideBarProfileImageView.layer.cornerRadius = sideBarProfileImageView.layer.frame.width/2
+        
+        setupView()
 
         // Do any additional setup after loading the view.
     }
@@ -196,6 +199,71 @@ class MyPage1ViewController: UIViewController {
         self.present(settionNaviVC, animated: true, completion: nil)
         
     }
+    
+    //MARK: 정기권
+    private lazy var myPage1TicketViewController: MyPage1TicketViewController = {
+        
+        var viewController = storyboard?.instantiateViewController(withIdentifier: MyPage1TicketViewController.reuseIdentifier) as! MyPage1TicketViewController
+        
+        self.add(asChildViewController: viewController)
+        return viewController
+    }()
+    
+    //MARK: 박스 주문하기
+    private lazy var myPage1BoxViewController: MyPage1BoxViewController = {
+        
+        var viewController = storyboard?.instantiateViewController(withIdentifier: MyPage1BoxViewController.reuseIdentifier) as! MyPage1BoxViewController
+        
+        self.add(asChildViewController: viewController)
+        return viewController
+    }()
+    
+    private func add(asChildViewController viewController: UIViewController) {
+        
+        // Add Child View Controller
+        addChildViewController(viewController)
+        
+        // Add Child View as Subview
+        myPageContainerView.addSubview(viewController.view)
+        
+        // Configure Child View
+        viewController.view.frame = myPageContainerView.bounds
+        viewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        
+        // Notify Child View Controller
+        viewController.didMove(toParentViewController: self)
+    }
+    
+    private func remove(asChildViewController viewController: UIViewController) {
+        // Notify Child View Controller
+        viewController.willMove(toParentViewController: nil)
+        
+        // Remove Child View From Superview
+        viewController.view.removeFromSuperview()
+        
+        // Notify Child View Controller
+        viewController.removeFromParentViewController()
+    }
+    
+    @objc private func updateView() {
+        
+     add(asChildViewController: myPage1TicketViewController)
+//        if 정기권이 있으면 {
+//            remove(asChildViewController: MyPage1BoxViewController)
+//            add(asChildViewController: myPage1TicketViewController)
+//
+//        else {
+//            remove(asChildViewController: myPage1TicketViewController)
+//            add(asChildViewController: myPage1BoxViewController)
+//        }
+    }
+    
+    func setupView() {
+        myPageContainerView.translatesAutoresizingMaskIntoConstraints = false
+        //myPageContainerView.topAnchor.constraint(equalTo: menuBar.bottomAnchor).isActive = true
+        updateView()
+    }
+
     
 }
 
