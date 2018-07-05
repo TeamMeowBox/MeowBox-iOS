@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -142,26 +143,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EQB-Sf-gVf">
-                                <rect key="frame" x="16" y="85" width="333" height="160"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EQB-Sf-gVf">
+                                <rect key="frame" x="21" y="85" width="333" height="160"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="siG-g7-lnP">
-                                        <rect key="frame" x="33" y="49" width="72" height="42"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="siG-g7-lnP">
+                                        <rect key="frame" x="49" y="49" width="72" height="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="Z5R-I2-P80"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="28"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YEu-Eh-oYa">
-                                        <rect key="frame" x="33" y="99" width="32" height="16"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YEu-Eh-oYa">
+                                        <rect key="frame" x="49" y="99" width="32" height="16"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="16" id="9Yp-c5-hI9"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="13"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="siG-g7-lnP" firstAttribute="leading" secondItem="EQB-Sf-gVf" secondAttribute="leading" constant="49" id="NHW-nf-vGD"/>
+                                    <constraint firstItem="YEu-Eh-oYa" firstAttribute="top" secondItem="siG-g7-lnP" secondAttribute="bottom" constant="8" id="NaA-Fg-bWv"/>
+                                    <constraint firstAttribute="width" secondItem="EQB-Sf-gVf" secondAttribute="height" multiplier="333:160" id="Pql-c7-e5H"/>
+                                    <constraint firstItem="YEu-Eh-oYa" firstAttribute="leading" secondItem="siG-g7-lnP" secondAttribute="leading" id="T82-G0-m0a"/>
+                                    <constraint firstItem="siG-g7-lnP" firstAttribute="top" secondItem="EQB-Sf-gVf" secondAttribute="top" constant="49" id="ja5-60-XQG"/>
+                                    <constraint firstAttribute="width" constant="333" id="k7v-1l-2bK"/>
+                                </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="gv6-LR-eB2">
                                 <rect key="frame" x="34" y="253" width="122.5" height="31"/>
@@ -186,16 +198,16 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="cancel-btn"/>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Lc0-HB-qHV">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Lc0-HB-qHV">
                                 <rect key="frame" x="0.0" y="302" width="375" height="365"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TicketTableViewCell" rowHeight="170" id="osq-Ir-ycO" customClass="TicketTableViewCell" customModule="MeowBox" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="TicketTableViewCell" rowHeight="170" id="osq-Ir-ycO" customClass="TicketTableViewCell" customModule="MeowBox" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="170"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="osq-Ir-ycO" id="PH6-nz-FO6">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="169.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="170"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pez-wH-gYm">
@@ -237,6 +249,7 @@
                                                 <constraint firstItem="pez-wH-gYm" firstAttribute="top" secondItem="PH6-nz-FO6" secondAttribute="top" constant="4" id="ycJ-3F-xZe"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.94117647059999998" green="0.92941176469999998" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="ticketNameLabel" destination="ic6-Sf-bgr" id="tdH-9j-EgV"/>
                                             <outlet property="ticketTermLabel" destination="nI7-2H-YxC" id="oWg-gq-5dS"/>
@@ -251,6 +264,10 @@
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.94117647059999998" green="0.92941176469999998" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="EQB-Sf-gVf" firstAttribute="centerX" secondItem="97e-fG-0ZY" secondAttribute="centerX" id="P3s-oQ-Gvt"/>
+                            <constraint firstItem="EQB-Sf-gVf" firstAttribute="top" secondItem="97e-fG-0ZY" secondAttribute="top" constant="21" id="jJx-r2-pjo"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="97e-fG-0ZY"/>
                     </view>
                     <navigationItem key="navigationItem" title="주문내역" id="tOa-8o-LDG">
