@@ -108,6 +108,11 @@ class MainViewController: UIViewController {
     
     //MARK: 홈 액션(기준)
     @IBAction func homeAction(_ sender: Any) {
+        
+        hiddenImageView.isHidden = true
+        
+        hiddenLeadingC.constant = 0
+        hiddenTrailingC.constant = 0
         leadingC.constant = 0
         trailingC.constant = 0
         

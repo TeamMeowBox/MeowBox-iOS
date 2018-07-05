@@ -92,6 +92,7 @@ class MyPage1ViewController: UIViewController {
     //MARK: 사이드 바 내에 있는 BackBtn 액션
     @IBAction func sideBarBackAction(_ sender: Any) {
         hiddenImageView.isHidden = true
+        
         hiddenLeadingC.constant = 0
         hiddenTrailingC.constant = 0
         leadingC.constant = 0
@@ -138,6 +139,11 @@ class MyPage1ViewController: UIViewController {
     
     //MARK: 마이페이지 액션(기준) - 사이드바
     @IBAction func myPageAction(_ sender: Any) {
+        
+        hiddenImageView.isHidden = true
+        hiddenLeadingC.constant = 0
+        hiddenTrailingC.constant = 0
+        
         leadingC.constant = 0
         trailingC.constant = 0
         

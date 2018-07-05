@@ -18,7 +18,7 @@ class LogoutPopUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //self.showAnimate()
+        self.showAnimate()
         
         logoutTextView.text = "정말 로그아웃 하시나요?\n정말인가요?"
         
@@ -69,7 +69,6 @@ class LogoutPopUpViewController: UIViewController {
     //MARK: 취소하기 액션
     @IBAction func closeAction(_ sender: Any) {
         self.removeAnimate()
-        self.dismiss(animated: true, completion: nil)
     }
     
     //MARK: 확인하기 액션

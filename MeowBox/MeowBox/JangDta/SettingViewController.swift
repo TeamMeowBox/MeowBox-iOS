@@ -31,7 +31,12 @@ class SettingViewController: UIViewController {
         
         let logoutPopUp = UIStoryboard(name: "MyPage", bundle: nil).instantiateViewController(withIdentifier: "LogoutPopUpViewController")
         
-        self.present(logoutPopUp, animated: true, completion: nil)
+        self.addChildViewController(logoutPopUp)
+        logoutPopUp.view.frame = self.view.frame
+        self.view.addSubview(logoutPopUp.view)
+    
+        logoutPopUp.didMove(toParentViewController: self)
+        
     }
     
 }
