@@ -18,6 +18,23 @@ class OrderWithInfo4ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        selectionListInit()
+        addScrollViewEndEditing()
+    }
+    
+    @objc func selectionChanged() {
+        print(selectionList.selectedIndexes)
+    }
+    
+    @IBAction func goPay(_ sender: Any) {
+        parentVC?.changeVC(num: 5)
+    }
+    
+    @IBAction func backWithInfo3(_ sender: Any) {
+        parentVC?.changeVC(num: 3)
+    }
+    
+    private func selectionListInit(){
         selectionList.items = ["신용카드","휴대폰 결제"]
         selectionList.isSelectionMarkTrailing = false
         selectionList.selectionImage = #imageLiteral(resourceName: "radio-btn-selected")
@@ -31,21 +48,15 @@ class OrderWithInfo4ViewController: UIViewController {
         }
     }
     
-    @objc func selectionChanged() {
-        print(selectionList.selectedIndexes)
-        //            selectionList.items.append("\(selectionList.selectedIndexes)")
-        //            selectionList.selectedIndexes = [0, 2, 4]
+    func addScrollViewEndEditing(){
+        let singleTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(scrollTapMethod))
+        singleTapGestureRecognizer.numberOfTapsRequired = 1
+        singleTapGestureRecognizer.isEnabled = true
+        singleTapGestureRecognizer.cancelsTouchesInView = false
+        scrollView.addGestureRecognizer(singleTapGestureRecognizer)
     }
     
-    @IBAction func goPay(_ sender: Any) {
-        parentVC?.changeVC(num: 5)
-    }
-    
-    @IBAction func backWithInfo3(_ sender: Any) {
-        parentVC?.changeVC(num: 3)
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
+    @objc func scrollTapMethod(sender: UITapGestureRecognizer) {
         self.view.endEditing(true)
     }
     

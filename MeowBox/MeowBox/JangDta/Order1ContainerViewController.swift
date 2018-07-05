@@ -235,6 +235,10 @@ class Order1ContainerViewController: UIViewController {
         self.present(myPageNaviVC, animated: true, completion: nil)
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
+        self.view.endEditing(true)
+    }
+    
     
     
 }
