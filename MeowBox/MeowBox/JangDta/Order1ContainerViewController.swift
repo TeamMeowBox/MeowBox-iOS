@@ -22,6 +22,8 @@ class Order1ContainerViewController: UIViewController {
     
     @IBOutlet weak var profileImageView: UIImageView!
     
+    var myCatName = ""
+    
     var sideBarIsVisible = false
     
     override func viewDidLoad() {
