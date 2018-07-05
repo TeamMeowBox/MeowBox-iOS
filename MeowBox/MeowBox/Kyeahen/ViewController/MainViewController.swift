@@ -161,6 +161,14 @@ class MainViewController: UIViewController,UICollectionViewDelegate,UICollection
         self.present(myPageNaviVC, animated: true, completion: nil)
     }
     
+    //MARK: 상세보기 액션
+    @IBAction func detailAction(_ sender: Any) {
+        let detailVC = UIStoryboard(name: "MeowBox", bundle: nil).instantiateViewController(withIdentifier: "MeowBoxDetailNaviVC")
+        
+        self.present(detailVC, animated: true, completion: nil)
+    }
+    
+    
     
     ///
     

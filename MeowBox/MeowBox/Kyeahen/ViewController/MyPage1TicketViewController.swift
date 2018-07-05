@@ -10,9 +10,11 @@ import UIKit
 
 class MyPage1TicketViewController: UIViewController {
 
+    @IBOutlet weak var progressView: UIProgressView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.progressView.setProgress(0.5, animated: true)
         // Do any additional setup after loading the view.
     }
 
