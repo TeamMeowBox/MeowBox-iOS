@@ -167,6 +167,13 @@ class MyPage1ViewController: UIViewController {
         self.navigationItem.title = self.title
     }
     
+    //MARK: 주문내역 액션
+    @IBAction func ticketAction(_ sender: Any) {
+        let ticketNaviVC = UIStoryboard(name: "Mypage2", bundle: nil).instantiateViewController(withIdentifier: "ticketNavi")
+
+        self.present(ticketNaviVC, animated: true, completion: nil)
+    }
+    
     //MARK: 내 계정 설정 액션
     @IBAction func myAccountSettingAction(_ sender: Any) {
         let myAccountNaviVC = UIStoryboard(name: "MyPage", bundle: nil).instantiateViewController(withIdentifier: "MyAccountNaviVC")
@@ -267,6 +274,10 @@ class MyPage1ViewController: UIViewController {
         //myPageContainerView.topAnchor.constraint(equalTo: menuBar.bottomAnchor).isActive = true
         updateView()
     }
+    
+    
+    
+    
 
     
 }
