@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MeowBoxReviewViewController: UIViewController {
+class MeowBoxReviewViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var leadingC: NSLayoutConstraint!
     @IBOutlet weak var trailingC: NSLayoutConstraint!
@@ -17,12 +17,26 @@ class MeowBoxReviewViewController: UIViewController {
     @IBOutlet weak var profileImageView: UIImageView!
     
     var sideBarIsVisible = false
-
+   
+    
+    @IBOutlet weak var reviewTableView: UITableView!
+    
+    @IBOutlet weak var reviewHeaderImageView: UIImageView!
+    
+    let tableImageArr = [#imageLiteral(resourceName: "package-box-img")]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //tableview
+        reviewTableView.delegate = self
+        reviewTableView.dataSource = self
+        
+        
+        //sidebar
 //        hiddenImageView.isHidden = true
         setNavigationBar()
+        
         self.navigationItem.backBarButtonItem = barButton
         
         //프로필 이미지 동그랗게
@@ -167,6 +181,34 @@ class MeowBoxReviewViewController: UIViewController {
         
         self.present(myPageNaviVC, animated: true, completion: nil)
     }
+    
+//MRAK: TableView
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    //섹션에 몇개의 데이터를 보여줄 것인지
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return tableImageArr.count
+    }
+    
+    //로우에 어떤 데이터를 보여줄건지
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MeowBoxReviewTableViewCell", for: indexPath) as! MeowBoxReviewTableViewCell
+        
+        cell.reviewBackgroundImageView.image = tableImageArr[indexPath.row]
+        cell.reviewTitleLabel.text = "이달의 소중한 탄생"
+        cell.reviewintroLabel.text = "7월에 태어난 아이들을 함께 축하해줘요!짝짝짝"
+        
+        return cell
+    }
+    
+    //MARK: 맨 위로 가기 액션
+    @IBAction func topAction(_ sender: Any) {
+        reviewTableView.setContentOffset(.zero, animated:true)
+    }
+    
     
     
 }

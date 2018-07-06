@@ -24,8 +24,7 @@ class MeowBoxDetailViewController: UIViewController, UITableViewDelegate, UITabl
     
     var sideBarIsVisible = false
     
-    let tableImageArr = [#imageLiteral(resourceName: "package-box-img"),]
-    let collectImageArr = [#imageLiteral(resourceName: "package-box-img"),#imageLiteral(resourceName: "package-box-detail-img"),#imageLiteral(resourceName: "package-box-img")]
+    let tableImageArr = [ #imageLiteral(resourceName: "package-box-img"),]
     
     override func viewDidLoad() {
         super.viewDidLoad()
