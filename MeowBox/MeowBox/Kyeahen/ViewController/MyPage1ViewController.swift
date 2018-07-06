@@ -275,11 +275,6 @@ class MyPage1ViewController: UIViewController {
         updateView()
     }
     
-    
-    
-    
-
-    
 }
 
 //navigation bar bottom line color 지정해주기 위함.
