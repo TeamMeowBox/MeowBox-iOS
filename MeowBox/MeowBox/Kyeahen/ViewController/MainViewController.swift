@@ -138,6 +138,16 @@ class MainViewController: UIViewController,UICollectionViewDelegate,UICollection
         self.navigationItem.title = self.title
     }
     
+    //MARK: 미유박스 이야기 액션
+    @IBAction func storyAction(_ sender: Any) {
+        
+    }
+    
+    //MARK: 생일축하해!박스 액션
+    @IBAction func birthBoxAction(_ sender: Any) {
+        
+    }
+    
     //MARK: 주문하기 액션
     //TODO: 팝업 예외 처리
     @IBAction func orderAction(_ sender: Any) {
@@ -152,6 +162,14 @@ class MainViewController: UIViewController,UICollectionViewDelegate,UICollection
         let orderNaviVC = UIStoryboard(name: "Order", bundle: nil).instantiateViewController(withIdentifier: "OrderWithInfoNavigationController")
         
         self.present(orderNaviVC, animated: true, completion: nil)
+    }
+    
+    //MARK: 집사들의 후기 액션
+    @IBAction func reviewAction(_ sender: Any) {
+        
+        let reviewNaviVC = UIStoryboard(name: "MeowBox", bundle: nil).instantiateViewController(withIdentifier: "ReviewNaviVC")
+        
+        self.present(reviewNaviVC, animated: true, completion: nil)
     }
     
     //MARK: 마이페이지 액션

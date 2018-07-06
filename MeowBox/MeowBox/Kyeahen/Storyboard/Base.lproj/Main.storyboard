@@ -38,13 +38,12 @@
                                     <constraint firstAttribute="width" constant="49" id="veg-Z9-JXn"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qea-Rk-BfV">
-                                <rect key="frame" x="222.5" y="81" width="14" height="15"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qea-Rk-BfV">
+                                <rect key="frame" x="222.5" y="80" width="17" height="17"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="13.279999999999999" id="5CJ-nk-WaS"/>
-                                    <constraint firstAttribute="width" secondItem="qea-Rk-BfV" secondAttribute="height" multiplier="13.28:14.4" id="fVY-28-uIH"/>
+                                    <constraint firstAttribute="height" constant="17.300000000000001" id="ufP-Us-e0n"/>
                                 </constraints>
-                                <state key="normal" image="side-bar-back-btn"/>
+                                <state key="normal" image="side-bar-back-btn2"/>
                                 <connections>
                                     <action selector="sideBarBackAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OYk-5W-BeV"/>
                                 </connections>
@@ -92,6 +91,9 @@
                                 <state key="normal" title="미유박스 이야기">
                                     <color key="titleColor" red="0.29803921568627451" green="0.30588235294117649" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="storyAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hak-9D-vnH"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fzp-45-W4k">
                                 <rect key="frame" x="21" y="344.5" width="138.5" height="24"/>
@@ -102,6 +104,9 @@
                                 <state key="normal" title="생일축하해! 박스">
                                     <color key="titleColor" red="0.29803921570000003" green="0.30588235289999999" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="birthBoxAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zkg-XO-crU"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gxn-D3-2Lf">
                                 <rect key="frame" x="21" y="426" width="120.5" height="24"/>
@@ -113,6 +118,9 @@
                                 <state key="normal" title="집사들의 후기">
                                     <color key="titleColor" red="0.29803921568627451" green="0.30588235294117649" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="reviewAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3OQ-TV-gDZ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qzS-8I-xI5">
                                 <rect key="frame" x="21" y="499" width="99" height="24"/>
@@ -542,7 +550,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="side-bar-back-btn" width="14" height="16"/>
+        <image name="side-bar-back-btn2" width="17" height="19"/>
         <image name="side-bar-btn-gray" width="20" height="16"/>
     </resources>
 </document>

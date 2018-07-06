@@ -204,6 +204,14 @@ class Order1ContainerViewController: UIViewController {
         self.present(mainNaviVC, animated: true, completion: nil)
     }
     
+    //MARK: 미유박스 이야기 액션
+    @IBAction func storyAction(_ sender: Any) {
+    }
+    
+    //MARK: 생일축하해!박스 액션
+    @IBAction func birthBoxAction(_ sender: Any) {
+    }
+    
     //MARK: 주문하기 액션(기준)
     @IBAction func orderAction(_ sender: Any) {
         
@@ -228,6 +236,16 @@ class Order1ContainerViewController: UIViewController {
             self.navigationItem.leftBarButtonItem = self.barBtn
             self.navigationItem.title = "주문하기"
     }
+    
+    
+    //MARK: 집사들의 후기 액션
+    @IBAction func reviewAction(_ sender: Any) {
+        
+        let reviewNaviVC = UIStoryboard(name: "MeowBox", bundle: nil).instantiateViewController(withIdentifier: "ReviewNaviVC")
+        
+        self.present(reviewNaviVC, animated: true, completion: nil)
+    }
+    
     
     //MARK: 마이페이지 액션
     @IBAction func myPageAction(_ sender: Any) {
