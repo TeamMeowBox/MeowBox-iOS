@@ -13,6 +13,7 @@ class MyPage1TicketViewController: UIViewController {
 
 
     @IBOutlet weak var progressView: GTProgressBar!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

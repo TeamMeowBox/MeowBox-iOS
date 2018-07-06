@@ -41,12 +41,12 @@
                                     <constraint firstAttribute="width" constant="49" id="uEs-1t-R55"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g3s-Hk-az8">
-                                <rect key="frame" x="222.5" y="81" width="14" height="15"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g3s-Hk-az8">
+                                <rect key="frame" x="222.5" y="80" width="17" height="17"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="15" id="lBC-xH-ARw"/>
+                                    <constraint firstAttribute="height" constant="17.300000000000001" id="lBC-xH-ARw"/>
                                 </constraints>
-                                <state key="normal" image="side-bar-back-btn"/>
+                                <state key="normal" image="side-bar-back-btn2"/>
                                 <connections>
                                     <action selector="sideBarBackAction:" destination="pqw-Cl-z5l" eventType="touchUpInside" id="zAx-TP-2km"/>
                                 </connections>
@@ -104,6 +104,9 @@
                                 <state key="normal" title="미유박스 이야기">
                                     <color key="titleColor" red="0.29803921570000003" green="0.30588235289999999" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="storyAction:" destination="pqw-Cl-z5l" eventType="touchUpInside" id="U4K-YN-9yZ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9rj-ne-sxe">
                                 <rect key="frame" x="21" y="344" width="148.5" height="24"/>
@@ -114,6 +117,9 @@
                                 <state key="normal" title="생일축하해! 박스">
                                     <color key="titleColor" red="0.29803921570000003" green="0.30588235289999999" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="birthBoxAction:" destination="pqw-Cl-z5l" eventType="touchUpInside" id="pbN-3k-l3c"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lb4-dK-O20">
                                 <rect key="frame" x="21" y="386" width="148.5" height="24"/>
@@ -137,6 +143,9 @@
                                 <state key="normal" title="집사들의 후기">
                                     <color key="titleColor" red="0.29803921570000003" green="0.30588235289999999" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="reviewAction:" destination="pqw-Cl-z5l" eventType="touchUpInside" id="npF-KP-YDv"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ve-g1-hBC">
                                 <rect key="frame" x="21" y="484.5" width="148.5" height="24"/>
@@ -1614,7 +1623,7 @@
     <resources>
         <image name="camera-icon" width="38" height="38"/>
         <image name="setting-icon" width="21" height="21"/>
-        <image name="side-bar-back-btn" width="14" height="16"/>
+        <image name="side-bar-back-btn2" width="17" height="19"/>
         <image name="side-bar-btn-gray" width="20" height="16"/>
         <image name="story-order-btn" width="115" height="33"/>
         <image name="x-btn" width="14" height="14"/>
