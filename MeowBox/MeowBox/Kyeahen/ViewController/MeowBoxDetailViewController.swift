@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MeowBoxDetailViewController: UIViewController {
+class MeowBoxDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var leadingC: NSLayoutConstraint!
     @IBOutlet weak var trailingC: NSLayoutConstraint!
@@ -16,11 +16,23 @@ class MeowBoxDetailViewController: UIViewController {
     @IBOutlet weak var barButton: UIBarButtonItem!
     @IBOutlet weak var profileImageView: UIImageView!
     
+    @IBOutlet weak var detailTableView: UITableView!
+    
     var sideBarIsVisible = false
+    
+    let tableImageArr = [#imageLiteral(resourceName: "package-box-img"),]
+    let collectImageArr = [#imageLiteral(resourceName: "package-box-img"),#imageLiteral(resourceName: "package-box-detail-img"),#imageLiteral(resourceName: "package-box-img")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //TableView
+        detailTableView.delegate = self
+        detailTableView.dataSource = self
+    
+       
         setNavigationBar()
+        detailTableView.contentInset = UIEdgeInsets(top: -64, left: 0, bottom: 0, right: 0)
         
         self.navigationItem.backBarButtonItem = barButton
         
@@ -28,7 +40,6 @@ class MeowBoxDetailViewController: UIViewController {
         profileImageView.layer.masksToBounds = true
         profileImageView.layer.cornerRadius = profileImageView.layer.frame.width/2
 
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,14 +47,43 @@ class MeowBoxDetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+//MARK: TableView
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    //섹션에 몇개의 데이터를 보여줄 것인지
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return tableImageArr.count
+    }
+    
+    //로우에 어떤 데이터를 보여줄건지
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MeowBoxDetailTableViewCell", for: indexPath) as! MeowBoxDetailTableViewCell
+
+        cell.detailTitle.text = "죠스 쿨링 모자"
+        cell.detailImageView.image = tableImageArr[indexPath.row]
+        cell.detailContent.text =
+            """
+            더운 여름을 시원한 바다로 만들어 줄
+            쿨 원단으로 만들어진 모자입니다.
+            귀여운 사진은 덤, 시원한 여름은 필수입니다.
+            """
+        
+        return cell
+    }
+    
+    
     //MARK: 네비게이션 바 투명하게 하는 함수
     func setNavigationBar() {
         let bar: UINavigationBar! = self.navigationController?.navigationBar
         
-        bar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        bar.setBackgroundImage(UIImage(), for: .default)
         
         bar.shadowImage = UIImage()
-        bar.backgroundColor = UIColor.clear
+        //bar.backgroundColor = UIColor.clear
+        bar.isTranslucent = true
     }
     
     //MARK: 사이드바 액션

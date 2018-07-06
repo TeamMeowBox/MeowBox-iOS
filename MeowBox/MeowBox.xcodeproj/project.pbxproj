@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		22109A8020EAAA3200E463C2 /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22109A7F20EAAA3200E463C2 /* MyPage.storyboard */; };
 		22109A8220EAAAFC00E463C2 /* MyPage1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22109A8120EAAAFC00E463C2 /* MyPage1ViewController.swift */; };
+		22156DBE20EF85380014491E /* MeowBoxDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22156DBD20EF85380014491E /* MeowBoxDetailTableViewCell.swift */; };
+		22156DC020EF85570014491E /* MeowBoxDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22156DBF20EF85570014491E /* MeowBoxDetailCollectionViewCell.swift */; };
 		222B5DAF20E8BA26003F0A8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222B5DAE20E8BA26003F0A8C /* AppDelegate.swift */; };
 		222B5DB420E8BA26003F0A8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 222B5DB220E8BA26003F0A8C /* Main.storyboard */; };
 		222B5DB620E8BA28003F0A8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 222B5DB520E8BA28003F0A8C /* Assets.xcassets */; };
@@ -71,6 +73,8 @@
 		0725B72C78BF90D17ACFD95D /* Pods-MeowBox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeowBox.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MeowBox/Pods-MeowBox.debug.xcconfig"; sourceTree = "<group>"; };
 		22109A7F20EAAA3200E463C2 /* MyPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
 		22109A8120EAAAFC00E463C2 /* MyPage1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPage1ViewController.swift; sourceTree = "<group>"; };
+		22156DBD20EF85380014491E /* MeowBoxDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeowBoxDetailTableViewCell.swift; sourceTree = "<group>"; };
+		22156DBF20EF85570014491E /* MeowBoxDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeowBoxDetailCollectionViewCell.swift; sourceTree = "<group>"; };
 		222B5DAB20E8BA26003F0A8C /* MeowBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeowBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		222B5DAE20E8BA26003F0A8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		222B5DB320E8BA26003F0A8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -266,6 +270,8 @@
 				22BEB4F520EDC63D0030E81B /* MyPage1TicketViewController.swift */,
 				22BEB4F720EDC6810030E81B /* MyPage1BoxViewController.swift */,
 				2259035020EE6E3300094935 /* MeowBoxDetailViewController.swift */,
+				22156DBD20EF85380014491E /* MeowBoxDetailTableViewCell.swift */,
+				22156DBF20EF85570014491E /* MeowBoxDetailCollectionViewCell.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -497,9 +503,11 @@
 				22E8F7EA20EBF90D00735276 /* WithdrawalSucessPopUpViewController.swift in Sources */,
 				CC44CBB820EB2235007466D8 /* QuestionViewController.swift in Sources */,
 				CC54E41620EC9892007C5C4E /* QuestionTableViewCell.swift in Sources */,
+				22156DC020EF85570014491E /* MeowBoxDetailCollectionViewCell.swift in Sources */,
 				CC4AD41F20EE1D0700C31E53 /* CheckTicketViewController.swift in Sources */,
 				CCB12E5B20E90C6B00C5D4B8 /* OrderWithInfoViewController.swift in Sources */,
 				22A86ED420EBE13600B17661 /* OrderPagePopUpViewController.swift in Sources */,
+				22156DBE20EF85380014491E /* MeowBoxDetailTableViewCell.swift in Sources */,
 				2259035120EE6E3300094935 /* MeowBoxDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
