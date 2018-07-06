@@ -17,15 +17,15 @@ class MyPage1TicketViewController: UIViewController {
         super.viewDidLoad()
         
         //1
-        let newProgress: CGFloat = progressView.progress == 0.333 ? 0.0 : 0.333
-        progressView.animateTo(progress: newProgress)
+//        let newProgress: CGFloat = progressView.progress == 0.333 ? 0.0 : 0.333
+//        progressView.animateTo(progress: newProgress)
         
 
         //2
-//        let newProgress: CGFloat = progressView.progress == 0.67 ? 0.0 : 0.67
-//        progressView.animateTo(progress: newProgress)
+        let newProgress: CGFloat = progressView.progress == 0.672 ? 0.0 : 0.672
+        progressView.animateTo(progress: newProgress)
         
-        // Do any additional setup after loading the view.
+         //Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
