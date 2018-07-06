@@ -22,6 +22,8 @@ class MeowBoxReviewTableViewCell: UITableViewCell, UICollectionViewDelegate, UIC
         
         reviewCollectionView.delegate = self
         reviewCollectionView.dataSource = self
+        
+        reviewCollectionView.backgroundColor = UIColor.clear
         // Initialization code
     }
 

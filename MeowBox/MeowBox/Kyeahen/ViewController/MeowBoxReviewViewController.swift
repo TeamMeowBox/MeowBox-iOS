@@ -35,7 +35,6 @@ class MeowBoxReviewViewController: UIViewController, UITableViewDelegate, UITabl
         
         //sidebar
 //        hiddenImageView.isHidden = true
-        setNavigationBar()
         
         self.navigationItem.backBarButtonItem = barButton
         
@@ -73,9 +72,10 @@ class MeowBoxReviewViewController: UIViewController, UITableViewDelegate, UITabl
             leadingC.constant = 258
             trailingC.constant = -258
             
+            setNavigationBar()
+            
             sideBarIsVisible = true
             self.navigationItem.leftBarButtonItem = nil
-            self.navigationItem.title = nil
             
         }
         
@@ -104,9 +104,10 @@ class MeowBoxReviewViewController: UIViewController, UITableViewDelegate, UITabl
             print("SideBar close")
         }
         
-        //네비게이션바 복원
+        //네비게이션바 투명 복원
+        self.navigationController?.navigationBar.shadowImage = UIColor( red: CGFloat(112/255.0), green: CGFloat(112/255.0), blue: CGFloat(112/255.0), alpha: CGFloat(0.2) ).as1ptImage()
+        self.navigationController?.navigationBar.barTintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         self.navigationItem.leftBarButtonItem = self.barButton
-        self.navigationItem.title = "MEOW BOX"
         
     }
     
@@ -169,9 +170,10 @@ class MeowBoxReviewViewController: UIViewController, UITableViewDelegate, UITabl
             print("SideBar close")
         }
         
-        //네비게이션바 복원
+        //네비게이션바 투명 복원
+        self.navigationController?.navigationBar.shadowImage = UIColor( red: CGFloat(112/255.0), green: CGFloat(112/255.0), blue: CGFloat(112/255.0), alpha: CGFloat(0.2) ).as1ptImage()
+        self.navigationController?.navigationBar.barTintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         self.navigationItem.leftBarButtonItem = self.barButton
-        self.navigationItem.title = self.title
         
     }
     
