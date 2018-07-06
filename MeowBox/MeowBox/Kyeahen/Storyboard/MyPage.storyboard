@@ -1024,7 +1024,6 @@
                                             <constraint firstAttribute="trailing" secondItem="vYZ-f4-SkM" secondAttribute="trailing" id="6Ai-33-cmh"/>
                                             <constraint firstItem="iUk-RS-GAd" firstAttribute="trailing" secondItem="eMD-YD-E6I" secondAttribute="trailing" id="6t2-LD-md5"/>
                                             <constraint firstItem="vYZ-f4-SkM" firstAttribute="top" secondItem="nGD-3z-xDJ" secondAttribute="bottom" id="785-zS-Dub"/>
-                                            <constraint firstAttribute="trailing" secondItem="oI0-46-56Z" secondAttribute="trailing" id="9u9-67-6Ea"/>
                                             <constraint firstItem="dsN-Pt-bPh" firstAttribute="leading" secondItem="iTu-2x-zJw" secondAttribute="leading" id="Atq-dh-cgN"/>
                                             <constraint firstItem="RwG-mt-rPY" firstAttribute="leading" secondItem="wCU-U0-JKa" secondAttribute="leading" id="B9b-vo-pjA"/>
                                             <constraint firstAttribute="trailing" secondItem="7rK-ZR-QvE" secondAttribute="trailing" id="EAr-Qe-3Zh"/>
@@ -1360,41 +1359,41 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eDG-1S-Lza">
-                                <rect key="frame" x="19" y="51" width="70" height="40"/>
+                                <rect key="frame" x="74" y="51" width="70" height="40"/>
                                 <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="27"/>
                                 <color key="textColor" red="0.40392156862745099" green="0.41176470588235292" blue="0.41568627450980394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3Z-N4-NgF">
-                                <rect key="frame" x="124" y="51" width="74" height="40"/>
+                                <rect key="frame" x="179" y="51" width="74" height="40"/>
                                 <fontDescription key="fontDescription" name="NotoSansCJKkr-Bold" family="Noto Sans CJK KR" pointSize="27"/>
                                 <color key="textColor" red="0.85882352941176465" green="0.54509803921568623" blue="0.53725490196078429" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="중" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u6G-gi-RQo">
-                                <rect key="frame" x="94" y="51" width="25" height="40"/>
+                                <rect key="frame" x="149" y="51" width="25" height="40"/>
                                 <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="27"/>
                                 <color key="textColor" red="0.4039215686" green="0.41176470590000003" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="를" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="suI-Yw-Iey">
-                                <rect key="frame" x="198" y="51" width="25" height="40"/>
+                                <rect key="frame" x="253" y="51" width="25" height="40"/>
                                 <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="27"/>
                                 <color key="textColor" red="0.4039215686" green="0.41176470590000003" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="배송 받으셨어요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ZE-6a-ZDW">
-                                <rect key="frame" x="19" y="94" width="182" height="40"/>
+                                <rect key="frame" x="74" y="94" width="182" height="40"/>
                                 <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="27"/>
                                 <color key="textColor" red="0.4039215686" green="0.41176470590000003" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A4r-ip-Zhm" customClass="GTProgressBar" customModule="GTProgressBar">
-                                <rect key="frame" x="21" y="144" width="333" height="15"/>
+                                <rect key="frame" x="21" y="150" width="333" height="8"/>
                                 <color key="backgroundColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="15" id="BRq-KA-jam"/>
-                                    <constraint firstAttribute="width" secondItem="A4r-ip-Zhm" secondAttribute="height" multiplier="333:15" id="cWR-Mg-jpX"/>
+                                    <constraint firstAttribute="height" constant="8" id="BRq-KA-jam"/>
+                                    <constraint firstAttribute="width" secondItem="A4r-ip-Zhm" secondAttribute="height" multiplier="333:15" constant="155.40000000000001" id="cWR-Mg-jpX"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="barBackgroundColor">
@@ -1425,7 +1424,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nqr-CN-NIF">
-                                <rect key="frame" x="130" y="159" width="2" height="10"/>
+                                <rect key="frame" x="130" y="158" width="2" height="10"/>
                                 <color key="backgroundColor" red="0.85490196080000003" green="0.5450980392" blue="0.5450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="2" id="G1Y-FG-7v6"/>
@@ -1434,7 +1433,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9KI-D4-3uH">
-                                <rect key="frame" x="243" y="159" width="2" height="10"/>
+                                <rect key="frame" x="243" y="158" width="2" height="10"/>
                                 <color key="backgroundColor" red="0.85490196080000003" green="0.5450980392" blue="0.5450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="10" id="Es2-OQ-Cpo"/>
@@ -1443,13 +1442,13 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AaU-Jx-6TK">
-                                <rect key="frame" x="110" y="173" width="42" height="21"/>
+                                <rect key="frame" x="110" y="172" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hF1-xt-Af0">
-                                <rect key="frame" x="223" y="173" width="42" height="21"/>
+                                <rect key="frame" x="223" y="172" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1477,9 +1476,9 @@
                             <constraint firstItem="suI-Yw-Iey" firstAttribute="centerY" secondItem="eDG-1S-Lza" secondAttribute="centerY" id="cbu-Nd-KrG"/>
                             <constraint firstItem="0ZE-6a-ZDW" firstAttribute="top" secondItem="eDG-1S-Lza" secondAttribute="bottom" constant="3" id="ffh-E7-qn4"/>
                             <constraint firstItem="eDG-1S-Lza" firstAttribute="top" secondItem="L0f-aG-JYh" secondAttribute="bottom" constant="14.300000000000001" id="hJC-P0-00e"/>
-                            <constraint firstItem="eDG-1S-Lza" firstAttribute="leading" secondItem="L0f-aG-JYh" secondAttribute="leading" id="kts-mQ-ruc"/>
+                            <constraint firstItem="eDG-1S-Lza" firstAttribute="leading" secondItem="L0f-aG-JYh" secondAttribute="leading" constant="55" id="kts-mQ-ruc"/>
                             <constraint firstItem="Nqr-CN-NIF" firstAttribute="top" secondItem="A4r-ip-Zhm" secondAttribute="bottom" id="l2z-BN-ps2"/>
-                            <constraint firstItem="A4r-ip-Zhm" firstAttribute="top" secondItem="0ZE-6a-ZDW" secondAttribute="bottom" constant="10" id="lpX-M8-PAd"/>
+                            <constraint firstItem="A4r-ip-Zhm" firstAttribute="top" secondItem="0ZE-6a-ZDW" secondAttribute="bottom" constant="16" id="lpX-M8-PAd"/>
                             <constraint firstItem="0ZE-6a-ZDW" firstAttribute="leading" secondItem="eDG-1S-Lza" secondAttribute="leading" id="zzC-MM-KOh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="u22-Hz-qdE"/>
@@ -1555,7 +1554,7 @@
                                     <action selector="segAction:" destination="EnQ-3E-Iid" eventType="valueChanged" id="y8A-aI-6AD"/>
                                 </connections>
                             </segmentedControl>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xCG-Cd-i6K">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xCG-Cd-i6K">
                                 <rect key="frame" x="21" y="121.5" width="333" height="545"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -1577,9 +1576,6 @@
                         <viewLayoutGuide key="safeArea" id="oPR-Vr-Eh1"/>
                     </view>
                     <navigationItem key="navigationItem" title="약관 및 개인정보 취급방침" id="CAe-ue-QIv">
-                        <barButtonItem key="leftBarButtonItem" image="back-btn" id="CEH-sX-PEV">
-                            <color key="tintColor" red="0.29803921568627451" green="0.30588235294117649" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" image="x-btn" id="fIG-zu-0Yl">
                             <color key="tintColor" red="0.29803921568627451" green="0.30588235294117649" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
@@ -1616,7 +1612,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="back-btn" width="14" height="16"/>
         <image name="camera-icon" width="38" height="38"/>
         <image name="setting-icon" width="21" height="21"/>
         <image name="side-bar-back-btn" width="14" height="16"/>

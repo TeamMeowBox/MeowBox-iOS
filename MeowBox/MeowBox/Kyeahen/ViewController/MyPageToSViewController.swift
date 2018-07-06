@@ -15,6 +15,7 @@ class MyPageToSViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         
         //navigation bar title color
     self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : #colorLiteral(red: 0.4392156863, green: 0.4392156863, blue: 0.4392156863, alpha: 1)]
@@ -176,6 +177,8 @@ class MyPageToSViewController: UIViewController {
         switch myPageSegmentedControl.selectedSegmentIndex {
             
         case 0:
+            
+        ToSTextView.setContentOffset(.zero, animated: false)
         ToSTextView.text =
             """
             제1조 목적
@@ -304,6 +307,8 @@ class MyPageToSViewController: UIViewController {
             """
             
         case 1:
+            
+                    ToSTextView.setContentOffset(.zero, animated: false)
             ToSTextView.text =
             """
             1. 개인정보의 처리 목적 <미유박스>(이하 ‘사이트’) 은(는) 다음의 목적을 위하여 개인정보를 처리하고 있으며, 다음의 목적 이외의 용도로는 이용하지 않습니다.
