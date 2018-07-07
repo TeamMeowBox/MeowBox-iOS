@@ -11,20 +11,24 @@ import UIKit
 class SettingViewController: UIViewController {
 
     @IBOutlet weak var ToSView: UIView!
+    @IBOutlet weak var noticeView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let gesture = UITapGestureRecognizer(target: self, action:  #selector(self.TosCheckAction))
         self.ToSView.addGestureRecognizer(gesture)
+        
+        let gesture2 = UITapGestureRecognizer(target: self, action:  #selector(noticeAction))
+        self.noticeView.addGestureRecognizer(gesture2)
 
-        // Do any additional setup after loading the view.
+    }
+    
+    @objc func noticeAction(){
+        let noticeNavi = UIStoryboard(name: "Mypage2", bundle: nil).instantiateViewController(withIdentifier: "noticeNavi")
+        self.present(noticeNavi, animated: true, completion: nil)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     @objc func TosCheckAction(sender : UITapGestureRecognizer) {
         let ToSNaviVC = UIStoryboard(name: "MyPage", bundle: nil).instantiateViewController(withIdentifier: "ToSNaviVC")
