@@ -20,6 +20,7 @@ class MeowBoxDetailViewController: UIViewController, UITableViewDelegate, UITabl
     
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var detailTableView: UITableView!
+    @IBOutlet weak var detailView: UIView!
     
     let logo : UIImage = UIImage(named: "meowbox-logo-pink.png")!
     let logoImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 128, height: 21))
@@ -110,6 +111,7 @@ class MeowBoxDetailViewController: UIViewController, UITableViewDelegate, UITabl
             trailingC.constant = -258
             
             sideBarIsVisible = true
+            detailView.isUserInteractionEnabled = false
             self.navigationItem.leftBarButtonItem = nil
             self.navigationItem.titleView = nil
             
@@ -133,6 +135,7 @@ class MeowBoxDetailViewController: UIViewController, UITableViewDelegate, UITabl
         trailingC.constant = 0
         
         sideBarIsVisible = false
+        detailView.isUserInteractionEnabled = true
         
         UIView.animate(withDuration: 0.3, delay: 0.0, options: .curveEaseIn, animations: {
             self.view.layoutIfNeeded()

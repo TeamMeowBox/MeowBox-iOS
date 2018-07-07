@@ -156,6 +156,10 @@ class MainViewController: UIViewController,UICollectionViewDelegate,UICollection
             self.navigationItem.leftBarButtonItem = nil
             self.navigationItem.titleView = nil
             
+            bottomBtnView.isUserInteractionEnabled = false
+            MainView.isUserInteractionEnabled = false
+            
+            
         }
         
         UIView.animate(withDuration: 0.3, delay: 0.0, options: .curveEaseIn, animations: {
@@ -176,6 +180,10 @@ class MainViewController: UIViewController,UICollectionViewDelegate,UICollection
         trailingC.constant = 0
         
         sideBarIsVisible = false
+        
+        bottomBtnView.isUserInteractionEnabled = true
+        MainView.isUserInteractionEnabled = true
+        
         
         UIView.animate(withDuration: 0.3, delay: 0.0, options: .curveEaseIn, animations: {
             self.view.layoutIfNeeded()
@@ -207,6 +215,9 @@ class MainViewController: UIViewController,UICollectionViewDelegate,UICollection
         trailingC.constant = 0
         
         sideBarIsVisible = false
+        
+        bottomBtnView.isUserInteractionEnabled = true
+        MainView.isUserInteractionEnabled = true
         
         UIView.animate(withDuration: 0.3, delay: 0.0, options: .curveEaseIn, animations: {
             self.view.layoutIfNeeded()

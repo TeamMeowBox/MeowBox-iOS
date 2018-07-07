@@ -146,6 +146,8 @@ class Order1ContainerViewController: UIViewController {
             trailingC.constant = -258
             
             sideBarIsVisible = true
+            container.isUserInteractionEnabled = false
+            
             self.navigationItem.leftBarButtonItem = nil
             self.navigationItem.title = nil
             
@@ -170,6 +172,7 @@ class Order1ContainerViewController: UIViewController {
         trailingC.constant = 0
         
         sideBarIsVisible = false
+        container.isUserInteractionEnabled = true
         
         UIView.animate(withDuration: 0.3, delay: 0.0, options: .curveEaseIn, animations: {
             self.view.layoutIfNeeded()
@@ -219,6 +222,7 @@ class Order1ContainerViewController: UIViewController {
         trailingC.constant = 0
         
         sideBarIsVisible = false
+        container.isUserInteractionEnabled = true
         
         UIView.animate(withDuration: 0.3, delay: 0.0, options: .curveEaseIn, animations: {
             self.view.layoutIfNeeded()

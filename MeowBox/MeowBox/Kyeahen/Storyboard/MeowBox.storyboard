@@ -164,7 +164,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y6r-UK-bwi">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="1730"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PsT-SA-Ktt">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PsT-SA-Ktt">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1730"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <imageView key="tableHeaderView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="whm-3t-hFg">
@@ -373,6 +373,7 @@
                     <connections>
                         <outlet property="barButton" destination="1iG-uw-31g" id="16R-He-i09"/>
                         <outlet property="detailTableView" destination="PsT-SA-Ktt" id="SO8-Eq-YGz"/>
+                        <outlet property="detailView" destination="y6r-UK-bwi" id="E9X-40-80X"/>
                         <outlet property="hiddenImageView" destination="6p5-2q-PRN" id="2fU-yU-dG2"/>
                         <outlet property="hiddenLeadingC" destination="khF-QL-jyE" id="Llv-1U-9Ka"/>
                         <outlet property="hiddenTrailingC" destination="ndV-Hd-g4Y" id="qJH-Jo-Q45"/>
@@ -525,7 +526,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9S3-XL-x9s">
                                 <rect key="frame" x="0.0" y="64" width="375" height="1129"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HSn-WE-eyP">
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HSn-WE-eyP">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1129"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <view key="tableHeaderView" contentMode="scaleToFill" id="7gi-KS-Cs2">
@@ -629,7 +630,7 @@
                                                 <rect key="frame" x="0.0" y="454.5" width="375" height="500"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1VJ-9P-hVu" id="2UF-3g-36C">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="499.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="500"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="W8Y-2J-d8v">
@@ -805,6 +806,7 @@
                         <outlet property="profileImageView" destination="x2e-mF-wQb" id="ijk-gQ-Eh8"/>
                         <outlet property="reviewHeaderImageView" destination="Yl3-eT-bzD" id="hpe-Qc-Vvk"/>
                         <outlet property="reviewTableView" destination="HSn-WE-eyP" id="qxY-zM-LXK"/>
+                        <outlet property="reviewView" destination="9S3-XL-x9s" id="CjG-0v-YAh"/>
                         <outlet property="trailingC" destination="2dt-NY-JCC" id="dY9-G3-w4X"/>
                     </connections>
                 </viewController>

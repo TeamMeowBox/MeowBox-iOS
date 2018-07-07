@@ -881,6 +881,7 @@
                                                 <constraints>
                                                     <constraint firstItem="c8y-1e-EKi" firstAttribute="leading" secondItem="RwG-mt-rPY" secondAttribute="trailing" constant="100" id="5vs-7S-aSk"/>
                                                     <constraint firstAttribute="width" secondItem="dsN-Pt-bPh" secondAttribute="height" multiplier="25:3" id="UOk-oO-KhS"/>
+                                                    <constraint firstAttribute="width" constant="375" id="Wk1-UP-LfC"/>
                                                     <constraint firstAttribute="height" constant="45" id="Z1n-sF-1gq"/>
                                                     <constraint firstAttribute="trailing" secondItem="c8y-1e-EKi" secondAttribute="trailing" constant="21" id="c6D-Dy-qI5"/>
                                                     <constraint firstItem="RwG-mt-rPY" firstAttribute="centerY" secondItem="dsN-Pt-bPh" secondAttribute="centerY" id="nl7-oE-NYg"/>
