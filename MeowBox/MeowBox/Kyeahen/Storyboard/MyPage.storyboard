@@ -33,9 +33,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XOI-fU-IEq">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sidebar-default-img" translatesAutoresizingMaskIntoConstraints="NO" id="XOI-fU-IEq">
                                 <rect key="frame" x="21" y="64" width="49" height="49"/>
-                                <color key="backgroundColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="XOI-fU-IEq" secondAttribute="height" multiplier="1:1" id="FUE-X8-QG5"/>
                                     <constraint firstAttribute="width" constant="49" id="uEs-1t-R55"/>
@@ -1625,6 +1624,7 @@
         <image name="setting-icon" width="21" height="21"/>
         <image name="side-bar-back-btn2" width="17" height="19"/>
         <image name="side-bar-btn-gray" width="20" height="16"/>
+        <image name="sidebar-default-img" width="49" height="49"/>
         <image name="story-order-btn" width="115" height="33"/>
         <image name="x-btn" width="14" height="14"/>
     </resources>

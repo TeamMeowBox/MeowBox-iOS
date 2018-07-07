@@ -12,18 +12,16 @@ class MeowBoxReviewViewController: UIViewController, UITableViewDelegate, UITabl
     
     @IBOutlet weak var leadingC: NSLayoutConstraint!
     @IBOutlet weak var trailingC: NSLayoutConstraint!
-    
     @IBOutlet weak var barButton: UIBarButtonItem!
     @IBOutlet weak var profileImageView: UIImageView!
     
-    var sideBarIsVisible = false
-   
-    
     @IBOutlet weak var reviewTableView: UITableView!
-    
     @IBOutlet weak var reviewHeaderImageView: UIImageView!
     
+    var sideBarIsVisible = false
     let tableImageArr = [#imageLiteral(resourceName: "package-box-img")]
+    let logo : UIImage = UIImage(named: "meowbox-logo-pink.png")!
+    let logoImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 128, height: 21))
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +35,12 @@ class MeowBoxReviewViewController: UIViewController, UITableViewDelegate, UITabl
 //        hiddenImageView.isHidden = true
         
         self.navigationItem.backBarButtonItem = barButton
+        self.navigationItem.titleView = logoImageView
+        
+        //navigation bar titleview
+        logoImageView.contentMode = .scaleAspectFit
+        logoImageView.image = logo
+        navigationItem.titleView = logoImageView
         
         //프로필 이미지 동그랗게
         profileImageView.layer.masksToBounds = true
@@ -76,6 +80,7 @@ class MeowBoxReviewViewController: UIViewController, UITableViewDelegate, UITabl
             
             sideBarIsVisible = true
             self.navigationItem.leftBarButtonItem = nil
+            self.navigationItem.titleView = nil
             
         }
         
@@ -108,6 +113,7 @@ class MeowBoxReviewViewController: UIViewController, UITableViewDelegate, UITabl
         self.navigationController?.navigationBar.shadowImage = UIColor( red: CGFloat(112/255.0), green: CGFloat(112/255.0), blue: CGFloat(112/255.0), alpha: CGFloat(0.2) ).as1ptImage()
         self.navigationController?.navigationBar.barTintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         self.navigationItem.leftBarButtonItem = self.barButton
+        self.navigationItem.titleView = logoImageView
         
     }
     
@@ -174,6 +180,7 @@ class MeowBoxReviewViewController: UIViewController, UITableViewDelegate, UITabl
         self.navigationController?.navigationBar.shadowImage = UIColor( red: CGFloat(112/255.0), green: CGFloat(112/255.0), blue: CGFloat(112/255.0), alpha: CGFloat(0.2) ).as1ptImage()
         self.navigationController?.navigationBar.barTintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         self.navigationItem.leftBarButtonItem = self.barButton
+        self.navigationItem.titleView = logoImageView
         
     }
     

@@ -413,9 +413,8 @@
                                     <action selector="loginAction:" destination="yuE-Yv-ipw" eventType="touchUpInside" id="j4q-kb-3QC"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zTA-K0-4QP">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login-meowbox-logo" translatesAutoresizingMaskIntoConstraints="NO" id="zTA-K0-4QP">
                                 <rect key="frame" x="122" y="134" width="131" height="131"/>
-                                <color key="backgroundColor" red="0.85490196078431369" green="0.54509803921568623" blue="0.54509803921568623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="131" id="2iO-CY-0Zj"/>
                                     <constraint firstAttribute="width" secondItem="zTA-K0-4QP" secondAttribute="height" multiplier="1:1" id="5yl-kZ-BI9"/>
@@ -494,6 +493,7 @@
         <image name="back-btn" width="14" height="16"/>
         <image name="email-icon-gray" width="17" height="14"/>
         <image name="login-btn-gray" width="283" height="66"/>
+        <image name="login-meowbox-logo" width="146" height="165"/>
         <image name="password-icon-gray" width="17" height="20"/>
         <image name="x-btn" width="14" height="14"/>
     </resources>

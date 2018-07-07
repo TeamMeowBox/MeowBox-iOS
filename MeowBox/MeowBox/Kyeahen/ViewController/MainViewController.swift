@@ -27,6 +27,9 @@ class MainViewController: UIViewController,UICollectionViewDelegate,UICollection
     @IBOutlet weak var profileImage: UIImageView!
     var sideBarIsVisible = false //메뉴 상태 여부
     
+    let logo : UIImage = UIImage(named: "meowbox-logo-pink.png")!
+    let logoImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 128, height: 21))
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,9 +37,15 @@ class MainViewController: UIViewController,UICollectionViewDelegate,UICollection
         collectionView.dataSource = self
         collectionView.decelerationRate = UIScrollViewDecelerationRateFast
         
+        //navigation bar titleview
+        logoImageView.contentMode = .scaleAspectFit
+        logoImageView.image = logo
+        navigationItem.titleView = logoImageView
+        
         hiddenImageView.isHidden = true
         setNavigationBar()
         self.navigationItem.backBarButtonItem = barButton
+        self.navigationItem.titleView = logoImageView
         
         //프로필 이미지 동그랗게
         profileImage.layer.masksToBounds = true
@@ -73,7 +82,7 @@ class MainViewController: UIViewController,UICollectionViewDelegate,UICollection
             
             sideBarIsVisible = true
             self.navigationItem.leftBarButtonItem = nil
-            self.navigationItem.title = nil
+            self.navigationItem.titleView = nil
             
         }
         
@@ -104,7 +113,7 @@ class MainViewController: UIViewController,UICollectionViewDelegate,UICollection
         
         //네비게이션바 복원
         self.navigationItem.leftBarButtonItem = self.barButton
-        self.navigationItem.title = self.title
+        self.navigationItem.titleView = self.logoImageView
     }
     
     //MARK: 로그인 액션
@@ -135,7 +144,7 @@ class MainViewController: UIViewController,UICollectionViewDelegate,UICollection
         
         //네비게이션바 복원
         self.navigationItem.leftBarButtonItem = self.barButton
-        self.navigationItem.title = self.title
+        self.navigationItem.titleView = self.logoImageView
     }
     
     //MARK: 미유박스 이야기 액션
