@@ -94,10 +94,10 @@ class LoginViewController: UIViewController {
         
         /***********************************************************************************************/
         
-        let URL = "http://13.209.220.1:3000/"
+        let URL = "http://13.209.220.1:3000/user/signin"
         let body: [String: Any] = [
-            "user_id" : gsno(emailTextField.text),
-            "user_pw" : gsno(pwdTextField.text)
+            "email" : gsno(emailTextField.text),
+            "password" : gsno(pwdTextField.text)
         ]
         
         Alamofire.request(URL, method: .post, parameters: body, encoding: JSONEncoding.default, headers: nil).responseData(){ res in
@@ -105,8 +105,9 @@ class LoginViewController: UIViewController {
             case .success:
                 if let value = res.result.value{
                     if let message = JSON(value)["message"].string{
-                        if message == "Login Success"{ // 로그인 성공
-                            self.userdefault.set(body["user_id"], forKey: "user_id")
+                        if message == "success"{ // 로그인 성공
+                            print("로그인성공")
+                            self.userdefault.set(body["email"], forKey: "user_email")
                             let mainVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainNaviVC")
                                 self.present(mainVC, animated: true, completion: nil)
                            
