@@ -44,10 +44,6 @@ class LoginViewController: UIViewController {
         emailTextField.addTarget(self, action: #selector(emptyCheck), for: .editingChanged)
         pwdTextField.addTarget(self, action: #selector(emptyCheck), for: .editingChanged)
         
-        //프로필 이미지 동그랗게
-        logoImageView.layer.masksToBounds = true
-        logoImageView.layer.cornerRadius = logoImageView.layer.frame.width/2
-        
         // Do any additional setup after loading the view.
     }
 

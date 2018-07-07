@@ -22,7 +22,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--MEOW BOX-->
+        <!--Meow Box Detail View Controller-->
         <scene sceneID="0t1-pJ-lQc">
             <objects>
                 <viewController storyboardIdentifier="MeowBoxDetailViewController" id="8et-LN-MJo" customClass="MeowBoxDetailViewController" customModule="MeowBox" customModuleProvider="target" sceneMemberID="viewController">
@@ -30,9 +30,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1730"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6x1-vv-hUQ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sidebar-default-img" translatesAutoresizingMaskIntoConstraints="NO" id="6x1-vv-hUQ">
                                 <rect key="frame" x="21" y="64" width="49" height="49"/>
-                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="6x1-vv-hUQ" secondAttribute="height" multiplier="1:1" id="AGu-w1-3Ff"/>
                                     <constraint firstAttribute="height" constant="49" id="aCa-Tp-Jpy"/>
@@ -363,7 +362,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="c4K-2e-hBz"/>
                     </view>
-                    <navigationItem key="navigationItem" title="MEOW BOX" id="zY3-zp-2ag">
+                    <navigationItem key="navigationItem" id="zY3-zp-2ag">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="side-bar-btn-gray" id="1iG-uw-31g">
                             <connections>
                                 <action selector="sideBarAction:" destination="8et-LN-MJo" id="4bG-9B-SqJ"/>
@@ -394,7 +393,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1193"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x2e-mF-wQb">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sidebar-default-img" translatesAutoresizingMaskIntoConstraints="NO" id="x2e-mF-wQb">
                                 <rect key="frame" x="21" y="64" width="49" height="49"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="x2e-mF-wQb" secondAttribute="height" multiplier="1:1" id="IVj-hP-cu7"/>
@@ -831,6 +830,7 @@
         <image name="indicator-first" width="45" height="13"/>
         <image name="side-bar-back-btn2" width="17" height="19"/>
         <image name="side-bar-btn-gray" width="20" height="16"/>
+        <image name="sidebar-default-img" width="49" height="49"/>
         <image name="top-btn" width="135" height="33"/>
     </resources>
 </document>

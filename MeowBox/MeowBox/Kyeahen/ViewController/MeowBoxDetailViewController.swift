@@ -16,11 +16,13 @@ class MeowBoxDetailViewController: UIViewController, UITableViewDelegate, UITabl
     @IBOutlet weak var hiddenTrailingC: NSLayoutConstraint!
     @IBOutlet weak var hiddenImageView: UIImageView!
     
-    
     @IBOutlet weak var barButton: UIBarButtonItem!
-    @IBOutlet weak var profileImageView: UIImageView!
     
+    @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var detailTableView: UITableView!
+    
+    let logo : UIImage = UIImage(named: "meowbox-logo-pink.png")!
+    let logoImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 128, height: 21))
     
     var sideBarIsVisible = false
     
@@ -34,12 +36,16 @@ class MeowBoxDetailViewController: UIViewController, UITableViewDelegate, UITabl
         //TableView
         detailTableView.delegate = self
         detailTableView.dataSource = self
-    
+        detailTableView.contentInset = UIEdgeInsets(top: -64, left: 0, bottom: 0, right: 0)
        
         setNavigationBar()
-        detailTableView.contentInset = UIEdgeInsets(top: -64, left: 0, bottom: 0, right: 0)
-        
         self.navigationItem.backBarButtonItem = barButton
+        self.navigationItem.titleView = logoImageView
+        
+        //navigation bar titleview
+        logoImageView.contentMode = .scaleAspectFit
+        logoImageView.image = logo
+        navigationItem.titleView = logoImageView
         
         //프로필 이미지 동그랗게
         profileImageView.layer.masksToBounds = true
@@ -105,7 +111,7 @@ class MeowBoxDetailViewController: UIViewController, UITableViewDelegate, UITabl
             
             sideBarIsVisible = true
             self.navigationItem.leftBarButtonItem = nil
-            self.navigationItem.title = nil
+            self.navigationItem.titleView = nil
             
         }
         
@@ -136,7 +142,7 @@ class MeowBoxDetailViewController: UIViewController, UITableViewDelegate, UITabl
         
         //네비게이션바 복원
         self.navigationItem.leftBarButtonItem = self.barButton
-        self.navigationItem.title = "MEOW BOX"
+        self.navigationItem.titleView = logoImageView
         
     }
     

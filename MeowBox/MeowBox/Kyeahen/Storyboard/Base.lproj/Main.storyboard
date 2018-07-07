@@ -30,9 +30,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wDv-H1-77o">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sidebar-default-img" translatesAutoresizingMaskIntoConstraints="NO" id="wDv-H1-77o">
                                 <rect key="frame" x="21" y="64" width="49" height="49"/>
-                                <color key="backgroundColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="wDv-H1-77o" secondAttribute="height" multiplier="1:1" id="EOT-kV-gxA"/>
                                     <constraint firstAttribute="width" constant="49" id="veg-Z9-JXn"/>
@@ -276,7 +275,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="MEOW BOX" id="WUW-OA-wbf">
+                    <navigationItem key="navigationItem" id="WUW-OA-wbf">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="side-bar-btn-gray" width="19.77" id="Ko4-RR-Qtb">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
@@ -552,5 +551,6 @@
     <resources>
         <image name="side-bar-back-btn2" width="17" height="19"/>
         <image name="side-bar-btn-gray" width="20" height="16"/>
+        <image name="sidebar-default-img" width="49" height="49"/>
     </resources>
 </document>
