@@ -19,7 +19,6 @@ class MeowBoxReviewViewController: UIViewController, UITableViewDelegate, UITabl
     @IBOutlet weak var reviewHeaderImageView: UIImageView!
     
     var sideBarIsVisible = false
-    let tableImageArr = [#imageLiteral(resourceName: "package-box-img")]
     let logo : UIImage = UIImage(named: "meowbox-logo-pink.png")!
     let logoImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 128, height: 21))
     
@@ -29,7 +28,6 @@ class MeowBoxReviewViewController: UIViewController, UITableViewDelegate, UITabl
         //tableview
         reviewTableView.delegate = self
         reviewTableView.dataSource = self
-        
         
         //sidebar
 //        hiddenImageView.isHidden = true
@@ -199,18 +197,32 @@ class MeowBoxReviewViewController: UIViewController, UITableViewDelegate, UITabl
     
     //섹션에 몇개의 데이터를 보여줄 것인지
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tableImageArr.count
+        return 2
     }
     
     //로우에 어떤 데이터를 보여줄건지
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MeowBoxReviewTableViewCell", for: indexPath) as! MeowBoxReviewTableViewCell
         
-        cell.reviewBackgroundImageView.image = tableImageArr[indexPath.row]
-        cell.reviewTitleLabel.text = "이달의 소중한 탄생"
-        cell.reviewintroLabel.text = "7월에 태어난 아이들을 함께 축하해줘요!짝짝짝"
-        
-        return cell
+        if indexPath.row == 0 {
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "MeowBoxReviewTableViewCell", for: indexPath) as! MeowBoxReviewTableViewCell
+            
+            cell.reviewBackgroundImageView.image = #imageLiteral(resourceName: "birthday-background-img")
+            cell.reviewTitleLabel.text = "이달의 소중한 탄생"
+            cell.reviewintroLabel.text = "7월에 태어난 아이들을 함께 축하해줘요!짝짝짝"
+            
+            return cell
+            
+        }
+        else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "MeowBoxReviewTableViewCell", for: indexPath) as! MeowBoxReviewTableViewCell
+            
+            cell.reviewBackgroundImageView.backgroundColor = #colorLiteral(red: 0.8980392157, green: 0.7058823529, blue: 0.7019607843, alpha: 1)
+            cell.reviewTitleLabel.text = "이달의 소중한 탄생"
+            cell.reviewintroLabel.text = "7월에 태어난 아이들을 함께 축하해줘요!짝짝짝"
+            
+            return cell
+        }
     }
     
     //MARK: 맨 위로 가기 액션

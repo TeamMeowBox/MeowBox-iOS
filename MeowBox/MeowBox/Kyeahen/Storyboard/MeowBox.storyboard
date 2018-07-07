@@ -634,7 +634,6 @@
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="W8Y-2J-d8v">
                                                             <rect key="frame" x="0.0" y="0.0" width="375" height="241"/>
-                                                            <color key="backgroundColor" red="0.89803921568627454" green="0.70588235294117652" blue="0.70196078431372544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="241" id="L9P-p6-MZZ"/>
                                                             </constraints>
@@ -657,7 +656,7 @@
                                                             <color key="textColor" red="0.29803921568627451" green="0.30588235294117649" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="T5t-SX-Sze">
+                                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="T5t-SX-Sze">
                                                             <rect key="frame" x="0.0" y="119" width="375" height="381"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="381" id="GLQ-ZB-k8V"/>
@@ -690,7 +689,7 @@
                                                                                     <constraint firstAttribute="height" constant="23" id="E1N-2k-PD2"/>
                                                                                 </constraints>
                                                                                 <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="15"/>
-                                                                                <nil key="textColor"/>
+                                                                                <color key="textColor" red="0.29803921568627451" green="0.30588235294117649" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D6C-M9-j6J">
@@ -699,7 +698,7 @@
                                                                                     <constraint firstAttribute="height" constant="23" id="IXu-l6-F6n"/>
                                                                                 </constraints>
                                                                                 <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="15"/>
-                                                                                <nil key="textColor"/>
+                                                                                <color key="textColor" red="0.29803921568627451" green="0.30588235294117649" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                         </subviews>
@@ -713,7 +712,9 @@
                                                                         <constraint firstItem="K5M-RJ-7Mj" firstAttribute="top" secondItem="C14-ba-6cd" secondAttribute="top" id="msU-j7-Kc0"/>
                                                                     </constraints>
                                                                     <connections>
+                                                                        <outlet property="reviewID" destination="7xs-g4-tBI" id="b78-Us-bJV"/>
                                                                         <outlet property="reviewImageView" destination="K5M-RJ-7Mj" id="ADU-Mu-EOs"/>
+                                                                        <outlet property="reviewTag" destination="D6C-M9-j6J" id="8e7-zU-EY0"/>
                                                                     </connections>
                                                                 </collectionViewCell>
                                                             </cells>
