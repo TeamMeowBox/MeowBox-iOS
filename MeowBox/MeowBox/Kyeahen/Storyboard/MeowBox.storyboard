@@ -684,9 +684,31 @@
                                                                                     <constraint firstAttribute="width" secondItem="K5M-RJ-7Mj" secondAttribute="height" multiplier="39:32" id="4Rb-9P-oe7"/>
                                                                                 </constraints>
                                                                             </imageView>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7xs-g4-tBI">
+                                                                                <rect key="frame" x="31" y="300" width="39" height="23"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="height" constant="23" id="E1N-2k-PD2"/>
+                                                                                </constraints>
+                                                                                <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="15"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
+                                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D6C-M9-j6J">
+                                                                                <rect key="frame" x="31" y="269" width="39" height="23"/>
+                                                                                <constraints>
+                                                                                    <constraint firstAttribute="height" constant="23" id="IXu-l6-F6n"/>
+                                                                                </constraints>
+                                                                                <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="15"/>
+                                                                                <nil key="textColor"/>
+                                                                                <nil key="highlightedColor"/>
+                                                                            </label>
                                                                         </subviews>
                                                                     </view>
                                                                     <constraints>
+                                                                        <constraint firstItem="7xs-g4-tBI" firstAttribute="leading" secondItem="D6C-M9-j6J" secondAttribute="leading" id="5Lc-bY-Poy"/>
+                                                                        <constraint firstItem="D6C-M9-j6J" firstAttribute="leading" secondItem="K5M-RJ-7Mj" secondAttribute="leading" id="YAC-GF-vSH"/>
+                                                                        <constraint firstItem="7xs-g4-tBI" firstAttribute="top" secondItem="D6C-M9-j6J" secondAttribute="bottom" constant="8" id="dRE-di-udi"/>
+                                                                        <constraint firstItem="D6C-M9-j6J" firstAttribute="top" secondItem="K5M-RJ-7Mj" secondAttribute="bottom" constant="13" id="khg-4i-1pq"/>
                                                                         <constraint firstItem="K5M-RJ-7Mj" firstAttribute="centerX" secondItem="C14-ba-6cd" secondAttribute="centerX" id="loj-Rx-tl4"/>
                                                                         <constraint firstItem="K5M-RJ-7Mj" firstAttribute="top" secondItem="C14-ba-6cd" secondAttribute="top" id="msU-j7-Kc0"/>
                                                                     </constraints>

@@ -33,14 +33,6 @@ class SignInViewController: UIViewController {
         self.pwdTextField.layer.borderColor = #colorLiteral(red: 0.6, green: 0.6, blue: 0.6, alpha: 1)
         self.pwdTextField.layer.borderWidth = 1
         
-        
-        //navigation bar title color
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : #colorLiteral(red: 0.2980392157, green: 0.3058823529, blue: 0.3137254902, alpha: 1)]
-        
-        //navigation bar tint color
-        self.navigationController?.navigationBar.barTintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        
-        
         // Do any additional setup after loading the view.
     }
     
