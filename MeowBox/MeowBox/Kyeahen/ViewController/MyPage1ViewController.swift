@@ -28,17 +28,9 @@ class MyPage1ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         hiddenImageView.isHidden = true
         
         self.navigationItem.backBarButtonItem = barButton
-        
-        //navigation bar title&left bar item color
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : #colorLiteral(red: 0.2980392157, green: 0.3058823529, blue: 0.3137254902, alpha: 1)]
-        self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 0.2980392157, green: 0.3058823529, blue: 0.3137254902, alpha: 1)
-        
-        //navigation bar tint color
-        self.navigationController?.navigationBar.barTintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         
         //프로필 이미지 동그랗게
         profileImageView.layer.masksToBounds = true

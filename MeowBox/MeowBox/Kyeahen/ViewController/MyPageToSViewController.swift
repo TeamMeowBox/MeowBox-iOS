@@ -27,6 +27,9 @@ class MyPageToSViewController: UIViewController {
         ToSTextView.layer.borderWidth = 0.5
         ToSTextView.layer.borderColor = #colorLiteral(red: 0.8078431373, green: 0.8078431373, blue: 0.8078431373, alpha: 1)
         
+        // Align the text to the left edge of textContainer
+        ToSTextView.textContainer.lineFragmentPadding = 14
+        
         //segmented control
         myPageSegmentedControl.selectedSegmentIndex = 0
         
