@@ -12,6 +12,10 @@ class MeowBoxReviewViewController: UIViewController, UITableViewDelegate, UITabl
     
     @IBOutlet weak var leadingC: NSLayoutConstraint!
     @IBOutlet weak var trailingC: NSLayoutConstraint!
+    @IBOutlet weak var hiddenLeadingC: NSLayoutConstraint!
+    @IBOutlet weak var hiddenTrailingC: NSLayoutConstraint!
+    @IBOutlet weak var hiddenImageView: UIImageView!
+    
     @IBOutlet weak var barButton: UIBarButtonItem!
     @IBOutlet weak var profileImageView: UIImageView!
     
@@ -31,7 +35,7 @@ class MeowBoxReviewViewController: UIViewController, UITableViewDelegate, UITabl
         reviewTableView.dataSource = self
         
         //sidebar
-//        hiddenImageView.isHidden = true
+        hiddenImageView.isHidden = true
         
         self.navigationItem.backBarButtonItem = barButton
         self.navigationItem.titleView = logoImageView
@@ -68,10 +72,10 @@ class MeowBoxReviewViewController: UIViewController, UITableViewDelegate, UITabl
         
         if !sideBarIsVisible { //메뉴 보여줘야함
             
-//            hiddenImageView.isHidden = false
-//
-//            hiddenLeadingC.constant = 258
-//            hiddenTrailingC.constant = -258
+            hiddenImageView.isHidden = false
+
+            hiddenLeadingC.constant = 258
+            hiddenTrailingC.constant = -258
             leadingC.constant = 258
             trailingC.constant = -258
             
@@ -95,10 +99,10 @@ class MeowBoxReviewViewController: UIViewController, UITableViewDelegate, UITabl
     //MARK: 사이드바 Back 액션
     @IBAction func sideBarBackAction(_ sender: Any) {
         
-//        hiddenImageView.isHidden = true
-//
-//        hiddenLeadingC.constant = 0
-//        hiddenTrailingC.constant = 0
+        hiddenImageView.isHidden = true
+
+        hiddenLeadingC.constant = 0
+        hiddenTrailingC.constant = 0
         leadingC.constant = 0
         trailingC.constant = 0
         
@@ -163,10 +167,10 @@ class MeowBoxReviewViewController: UIViewController, UITableViewDelegate, UITabl
     //MARK: 집사들의 후기 액션
     @IBAction func reviewAction(_ sender: Any) {
         
-        //        hiddenImageView.isHidden = true
-        //
-        //        hiddenLeadingC.constant = 0
-        //        hiddenTrailingC.constant = 0
+        hiddenImageView.isHidden = true
+        
+        hiddenLeadingC.constant = 0
+        hiddenTrailingC.constant = 0
         leadingC.constant = 0
         trailingC.constant = 0
         
