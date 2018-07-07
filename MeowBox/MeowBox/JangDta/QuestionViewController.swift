@@ -98,9 +98,7 @@ class QuestionViewController: UIViewController, UITableViewDelegate,UITableViewD
         else{
             self.expandedCells.add(indexPath)
         }
-        
-//        tableView.beginUpdates()
-//        tableView.endUpdates()
+
         tableView.reloadData()
         tableView.deselectRow(at: indexPath, animated: true)
     }

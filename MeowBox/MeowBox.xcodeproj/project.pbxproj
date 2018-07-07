@@ -72,6 +72,8 @@
 		CC693A1320EE0BED00DA0935 /* TicketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC693A1220EE0BED00DA0935 /* TicketTableViewCell.swift */; };
 		CC7DB55520EDE3CC00286E29 /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7DB55420EDE3CC00286E29 /* MainCollectionViewCell.swift */; };
 		CCB12E5B20E90C6B00C5D4B8 /* OrderWithInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB12E5A20E90C6B00C5D4B8 /* OrderWithInfoViewController.swift */; };
+		CCCA9DF220F0E930004319E5 /* NoticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCA9DF120F0E930004319E5 /* NoticeViewController.swift */; };
+		CCCA9DF420F0EE5B004319E5 /* NoticeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCA9DF320F0EE5B004319E5 /* NoticeTableViewCell.swift */; };
 		CCDD5E7820E945C100A989CB /* OrderWithInfo2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDD5E7720E945C100A989CB /* OrderWithInfo2ViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -145,6 +147,8 @@
 		CC693A1220EE0BED00DA0935 /* TicketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketTableViewCell.swift; sourceTree = "<group>"; };
 		CC7DB55420EDE3CC00286E29 /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
 		CCB12E5A20E90C6B00C5D4B8 /* OrderWithInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderWithInfoViewController.swift; sourceTree = "<group>"; };
+		CCCA9DF120F0E930004319E5 /* NoticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeViewController.swift; sourceTree = "<group>"; };
+		CCCA9DF320F0EE5B004319E5 /* NoticeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeTableViewCell.swift; sourceTree = "<group>"; };
 		CCDD5E7720E945C100A989CB /* OrderWithInfo2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderWithInfo2ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -359,6 +363,8 @@
 				CC693A1220EE0BED00DA0935 /* TicketTableViewCell.swift */,
 				CC4AD41E20EE1D0700C31E53 /* CheckTicketViewController.swift */,
 				CC4AD42020EE20A700C31E53 /* CheckTicketTableViewCell.swift */,
+				CCCA9DF120F0E930004319E5 /* NoticeViewController.swift */,
+				CCCA9DF320F0EE5B004319E5 /* NoticeTableViewCell.swift */,
 			);
 			path = JangDta;
 			sourceTree = "<group>";
@@ -532,7 +538,9 @@
 				CC44CBBA20EB2307007466D8 /* SettingViewController.swift in Sources */,
 				CC7DB55520EDE3CC00286E29 /* MainCollectionViewCell.swift in Sources */,
 				CC693A1320EE0BED00DA0935 /* TicketTableViewCell.swift in Sources */,
+				CCCA9DF220F0E930004319E5 /* NoticeViewController.swift in Sources */,
 				222B5DCA20E8BB6F003F0A8C /* APIService.swift in Sources */,
+				CCCA9DF420F0EE5B004319E5 /* NoticeTableViewCell.swift in Sources */,
 				2200E30320F0E46F0030A7E9 /* test.swift in Sources */,
 				2200E30520F0E4790030A7E9 /* test1.swift in Sources */,
 				22A86ED620EBE84C00B17661 /* TicketCancelPopUpViewController.swift in Sources */,
