@@ -18,6 +18,7 @@ class MeowBoxReviewViewController: UIViewController, UITableViewDelegate, UITabl
     @IBOutlet weak var reviewTableView: UITableView!
     @IBOutlet weak var reviewHeaderImageView: UIImageView!
     
+    @IBOutlet var reviewView: UIView!
     var sideBarIsVisible = false
     let logo : UIImage = UIImage(named: "meowbox-logo-pink.png")!
     let logoImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 128, height: 21))
@@ -77,6 +78,8 @@ class MeowBoxReviewViewController: UIViewController, UITableViewDelegate, UITabl
             setNavigationBar()
             
             sideBarIsVisible = true
+        
+            reviewView.isUserInteractionEnabled = false
             self.navigationItem.leftBarButtonItem = nil
             self.navigationItem.titleView = nil
             
@@ -100,6 +103,7 @@ class MeowBoxReviewViewController: UIViewController, UITableViewDelegate, UITabl
         trailingC.constant = 0
         
         sideBarIsVisible = false
+        reviewView.isUserInteractionEnabled = true
         
         UIView.animate(withDuration: 0.3, delay: 0.0, options: .curveEaseIn, animations: {
             self.view.layoutIfNeeded()
@@ -167,6 +171,7 @@ class MeowBoxReviewViewController: UIViewController, UITableViewDelegate, UITabl
         trailingC.constant = 0
         
         sideBarIsVisible = false
+        reviewView.isUserInteractionEnabled = true
         
         UIView.animate(withDuration: 0.3, delay: 0.0, options: .curveEaseIn, animations: {
             self.view.layoutIfNeeded()

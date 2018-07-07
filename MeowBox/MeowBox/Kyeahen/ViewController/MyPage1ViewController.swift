@@ -71,6 +71,7 @@ class MyPage1ViewController: UIViewController {
             trailingC.constant = -258
             
             sideBarIsVisible = true
+            myPageView.isUserInteractionEnabled = false
             self.navigationItem.leftBarButtonItem = nil
             self.navigationItem.title = nil
             
@@ -95,6 +96,7 @@ class MyPage1ViewController: UIViewController {
         trailingC.constant = 0
         
         sideBarIsVisible = false
+        myPageView.isUserInteractionEnabled = true
         
         UIView.animate(withDuration: 0.3, delay: 0.0, options: .curveEaseIn, animations: {
             self.view.layoutIfNeeded()
@@ -162,6 +164,7 @@ class MyPage1ViewController: UIViewController {
         trailingC.constant = 0
         
         sideBarIsVisible = false
+        myPageView.isUserInteractionEnabled = true
         
         UIView.animate(withDuration: 0.3, delay: 0.0, options: .curveEaseIn, animations: {
             self.view.layoutIfNeeded()
