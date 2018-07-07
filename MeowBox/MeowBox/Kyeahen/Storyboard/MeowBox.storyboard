@@ -598,7 +598,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="베스트 컷을 기대해주세요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gye-Cf-9Ls">
-                                                    <rect key="frame" x="88.5" y="50" width="198.5" height="27"/>
+                                                    <rect key="frame" x="89" y="50" width="198.5" height="27"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="27" id="qqR-zm-amA"/>
                                                     </constraints>
