@@ -47,6 +47,8 @@ class MeowBoxReviewTableViewCell: UITableViewCell, UICollectionViewDelegate, UIC
         if let cell: MeowBoxReviewCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "MeowBoxReviewCollectionViewCell", for: indexPath) as? MeowBoxReviewCollectionViewCell
         {
             cell.reviewImageView.image = collectImageArr[indexPath.row]
+            cell.reviewTag.text = "#냥냥이 #고양이"
+            cell.reviewID.text = "@kyeahen"
             
             return cell
         }
