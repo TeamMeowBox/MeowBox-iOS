@@ -25,7 +25,10 @@ class MainViewController: UIViewController,UICollectionViewDelegate,UICollection
     @IBOutlet weak var barButton: UIBarButtonItem!
     
     @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var bottomBtnView: UIView!
+    
     var sideBarIsVisible = false //메뉴 상태 여부
+    var panGestureRecognizer: UIPanGestureRecognizer!
     
     let logo : UIImage = UIImage(named: "meowbox-logo-pink.png")!
     let logoImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 128, height: 21))
@@ -50,8 +53,45 @@ class MainViewController: UIViewController,UICollectionViewDelegate,UICollection
         //프로필 이미지 동그랗게
         profileImage.layer.masksToBounds = true
         profileImage.layer.cornerRadius = profileImage.layer.frame.width/2
+        
+        //bottomView click litener
+        let gesture = UITapGestureRecognizer(target: self, action:  #selector(self.bottomViewAction))
+        self.bottomBtnView.addGestureRecognizer(gesture)
+        
+        //bottomView conerRadius
+        bottomBtnView.clipsToBounds = true
+        bottomBtnView.layer.cornerRadius = 5
+        bottomBtnView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
+        
+        //bottomview shadow
+        bottomBtnView.layer.shadowColor = #colorLiteral(red: 0.8392156863, green: 0.8392156863, blue: 0.8392156863, alpha: 1)
+        bottomBtnView.layer.shadowOpacity = 6
+        bottomBtnView.layer.shadowOffset = CGSize.zero
+        bottomBtnView.layer.shadowRadius = 5
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(animated)
+//        
+//        addBottomSheetView()
+//        
+//    }
+    
+//    func addBottomSheetView() {
+//        // 1- Init bottomSheetVC
+//        let bottomSheetVC = MainBottomViewController()
+//
+//        // 2- Add bottomSheetVC as a child view
+//        self.addChildViewController(bottomSheetVC)
+//        self.view.addSubview(bottomSheetVC.view)
+//        bottomSheetVC.didMove(toParentViewController: self)
+//
+//        // 3- Adjust bottomSheet frame and initial position.
+//        let height = view.frame.height
+//        let width  = view.frame.width
+//        bottomSheetVC.view.frame = CGRect(origin: CGPoint(x: 0, y: self.view.frame.maxY),size: CGSize(width: width, height:height))
+//    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -66,6 +106,38 @@ class MainViewController: UIViewController,UICollectionViewDelegate,UICollection
 
         bar.shadowImage = UIImage()
         bar.backgroundColor = UIColor.clear
+    }
+
+    
+//    //MARK: bottomView drag action
+//    @objc func dragViewAction(sender : UITapGestureRecognizer) {
+//        let translation = panGestureRecognizer.translation(in: self.bottomBtnView)
+//        let y = self.view.frame.minY
+//        self.bottomBtnView.frame = CGRect(origin: CGPoint(x: 0, y: 65), size: CGSize(width: bottomBtnView.frame.width, height: view.frame.height - 30))
+//        panGestureRecognizer.setTranslation(.zero, in: self.bottomBtnView)
+//
+//    }
+    
+    //MARK: bottomView click action
+    @objc func bottomViewAction(sender : UITapGestureRecognizer) {
+
+        let bottomVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: MainBottomViewController.reuseIdentifier) as! MainBottomViewController
+
+//        self.addChildViewController(bottomVC)
+//        self.view.addSubview(bottomVC.view)
+//        bottomVC.didMove(toParentViewController: self)
+//        let height = view.frame.height
+//        let width  = view.frame.width
+//        UIView.animate(withDuration: 0.3, delay: 0, options: UIViewAnimationOptions.curveEaseIn, animations: {
+//            bottomVC.view.frame = CGRect(x: 0, y: 100 , width: width, height: height - 100)
+//        }, completion: { (result) in
+//            // do what you want to do
+//        })
+
+//        bottomVC.view.frame = CGRect(origin: CGPoint(x: 0, y:65),
+//                               size: CGSize(width: self.view.frame.width, height: self.view.frame.height))
+
+        self.present(bottomVC, animated: true, completion: nil)
     }
     
     //MARK: 사이드 바

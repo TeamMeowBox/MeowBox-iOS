@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2200E2FE20F086E30030A7E9 /* MainBottomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200E2FD20F086E30030A7E9 /* MainBottomViewController.swift */; };
 		22109A8020EAAA3200E463C2 /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22109A7F20EAAA3200E463C2 /* MyPage.storyboard */; };
 		22109A8220EAAAFC00E463C2 /* MyPage1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22109A8120EAAAFC00E463C2 /* MyPage1ViewController.swift */; };
 		22156DBE20EF85380014491E /* MeowBoxDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22156DBD20EF85380014491E /* MeowBoxDetailTableViewCell.swift */; };
@@ -74,6 +75,7 @@
 
 /* Begin PBXFileReference section */
 		0725B72C78BF90D17ACFD95D /* Pods-MeowBox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeowBox.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MeowBox/Pods-MeowBox.debug.xcconfig"; sourceTree = "<group>"; };
+		2200E2FD20F086E30030A7E9 /* MainBottomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBottomViewController.swift; sourceTree = "<group>"; };
 		22109A7F20EAAA3200E463C2 /* MyPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
 		22109A8120EAAAFC00E463C2 /* MyPage1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPage1ViewController.swift; sourceTree = "<group>"; };
 		22156DBD20EF85380014491E /* MeowBoxDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeowBoxDetailTableViewCell.swift; sourceTree = "<group>"; };
@@ -281,6 +283,7 @@
 				22C1D38620EFC33700391389 /* MeowBoxReviewViewController.swift */,
 				22D3B21220EFE10A00DE37F4 /* MeowBoxReviewCollectionViewCell.swift */,
 				22D3B21420EFE13A00DE37F4 /* MeowBoxReviewTableViewCell.swift */,
+				2200E2FD20F086E30030A7E9 /* MainBottomViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -488,6 +491,7 @@
 				22BB241720EDCC0D00FD04E9 /* MyPageToSViewController.swift in Sources */,
 				22BEB4F620EDC63D0030E81B /* MyPage1TicketViewController.swift in Sources */,
 				CC4AD42120EE20A700C31E53 /* CheckTicketTableViewCell.swift in Sources */,
+				2200E2FE20F086E30030A7E9 /* MainBottomViewController.swift in Sources */,
 				CC4493BD20EBCBC60095D118 /* Order1ContainerViewController.swift in Sources */,
 				22D3B21520EFE13A00DE37F4 /* MeowBoxReviewTableViewCell.swift in Sources */,
 				22C1D38720EFC33700391389 /* MeowBoxReviewViewController.swift in Sources */,
