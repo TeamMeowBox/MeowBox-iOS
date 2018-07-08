@@ -657,7 +657,7 @@
                                         <color key="textColor" red="0.29803921568627451" green="0.30588235294117649" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="COg-2C-6jc">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="COg-2C-6jc">
                                         <rect key="frame" x="14" y="62" width="294" height="75"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="COg-2C-6jc" secondAttribute="height" multiplier="98:25" id="AZx-cv-sak"/>
@@ -812,7 +812,7 @@
                                             <action selector="editAction:" destination="Urr-1d-Xkn" eventType="touchUpInside" id="mEb-BN-yXw"/>
                                         </connections>
                                     </button>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Aou-nm-OPD">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aou-nm-OPD">
                                         <rect key="frame" x="11" y="61" width="300" height="75"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Aou-nm-OPD" secondAttribute="height" multiplier="300:75" id="0a5-dQ-dxU"/>
