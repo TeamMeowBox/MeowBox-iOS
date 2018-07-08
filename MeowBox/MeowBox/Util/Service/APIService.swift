@@ -17,5 +17,12 @@ extension APIService {
         return "http://13.209.220.1:3000" + path
     }
     
+    static func gsno(_ value: String?) -> String { //String 옵셔널 벗기기
+        return value ?? ""
+    }
+    
+    static func gino(_ value: Int?) -> Int { //Int 옵셔널 벗기기
+        return value ?? 0
+    }
     
 }

@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class SignInViewController: UIViewController {
+class SignInViewController: UIViewController, APIService {
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var phoneTextField: UITextField!
@@ -56,43 +56,24 @@ class SignInViewController: UIViewController {
         }
     }
     
+    func signup(){
+        SignService.signup(email: gsno(emailTextField.text), pwd: gsno(pwdTextField.text), name: gsno(nameTextField.text), phone_number: gsno(phoneTextField.text)){ message in
+            if message == "success"{
+                self.dismiss(animated: true, completion: nil)
+            }else if message == "exist_id"{
+                let alertView = UIAlertController(title: "중복", message: "이미 존재하는 아이디입니다.", preferredStyle: .alert)
+                let ok = UIAlertAction(title: "확인", style: .default, handler: nil)
+                alertView.addAction(ok)
+                self.present(alertView, animated: true, completion: nil)
+            }
+        }
+    }
+    
     //MARK: 회원가입 액션
     //TODO: 서버 통신
     @IBAction func SignInAction(_ sender: Any) {
         
-        /***********************************************************************************************/
-        
-        let URL = "http://13.209.220.1:3000/user/signup"
-        let body: [String: Any] = [
-            "email" : gsno(emailTextField.text),
-            "pwd" : gsno(pwdTextField.text),
-            "name" : gsno(nameTextField.text),
-            "phone_number" : gsno(phoneTextField.text),
-            ]
-        Alamofire.request(URL, method: .post, parameters: body, encoding: JSONEncoding.default, headers: nil).responseData(){ res in
-            switch res.result{
-            case .success:
-                if let value = res.result.value{
-                    if let message = JSON(value)["message"].string{
-                        if message == "success"{ // 회원가입 성공
-                            self.dismiss(animated: true, completion: nil)
-                        }else if message == "exist_id"{ // 중복 있음
-                            let alertView = UIAlertController(title: "중복", message: "이미 존재하는 아이디입니다.", preferredStyle: .alert)
-                            let ok = UIAlertAction(title: "확인", style: .default, handler: nil)
-                            alertView.addAction(ok)
-                            self.present(alertView, animated: true, completion: nil)
-                        }
-                    }
-                }
-                
-                break
-            case .failure(let err):
-                print(err.localizedDescription)
-                break
-            }
-        }
-        
-        /***********************************************************************************************/
+        signup()
         
     }
     
