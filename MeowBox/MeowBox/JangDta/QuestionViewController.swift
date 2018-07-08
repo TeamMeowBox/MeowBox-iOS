@@ -16,13 +16,13 @@ struct que{
 class QuestionViewController: UIViewController, UITableViewDelegate,UITableViewDataSource {
     
     
-    let questions1 = [que(t1: "Q.간식과 사료의 성분을 알 수 있을까요?", t2: "미유박스를 받으시면 간식/사료 포장 뒷면에 성분이 표기되어 있습니다."),que(t1: "Q.장난감은 같은 것으로 구성되어 있나요?", t2: "장난감은 매달 컨셉에 맞게 다른 상품으로 구성됩니다."), que(t1: "Q.크기는 어느정도 되나요?", t2: "미유박스는 350x240x150(mm)의 상자에 상품이 담겨 배송됩니다.")]
+    let questions1 = [que(t1: "Q. 간식과 사료의 성분을 알 수 있을까요?", t2: "미유박스를 받으시면 간식/사료 포장 뒷면에 성분이 표기되어 있습니다."),que(t1: "Q. 장난감은 같은 것으로 구성되어 있나요?", t2: "장난감은 매달 컨셉에 맞게 다른 상품으로 구성됩니다."), que(t1: "Q. 크기는 어느정도 되나요?", t2: "미유박스는 350x240x150(mm)의 상자에 상품이 담겨 배송됩니다.")]
     
-    let questions2 = [que(t1: "Q2.간식과 사료의 성분을 알 수 있을까요?", t2: "미유박스를 받으시면 간식/사료 포장 뒷면에 성분이 표기되어 있습니다."),que(t1: "Q2.장난감은 같은 것으로 구성되어 있나요?", t2: "장난감은 매달 컨셉에 맞게 다른 상품으로 구성됩니다."), que(t1: "Q2.크기는 어느정도 되나요?", t2: "미유박스는 350x240x150(mm)의 상자에 상품이 담겨 배송됩니다.")]
+    let questions2 = [que(t1: "Q. 배송일은 몇일 정도 걸리나요?", t2: "배송일은 주문/결제일 기준 다음주 월요일에 일괄 배송되며, 일반택배 기간인 2~3일 정도가 보통 소요됩니다.")]
     
-    let questions3 = [que(t1: "Q3.간식과 사료의 성분을 알 수 있을까요?", t2: "미유박스를 받으시면 간식/사료 포장 뒷면에 성분이 표기되어 있습니다."),que(t1: "Q3.장난감은 같은 것으로 구성되어 있나요?", t2: "장난감은 매달 컨셉에 맞게 다른 상품으로 구성됩니다."), que(t1: "Q3.크기는 어느정도 되나요?", t2: "미유박스는 350x240x150(mm)의 상자에 상품이 담겨 배송됩니다.")]
+    let questions3 = [que(t1: "Q. 사료와 간식은 어떻게 포장되어 오나요?", t2: "사료와 간식은 포장봉투에 싸여서 배송됩니다.")]
     
-    let questions4 = [que(t1: "Q4.간식과 사료의 성분을 알 수 있을까요?", t2: "미유박스를 받으시면 간식/사료 포장 뒷면에 성분이 표기되어 있습니다."),que(t1: "Q4.장난감은 같은 것으로 구성되어 있나요?", t2: "장난감은 매달 컨셉에 맞게 다른 상품으로 구성됩니다."), que(t1: "Q4.크기는 어느정도 되나요?", t2: "미유박스는 350x240x150(mm)의 상자에 상품이 담겨 배송됩니다.")]
+    let questions4 = [que(t1: "Q. 매번 결제를 해야하는건가요?", t2: "1회 구매의 경우 매번 결제를 하셔야합니다. 이것이 귀찮으시다면 정기구독(3개월, 6개월)을 선택하시면 매월초 자동결제가 되고 박스가 배송됩니다.")]
     
     
     var selectedCell: QuestionTableViewCell? = nil
@@ -157,7 +157,7 @@ class QuestionViewController: UIViewController, UITableViewDelegate,UITableViewD
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 20
+        return 12
     }
     
 
