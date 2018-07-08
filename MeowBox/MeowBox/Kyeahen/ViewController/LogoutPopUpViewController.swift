@@ -15,6 +15,8 @@ class LogoutPopUpViewController: UIViewController {
     @IBOutlet weak var logoutCloseBtn: UIButton!
     @IBOutlet weak var logoutOkBtn: UIButton!
     
+    let userDefault = UserDefaults.standard
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -72,7 +74,15 @@ class LogoutPopUpViewController: UIViewController {
     //MARK: 확인하기 액션
     //TODO: 로그아웃 통신
     @IBAction func okAction(_ sender: Any) {
+        userDefault.set("", forKey: "token")
         
+        let successPopup = UIStoryboard(name: "MyPage", bundle: nil).instantiateViewController(withIdentifier: LogoutSucessPopUpViewController.reuseIdentifier) as! LogoutSucessPopUpViewController
+        
+        self.addChildViewController(successPopup)
+        successPopup.view.frame = self.view.frame
+        self.view.addSubview(successPopup.view)
+        
+        successPopup.didMove(toParentViewController: self)
     }
     
     

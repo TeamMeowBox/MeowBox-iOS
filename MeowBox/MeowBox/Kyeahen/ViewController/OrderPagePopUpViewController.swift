@@ -21,9 +21,7 @@ class OrderPagePopUpViewController: UIViewController {
         self.showAnimate()
 
         orderPopupTextView.text = "나의 고양이 정보를 입력하여\n나의 고양이에게 꼭 맞는 박스를 받아보세요!"
-        
-        orderPopupView.layer.borderColor = #colorLiteral(red: 0.8666666667, green: 0.8666666667, blue: 0.8666666667, alpha: 1)
-        orderPopupView.layer.borderWidth = 1
+    
         orderPopupView.layer.cornerRadius = 5
         
         orderCloseBtn.clipsToBounds = true

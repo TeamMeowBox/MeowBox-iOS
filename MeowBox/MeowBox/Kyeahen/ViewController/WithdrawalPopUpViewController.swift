@@ -72,8 +72,23 @@ class WithdrawalPopUpViewController: UIViewController {
     //MARK: 확인하기 액션
     //TODO: 회원탈퇴 서버 통신
     @IBAction func okAction(_ sender: Any) {
-        
         //회원탈퇴 요청
+        leave()
+        
+    }
+    
+    func leave(){
+        SignService.leave(){message in
+            if message == "success"{
+                let withdrawalPopUp = UIStoryboard(name: "MyPage", bundle: nil).instantiateViewController(withIdentifier: WithdrawalSucessPopUpViewController.reuseIdentifier) as! WithdrawalSucessPopUpViewController
+                
+                self.addChildViewController(withdrawalPopUp)
+                withdrawalPopUp.view.frame = self.view.frame
+                self.view.addSubview(withdrawalPopUp.view)
+                
+                withdrawalPopUp.didMove(toParentViewController: self)
+            }
+        }
     }
     
     
