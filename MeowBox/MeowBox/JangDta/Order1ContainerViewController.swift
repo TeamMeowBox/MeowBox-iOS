@@ -78,9 +78,11 @@ class Order1ContainerViewController: UIViewController {
     func changeVC(num : Int){
         switch num {
         case 1:
+            remove(asChildViewController: withInfoVC2)
             add(asChildViewController: withInfoVC1)
             break
         case 2:
+            remove(asChildViewController: withInfoVC1)
             add(asChildViewController: withInfoVC2)
             withInfoVC2.scrollView.setContentOffset(.zero, animated: true)
             break
@@ -123,6 +125,7 @@ class Order1ContainerViewController: UIViewController {
         
         // Notify Child View Controller
         viewController.removeFromParentViewController()
+        
     }
     
     //MARK: 네비게이션 바 투명하게 하는 함수

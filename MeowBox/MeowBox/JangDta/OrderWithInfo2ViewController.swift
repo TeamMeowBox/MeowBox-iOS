@@ -12,12 +12,16 @@ class OrderWithInfo2ViewController: UIViewController {
     
     var catName = ""
     
+    var catSize = "0"
+    
     @IBOutlet weak var smallImage: UIImageView!
     @IBOutlet weak var mediumImage: UIImageView!
     @IBOutlet weak var largeImage: UIImageView!
     @IBOutlet weak var specialTextView: UITextView!
     
     @IBOutlet weak var changingLabel: UILabel!
+    
+    let userDefault = UserDefaults.standard
     
     var parentVC : Order1ContainerViewController?
     let datePicker = UIDatePicker()
@@ -47,28 +51,51 @@ class OrderWithInfo2ViewController: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        catName = (parentVC?.myCatName)!
+    }
+    
+    
+    
     @objc func selectSmall(){
        smallImage.image = #imageLiteral(resourceName: "small-cat-card-pink.png")
         mediumImage.image = #imageLiteral(resourceName: "medium-cat-card-gray.png")
         largeImage.image = #imageLiteral(resourceName: "large-cat-card-gray.png")
+        catSize = "0"
     }
     
     @objc func selectMedium(){
         smallImage.image = #imageLiteral(resourceName: "small-cat-card-gray.png")
         mediumImage.image = #imageLiteral(resourceName: "medium-cat-card-pink.png")
         largeImage.image = #imageLiteral(resourceName: "large-cat-card-gray.png")
+        catSize = "1"
     }
     
     @objc func selectLarge(){
         smallImage.image = #imageLiteral(resourceName: "small-cat-card-gray.png")
         mediumImage.image = #imageLiteral(resourceName: "medium-cat-card-gray.png")
         largeImage.image = #imageLiteral(resourceName: "large-cat-card-pink.png")
+        catSize = "2"
     }
-
+    
+    func catsignUp(){
+        CatService.catSignup(name: catName, size: catSize, birthday: gsno(birthTextField.text), caution: gsno(specialTextView.text)){ message in
+            if message == "success"{
+                self.parentVC?.changeVC(num: 3)
+            }else if message == "failure"{
+                let alertView = UIAlertController(title: "고양이 등록 실패", message: "ㅜㅜㅜ", preferredStyle: .alert)
+                let ok = UIAlertAction(title: "확인", style: .default, handler: nil)
+                alertView.addAction(ok)
+                self.present(alertView, animated: true, completion: nil)
+            }
+        }
+    }
+    
     @IBAction func goWithInfo3(_ sender: Any) {
-        parentVC?.changeVC(num: 3)
+        catsignUp()
     }
     @IBAction func backWithInfo2(_ sender: Any) {
+        parentVC?.myCatName = ""
         parentVC?.changeVC(num: 1)
     }
     

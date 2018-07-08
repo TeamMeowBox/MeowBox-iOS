@@ -11,6 +11,7 @@ import UIKit
 class OrderWithInfoViewController: UIViewController {
     
     var parentVC : Order1ContainerViewController?
+    let userDeafult = UserDefaults.standard
 
     @IBOutlet weak var changingLabel: UILabel!
     @IBOutlet weak var catNameTextField: UITextField!
@@ -21,7 +22,13 @@ class OrderWithInfoViewController: UIViewController {
 
 
     @IBAction func goWithInfo2(_ sender: Any) {
-        parentVC?.myCatName = catNameTextField.text!
+        //parentVC?.myCatName = catNameTextField.text!
+        if let cName = catNameTextField.text{
+            parentVC?.myCatName = cName
+        }else{ // 고양이 이름 입력 안 한 경우
+            
+        }
+        
         parentVC?.changeVC(num: 2)
     }
     
