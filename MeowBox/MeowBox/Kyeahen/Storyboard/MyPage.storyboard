@@ -678,10 +678,13 @@
                                             <action selector="sucessAction:" destination="H0I-Ei-4a9" eventType="touchUpInside" id="Dzi-i8-VlI"/>
                                         </connections>
                                     </button>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eGD-H3-j1P">
-                                        <rect key="frame" x="91.5" y="68" width="136" height="40"/>
+
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eGD-H3-j1P">
+                                        <rect key="frame" x="67.5" y="68" width="184" height="46"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="eGD-H3-j1P" secondAttribute="height" multiplier="170:50" id="OYs-bs-TJM"/>
+                                            <constraint firstAttribute="width" secondItem="eGD-H3-j1P" secondAttribute="height" multiplier="200:50" id="OYs-bs-TJM"/>
+                                            <constraint firstAttribute="height" constant="46" id="QQC-Wr-t9Z"/>
+
                                         </constraints>
                                         <color key="textColor" red="0.29803921570000003" green="0.30588235289999999" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="16"/>
@@ -1017,7 +1020,6 @@
                                                     <constraint firstItem="WCN-p1-gXQ" firstAttribute="top" secondItem="Th7-lZ-4Eg" secondAttribute="top" constant="9.5" id="O4I-6z-IkC"/>
                                                     <constraint firstAttribute="height" constant="194" id="Oe7-EY-dFM"/>
                                                     <constraint firstItem="iUk-RS-GAd" firstAttribute="leading" secondItem="WCN-p1-gXQ" secondAttribute="leading" id="RBZ-BQ-oWq"/>
-                                                    <constraint firstAttribute="width" secondItem="Th7-lZ-4Eg" secondAttribute="height" multiplier="375:194" id="ba6-pa-uP0"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -1491,7 +1493,11 @@
                     </view>
                     <size key="freeformSize" width="375" height="211"/>
                     <connections>
+                        <outlet property="firstLabel" destination="AaU-Jx-6TK" id="LLQ-5p-b7X"/>
                         <outlet property="progressView" destination="A4r-ip-Zhm" id="mg4-Hp-mlA"/>
+                        <outlet property="secondLabel" destination="hF1-xt-Af0" id="4MF-H0-Cnv"/>
+                        <outlet property="ticketLabel" destination="eDG-1S-Lza" id="Pk6-q9-9nC"/>
+                        <outlet property="useLabel" destination="O3Z-N4-NgF" id="hhT-Wi-8Mw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wh2-Vi-Jfh" userLabel="First Responder" sceneMemberID="firstResponder"/>
