@@ -11,6 +11,8 @@
 		2200E30720F1D8E00030A7E9 /* MyPageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200E30620F1D8E00030A7E9 /* MyPageService.swift */; };
 		2200E30920F1D96A0030A7E9 /* MyPageNoneTicketData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200E30820F1D96A0030A7E9 /* MyPageNoneTicketData.swift */; };
 		2200E30B20F1D9850030A7E9 /* MyPageNoneTicket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200E30A20F1D9850030A7E9 /* MyPageNoneTicket.swift */; };
+		2200E30D20F27C090030A7E9 /* MyPageTicketData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200E30C20F27C090030A7E9 /* MyPageTicketData.swift */; };
+		2200E30F20F27C210030A7E9 /* MyPageTicket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200E30E20F27C210030A7E9 /* MyPageTicket.swift */; };
 		22109A8020EAAA3200E463C2 /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22109A7F20EAAA3200E463C2 /* MyPage.storyboard */; };
 		22109A8220EAAAFC00E463C2 /* MyPage1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22109A8120EAAAFC00E463C2 /* MyPage1ViewController.swift */; };
 		22156DBE20EF85380014491E /* MeowBoxDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22156DBD20EF85380014491E /* MeowBoxDetailTableViewCell.swift */; };
@@ -87,6 +89,8 @@
 		2200E30620F1D8E00030A7E9 /* MyPageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageService.swift; sourceTree = "<group>"; };
 		2200E30820F1D96A0030A7E9 /* MyPageNoneTicketData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageNoneTicketData.swift; sourceTree = "<group>"; };
 		2200E30A20F1D9850030A7E9 /* MyPageNoneTicket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageNoneTicket.swift; sourceTree = "<group>"; };
+		2200E30C20F27C090030A7E9 /* MyPageTicketData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageTicketData.swift; sourceTree = "<group>"; };
+		2200E30E20F27C210030A7E9 /* MyPageTicket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageTicket.swift; sourceTree = "<group>"; };
 		22109A7F20EAAA3200E463C2 /* MyPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
 		22109A8120EAAAFC00E463C2 /* MyPage1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPage1ViewController.swift; sourceTree = "<group>"; };
 		22156DBD20EF85380014491E /* MeowBoxDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeowBoxDetailTableViewCell.swift; sourceTree = "<group>"; };
@@ -186,6 +190,8 @@
 			children = (
 				2200E30820F1D96A0030A7E9 /* MyPageNoneTicketData.swift */,
 				2200E30A20F1D9850030A7E9 /* MyPageNoneTicket.swift */,
+				2200E30C20F27C090030A7E9 /* MyPageTicketData.swift */,
+				2200E30E20F27C210030A7E9 /* MyPageTicket.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -540,7 +546,9 @@
 				22BB241720EDCC0D00FD04E9 /* MyPageToSViewController.swift in Sources */,
 				22BEB4F620EDC63D0030E81B /* MyPage1TicketViewController.swift in Sources */,
 				CC4AD42120EE20A700C31E53 /* CheckTicketTableViewCell.swift in Sources */,
+				2200E30D20F27C090030A7E9 /* MyPageTicketData.swift in Sources */,
 				2200E2FE20F086E30030A7E9 /* MainBottomViewController.swift in Sources */,
+				2200E30F20F27C210030A7E9 /* MyPageTicket.swift in Sources */,
 				CC4493BD20EBCBC60095D118 /* Order1ContainerViewController.swift in Sources */,
 				22D3B21520EFE13A00DE37F4 /* MeowBoxReviewTableViewCell.swift in Sources */,
 				22C1D38720EFC33700391389 /* MeowBoxReviewViewController.swift in Sources */,

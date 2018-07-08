@@ -30,8 +30,9 @@ class MyPage1ViewController: UIViewController {
     
     //server var
     let userdefault = UserDefaults.standard
-    var myPageNoneTickets : MyPageNoneTicket?
-    var flag: String = "" //정기권 유무 상태
+    var myPageNoneTickets: MyPageNoneTicket?
+    var myPageTicekets: MyPageTicket?
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,8 +47,6 @@ class MyPage1ViewController: UIViewController {
     
         sideBarProfileImageView.layer.masksToBounds = true
         sideBarProfileImageView.layer.cornerRadius = sideBarProfileImageView.layer.frame.width/2
-        
-        myPageNoneTicketInit() //서버 통신
         
         //container view
         setupView()
@@ -238,7 +237,8 @@ class MyPage1ViewController: UIViewController {
         
         var viewController = storyboard?.instantiateViewController(withIdentifier: MyPage1TicketViewController.reuseIdentifier) as! MyPage1TicketViewController
         
-        self.add(asChildViewController: viewController)
+//        self.add(asChildViewController: viewController)
+        viewController.loadView()
         return viewController
     }()
     
@@ -247,7 +247,8 @@ class MyPage1ViewController: UIViewController {
         
         var viewController = storyboard?.instantiateViewController(withIdentifier: MyPage1BoxViewController.reuseIdentifier) as! MyPage1BoxViewController
         
-        self.add(asChildViewController: viewController)
+//        self.add(asChildViewController: viewController)
+        viewController.loadView()
         return viewController
     }()
     
@@ -281,13 +282,15 @@ class MyPage1ViewController: UIViewController {
     //TODO: 조건에 맞게 뷰 뿌리기
     @objc private func updateView() {
         
-        let flag1 = userdefault.string(forKey: "flag")
+        let flag = userdefault.string(forKey: "flag")
         
-        if flag1 == "-1" { //정기권 없으면
+        if flag == "-1" { //정기권 없으면
+            myPageNoneTicketInit() //서버 통신
             remove(asChildViewController: myPage1TicketViewController)
             add(asChildViewController: myPage1BoxViewController)
         }
         else { //정기권 있으면
+            myPageTicketInit()
             remove(asChildViewController: myPage1BoxViewController)
             add(asChildViewController: myPage1TicketViewController)
         }
@@ -301,20 +304,28 @@ class MyPage1ViewController: UIViewController {
 
     
     //MARK: *서버 통신*
-    //TODO: 고양이 이름, 유저이름 넣기
+
+    //MARK: 마이페이지 - 정기권X
     func myPageNoneTicketInit() {
         
         MyPageService.myPageNoneTicketInit{ (myPageNoneTicketData) in
             
             self.myPageNoneTickets = myPageNoneTicketData
-            self.catNameLabel.text = self.myPageNoneTickets!.catinfo
-            
-//            self.flag = self.myPageNoneTickets!.flag
-            
-            print("dd\(self.flag)")
-            
-           // userNameLabel.text =
+            self.catNameLabel.text = self.myPageNoneTickets?.catinfo
+            self.userNameLabel.text = self.userdefault.string(forKey: "name")
         }
+    }
+    
+    //MARK: 마이페이지 - 정기권O
+    func myPageTicketInit() {
+        
+        MyPageService.MyPageTicketInit{ (myPageTicketData) in
+            
+            self.myPageTicekets = myPageTicketData
+            self.catNameLabel.text = self.myPageNoneTickets?.catinfo
+            self.userNameLabel.text = self.userdefault.string(forKey: "name")
+        }
+        
     }
 
     

@@ -1,16 +1,16 @@
 //
-//  MyPageNoneTicket.swift
+//  MyPageTicekt.swift
 //  MeowBox
 //
-//  Created by 김예은 on 2018. 7. 8..
+//  Created by 김예은 on 2018. 7. 9..
 //  Copyright © 2018년 yeen. All rights reserved.
 //
 
 import Foundation
 
-struct MyPageNoneTicket: Codable {
-    
+struct MyPageTicket: Codable {
     let catinfo: String
     let flag: String
-    let sendImage: String
+    let ticket: String
+    let use: String
 }
