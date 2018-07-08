@@ -97,7 +97,7 @@ class LoginViewController: UIViewController {
         let URL = "http://13.209.220.1:3000/user/signin"
         let body: [String: Any] = [
             "email" : gsno(emailTextField.text),
-            "password" : gsno(pwdTextField.text)
+            "pwd" : gsno(pwdTextField.text)
         ]
         
         Alamofire.request(URL, method: .post, parameters: body, encoding: JSONEncoding.default, headers: nil).responseData(){ res in

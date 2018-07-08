@@ -144,7 +144,7 @@ extension OrderWithInfo2ViewController  {
     @objc func selectedDatePicker(){
         
         let dateformatter = DateFormatter()
-        dateformatter.dateFormat = "yyyy년 MM월 dd일"
+        dateformatter.dateFormat = "yyyy-MM-dd"
         
         let date = dateformatter.string(from: datePicker.date)
         
