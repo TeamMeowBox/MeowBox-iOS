@@ -17,12 +17,18 @@ class OrderWithInfo3ViewController: UIViewController {
     @IBOutlet weak var changingLabel: UILabel!
     
     var parentVC : Order1ContainerViewController?
+    let userDefault = UserDefaults.standard
+    var selectProduct = "1"
+    var selectPrice = "38500"
 
     @IBOutlet weak var selectionList: SelectionList!
     @IBOutlet weak var scrollView: UIScrollView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        userDefault.set(selectProduct, forKey: "order_product")
+        userDefault.set(selectPrice, forKey: "order_price")
+
         selectionListInit()
         labelFontInit()
         boxInit()
@@ -32,6 +38,8 @@ class OrderWithInfo3ViewController: UIViewController {
 
     
     @IBAction func goWithInfo4(_ sender: Any) {
+        userDefault.set(selectProduct, forKey: "order_product")
+        userDefault.set(selectPrice, forKey: "order_price")
         parentVC?.changeVC(num: 4)
     }
     
@@ -71,6 +79,14 @@ class OrderWithInfo3ViewController: UIViewController {
     
     @objc func selectionChanged() {
         print("selected: \(selectionList.selectedIndex ?? 9999)")
+        
+        if selectionList.selectedIndex == 0{
+            selectProduct = "1"
+            selectPrice = "38500"
+        }else if selectionList.selectedIndex == 1{
+            selectProduct = "2"
+            selectPrice = "38500"
+        }
         box1View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "big-card-box-pink.png"))
         box2View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "card-box-white.png"))
         box3View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "card-box-white.png"))
@@ -111,6 +127,8 @@ class OrderWithInfo3ViewController: UIViewController {
         box2View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "card-box-pink.png"))
         box3View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "card-box-white.png"))
         box4View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "card-box-white.png"))
+        selectProduct = "3"
+        selectPrice = "36500"
     }
     
     @objc func select3View(){
@@ -119,6 +137,8 @@ class OrderWithInfo3ViewController: UIViewController {
         box2View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "card-box-white.png"))
         box3View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "card-box-pink.png"))
         box4View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "card-box-white.png"))
+        selectProduct = "6"
+        selectPrice = "34500"
     }
     
     @objc func select4View(){
@@ -127,6 +147,8 @@ class OrderWithInfo3ViewController: UIViewController {
         box2View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "card-box-white.png"))
         box3View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "card-box-white.png"))
         box4View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "card-box-pink.png"))
+        selectProduct = "7"
+        selectPrice = "60000"
     }
     
     

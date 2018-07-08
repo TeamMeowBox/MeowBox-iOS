@@ -56,6 +56,9 @@
 		22E8F7EA20EBF90D00735276 /* WithdrawalSucessPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E8F7E920EBF90D00735276 /* WithdrawalSucessPopUpViewController.swift */; };
 		9308BCA6A6E7FEDA2CAE42E1 /* Pods_MeowBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 287C0D40915BBAC2BD0D00E3 /* Pods_MeowBox.framework */; };
 		CC05673A20E8EC4B00AEDF24 /* Order.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC05673920E8EC4B00AEDF24 /* Order.storyboard */; };
+		CC336E1E20F2746E00073E96 /* Ticketed.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC336E1D20F2746D00073E96 /* Ticketed.swift */; };
+		CC336E2020F276C400073E96 /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC336E1F20F276C400073E96 /* Ticket.swift */; };
+		CC336E2220F2772500073E96 /* OrderList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC336E2120F2772500073E96 /* OrderList.swift */; };
 		CC4493BD20EBCBC60095D118 /* Order1ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4493BC20EBCBC60095D118 /* Order1ContainerViewController.swift */; };
 		CC44CBB420EB2174007466D8 /* Mypage2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC44CBB320EB2174007466D8 /* Mypage2.storyboard */; };
 		CC44CBB620EB21EB007466D8 /* SuggestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC44CBB520EB21EB007466D8 /* SuggestViewController.swift */; };
@@ -135,6 +138,9 @@
 		287C0D40915BBAC2BD0D00E3 /* Pods_MeowBox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeowBox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F03CE3F3C4107E59BCDF87A /* Pods-MeowBox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeowBox.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeowBox/Pods-MeowBox.release.xcconfig"; sourceTree = "<group>"; };
 		CC05673920E8EC4B00AEDF24 /* Order.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Order.storyboard; sourceTree = "<group>"; };
+		CC336E1D20F2746D00073E96 /* Ticketed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticketed.swift; sourceTree = "<group>"; };
+		CC336E1F20F276C400073E96 /* Ticket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
+		CC336E2120F2772500073E96 /* OrderList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderList.swift; sourceTree = "<group>"; };
 		CC4493BC20EBCBC60095D118 /* Order1ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order1ContainerViewController.swift; sourceTree = "<group>"; };
 		CC44CBB320EB2174007466D8 /* Mypage2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mypage2.storyboard; sourceTree = "<group>"; };
 		CC44CBB520EB21EB007466D8 /* SuggestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestViewController.swift; sourceTree = "<group>"; };
@@ -253,6 +259,9 @@
 			isa = PBXGroup;
 			children = (
 				222B5DCB20E8BB99003F0A8C /* Order.swift */,
+				CC336E1D20F2746D00073E96 /* Ticketed.swift */,
+				CC336E1F20F276C400073E96 /* Ticket.swift */,
+				CC336E2120F2772500073E96 /* OrderList.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -550,6 +559,7 @@
 				CCF0947A20F1EE460029567B /* OrderService.swift in Sources */,
 				22A86ED220EBD81D00B17661 /* LoginPopUp1ViewController.swift in Sources */,
 				CC44CBBA20EB2307007466D8 /* SettingViewController.swift in Sources */,
+				CC336E2220F2772500073E96 /* OrderList.swift in Sources */,
 				2200E30920F1D96A0030A7E9 /* MyPageNoneTicketData.swift in Sources */,
 				CC7DB55520EDE3CC00286E29 /* MainCollectionViewCell.swift in Sources */,
 				CC693A1320EE0BED00DA0935 /* TicketTableViewCell.swift in Sources */,
@@ -572,6 +582,7 @@
 				22A86EDA20EBF09500B17661 /* LogoutSucessPopUpViewController.swift in Sources */,
 				CC44CBB620EB21EB007466D8 /* SuggestViewController.swift in Sources */,
 				22E8F7EA20EBF90D00735276 /* WithdrawalSucessPopUpViewController.swift in Sources */,
+				CC336E1E20F2746E00073E96 /* Ticketed.swift in Sources */,
 				CC44CBB820EB2235007466D8 /* QuestionViewController.swift in Sources */,
 				CC54E41620EC9892007C5C4E /* QuestionTableViewCell.swift in Sources */,
 				22156DC020EF85570014491E /* MeowBoxDetailCollectionViewCell.swift in Sources */,
@@ -579,6 +590,7 @@
 				CCB12E5B20E90C6B00C5D4B8 /* OrderWithInfoViewController.swift in Sources */,
 				22A86ED420EBE13600B17661 /* OrderPagePopUpViewController.swift in Sources */,
 				22156DBE20EF85380014491E /* MeowBoxDetailTableViewCell.swift in Sources */,
+				CC336E2020F276C400073E96 /* Ticket.swift in Sources */,
 				CCF0947620F1C3BB0029567B /* SignService.swift in Sources */,
 				2259035120EE6E3300094935 /* MeowBoxDetailViewController.swift in Sources */,
 			);

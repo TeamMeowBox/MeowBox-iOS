@@ -1128,11 +1128,16 @@
                     <navigationItem key="navigationItem" title="주문하기" id="LMy-Ky-1me"/>
                     <size key="freeformSize" width="375" height="950"/>
                     <connections>
+                        <outlet property="addressTextField1" destination="Jhr-2G-yMd" id="e8i-37-RCu"/>
+                        <outlet property="addressTextField2" destination="QdK-3I-PzA" id="hB5-cU-dNZ"/>
                         <outlet property="beforeAddressView" destination="jsd-eW-QR8" id="kn4-tQ-dQV"/>
                         <outlet property="beforeRadioImage" destination="2pA-j3-yfb" id="7cy-18-ajk"/>
                         <outlet property="changingLabel" destination="Mby-Fe-HMY" id="3Ay-A8-TJu"/>
                         <outlet property="currentAddressView" destination="ixJ-En-WFo" id="Os9-uV-qlT"/>
                         <outlet property="currentRadioImage" destination="EUh-W6-Smj" id="99l-jz-ws9"/>
+                        <outlet property="emailTextField" destination="WFM-MT-oz8" id="5D8-ai-x9g"/>
+                        <outlet property="nameTextField" destination="jMg-ij-35r" id="waG-Dd-WWv"/>
+                        <outlet property="phoneTextField" destination="KHc-GD-Y4y" id="4r6-Hs-pZs"/>
                         <outlet property="scrollView" destination="N2N-iK-7JC" id="Yv0-aE-MhZ"/>
                         <outlet property="selectionList" destination="FN5-8W-8Hu" id="9mJ-dA-csg"/>
                     </connections>
