@@ -32,7 +32,7 @@ struct SignService : APIService{
                     if let message = JSON(value)["message"].string{
                         if message == "success"{ // 로그인 성공
                             let myToken = gsno(JSON(value)["result"]["token"].string)
-                            let myCat_idx = String(gino(JSON(value)["result"]["cat_idx"].int))
+                            let myCat_idx = gsno(JSON(value)["result"]["cat_idx"].string)
                             
                             print("token: "+myToken)
                             print("cat_idx: "+myCat_idx)

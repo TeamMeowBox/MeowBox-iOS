@@ -76,6 +76,8 @@
 		CCCA9DF420F0EE5B004319E5 /* NoticeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCA9DF320F0EE5B004319E5 /* NoticeTableViewCell.swift */; };
 		CCDD5E7820E945C100A989CB /* OrderWithInfo2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDD5E7720E945C100A989CB /* OrderWithInfo2ViewController.swift */; };
 		CCF0947620F1C3BB0029567B /* SignService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF0947520F1C3BB0029567B /* SignService.swift */; };
+		CCF0947820F1D6F30029567B /* CatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF0947720F1D6F30029567B /* CatService.swift */; };
+		CCF0947A20F1EE460029567B /* OrderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF0947920F1EE460029567B /* OrderService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -152,6 +154,8 @@
 		CCCA9DF320F0EE5B004319E5 /* NoticeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeTableViewCell.swift; sourceTree = "<group>"; };
 		CCDD5E7720E945C100A989CB /* OrderWithInfo2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderWithInfo2ViewController.swift; sourceTree = "<group>"; };
 		CCF0947520F1C3BB0029567B /* SignService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignService.swift; sourceTree = "<group>"; };
+		CCF0947720F1D6F30029567B /* CatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatService.swift; sourceTree = "<group>"; };
+		CCF0947920F1EE460029567B /* OrderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,6 +259,8 @@
 			children = (
 				222B5DC920E8BB6F003F0A8C /* APIService.swift */,
 				CCF0947520F1C3BB0029567B /* SignService.swift */,
+				CCF0947720F1D6F30029567B /* CatService.swift */,
+				CCF0947920F1EE460029567B /* OrderService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -537,11 +543,13 @@
 				CC5CE21B20E9C40D00FCE6AD /* OrderWithInfo3ViewController.swift in Sources */,
 				CCDD5E7820E945C100A989CB /* OrderWithInfo2ViewController.swift in Sources */,
 				CC693A1120EE080E00DA0935 /* TicketViewController.swift in Sources */,
+				CCF0947A20F1EE460029567B /* OrderService.swift in Sources */,
 				22A86ED220EBD81D00B17661 /* LoginPopUp1ViewController.swift in Sources */,
 				CC44CBBA20EB2307007466D8 /* SettingViewController.swift in Sources */,
 				CC7DB55520EDE3CC00286E29 /* MainCollectionViewCell.swift in Sources */,
 				CC693A1320EE0BED00DA0935 /* TicketTableViewCell.swift in Sources */,
 				CCCA9DF220F0E930004319E5 /* NoticeViewController.swift in Sources */,
+				CCF0947820F1D6F30029567B /* CatService.swift in Sources */,
 				222B5DCA20E8BB6F003F0A8C /* APIService.swift in Sources */,
 				CCCA9DF420F0EE5B004319E5 /* NoticeTableViewCell.swift in Sources */,
 				2200E30320F0E46F0030A7E9 /* test.swift in Sources */,
