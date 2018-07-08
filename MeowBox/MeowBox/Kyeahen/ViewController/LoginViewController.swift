@@ -88,46 +88,26 @@ class LoginViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    func login() {
+        SignService.login(email: gsno(emailTextField.text), pwd: gsno(pwdTextField.text)) { (message) in
+            if message == "success"{
+                let mainVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainNaviVC")
+                self.present(mainVC, animated: true, completion: nil)
+            }else if message == "failure"{
+                let alertView = UIAlertController(title: "로그인 실패", message: "아이디와 비밀번호를 확인해주세요", preferredStyle: .alert)
+                let ok = UIAlertAction(title: "확인", style: .default, handler: nil)
+                alertView.addAction(ok)
+                self.present(alertView, animated: true, completion: nil)
+            }
+            
+        }
+    }
+    
     //MARK: 로그인 액션
     //TODO: 로그인 서버 통신
     @IBAction func loginAction(_ sender: Any) {
         
-        /***********************************************************************************************/
-        
-        let URL = "http://13.209.220.1:3000/user/signin"
-        let body: [String: Any] = [
-            "email" : gsno(emailTextField.text),
-            "pwd" : gsno(pwdTextField.text)
-        ]
-        
-        Alamofire.request(URL, method: .post, parameters: body, encoding: JSONEncoding.default, headers: nil).responseData(){ res in
-            switch res.result{
-            case .success:
-                if let value = res.result.value{
-                    if let message = JSON(value)["message"].string{
-                        if message == "success"{ // 로그인 성공
-                            print("로그인성공")
-                            self.userdefault.set(body["email"], forKey: "user_email")
-                            let mainVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainNaviVC")
-                                self.present(mainVC, animated: true, completion: nil)
-                           
-                        }else{ // 로그인 실패
-                            let alertView = UIAlertController(title: "로그인 실패", message: "아이디와 비밀번호를 확인해주세요", preferredStyle: .alert)
-                            let ok = UIAlertAction(title: "확인", style: .default, handler: nil)
-                            alertView.addAction(ok)
-                            self.present(alertView, animated: true, completion: nil)
-                        }
-                    }
-                }
-                
-                break
-            case .failure(let err):
-                print(err.localizedDescription)
-                break
-            }
-        }
-        
-        /***********************************************************************************************/
+        login()
 
     }
     
