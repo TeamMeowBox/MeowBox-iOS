@@ -674,8 +674,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="okAction:" destination="H0I-Ei-4a9" eventType="touchUpInside" id="EsK-Kh-cqh"/>
-                                            <action selector="sucessAction:" destination="H0I-Ei-4a9" eventType="touchUpInside" id="DmE-vx-dY7"/>
+                                            <action selector="sucessAction:" destination="H0I-Ei-4a9" eventType="touchUpInside" id="Dzi-i8-VlI"/>
                                         </connections>
                                     </button>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eGD-H3-j1P">

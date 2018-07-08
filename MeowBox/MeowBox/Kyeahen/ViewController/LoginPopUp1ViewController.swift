@@ -22,8 +22,6 @@ class LoginPopUp1ViewController: UIViewController {
         
         popupTextView.text = "미유박스를 주문하기 위해\n먼저 로그인을 해주세요!"
         
-        popupView.layer.borderColor = #colorLiteral(red: 0.8666666667, green: 0.8666666667, blue: 0.8666666667, alpha: 1)
-        popupView.layer.borderWidth = 1
         popupView.layer.cornerRadius = 5
         
         closeBtn.clipsToBounds = true

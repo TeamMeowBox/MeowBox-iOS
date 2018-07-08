@@ -11,6 +11,7 @@ import UIKit
 class MainViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     
     let imageArr = [#imageLiteral(resourceName: "package-box-img"),#imageLiteral(resourceName: "package-box-detail-img"),#imageLiteral(resourceName: "package-box-img"),#imageLiteral(resourceName: "package-box-detail-img"),#imageLiteral(resourceName: "package-box-img"),#imageLiteral(resourceName: "package-box-detail-img"),#imageLiteral(resourceName: "package-box-img"),#imageLiteral(resourceName: "package-box-detail-img")]
+    let userDefault = UserDefaults.standard
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
@@ -244,16 +245,23 @@ class MainViewController: UIViewController,UICollectionViewDelegate,UICollection
     //TODO: 팝업 예외 처리
     @IBAction func orderAction(_ sender: Any) {
         
-        //if 로그인이 안되어있다면
-        //        let popUPVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AlertViewController") as! AlertViewController
-        //        self.addChildViewController(popUPVC)
-        //        popUPVC.view.frame = self.view.frame
-        //        self.view.addSubview(popUPVC.view)
-        //        popUPVC.didMove(toParentViewController: self)
-    
-        let orderNaviVC = UIStoryboard(name: "Order", bundle: nil).instantiateViewController(withIdentifier: "OrderWithInfoNavigationController")
+        if userDefault.string(forKey: "token") != ""{ // 로그인이 되어 있다면
+            let orderNaviVC = UIStoryboard(name: "Order", bundle: nil).instantiateViewController(withIdentifier: "OrderWithInfoNavigationController")
+            
+            self.present(orderNaviVC, animated: true, completion: nil)
+            
+            
+        }else{ // 로그인 안 된 상태
+            let popUPVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginPopUp1ViewController") as! LoginPopUp1ViewController
+            self.addChildViewController(popUPVC)
+            popUPVC.view.frame = self.view.frame
+            self.view.addSubview(popUPVC.view)
+            popUPVC.didMove(toParentViewController: self)
+        }
         
-        self.present(orderNaviVC, animated: true, completion: nil)
+        
+    
+        
     }
     
     //MARK: 집사들의 후기 액션

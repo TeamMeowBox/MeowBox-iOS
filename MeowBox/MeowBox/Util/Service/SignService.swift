@@ -31,21 +31,29 @@ struct SignService : APIService{
                 if let value = res.result.value{
                     if let message = JSON(value)["message"].string{
                         if message == "success"{ // 로그인 성공
+                            
+                            /***************** USER DEFAULT *****************/
+                            
                             let myToken = gsno(JSON(value)["result"]["token"].string)
                             let myCat_idx = gsno(JSON(value)["result"]["cat_idx"].string)
                             
                             print("token: "+myToken)
                             print("cat_idx: "+myCat_idx)
+                            print("name: "+gsno(JSON(value)["result"]["name"].string))
                             
                             userdefault.set(email, forKey: "email")
-                            userdefault.set(myToken, forKey: "token")
-                            userdefault.set(myCat_idx, forKey: "cat_idx")
+                            userdefault.set(gsno(JSON(value)["result"]["token"].string), forKey: "token")
+                            userdefault.set(gsno(JSON(value)["result"]["cat_idx"].string), forKey: "cat_idx")
+                            userdefault.set(gsno(JSON(value)["result"]["name"].string), forKey: "name")
+                            userdefault.set(gsno(JSON(value)["result"]["phone_number"].string), forKey: "phone_number")
+                            userdefault.set(gsno(JSON(value)["result"]["image_profile"].string), forKey: "image_profile")
                             
                             completion("success")
                             
                             
                             
                         }else{ // 로그인 실패
+                            print("로그인 실패 : "+message)
                             
                             completion("failure")
                             
@@ -96,6 +104,39 @@ struct SignService : APIService{
                 break
             }
         }
+    }
+    
+    
+    //MARK : 회원탈퇴 서비스
+    static func leave(completion: @escaping (_ messgae: String)->Void){
+        
+        let userDefault = UserDefaults.standard
+        
+        let URL = url("/user/account")
+        
+        guard let token = userDefault.string(forKey: "token") else { return }
+        
+        let headers = ["authorization": token]
+        
+        Alamofire.request(URL, method: .delete, parameters: nil, encoding: JSONEncoding.default, headers: headers).responseData(){ res in
+            switch res.result{
+            case .success:
+                if let value = res.result.value{
+                    if let message = JSON(value)["message"].string{
+                        if message == "success"{ // 회원탈퇴 성공
+                            print("회원 탈퇴 성공!")
+                            completion("success")
+                        }
+                    }
+                }
+                
+                break
+            case .failure(let err):
+                print(err.localizedDescription)
+                break
+            }
+        }
+        
     }
     
     

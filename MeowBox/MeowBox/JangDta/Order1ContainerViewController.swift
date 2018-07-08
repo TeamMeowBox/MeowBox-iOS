@@ -10,6 +10,8 @@ import UIKit
 
 class Order1ContainerViewController: UIViewController {
     
+    let userDefault = UserDefaults.standard
+    
     @IBOutlet weak var barBtn: UIBarButtonItem!
     
     @IBOutlet weak var container: UIView!
@@ -36,7 +38,12 @@ class Order1ContainerViewController: UIViewController {
         profileImageView.layer.masksToBounds = true
         profileImageView.layer.cornerRadius = profileImageView.layer.frame.width/2
         
-        add(asChildViewController: withInfoVC1)
+        if userDefault.string(forKey: "cat_idx") == "-1"{
+            add(asChildViewController: withInfoVC1)
+        }else{
+            add(asChildViewController: withInfoVC3)
+        }
+        
         
     }
     
