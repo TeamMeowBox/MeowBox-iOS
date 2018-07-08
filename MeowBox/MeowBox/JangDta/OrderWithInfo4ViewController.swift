@@ -20,10 +20,20 @@ class OrderWithInfo4ViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     
     @IBOutlet weak var selectionList: SelectionList!
+    
+    let userDefault = UserDefaults.standard
+    
+    // NEEDS TO ORDER
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var addressTextField1: UITextField!
+    @IBOutlet weak var addressTextField2: UITextField!
+    @IBOutlet weak var phoneTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        userDefault.set("1", forKey: "payment_method")
         selectionListInit()
         radioInit()
         addScrollViewEndEditing()
@@ -31,11 +41,17 @@ class OrderWithInfo4ViewController: UIViewController {
     }
     
     @objc func selectionChanged() {
-        print(selectionList.selectedIndexes)
+        //print(selectionList.selectedIndexes)
+        print(selectionList.selectedIndex)
+        if selectionList.selectedIndex == 0{ // 신용카드
+            userDefault.set("1", forKey: "payment_method")
+        }else{ // 현금
+            userDefault.set("2", forKey: "payment_method")
+        }
     }
     
     @IBAction func goPay(_ sender: Any) {
-        parentVC?.changeVC(num: 5)
+        order()
     }
     
     @IBAction func backWithInfo3(_ sender: Any) {
@@ -92,6 +108,26 @@ class OrderWithInfo4ViewController: UIViewController {
     @objc func selectCurrent(){
         currentRadioImage.image = #imageLiteral(resourceName: "radio-btn-selected")
         beforeRadioImage.image = #imageLiteral(resourceName: "radio-btn")
+    }
+    
+    func order(){
+        print("product : "+gsno(userDefault.string(forKey: "order_product")))
+        print("price : "+gsno(userDefault.string(forKey: "order_price")))
+        print("payment : "+gsno(userDefault.string(forKey: "payment_method")))
+
+
+        let orderAddress = "\(gsno(addressTextField1.text)) \(gsno(addressTextField2.text))"
+        OrderService.order(name: gsno(nameTextField.text), address: orderAddress, phone_number: gsno(phoneTextField.text), product: gsno(userDefault.string(forKey: "order_product")), price: gsno(userDefault.string(forKey: "order_price")), email: gsno(emailTextField.text), payment_method: gsno(userDefault.string(forKey: "payment_method"))){ message in
+            if message == "success"{
+                self.parentVC?.changeVC(num: 5)
+            }else if message == "failure"{
+                let alertView = UIAlertController(title: "주문 실패", message: "ㅜㅜㅜㅜㅜㅜ", preferredStyle: .alert)
+                let ok = UIAlertAction(title: "확인", style: .default, handler: nil)
+                alertView.addAction(ok)
+                self.present(alertView, animated: true, completion: nil)
+            }
+            
+        }
     }
     
     

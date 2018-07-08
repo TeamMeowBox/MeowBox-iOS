@@ -16,13 +16,23 @@ class TicketViewController: UIViewController,UITableViewDelegate,UITableViewData
     @IBOutlet weak var usingTicketNameLabel: UILabel!
     @IBOutlet weak var usingTicketTermLabel: UILabel!
     
+    var myTicket : Ticket?
+    var myTicketedArr = [Ticketed]()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        usingTicketView.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "one-ticket-pink"))
-        usingTicketNameLabel.text = "3개월 정기권"
-        usingTicketTermLabel.text = "2018.04.26 - 2018.06.26"
+        orderlist()
+        
+        if myTicket == nil{
+            print("no using ticket")
+        }else{
+            usingTicketView.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "one-ticket-pink"))
+            usingTicketNameLabel.text = myTicket?.product
+            usingTicketTermLabel.text = myTicket?.term
+        }
+        
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -30,6 +40,8 @@ class TicketViewController: UIViewController,UITableViewDelegate,UITableViewData
         let tap = UITapGestureRecognizer(target: self, action: #selector(checkTicketAction))
         
         usingTicketView.addGestureRecognizer(tap)
+        
+        
 
     }
     
@@ -66,25 +78,27 @@ class TicketViewController: UIViewController,UITableViewDelegate,UITableViewData
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return myTicketedArr.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TicketTableViewCell") as! TicketTableViewCell
-        if indexPath.row == 0{
-            cell.ticketView.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "ticket-gray.png"))
-            cell.ticketNameLabel.text = "6개월 정기권"
-            cell.ticketTermLabel.text = "2018.08.26 - 2018.01.26"
-        }else{
-            cell.ticketView.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "one-ticket-gray.png"))
-            cell.ticketNameLabel.text = "생일축하해! 박스"
-            cell.ticketTermLabel.text = "2018.06.26"
-        }
+        cell.ticketView.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "ticket-gray.png"))
+        cell.ticketNameLabel.text = myTicketedArr[indexPath.row].product
+        cell.ticketTermLabel.text = myTicketedArr[indexPath.row].term
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 170
+    }
+    
+    func orderlist(){
+        OrderService.orderlist { (ticket, ticketedArr) in
+            self.myTicket = ticket
+            self.myTicketedArr = ticketedArr
+        }
     }
     
     
