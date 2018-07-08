@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2200E2FE20F086E30030A7E9 /* MainBottomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200E2FD20F086E30030A7E9 /* MainBottomViewController.swift */; };
-		2200E30320F0E46F0030A7E9 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200E30220F0E46F0030A7E9 /* test.swift */; };
-		2200E30520F0E4790030A7E9 /* test1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200E30420F0E4790030A7E9 /* test1.swift */; };
+		2200E30720F1D8E00030A7E9 /* MyPageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200E30620F1D8E00030A7E9 /* MyPageService.swift */; };
+		2200E30920F1D96A0030A7E9 /* MyPageNoneTicketData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200E30820F1D96A0030A7E9 /* MyPageNoneTicketData.swift */; };
+		2200E30B20F1D9850030A7E9 /* MyPageNoneTicket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200E30A20F1D9850030A7E9 /* MyPageNoneTicket.swift */; };
 		22109A8020EAAA3200E463C2 /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22109A7F20EAAA3200E463C2 /* MyPage.storyboard */; };
 		22109A8220EAAAFC00E463C2 /* MyPage1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22109A8120EAAAFC00E463C2 /* MyPage1ViewController.swift */; };
 		22156DBE20EF85380014491E /* MeowBoxDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22156DBD20EF85380014491E /* MeowBoxDetailTableViewCell.swift */; };
@@ -83,8 +84,9 @@
 /* Begin PBXFileReference section */
 		0725B72C78BF90D17ACFD95D /* Pods-MeowBox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeowBox.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MeowBox/Pods-MeowBox.debug.xcconfig"; sourceTree = "<group>"; };
 		2200E2FD20F086E30030A7E9 /* MainBottomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBottomViewController.swift; sourceTree = "<group>"; };
-		2200E30220F0E46F0030A7E9 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
-		2200E30420F0E4790030A7E9 /* test1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test1.swift; sourceTree = "<group>"; };
+		2200E30620F1D8E00030A7E9 /* MyPageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageService.swift; sourceTree = "<group>"; };
+		2200E30820F1D96A0030A7E9 /* MyPageNoneTicketData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageNoneTicketData.swift; sourceTree = "<group>"; };
+		2200E30A20F1D9850030A7E9 /* MyPageNoneTicket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageNoneTicket.swift; sourceTree = "<group>"; };
 		22109A7F20EAAA3200E463C2 /* MyPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
 		22109A8120EAAAFC00E463C2 /* MyPage1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPage1ViewController.swift; sourceTree = "<group>"; };
 		22156DBD20EF85380014491E /* MeowBoxDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeowBoxDetailTableViewCell.swift; sourceTree = "<group>"; };
@@ -182,7 +184,8 @@
 		2200E30020F0E36E0030A7E9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				2200E30220F0E46F0030A7E9 /* test.swift */,
+				2200E30820F1D96A0030A7E9 /* MyPageNoneTicketData.swift */,
+				2200E30A20F1D9850030A7E9 /* MyPageNoneTicket.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -190,7 +193,7 @@
 		2200E30120F0E37C0030A7E9 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				2200E30420F0E4790030A7E9 /* test1.swift */,
+				2200E30620F1D8E00030A7E9 /* MyPageService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -529,6 +532,7 @@
 			files = (
 				CC54E41A20ECAE3F007C5C4E /* QuestionFooterTableViewCell.swift in Sources */,
 				22E8F7E820EBF70A00735276 /* WithdrawalPopUpViewController.swift in Sources */,
+				2200E30B20F1D9850030A7E9 /* MyPageNoneTicket.swift in Sources */,
 				222B5DC820E8BB56003F0A8C /* ExtensionControl.swift in Sources */,
 				222B5DCC20E8BB99003F0A8C /* Order.swift in Sources */,
 				CC5CE21D20E9D28D00FCE6AD /* OrderWithInfo4ViewController.swift in Sources */,
@@ -546,19 +550,19 @@
 				CCF0947A20F1EE460029567B /* OrderService.swift in Sources */,
 				22A86ED220EBD81D00B17661 /* LoginPopUp1ViewController.swift in Sources */,
 				CC44CBBA20EB2307007466D8 /* SettingViewController.swift in Sources */,
+				2200E30920F1D96A0030A7E9 /* MyPageNoneTicketData.swift in Sources */,
 				CC7DB55520EDE3CC00286E29 /* MainCollectionViewCell.swift in Sources */,
 				CC693A1320EE0BED00DA0935 /* TicketTableViewCell.swift in Sources */,
 				CCCA9DF220F0E930004319E5 /* NoticeViewController.swift in Sources */,
 				CCF0947820F1D6F30029567B /* CatService.swift in Sources */,
 				222B5DCA20E8BB6F003F0A8C /* APIService.swift in Sources */,
 				CCCA9DF420F0EE5B004319E5 /* NoticeTableViewCell.swift in Sources */,
-				2200E30320F0E46F0030A7E9 /* test.swift in Sources */,
-				2200E30520F0E4790030A7E9 /* test1.swift in Sources */,
 				22A86ED620EBE84C00B17661 /* TicketCancelPopUpViewController.swift in Sources */,
 				22D3B21320EFE10A00DE37F4 /* MeowBoxReviewCollectionViewCell.swift in Sources */,
 				22109A8220EAAAFC00E463C2 /* MyPage1ViewController.swift in Sources */,
 				229BCBAB20E9BBC7005E3B9F /* SignInViewController.swift in Sources */,
 				222B5DAF20E8BA26003F0A8C /* AppDelegate.swift in Sources */,
+				2200E30720F1D8E00030A7E9 /* MyPageService.swift in Sources */,
 				22A86ED820EBEE4400B17661 /* LogoutPopUpViewController.swift in Sources */,
 				22B1179D20EC5EE7006B8536 /* MyAccountViewController.swift in Sources */,
 				227DF56B20E905FF00050EBC /* MainViewController.swift in Sources */,

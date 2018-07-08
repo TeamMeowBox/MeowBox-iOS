@@ -7,12 +7,19 @@
 //
 
 import UIKit
+import Alamofire
+import Kingfisher
 
 class MyPage1BoxViewController: UIViewController {
-
+    
+    @IBOutlet weak var textImageView: UIImageView!
+    
+    var myPageNoneTickets: MyPageNoneTicket? 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        myPageNoneTicketInit() //서버 통신
         // Do any additional setup after loading the view.
     }
 
@@ -20,16 +27,18 @@ class MyPage1BoxViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
-    /*
-    // MARK: - Navigation
+    //MARK: *서버 통신*
+    //TODO: 고양이 이름, 유저이름 넣기
+    func myPageNoneTicketInit() {
+        
+        MyPageService.myPageNoneTicketInit{ (myPageNoneTicketData) in
+            
+            self.myPageNoneTickets = myPageNoneTicketData
+            self.textImageView.kf.setImage(with: URL(string: (self.myPageNoneTickets?.sendImage)!), placeholder: UIImage())
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        }
     }
-    */
+
 
 }

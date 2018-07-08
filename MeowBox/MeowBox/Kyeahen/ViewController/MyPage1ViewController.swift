@@ -7,14 +7,15 @@
 //
 
 import UIKit
+import Alamofire
 
 class MyPage1ViewController: UIViewController {
 
+    //layout var
     @IBOutlet weak var leadingC: NSLayoutConstraint!
     @IBOutlet weak var trailingC: NSLayoutConstraint!
     @IBOutlet weak var hiddenLeadingC: NSLayoutConstraint!
     @IBOutlet weak var hiddenTrailingC: NSLayoutConstraint!
-    
     
     @IBOutlet weak var myPageContainerView: UIView!
     @IBOutlet weak var myPageView: UIView!
@@ -22,8 +23,15 @@ class MyPage1ViewController: UIViewController {
     @IBOutlet weak var hiddenImageView: UIImageView!
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var sideBarProfileImageView: UIImageView!
+    @IBOutlet weak var catNameLabel: UILabel!
+    @IBOutlet weak var userNameLabel: UILabel!
     
     var sideBarIsVisible = false
+    
+    //server var
+    let userdefault = UserDefaults.standard
+    var myPageNoneTickets : MyPageNoneTicket?
+    var flag: String = "" //정기권 유무 상태
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +46,8 @@ class MyPage1ViewController: UIViewController {
     
         sideBarProfileImageView.layer.masksToBounds = true
         sideBarProfileImageView.layer.cornerRadius = sideBarProfileImageView.layer.frame.width/2
+        
+        myPageNoneTicketInit() //서버 통신
         
         //container view
         setupView()
@@ -271,22 +281,43 @@ class MyPage1ViewController: UIViewController {
     //TODO: 조건에 맞게 뷰 뿌리기
     @objc private func updateView() {
         
-     add(asChildViewController: myPage1TicketViewController)
-//        if 정기권이 있으면 {
-//            remove(asChildViewController: MyPage1BoxViewController)
-//            add(asChildViewController: myPage1TicketViewController)
-//
-//        else {
-//            remove(asChildViewController: myPage1TicketViewController)
-//            add(asChildViewController: myPage1BoxViewController)
-//        }
+        let flag1 = userdefault.string(forKey: "flag")
+        
+        if flag1 == "-1" { //정기권 없으면
+            remove(asChildViewController: myPage1TicketViewController)
+            add(asChildViewController: myPage1BoxViewController)
+        }
+        else { //정기권 있으면
+            remove(asChildViewController: myPage1BoxViewController)
+            add(asChildViewController: myPage1TicketViewController)
+        }
     }
     
     func setupView() {
-        myPageContainerView.translatesAutoresizingMaskIntoConstraints = false
-        //myPageContainerView.topAnchor.constraint(equalTo: menuBar.bottomAnchor).isActive = true
+//        myPageContainerView.translatesAutoresizingMaskIntoConstraints = false
+////        myPageContainerView.topAnchor.constraint(equalTo: menuBar.bottomAnchor).isActive = true
         updateView()
     }
+
+    
+    //MARK: *서버 통신*
+    //TODO: 고양이 이름, 유저이름 넣기
+    func myPageNoneTicketInit() {
+        
+        MyPageService.myPageNoneTicketInit{ (myPageNoneTicketData) in
+            
+            self.myPageNoneTickets = myPageNoneTicketData
+            self.catNameLabel.text = self.myPageNoneTickets!.catinfo
+            
+//            self.flag = self.myPageNoneTickets!.flag
+            
+            print("dd\(self.flag)")
+            
+           // userNameLabel.text =
+        }
+    }
+
+    
     
 }
 
