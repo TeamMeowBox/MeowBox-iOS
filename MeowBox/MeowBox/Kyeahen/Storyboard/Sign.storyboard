@@ -96,6 +96,9 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="휴대전화" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Jr-cq-9c8">
                                         <rect key="frame" x="0.0" y="0.0" width="59" height="26"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="59" id="QjW-hc-EOg"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="16"/>
                                         <color key="textColor" red="0.29803921568627451" green="0.30588235294117649" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -111,7 +114,6 @@
                                     </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="85.5" id="4IF-L3-Hja"/>
                                     <constraint firstAttribute="height" constant="26" id="SAr-mh-5I2"/>
                                 </constraints>
                             </stackView>
@@ -317,9 +319,9 @@
                                 </constraints>
                             </view>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="이메일" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uTx-IM-5ov">
-                                <rect key="frame" x="87.5" y="335" width="154.5" height="23"/>
+                                <rect key="frame" x="87.5" y="335" width="233" height="23"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="uTx-IM-5ov" secondAttribute="height" multiplier="168:25" id="n2L-D2-mAx"/>
+                                    <constraint firstAttribute="height" constant="23" id="HXR-uk-hOL"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="16"/>
@@ -386,9 +388,9 @@
                                 </constraints>
                             </view>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Czd-Fv-wAt">
-                                <rect key="frame" x="87.5" y="401.5" width="151" height="22.5"/>
+                                <rect key="frame" x="87.5" y="401.5" width="233" height="22.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="Czd-Fv-wAt" secondAttribute="height" multiplier="168:25" id="S8l-Jw-rXL"/>
+                                    <constraint firstAttribute="height" constant="22.5" id="g9Q-EE-KuL"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="16"/>
@@ -434,8 +436,10 @@
                             <constraint firstItem="mZv-Wg-hNN" firstAttribute="top" secondItem="Czd-Fv-wAt" secondAttribute="bottom" constant="3.46" id="J88-d4-Gtg"/>
                             <constraint firstItem="mZv-Wg-hNN" firstAttribute="centerX" secondItem="V4Z-DV-G1D" secondAttribute="centerX" id="OlR-Nk-qxD"/>
                             <constraint firstItem="yo3-rk-mhk" firstAttribute="leading" secondItem="aKB-2A-2cn" secondAttribute="leading" constant="3.79" id="Q9F-dD-e8t"/>
+                            <constraint firstItem="uTx-IM-5ov" firstAttribute="trailing" secondItem="aKB-2A-2cn" secondAttribute="trailing" id="T6F-vw-o0d"/>
                             <constraint firstItem="Czd-Fv-wAt" firstAttribute="top" secondItem="aKB-2A-2cn" secondAttribute="bottom" constant="38.890000000000001" id="UUr-Jr-mwO"/>
                             <constraint firstItem="Czd-Fv-wAt" firstAttribute="centerY" secondItem="Ux0-BI-KBW" secondAttribute="centerY" id="Xyc-Iw-zXh"/>
+                            <constraint firstItem="Czd-Fv-wAt" firstAttribute="trailing" secondItem="mZv-Wg-hNN" secondAttribute="trailing" id="aXj-wY-sil"/>
                             <constraint firstItem="Ux0-BI-KBW" firstAttribute="leading" secondItem="mZv-Wg-hNN" secondAttribute="leading" constant="3.79" id="cBH-gw-Fuu"/>
                             <constraint firstItem="uTx-IM-5ov" firstAttribute="leading" secondItem="yo3-rk-mhk" secondAttribute="trailing" constant="12.130000000000001" id="d4j-At-FYy"/>
                             <constraint firstItem="V4Z-DV-G1D" firstAttribute="bottom" secondItem="vRU-im-Uov" secondAttribute="bottom" id="dfd-7P-w5X"/>
