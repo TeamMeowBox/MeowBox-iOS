@@ -123,7 +123,7 @@ struct OrderService : APIService{
         let URL = url("/order/order_detail")
 
         let body: [String: Any] = [
-            "order_idx" : order_idx
+            "order_idx" : "12"
         ]
 
         Alamofire.request(URL, method: .post, parameters: body, encoding: JSONEncoding.default, headers: headers).responseData() { res in
@@ -142,7 +142,7 @@ struct OrderService : APIService{
                                 completion(orderDetailList.result)
                                 
                             } catch {
-                                
+                                print("catch.....")
                             }
                             
                             
@@ -159,5 +159,9 @@ struct OrderService : APIService{
             }
         }
     }
+    
+    
+    // MARK: 최근 배송지 불러오기
+    
     
 }

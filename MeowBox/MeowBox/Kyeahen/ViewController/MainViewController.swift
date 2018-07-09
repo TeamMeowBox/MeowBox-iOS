@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Lottie
 
 class MainViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     
@@ -33,9 +34,13 @@ class MainViewController: UIViewController,UICollectionViewDelegate,UICollection
     
     let logo : UIImage = UIImage(named: "meowbox-logo-pink.png")!
     let logoImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 128, height: 21))
+    
+    var boatAnimation : LOTAnimationView?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //playLaunch()
         
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -331,6 +336,23 @@ class MainViewController: UIViewController,UICollectionViewDelegate,UICollection
         self.pageControl.currentPage = Int(newPage)
         let point = CGPoint (x: CGFloat(newPage * pageWidth), y: targetContentOffset.pointee.y)
         targetContentOffset.pointee = point
+        
+    }
+    
+    func playLaunch(){
+        
+        boatAnimation = LOTAnimationView(name: "meow_box_splash")
+        
+        boatAnimation!.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        
+        boatAnimation!.contentMode = .scaleAspectFill
+        
+        boatAnimation!.frame = view.bounds
+        
+        view.addSubview(boatAnimation!)
+        
+        boatAnimation?.play()
+        sleep(4)
         
     }
 
