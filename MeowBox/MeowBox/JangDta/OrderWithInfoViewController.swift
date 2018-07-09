@@ -24,7 +24,7 @@ class OrderWithInfoViewController: UIViewController {
     @IBAction func goWithInfo2(_ sender: Any) {
         //parentVC?.myCatName = catNameTextField.text!
         if let cName = catNameTextField.text{
-            parentVC?.myCatName = cName
+            Cat.shared.name = cName
         }else{ // 고양이 이름 입력 안 한 경우
             
         }

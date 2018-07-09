@@ -86,6 +86,7 @@
 		CC693A1320EE0BED00DA0935 /* TicketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC693A1220EE0BED00DA0935 /* TicketTableViewCell.swift */; };
 		CC794FDC20F327D500B8EEEE /* OrderListData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC794FDB20F327D500B8EEEE /* OrderListData.swift */; };
 		CC794FDE20F32D1300B8EEEE /* OrderDetailList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC794FDD20F32D1300B8EEEE /* OrderDetailList.swift */; };
+		CC794FE220F3482100B8EEEE /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC794FE120F3482100B8EEEE /* Cat.swift */; };
 		CC7DB55520EDE3CC00286E29 /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7DB55420EDE3CC00286E29 /* MainCollectionViewCell.swift */; };
 		CCB12E5B20E90C6B00C5D4B8 /* OrderWithInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB12E5A20E90C6B00C5D4B8 /* OrderWithInfoViewController.swift */; };
 		CCCA9DF220F0E930004319E5 /* NoticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCA9DF120F0E930004319E5 /* NoticeViewController.swift */; };
@@ -180,6 +181,7 @@
 		CC693A1220EE0BED00DA0935 /* TicketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketTableViewCell.swift; sourceTree = "<group>"; };
 		CC794FDB20F327D500B8EEEE /* OrderListData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListData.swift; sourceTree = "<group>"; };
 		CC794FDD20F32D1300B8EEEE /* OrderDetailList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailList.swift; sourceTree = "<group>"; };
+		CC794FE120F3482100B8EEEE /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
 		CC7DB55420EDE3CC00286E29 /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
 		CCB12E5A20E90C6B00C5D4B8 /* OrderWithInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderWithInfoViewController.swift; sourceTree = "<group>"; };
 		CCCA9DF120F0E930004319E5 /* NoticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeViewController.swift; sourceTree = "<group>"; };
@@ -298,6 +300,7 @@
 				CC336E2120F2772500073E96 /* OrderList.swift */,
 				CC794FDB20F327D500B8EEEE /* OrderListData.swift */,
 				CC794FDD20F32D1300B8EEEE /* OrderDetailList.swift */,
+				CC794FE120F3482100B8EEEE /* Cat.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -623,6 +626,7 @@
 				2200E31D20F309A40030A7E9 /* AccountData.swift in Sources */,
 				22BEB4F820EDC6810030E81B /* MyPage1BoxViewController.swift in Sources */,
 				229BCBAD20E9CD16005E3B9F /* LoginViewController.swift in Sources */,
+				CC794FE220F3482100B8EEEE /* Cat.swift in Sources */,
 				CC5CE21F20E9D3B500FCE6AD /* OrderCompleteViewController.swift in Sources */,
 				22A86EDA20EBF09500B17661 /* LogoutSucessPopUpViewController.swift in Sources */,
 				CC44CBB620EB21EB007466D8 /* SuggestViewController.swift in Sources */,

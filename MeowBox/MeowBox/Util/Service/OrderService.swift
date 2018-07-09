@@ -42,6 +42,8 @@ struct OrderService : APIService{
                         if message == "success"{ // 주문하기 성공
                             print("주문 성공!")
                             completion("success")
+                        }else if message == "bad_request"{
+                            completion("bad_request")
                         }else{
                             completion("failure")
                         }
@@ -63,8 +65,8 @@ struct OrderService : APIService{
     static func orderlist(completion: @escaping (_ ticket: Ticket?,_ ticketeds: [Ticketed])->Void){
         let userDefault = UserDefaults.standard
         
-        //guard let token = userDefault.string(forKey: "token") else { return }
-       let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImtrbW1AbmF2ZS5jb20iLCJ1c2VyX2lkeCI6NywiaWF0IjoxNTMxMTAyMTM4LCJleHAiOjE1MzM2OTQxMzh9.sUJ-i5IF8oWhG3x-0fmQ0-xZH_qxeWKmQdiA-9QHaSw"
+        guard let token = userDefault.string(forKey: "token") else { return }
+//       let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImtrbW1AbmF2ZS5jb20iLCJ1c2VyX2lkeCI6NywiaWF0IjoxNTMxMTAyMTM4LCJleHAiOjE1MzM2OTQxMzh9.sUJ-i5IF8oWhG3x-0fmQ0-xZH_qxeWKmQdiA-9QHaSw"
         let headers = ["authorization": token]
         
         let URL = url("/order/order_list")
@@ -108,4 +110,54 @@ struct OrderService : APIService{
             }
         }
     }
+    
+    
+    // MARK: 주문 내역 상세 서비스
+    static func orderdetaillist(order_idx: String, completion: @escaping ([String])->Void){
+        let userDefault = UserDefaults.standard
+
+        guard let token = userDefault.string(forKey: "token") else { return }
+
+        let headers = ["authorization": token]
+
+        let URL = url("/order/order_detail")
+
+        let body: [String: Any] = [
+            "order_idx" : order_idx
+        ]
+
+        Alamofire.request(URL, method: .post, parameters: body, encoding: JSONEncoding.default, headers: headers).responseData() { res in
+            switch res.result{
+            case .success:
+                
+                if let value = res.result.value{
+                    if let message = JSON(value)["message"].string{
+                        if message == "success"{ // 주문내역 상세보기 성공
+                            print("주문내역 상세보기 성공!")
+                            
+                            let decoder = JSONDecoder()
+                            do{
+                                let orderDetailList = try decoder.decode(OrderDetailList.self, from: value)
+                                
+                                completion(orderDetailList.result)
+                                
+                            } catch {
+                                
+                            }
+                            
+                            
+                        }else{
+                            
+                        }
+                    }
+                }
+
+                break
+            case .failure(let err):
+                print(err.localizedDescription)
+                break
+            }
+        }
+    }
+    
 }

@@ -42,7 +42,7 @@ class OrderWithInfo2ViewController: UIViewController {
         specialTextView.layer.borderWidth = 1
         specialTextView.layer.borderColor = #colorLiteral(red: 0.5999526381, green: 0.6000267267, blue: 0.5999273658, alpha: 1)
         
-        catName = (parentVC?.myCatName)!
+//        catName = (parentVC?.myCatName)!
         
         labelFontInit()
         addScrollViewEndEditing()
@@ -52,7 +52,16 @@ class OrderWithInfo2ViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        catName = (parentVC?.myCatName)!
+//        catName = (parentVC?.myCatName)!
+        
+        catName = Cat.shared.name ?? ""
+        labelFontInit()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
+//        catName = Cat.shared.name ?? ""
     }
     
     

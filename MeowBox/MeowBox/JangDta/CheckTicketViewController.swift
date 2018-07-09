@@ -15,6 +15,8 @@ class CheckTicketViewController: UIViewController,UITableViewDelegate,UITableVie
     @IBOutlet weak var checkTicketTermLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
+    var myTicketIdx = ""
+    
     var myTicketName = ""
     var myTicketTerm = ""
     
@@ -50,6 +52,10 @@ class CheckTicketViewController: UIViewController,UITableViewDelegate,UITableVie
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 331
+    }
+    
+    func orderdetaillist(){
+        
     }
 
     

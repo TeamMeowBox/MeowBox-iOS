@@ -125,6 +125,11 @@ class OrderWithInfo4ViewController: UIViewController {
                 let ok = UIAlertAction(title: "확인", style: .default, handler: nil)
                 alertView.addAction(ok)
                 self.present(alertView, animated: true, completion: nil)
+            }else if message == "bad_request"{
+                let alertView = UIAlertController(title: "중복", message: "사용중인 정기권이 있습니다", preferredStyle: .alert)
+                let ok = UIAlertAction(title: "확인", style: .default, handler: nil)
+                alertView.addAction(ok)
+                self.present(alertView, animated: true, completion: nil)
             }
             
         }
