@@ -748,11 +748,14 @@
                                                 <state key="normal" title="저장하기">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="saveAccount:" destination="6Ew-l0-MD9" eventType="touchUpInside" id="bCa-t5-JFY"/>
+                                                </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7rK-ZR-QvE">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="138"/>
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4LI-NO-ceE">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sidebar-default-img" translatesAutoresizingMaskIntoConstraints="NO" id="4LI-NO-ceE">
                                                         <rect key="frame" x="145" y="27" width="85" height="85"/>
                                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
@@ -980,6 +983,9 @@
                                                             <constraint firstAttribute="width" secondItem="jd8-EQ-9Xb" secondAttribute="height" multiplier="163:40" id="6t3-lb-rhU"/>
                                                         </constraints>
                                                         <state key="normal" title="Button" image="small-radio-btn-gray"/>
+                                                        <connections>
+                                                            <action selector="smallSizeAction:" destination="6Ew-l0-MD9" eventType="touchUpInside" id="06f-9c-bGg"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UsB-Rg-NXs">
                                                         <rect key="frame" x="191.5" y="42" width="165" height="40.5"/>
@@ -988,6 +994,9 @@
                                                             <constraint firstAttribute="height" constant="40.5" id="boZ-hO-Xcm"/>
                                                         </constraints>
                                                         <state key="normal" title="Button" image="medium-radio-btn-gray"/>
+                                                        <connections>
+                                                            <action selector="mediumSizeAction:" destination="6Ew-l0-MD9" eventType="touchUpInside" id="FS5-42-MG7"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vkl-mH-Va4">
                                                         <rect key="frame" x="21" y="92" width="165" height="40.5"/>
@@ -996,6 +1005,9 @@
                                                             <constraint firstAttribute="height" constant="40.5" id="VCN-cg-Nr4"/>
                                                         </constraints>
                                                         <state key="normal" title="Button" image="large-radio-btn-gray"/>
+                                                        <connections>
+                                                            <action selector="largeSizeAction:" destination="6Ew-l0-MD9" eventType="touchUpInside" id="kET-rb-J79"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

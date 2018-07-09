@@ -10,6 +10,7 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 import Kingfisher
+import UIKit
 
 struct MyPageService: APIService {
     
@@ -245,7 +246,190 @@ struct MyPageService: APIService {
 
     }
     
+    //MARK: 마이페이지 - 계정 설정 변경(사진 무)
+    static func updateAccountX(user_name: String, user_phone: String, user_email: String, image_profile: UIImage, cat_name: String, cat_size: String, cat_birthday: String, cat_caution: String, completion: @escaping ()-> Void) {
+        
+        let URL = url("/mypage/account_setting/account")
+        
+        let userdefault = UserDefaults.standard
+        guard let token = userdefault.string(forKey: "token") else { return }
+        let token_header = [ "authorization" : token ]
+        
+        let userNameData = user_name.data(using: .utf8)
+        let userPhoneData = user_phone.data(using: .utf8)
+        let userEmailData = user_email.data(using: .utf8)
+        
+         let catNameData = cat_name.data(using: .utf8)
+        let catSizeData = cat_size.data(using: .utf8)
+        let catBirthData = cat_birthday.data(using: .utf8)
+        let catCautionData = cat_caution.data(using: .utf8)
+        
+        Alamofire.upload(multipartFormData: { (multipartFormData) in
+            
+            do {
+                
+                let data = try JSONSerialization.data(withJSONObject: NSNull())
+                multipartFormData.append(data as Data , withName: "image_profile")
+                
+                
+            } catch {
+                print("err")
+            }
+            
+            multipartFormData.append(userNameData!, withName: "user_name")
+            multipartFormData.append(userPhoneData!, withName: "user_phone")
+            multipartFormData.append(userEmailData!, withName: "user_email")
+//            multipartFormData.append(profileImageData!, withName: "image_profile", fileName: "photo.jpg", mimeType: "image/jpeg")
+            multipartFormData.append(catNameData!, withName: "cat_name")
+            multipartFormData.append(catSizeData!, withName: "cat_size")
+            multipartFormData.append(catBirthData!, withName: "cat_birthday")
+            multipartFormData.append(catCautionData!, withName: "cat_caution")
+            
+        }, to: URL, method: .post, headers: token_header ) { (encodingResult) in
+            
+            switch encodingResult {
+            case .success(request: let upload, streamingFromDisk: _, streamFileURL: _) :
+                
+                upload.responseData(completionHandler: {(res) in
+                    
+                    switch res.result {
+                    case .success:
+                        
+                        if let value = res.result.value {
+                            
+                            print("update 접근")
+                            
+                            do {
+                                let status = JSON(value)["status"]
+                                if status == true {
+                                    
+                                    let message = JSON(value)["message"].string
+                                    print(message)
+                                    
+                                    if message == "success" {
+                                        print("update 성공")
+                                        completion()
+                                    }
+                                    else {
+                                        print("update 실패")
+                                    }
+                                }
+                                else {
+                                    print("서버 에러")
+                                    
+                                }
+                                
+                            }catch {
+                                ("예외 발생")
+                            }
+                        }
+                        
+                        break
+                        
+                        
+                    case .failure(let err):
+                        
+                        print(err.localizedDescription)
+                        break
+                    }
+                })
+                
+                break
+                
+            case .failure(let err):
+                print(err.localizedDescription)
+            }
+            
+        }
+    }
+        
     
     
     
+    //MARK: 마이페이지 - 계정 설정 변경(사진 유)
+    static func updateAccount(user_name: String, user_phone: String, user_email: String, image_profile: UIImage, cat_name: String, cat_size: String, cat_birthday: String, cat_caution: String, completion: @escaping ()-> Void) {
+
+        let URL = url("/mypage/account_setting/account")
+
+        let userdefault = UserDefaults.standard
+        guard let token = userdefault.string(forKey: "token") else { return }
+        let token_header = [ "authorization" : token ]
+
+        let userNameData = user_name.data(using: .utf8)
+        let userPhoneData = user_phone.data(using: .utf8)
+        let userEmailData = user_email.data(using: .utf8)
+        let profileImageData = UIImageJPEGRepresentation(image_profile, 0.3)
+        let catNameData = cat_name.data(using: .utf8)
+        let catSizeData = cat_size.data(using: .utf8)
+        let catBirthData = cat_birthday.data(using: .utf8)
+        let catCautionData = cat_caution.data(using: .utf8)
+
+        Alamofire.upload(multipartFormData: { (multipartFormData) in
+
+            multipartFormData.append(userNameData!, withName: "user_name")
+            multipartFormData.append(userPhoneData!, withName: "user_phone")
+            multipartFormData.append(userEmailData!, withName: "user_email")
+            multipartFormData.append(profileImageData!, withName: "image_profile", fileName: "photo.jpg", mimeType: "image/jpeg")
+            multipartFormData.append(catNameData!, withName: "cat_name")
+            multipartFormData.append(catSizeData!, withName: "cat_size")
+            multipartFormData.append(catBirthData!, withName: "cat_birthday")
+            multipartFormData.append(catCautionData!, withName: "cat_caution")
+
+        }, to: URL, method: .post, headers: token_header ) { (encodingResult) in
+
+            switch encodingResult {
+            case .success(request: let upload, streamingFromDisk: _, streamFileURL: _) :
+
+                upload.responseData(completionHandler: {(res) in
+                    
+                    switch res.result {
+                    case .success:
+
+                        if let value = res.result.value {
+
+                            print("update 접근")
+
+                            do {
+                                let status = JSON(value)["status"]
+                                if status == true {
+
+                                    let message = JSON(value)["message"].string
+                                    print(message)
+
+                                    if message == "success" {
+                                        print("update 성공")
+                                        completion()
+                                    }
+                                    else {
+                                        print("update 실패")
+                                    }
+                                }
+                                else {
+                                    print("서버 에러")
+
+                                }
+
+                            }catch {
+                                ("예외 발생")
+                            }
+                        }
+
+                        break
+
+
+                    case .failure(let err):
+
+                        print(err.localizedDescription)
+                        break
+                    }
+                })
+
+                break
+
+            case .failure(let err):
+                print(err.localizedDescription)
+            }
+
+        }
+    }
 }

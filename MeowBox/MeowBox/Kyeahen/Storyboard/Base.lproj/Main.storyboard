@@ -220,7 +220,7 @@
                                         </cells>
                                     </collectionView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zvt-mJ-pWx">
-                                        <rect key="frame" x="0.0" y="606" width="375" height="61"/>
+                                        <rect key="frame" x="10" y="606" width="355" height="61"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="9.6500000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="Zb1-F2-t3K">
                                                 <rect key="frame" x="23.5" y="20" width="187" height="21"/>
@@ -243,7 +243,6 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="Zb1-F2-t3K" firstAttribute="top" secondItem="zvt-mJ-pWx" secondAttribute="top" constant="20" id="MBW-7S-eH3"/>
-                                            <constraint firstAttribute="width" secondItem="zvt-mJ-pWx" secondAttribute="height" multiplier="375:61" id="oTc-xI-Vxj"/>
                                             <constraint firstItem="Zb1-F2-t3K" firstAttribute="leading" secondItem="zvt-mJ-pWx" secondAttribute="leading" constant="23.620000000000001" id="u6O-n6-ULc"/>
                                             <constraint firstAttribute="height" constant="61" id="zjd-m8-OZA"/>
                                         </constraints>
@@ -252,10 +251,11 @@
                                 <color key="backgroundColor" red="0.36892167510000001" green="0.6970864604" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstItem="ibp-xh-i7J" firstAttribute="top" secondItem="xZ8-Px-2zH" secondAttribute="top" id="0ra-j8-JFQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="zvt-mJ-pWx" secondAttribute="trailing" constant="10" id="OhB-gg-cW5"/>
                                     <constraint firstAttribute="bottom" secondItem="ibp-xh-i7J" secondAttribute="bottom" id="akF-m0-tlb"/>
                                     <constraint firstItem="ibp-xh-i7J" firstAttribute="width" secondItem="xZ8-Px-2zH" secondAttribute="width" id="bBS-SB-yJv"/>
                                     <constraint firstAttribute="bottom" secondItem="zvt-mJ-pWx" secondAttribute="bottom" id="j0x-eu-KKH"/>
-                                    <constraint firstItem="zvt-mJ-pWx" firstAttribute="leading" secondItem="xZ8-Px-2zH" secondAttribute="leading" id="jIP-AB-6MZ"/>
+                                    <constraint firstItem="zvt-mJ-pWx" firstAttribute="leading" secondItem="xZ8-Px-2zH" secondAttribute="leading" constant="10" id="jIP-AB-6MZ"/>
                                     <constraint firstItem="ibp-xh-i7J" firstAttribute="leading" secondItem="xZ8-Px-2zH" secondAttribute="leading" id="mdL-nW-9KF"/>
                                     <constraint firstItem="ibp-xh-i7J" firstAttribute="height" secondItem="xZ8-Px-2zH" secondAttribute="height" id="rcQ-2m-SDQ"/>
                                     <constraint firstAttribute="trailing" secondItem="ibp-xh-i7J" secondAttribute="trailing" id="tnL-gr-kve"/>
@@ -337,14 +337,14 @@
             <objects>
                 <viewController storyboardIdentifier="MainBottomViewController" modalPresentationStyle="overCurrentContext" id="oHw-be-E6c" customClass="MainBottomViewController" customModule="MeowBox" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fwx-dJ-HZK">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1800"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AXm-w8-vLU">
-                                <rect key="frame" x="0.0" y="20" width="375" height="1780"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="1770"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2BG-oS-IVd">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1780"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1700"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jM3-He-v3t">
                                                 <rect key="frame" x="0.0" y="-7" width="375" height="61"/>
@@ -586,7 +586,7 @@
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="2BG-oS-IVd" firstAttribute="height" secondItem="AXm-w8-vLU" secondAttribute="height" priority="1" id="2uO-Mk-t1l"/>
+                                    <constraint firstItem="2BG-oS-IVd" firstAttribute="height" secondItem="AXm-w8-vLU" secondAttribute="height" priority="1" constant="-70" id="2uO-Mk-t1l"/>
                                     <constraint firstAttribute="trailing" secondItem="2BG-oS-IVd" secondAttribute="trailing" id="4Bt-rD-1wo"/>
                                     <constraint firstAttribute="bottom" secondItem="2BG-oS-IVd" secondAttribute="bottom" constant="1233" id="E9d-Lf-3vv"/>
                                     <constraint firstItem="2BG-oS-IVd" firstAttribute="leading" secondItem="AXm-w8-vLU" secondAttribute="leading" id="Mjk-El-RQE"/>
@@ -605,7 +605,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Krr-rU-cHC"/>
                     </view>
-                    <size key="freeformSize" width="375" height="1800"/>
+                    <size key="freeformSize" width="375" height="1790"/>
                     <connections>
                         <outlet property="closeBtnView" destination="jM3-He-v3t" id="Hgf-52-3JU"/>
                     </connections>

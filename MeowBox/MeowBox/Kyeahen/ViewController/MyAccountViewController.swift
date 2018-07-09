@@ -38,6 +38,7 @@ class MyAccountViewController: UIViewController {
     @IBOutlet weak var dateTextField: UITextField!
     
     var accounts: Account?
+    var size: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -109,7 +110,95 @@ class MyAccountViewController: UIViewController {
         }
     }
     
+    //MARK: 마른 사이즈 액션
+    @IBAction func smallSizeAction(_ sender: UIButton) {
+        
+        if sender == smallSizeBtn {
+            size = "1"
+            smallSizeBtn.isSelected = !smallSizeBtn.isSelected
+            smallSizeBtn.setImage(#imageLiteral(resourceName: "small-radio-btn-pink"), for: UIControlState.normal)
+            mediumSizeBtn.setImage(#imageLiteral(resourceName: "medium-radio-btn-gray"), for: UIControlState.normal)
+            bigSizeBtn.setImage(#imageLiteral(resourceName: "large-radio-btn-gray"), for: UIControlState.normal)
+        }
+            
+        else {
+            size = "null"
+            smallSizeBtn.isSelected = !smallSizeBtn.isSelected
+            smallSizeBtn.setImage(#imageLiteral(resourceName: "small-radio-btn-gray"), for: UIControlState.normal)
+        }
+        
+        print(size)
+    }
     
+    @IBAction func mediumSizeAction(_ sender: UIButton) {
+        
+        if sender == mediumSizeBtn {
+            size = "2"
+            mediumSizeBtn.isSelected = !mediumSizeBtn.isSelected
+            mediumSizeBtn.setImage(#imageLiteral(resourceName: "medium-radio-btn-pink"), for: UIControlState.normal)
+            smallSizeBtn.setImage(#imageLiteral(resourceName: "small-radio-btn-gray"), for: UIControlState.normal)
+            bigSizeBtn.setImage(#imageLiteral(resourceName: "large-radio-btn-gray"), for: UIControlState.normal)
+        }
+            
+        else {
+            size = "null"
+            mediumSizeBtn.isSelected = !mediumSizeBtn.isSelected
+            mediumSizeBtn.setImage(#imageLiteral(resourceName: "small-radio-btn-gray"), for: UIControlState.normal)
+        }
+        
+        print(size)
+        
+    }
+    
+    @IBAction func largeSizeAction(_ sender: UIButton) {
+        
+        if sender == bigSizeBtn {
+            size = "3"
+            bigSizeBtn.isSelected = !bigSizeBtn.isSelected
+            bigSizeBtn.setImage(#imageLiteral(resourceName: "large-radio-btn-pink"), for: UIControlState.normal)
+            mediumSizeBtn.setImage(#imageLiteral(resourceName: "medium-radio-btn-gray"), for: UIControlState.normal)
+            smallSizeBtn.setImage(#imageLiteral(resourceName: "small-radio-btn-gray"), for: UIControlState.normal)
+        }
+            
+        else {
+            size = "null"
+            bigSizeBtn.isSelected = !bigSizeBtn.isSelected
+            bigSizeBtn.setImage(#imageLiteral(resourceName: "large-radio-btn-gray"), for: UIControlState.normal)
+        }
+        
+        print(size)
+        
+    }
+    
+    
+    //MARK: 글 저장
+    @IBAction func saveAccount(_ sender: Any) {
+        updateAccount()
+    }
+    
+    func updateAccount() {
+//
+//        if let img = profileImageView.image {
+        print(gsno(nameTextField.text))
+            MyPageService.updateAccount(user_name: gsno(nameTextField.text), user_phone: gsno(phoneTextField.text), user_email: gsno(emailTextField.text), image_profile: profileImageView.image!, cat_name: gsno(catNameTextField.text), cat_size: size, cat_birthday: gsno(dateTextField.text), cat_caution: gsno(infoEtcTextView.text)) {
+                
+                    print("수정 완료!")
+                
+                    self.dismiss(animated: true, completion: nil)
+                
+            }
+//        }
+//        else {
+//            MyPageService.updateAccountX(user_name: gsno(nameTextField.text), user_phone: gsno(phoneTextField.text), user_email: gsno(emailTextField.text), image_profile: profileImageView.image!, cat_name: gsno(catNameTextField.text), cat_size: size, cat_birthday: gsno(dateTextField.text), cat_caution: gsno(infoEtcTextView.text)) {
+//                
+//                print("수정 완료!")
+//                
+//                self.dismiss(animated: true, completion: nil)
+//                
+//            }
+//            
+//        }
+    }
     
     
 }

@@ -9,7 +9,9 @@
 import UIKit
 
 class SignUpCheckPopUpViewController: UIViewController {
-
+    
+    @IBOutlet weak var okBtn: UIButton!
+    @IBOutlet weak var checkView: UIView!
     @IBOutlet weak var contentTextView: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +23,13 @@ class SignUpCheckPopUpViewController: UIViewController {
         필수 항목을 모두 입력했는지
         다시 확인해주세요!
         """
-
+        
+        checkView.layer.cornerRadius = 5
+        
+        okBtn.clipsToBounds = true
+        okBtn.layer.cornerRadius = 5
+        okBtn.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
+        
         // Do any additional setup after loading the view.
     }
 
