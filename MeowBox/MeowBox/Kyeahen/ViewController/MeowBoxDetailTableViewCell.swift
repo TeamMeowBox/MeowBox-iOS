@@ -14,6 +14,7 @@ class MeowBoxDetailTableViewCell: UITableViewCell,UICollectionViewDataSource, UI
     @IBOutlet weak var detailImageView: UIImageView!
     @IBOutlet weak var detailContent: UITextView!
     @IBOutlet weak var detailCollectionView: UICollectionView!
+
     
     let collectImageArr = [#imageLiteral(resourceName: "package-box-img"),#imageLiteral(resourceName: "package-box-detail-img"),#imageLiteral(resourceName: "package-box-img")]
     let indicatorArr = [#imageLiteral(resourceName: "indicator-first"), #imageLiteral(resourceName: "indicator-second"), #imageLiteral(resourceName: "indicator-third")]
@@ -23,6 +24,7 @@ class MeowBoxDetailTableViewCell: UITableViewCell,UICollectionViewDataSource, UI
         
         self.detailCollectionView.delegate = self
         self.detailCollectionView.dataSource = self
+
         
         // Initialization code
     }
@@ -54,7 +56,8 @@ class MeowBoxDetailTableViewCell: UITableViewCell,UICollectionViewDataSource, UI
             모자를 물로 적시고 짜기만 하면
             얼음처럼 시원해집니다.
             """
-        cell.collectioniIndicator.image = indicatorArr[indexPath.row]
+
+        cell.collectionPageControl.currentPage = indexPath.row
         
         return cell
         }

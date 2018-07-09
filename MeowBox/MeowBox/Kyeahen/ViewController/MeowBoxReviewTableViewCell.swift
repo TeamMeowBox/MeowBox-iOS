@@ -13,6 +13,7 @@ class MeowBoxReviewTableViewCell: UITableViewCell, UICollectionViewDelegate, UIC
     @IBOutlet weak var reviewBackgroundImageView: UIImageView!
     @IBOutlet weak var reviewTitleLabel: UILabel!
     @IBOutlet weak var reviewintroLabel: UILabel!
+    @IBOutlet weak var collectionPageControl: UIPageControl!
     @IBOutlet weak var reviewCollectionView: UICollectionView!
     
     let collectImageArr = [#imageLiteral(resourceName: "package-box-img"),#imageLiteral(resourceName: "package-box-detail-img"),#imageLiteral(resourceName: "package-box-img")]
@@ -49,10 +50,21 @@ class MeowBoxReviewTableViewCell: UITableViewCell, UICollectionViewDelegate, UIC
             cell.reviewImageView.image = collectImageArr[indexPath.row]
             cell.reviewTag.text = "#냥냥이 #고양이"
             cell.reviewID.text = "@kyeahen"
+            cell.reviewPageControl.currentPage = indexPath.row
             
             return cell
         }
         return UICollectionViewCell()
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
 
+}
+
+extension MeowBoxReviewTableViewCell: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: self.frame.width, height: (381/375)*self.frame.width)
+    }
 }

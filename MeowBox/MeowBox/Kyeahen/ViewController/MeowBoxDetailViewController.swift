@@ -21,7 +21,7 @@ class MeowBoxDetailViewController: UIViewController, UITableViewDelegate, UITabl
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var detailTableView: UITableView!
     @IBOutlet weak var detailView: UIView!
-    
+
     let logo : UIImage = UIImage(named: "meowbox-logo-pink.png")!
     let logoImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 128, height: 21))
     
@@ -82,6 +82,7 @@ class MeowBoxDetailViewController: UIViewController, UITableViewDelegate, UITabl
             쿨 원단으로 만들어진 모자입니다.
             귀여운 사진은 덤, 시원한 여름은 필수입니다.
             """
+        
         
         return cell
     }

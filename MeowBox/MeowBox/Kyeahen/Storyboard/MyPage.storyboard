@@ -735,10 +735,10 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="868"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iTu-2x-zJw">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="932"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="931"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VwA-zC-PTu">
-                                                <rect key="frame" x="0.0" y="814" width="375" height="56"/>
+                                                <rect key="frame" x="0.0" y="813" width="375" height="56"/>
                                                 <color key="backgroundColor" red="0.85490196078431369" green="0.54509803921568623" blue="0.54509803921568623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="56" id="TBu-IX-Puk"/>
@@ -778,11 +778,10 @@
                                                     <constraint firstItem="aVZ-nE-fju" firstAttribute="leading" secondItem="7rK-ZR-QvE" secondAttribute="leading" constant="213.37" id="HWm-wY-1Wi"/>
                                                     <constraint firstItem="4LI-NO-ceE" firstAttribute="centerY" secondItem="7rK-ZR-QvE" secondAttribute="centerY" id="QOf-mA-mpu"/>
                                                     <constraint firstItem="4LI-NO-ceE" firstAttribute="centerX" secondItem="7rK-ZR-QvE" secondAttribute="centerX" id="h7m-0h-CPw"/>
-                                                    <constraint firstAttribute="width" secondItem="7rK-ZR-QvE" secondAttribute="height" multiplier="125:46" id="ou3-Ve-RmZ"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oI0-46-56Z">
-                                                <rect key="frame" x="0.0" y="274" width="375" height="45"/>
+                                                <rect key="frame" x="0.0" y="273" width="375" height="45"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="전화번호" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jqc-zB-D7A">
                                                         <rect key="frame" x="21" y="11" width="59" height="24"/>
@@ -809,7 +808,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Kd-T8-hoZ">
-                                                <rect key="frame" x="0.0" y="334" width="375" height="45"/>
+                                                <rect key="frame" x="0.0" y="333" width="375" height="45"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="내 고양이 정보" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kh8-5W-oUJ">
                                                         <rect key="frame" x="21" y="13" width="294" height="20"/>
@@ -829,7 +828,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="osX-aG-9u1">
-                                                <rect key="frame" x="0.0" y="229" width="375" height="45"/>
+                                                <rect key="frame" x="0.0" y="228" width="375" height="45"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E-mail" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OAd-Us-d46">
                                                         <rect key="frame" x="21" y="11" width="49" height="24"/>
@@ -856,7 +855,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dsN-Pt-bPh">
-                                                <rect key="frame" x="0.0" y="184" width="375" height="45"/>
+                                                <rect key="frame" x="0.0" y="183" width="375" height="45"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이름" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RwG-mt-rPY">
                                                         <rect key="frame" x="21" y="11" width="30" height="24"/>
@@ -906,7 +905,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nGD-3z-xDJ">
-                                                <rect key="frame" x="0.0" y="379" width="375" height="45"/>
+                                                <rect key="frame" x="0.0" y="378" width="375" height="45"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g1F-zr-8fZ">
                                                         <rect key="frame" x="21" y="11" width="59" height="24"/>
@@ -933,7 +932,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uUf-LW-a1p">
-                                                <rect key="frame" x="0.0" y="575" width="375" height="45"/>
+                                                <rect key="frame" x="0.0" y="574" width="375" height="45"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="생일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dwx-S8-m5J">
                                                         <rect key="frame" x="21" y="11" width="59" height="24"/>
@@ -962,7 +961,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vYZ-f4-SkM">
-                                                <rect key="frame" x="0.0" y="424" width="375" height="151"/>
+                                                <rect key="frame" x="0.0" y="423" width="375" height="151"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="크기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CgU-va-au1">
                                                         <rect key="frame" x="21" y="9" width="59" height="24"/>
@@ -1013,7 +1012,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Th7-lZ-4Eg">
-                                                <rect key="frame" x="0.0" y="620" width="375" height="194"/>
+                                                <rect key="frame" x="0.0" y="619" width="375" height="194"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="알레르기 및 특이사항" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WCN-p1-gXQ">
                                                         <rect key="frame" x="21" y="10" width="231" height="26"/>
@@ -1049,7 +1048,6 @@
                                         <constraints>
                                             <constraint firstItem="oI0-46-56Z" firstAttribute="leading" secondItem="iTu-2x-zJw" secondAttribute="leading" id="1d2-dZ-o7m"/>
                                             <constraint firstAttribute="trailing" secondItem="Th7-lZ-4Eg" secondAttribute="trailing" id="1lx-x4-yeF"/>
-                                            <constraint firstItem="kep-GX-zxH" firstAttribute="centerY" secondItem="iTu-2x-zJw" secondAttribute="centerY" constant="-305.5" id="3KN-3B-EWi"/>
                                             <constraint firstAttribute="trailing" secondItem="dsN-Pt-bPh" secondAttribute="trailing" id="3gh-KX-I7H"/>
                                             <constraint firstItem="SWM-T2-i0s" firstAttribute="leading" secondItem="c8y-1e-EKi" secondAttribute="leading" id="5qx-ND-vQh"/>
                                             <constraint firstAttribute="trailing" secondItem="vYZ-f4-SkM" secondAttribute="trailing" id="6Ai-33-cmh"/>
@@ -1094,7 +1092,7 @@
                                             <constraint firstItem="nGD-3z-xDJ" firstAttribute="top" secondItem="2Kd-T8-hoZ" secondAttribute="bottom" id="oBa-GV-wkm"/>
                                             <constraint firstItem="jqc-zB-D7A" firstAttribute="leading" secondItem="OAd-Us-d46" secondAttribute="leading" id="r47-kS-XLC"/>
                                             <constraint firstItem="kep-GX-zxH" firstAttribute="leading" secondItem="iTu-2x-zJw" secondAttribute="leading" id="wMR-O2-BGn"/>
-                                            <constraint firstItem="dsN-Pt-bPh" firstAttribute="top" secondItem="kep-GX-zxH" secondAttribute="bottom" constant="1" id="xYu-E3-6jN"/>
+                                            <constraint firstItem="dsN-Pt-bPh" firstAttribute="top" secondItem="kep-GX-zxH" secondAttribute="bottom" id="xYu-E3-6jN"/>
                                             <constraint firstItem="OAd-Us-d46" firstAttribute="leading" secondItem="RwG-mt-rPY" secondAttribute="leading" id="zHd-c4-m0Z"/>
                                         </constraints>
                                     </view>
@@ -1129,6 +1127,7 @@
                             <constraint firstItem="2Kd-T8-hoZ" firstAttribute="leading" secondItem="CHM-xU-OkD" secondAttribute="leading" id="UgL-fe-lqo"/>
                             <constraint firstItem="nQB-6a-g9D" firstAttribute="leading" secondItem="CHM-xU-OkD" secondAttribute="leading" id="aCE-VR-Vx7"/>
                             <constraint firstItem="Th7-lZ-4Eg" firstAttribute="leading" secondItem="CHM-xU-OkD" secondAttribute="leading" id="atT-lt-JFc"/>
+                            <constraint firstItem="CHM-xU-OkD" firstAttribute="trailing" secondItem="7rK-ZR-QvE" secondAttribute="trailing" id="csM-qt-Srt"/>
                             <constraint firstItem="VwA-zC-PTu" firstAttribute="leading" secondItem="CHM-xU-OkD" secondAttribute="leading" id="fj0-G0-f9o"/>
                             <constraint firstItem="nQB-6a-g9D" firstAttribute="trailing" secondItem="CHM-xU-OkD" secondAttribute="trailing" id="isQ-py-SVo"/>
                             <constraint firstItem="vYZ-f4-SkM" firstAttribute="leading" secondItem="CHM-xU-OkD" secondAttribute="leading" id="wNU-y3-XcP"/>

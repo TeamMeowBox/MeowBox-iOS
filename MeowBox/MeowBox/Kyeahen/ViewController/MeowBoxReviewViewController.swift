@@ -23,7 +23,10 @@ class MeowBoxReviewViewController: UIViewController, UITableViewDelegate, UITabl
     @IBOutlet weak var reviewHeaderImageView: UIImageView!
     
     @IBOutlet var reviewView: UIView!
+    
     var sideBarIsVisible = false
+
+    
     let logo : UIImage = UIImage(named: "meowbox-logo-pink.png")!
     let logoImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 128, height: 21))
     
