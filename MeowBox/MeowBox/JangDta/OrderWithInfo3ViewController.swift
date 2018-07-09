@@ -45,14 +45,24 @@ class OrderWithInfo3ViewController: UIViewController {
     }
     
     @IBAction func backWithInfo2(_ sender: Any) {
-        parentVC?.changeVC(num: 2)
+        
+        guard let hasCat = userDefault.string(forKey: "cat_idx") else { return }
+        if hasCat != "-1"{
+            let alertView = UIAlertController(title: "고양이", message: "고양이가 이미 등록되어 있습니다", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "확인", style: .default, handler: nil)
+            alertView.addAction(ok)
+            self.present(alertView, animated: true, completion: nil)
+        }else{
+            parentVC?.changeVC(num: 2)
+        }
+        
     }
     
     func boxInit(){
-        box1View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "big-card-box-pink.png"))
-        box2View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "card-box-white.png"))
-        box3View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "card-box-white.png"))
-        box4View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "card-box-white.png"))
+        box1View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "big-card-box-pink-1"))
+        box2View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "card-box-white-1"))
+        box3View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "card-box-white-1"))
+        box4View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "card-box-white-1"))
     }
     
     private func selectionListInit(){
@@ -88,10 +98,10 @@ class OrderWithInfo3ViewController: UIViewController {
             selectProduct = "2"
             selectPrice = "38500"
         }
-        box1View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "big-card-box-pink.png"))
-        box2View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "card-box-white.png"))
-        box3View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "card-box-white.png"))
-        box4View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "card-box-white.png"))
+        box1View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "big-card-box-pink-1"))
+        box2View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "card-box-white-1"))
+        box3View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "card-box-white-1"))
+        box4View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "card-box-white-1"))
     }
     
     func labelFontInit(){
@@ -124,30 +134,30 @@ class OrderWithInfo3ViewController: UIViewController {
     
     @objc func select2View(){
         selectionList.selectedIndexes = []
-        box1View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "big-card-box-white.png"))
-        box2View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "card-box-pink.png"))
-        box3View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "card-box-white.png"))
-        box4View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "card-box-white.png"))
+        box1View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "big-card-box-white-1"))
+        box2View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "card-box-pink-1"))
+        box3View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "card-box-white-1"))
+        box4View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "card-box-white-1"))
         selectProduct = "3"
         selectPrice = "36500"
     }
     
     @objc func select3View(){
         selectionList.selectedIndexes = []
-        box1View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "big-card-box-white.png"))
-        box2View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "card-box-white.png"))
-        box3View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "card-box-pink.png"))
-        box4View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "card-box-white.png"))
+        box1View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "big-card-box-white-1"))
+        box2View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "card-box-white-1"))
+        box3View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "card-box-pink-1"))
+        box4View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "card-box-white-1"))
         selectProduct = "6"
         selectPrice = "34500"
     }
     
     @objc func select4View(){
         selectionList.selectedIndexes = []
-        box1View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "big-card-box-white.png"))
-        box2View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "card-box-white.png"))
-        box3View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "card-box-white.png"))
-        box4View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "card-box-pink.png"))
+        box1View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "big-card-box-white-1"))
+        box2View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "card-box-white-1"))
+        box3View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "card-box-white-1"))
+        box4View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "card-box-pink-1"))
         selectProduct = "7"
         selectPrice = "60000"
     }
