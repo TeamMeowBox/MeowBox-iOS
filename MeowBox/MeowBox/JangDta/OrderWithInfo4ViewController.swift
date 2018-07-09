@@ -22,6 +22,7 @@ class OrderWithInfo4ViewController: UIViewController {
     @IBOutlet weak var selectionList: SelectionList!
     
     let userDefault = UserDefaults.standard
+    var latest : LatestAddress?
     
     // NEEDS TO ORDER
     @IBOutlet weak var nameTextField: UITextField!
@@ -30,16 +31,30 @@ class OrderWithInfo4ViewController: UIViewController {
     @IBOutlet weak var phoneTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     
+    @IBOutlet weak var totalPriceLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         userDefault.set("1", forKey: "payment_method")
+        
+        
         selectionListInit()
         radioInit()
         addScrollViewEndEditing()
         labelFontInit()
         
+        
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
         recentaddress()
+        
+        guard let price = userDefault.string(forKey: "order_price") else{ return }
+        print(price)
+        
+        totalPriceLabel.text = price+" 원"
     }
     
     @objc func selectionChanged() {
@@ -105,11 +120,13 @@ class OrderWithInfo4ViewController: UIViewController {
     @objc func selectBefore(){
         beforeRadioImage.image = #imageLiteral(resourceName: "radio-btn-selected")
         currentRadioImage.image = #imageLiteral(resourceName: "radio-btn")
+        recentaddress()
     }
     
     @objc func selectCurrent(){
         currentRadioImage.image = #imageLiteral(resourceName: "radio-btn-selected")
         beforeRadioImage.image = #imageLiteral(resourceName: "radio-btn")
+        cleanAddress()
     }
     
     func order(){
@@ -145,10 +162,25 @@ class OrderWithInfo4ViewController: UIViewController {
                 alertView.addAction(ok)
                 self.present(alertView, animated: true, completion: nil)
             }else{
-                print("성공성공성공성공")
+                self.latest = address
+                
+                self.nameTextField.text = self.latest?.name
+                self.addressTextField1.text = self.latest?.address
+                self.phoneTextField.text = self.latest?.phone_number
+                self.emailTextField.text = self.latest?.email
+                
             }
         }
     }
+    
+    func cleanAddress(){
+        nameTextField.text = ""
+        addressTextField1.text = ""
+        addressTextField2.text = ""
+        phoneTextField.text = ""
+        emailTextField.text = ""
+    }
+    
     
     
     

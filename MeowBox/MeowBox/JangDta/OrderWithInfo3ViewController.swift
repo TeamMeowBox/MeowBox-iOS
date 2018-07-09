@@ -40,6 +40,7 @@ class OrderWithInfo3ViewController: UIViewController {
     @IBAction func goWithInfo4(_ sender: Any) {
         userDefault.set(selectProduct, forKey: "order_product")
         userDefault.set(selectPrice, forKey: "order_price")
+        print("3 ->  "+userDefault.string(forKey: "order_price")!)
         parentVC?.changeVC(num: 4)
     }
     

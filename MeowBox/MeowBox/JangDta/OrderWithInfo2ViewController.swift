@@ -53,6 +53,7 @@ class OrderWithInfo2ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
 //        catName = (parentVC?.myCatName)!
+        super.viewWillAppear(animated)
         
         catName = Cat.shared.name ?? ""
         labelFontInit()
@@ -90,6 +91,10 @@ class OrderWithInfo2ViewController: UIViewController {
     func catsignUp(){
         CatService.catSignup(name: catName, size: catSize, birthday: gsno(birthTextField.text), caution: gsno(specialTextView.text)){ message in
             if message == "success"{
+
+                // 고양이 등록 완료 됬을 때 userdefault cat_idx 갱신해주기
+                
+                
                 self.parentVC?.changeVC(num: 3)
             }else if message == "failure"{
                 let alertView = UIAlertController(title: "고양이 등록 실패", message: "ㅜㅜㅜ", preferredStyle: .alert)

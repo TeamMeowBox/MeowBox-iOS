@@ -36,6 +36,8 @@ struct CatService : APIService{
                     if let message = JSON(value)["message"].string{
                         if message == "success"{ // 고양이 등록 성공
                             print("고양이 등록 성공!")
+                            
+                            userDefault.set(JSON(value)["result"]["cat_idx"].string, forKey: "cat_idx")
                             completion("success")
                         }else{
                             completion("failure")
