@@ -17,6 +17,8 @@
 		2200E31F20F309AC0030A7E9 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200E31E20F309AC0030A7E9 /* Account.swift */; };
 		22109A8020EAAA3200E463C2 /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22109A7F20EAAA3200E463C2 /* MyPage.storyboard */; };
 		22109A8220EAAAFC00E463C2 /* MyPage1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22109A8120EAAAFC00E463C2 /* MyPage1ViewController.swift */; };
+		221560F620F3E51100EA5C2B /* MainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221560F520F3E51100EA5C2B /* MainService.swift */; };
+		221560F820F3E5EE00EA5C2B /* CatCountData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221560F720F3E5EE00EA5C2B /* CatCountData.swift */; };
 		22156DBE20EF85380014491E /* MeowBoxDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22156DBD20EF85380014491E /* MeowBoxDetailTableViewCell.swift */; };
 		22156DC020EF85570014491E /* MeowBoxDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22156DBF20EF85570014491E /* MeowBoxDetailCollectionViewCell.swift */; };
 		222B5DAF20E8BA26003F0A8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222B5DAE20E8BA26003F0A8C /* AppDelegate.swift */; };
@@ -106,6 +108,8 @@
 		2200E31E20F309AC0030A7E9 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		22109A7F20EAAA3200E463C2 /* MyPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
 		22109A8120EAAAFC00E463C2 /* MyPage1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPage1ViewController.swift; sourceTree = "<group>"; };
+		221560F520F3E51100EA5C2B /* MainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainService.swift; sourceTree = "<group>"; };
+		221560F720F3E5EE00EA5C2B /* CatCountData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatCountData.swift; sourceTree = "<group>"; };
 		22156DBD20EF85380014491E /* MeowBoxDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeowBoxDetailTableViewCell.swift; sourceTree = "<group>"; };
 		22156DBF20EF85570014491E /* MeowBoxDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeowBoxDetailCollectionViewCell.swift; sourceTree = "<group>"; };
 		222B5DAB20E8BA26003F0A8C /* MeowBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeowBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -216,6 +220,7 @@
 				2200E30E20F27C210030A7E9 /* MyPageTicket.swift */,
 				2200E31C20F309A40030A7E9 /* AccountData.swift */,
 				2200E31E20F309AC0030A7E9 /* Account.swift */,
+				221560F720F3E5EE00EA5C2B /* CatCountData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -224,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				2200E30620F1D8E00030A7E9 /* MyPageService.swift */,
+				221560F520F3E51100EA5C2B /* MainService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -622,8 +628,10 @@
 				22A86EDA20EBF09500B17661 /* LogoutSucessPopUpViewController.swift in Sources */,
 				CC44CBB620EB21EB007466D8 /* SuggestViewController.swift in Sources */,
 				22E8F7EA20EBF90D00735276 /* WithdrawalSucessPopUpViewController.swift in Sources */,
+				221560F620F3E51100EA5C2B /* MainService.swift in Sources */,
 				CC336E1E20F2746E00073E96 /* Ticketed.swift in Sources */,
 				CC44CBB820EB2235007466D8 /* QuestionViewController.swift in Sources */,
+				221560F820F3E5EE00EA5C2B /* CatCountData.swift in Sources */,
 				2200E31F20F309AC0030A7E9 /* Account.swift in Sources */,
 				CC54E41620EC9892007C5C4E /* QuestionTableViewCell.swift in Sources */,
 				22156DC020EF85570014491E /* MeowBoxDetailCollectionViewCell.swift in Sources */,
