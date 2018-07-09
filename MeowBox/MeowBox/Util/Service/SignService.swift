@@ -47,6 +47,7 @@ struct SignService : APIService{
                             userdefault.set(gsno(JSON(value)["result"]["name"].string), forKey: "name")
                             userdefault.set(gsno(JSON(value)["result"]["phone_number"].string), forKey: "phone_number")
                             userdefault.set(gsno(JSON(value)["result"]["image_profile"].string), forKey: "image_profile")
+                            userdefault.set(gsno(JSON(value)["result"]["flag"].string), forKey: "flag")
                             
                             completion("success")
                             

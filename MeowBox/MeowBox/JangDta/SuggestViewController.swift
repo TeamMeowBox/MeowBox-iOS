@@ -31,4 +31,16 @@ class SuggestViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    
+    @IBAction func suggestAction(_ sender: Any) {
+        saveFeedback(title: gsno(detailSuggestionTextField.text), content: gsno(detailSuggestionTextView.text))
+    }
+    
+    
+    func saveFeedback(title: String, content: String) {
+        MyPageService.saveFeedback(title: title, content: content) {
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
+    
 }

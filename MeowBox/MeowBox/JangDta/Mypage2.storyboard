@@ -84,6 +84,9 @@
                                 <state key="normal" title="제안하기">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="suggestAction:" destination="PDK-Tp-Sdy" eventType="touchUpInside" id="SLQ-2K-16M"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Lc6-Nk-vBp">
                                 <rect key="frame" x="16" y="374" width="343" height="175"/>

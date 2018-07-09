@@ -36,6 +36,9 @@ class MyPage1ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+                             print("11\(userdefault.string(forKey: "flag"))")
+        //container view
+        setupView()
         
         hiddenImageView.isHidden = true
         
@@ -48,9 +51,6 @@ class MyPage1ViewController: UIViewController {
         sideBarProfileImageView.layer.masksToBounds = true
         sideBarProfileImageView.layer.cornerRadius = sideBarProfileImageView.layer.frame.width/2
         
-        //container view
-        setupView()
-
         // Do any additional setup after loading the view.
     }
 
@@ -237,8 +237,8 @@ class MyPage1ViewController: UIViewController {
         
         var viewController = storyboard?.instantiateViewController(withIdentifier: MyPage1TicketViewController.reuseIdentifier) as! MyPage1TicketViewController
         
-//        self.add(asChildViewController: viewController)
-        viewController.loadView()
+        self.add(asChildViewController: viewController)
+//        viewController.loadView()
         return viewController
     }()
     
@@ -247,8 +247,8 @@ class MyPage1ViewController: UIViewController {
         
         var viewController = storyboard?.instantiateViewController(withIdentifier: MyPage1BoxViewController.reuseIdentifier) as! MyPage1BoxViewController
         
-//        self.add(asChildViewController: viewController)
-        viewController.loadView()
+        self.add(asChildViewController: viewController)
+//        viewController.loadView()
         return viewController
     }()
     
@@ -282,10 +282,8 @@ class MyPage1ViewController: UIViewController {
     //TODO: 조건에 맞게 뷰 뿌리기
     @objc private func updateView() {
         
-        let flag = userdefault.string(forKey: "flag")
-        
-        if flag == "-1" { //정기권 없으면
-            myPageNoneTicketInit() //서버 통신
+        if userdefault.string(forKey: "flag") == "-1" { //정기권 없으면
+            myPageNoneTicketInit()
             remove(asChildViewController: myPage1TicketViewController)
             add(asChildViewController: myPage1BoxViewController)
         }
