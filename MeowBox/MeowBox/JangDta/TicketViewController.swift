@@ -48,6 +48,7 @@ class TicketViewController: UIViewController,UITableViewDelegate,UITableViewData
         
         checkVC.myTicketName = usingTicketNameLabel.text!
         checkVC.myTicketTerm = usingTicketTermLabel.text!
+        checkVC.myTicketIdx = (self.myTicket?.idx)!
         
         self.navigationController?.pushViewController(checkVC, animated: true)
         

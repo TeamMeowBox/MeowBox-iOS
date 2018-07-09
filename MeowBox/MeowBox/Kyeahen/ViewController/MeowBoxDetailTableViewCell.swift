@@ -68,4 +68,10 @@ class MeowBoxDetailTableViewCell: UITableViewCell,UICollectionViewDataSource, UI
 
 }
 
+extension MeowBoxDetailTableViewCell: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: self.frame.width, height: (548/375)*self.frame.width)
+    }
+}
+
 

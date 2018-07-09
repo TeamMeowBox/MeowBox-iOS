@@ -1,5 +1,5 @@
 //
-//  OrderDetailList.swift
+//  Cat.swift
 //  MeowBox
 //
 //  Created by 장한솔 on 2018. 7. 9..
@@ -7,7 +7,10 @@
 //
 
 import Foundation
+import UIKit
 
-struct OrderDetailList: Codable{
-    var result: [String]
+class Cat {
+    static let shared = Cat()
+    
+    var name: String?
 }
