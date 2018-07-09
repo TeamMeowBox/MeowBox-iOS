@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class MyAccountViewController: UIViewController {
 
@@ -20,7 +21,12 @@ class MyAccountViewController: UIViewController {
     @IBOutlet weak var infoSizeView: UIView!
     @IBOutlet weak var infoBirthView: UIView!
     @IBOutlet weak var infoEtcView: UIView!
+    
     @IBOutlet weak var infoEtcTextView: UITextView!
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var phoneTextField: UITextField!
+    @IBOutlet weak var catNameTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
     
     let imagePicker : UIImagePickerController = UIImagePickerController()
     let datePicker = UIDatePicker()
@@ -28,8 +34,12 @@ class MyAccountViewController: UIViewController {
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var dateTextField: UITextField!
     
+    var accounts: Account?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        myAccountInit()
         
         initDatePicker()
         
@@ -72,6 +82,18 @@ class MyAccountViewController: UIViewController {
     //MARK: 이미지 피커
     @IBAction func openImagePicker(_ sender: UITapGestureRecognizer) {
         openGallery()
+    }
+    
+    func myAccountInit() {
+        MyPageService.myAccountInit() { (accountData) in
+            self.nameTextField.text = accountData.user_name
+            self.emailTextField.text = accountData.email
+            self.phoneTextField.text = accountData.phone_number
+            
+            self.catNameTextField.text = accountData.cat_name
+            self.dateTextField.text = accountData.birthday
+            self.infoEtcTextView.text = accountData.caution
+        }
     }
     
     

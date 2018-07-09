@@ -1112,7 +1112,9 @@
                     </navigationItem>
                     <size key="freeformSize" width="375" height="932"/>
                     <connections>
+                        <outlet property="catNameTextField" destination="MAG-IQ-Kvh" id="43D-IJ-iGa"/>
                         <outlet property="dateTextField" destination="eMD-YD-E6I" id="aPH-f3-yuL"/>
+                        <outlet property="emailTextField" destination="SWM-T2-i0s" id="sgr-Cd-x2o"/>
                         <outlet property="infoBirthView" destination="uUf-LW-a1p" id="X4O-2a-tuu"/>
                         <outlet property="infoCatNameView" destination="nGD-3z-xDJ" id="fvQ-4V-wsc"/>
                         <outlet property="infoCatView" destination="2Kd-T8-hoZ" id="iLd-dm-DpP"/>
@@ -1123,6 +1125,8 @@
                         <outlet property="infoPhoneView" destination="oI0-46-56Z" id="gDe-f6-uZV"/>
                         <outlet property="infoSizeView" destination="vYZ-f4-SkM" id="ZQI-AQ-9l2"/>
                         <outlet property="infoView1" destination="kep-GX-zxH" id="TTw-V4-Xwq"/>
+                        <outlet property="nameTextField" destination="c8y-1e-EKi" id="yMg-l4-8Ze"/>
+                        <outlet property="phoneTextField" destination="t7q-dA-iFF" id="HS4-3t-0nh"/>
                         <outlet property="profileImageView" destination="4LI-NO-ceE" id="dUQ-5V-iL5"/>
                     </connections>
                 </viewController>
