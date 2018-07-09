@@ -8,6 +8,7 @@ target 'MeowBox' do
     pod 'SelectionList'
     pod 'UITextView+Placeholder'
     pod 'GTProgressBar'
+    pod 'lottie-ios'
 end
 
 post_install do |installer|

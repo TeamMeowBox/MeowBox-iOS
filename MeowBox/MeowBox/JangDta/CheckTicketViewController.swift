@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class CheckTicketViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
@@ -20,6 +21,8 @@ class CheckTicketViewController: UIViewController,UITableViewDelegate,UITableVie
     var myTicketName = ""
     var myTicketTerm = ""
     
+    var imgArr = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,6 +32,8 @@ class CheckTicketViewController: UIViewController,UITableViewDelegate,UITableVie
         checkTicketView.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "order-page-detail-ticket"))
         checkTicketNameLabel.text = myTicketName
         checkTicketTermLabel.text = myTicketTerm
+        
+        orderdetaillist()
 
     }
     
@@ -37,16 +42,12 @@ class CheckTicketViewController: UIViewController,UITableViewDelegate,UITableVie
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return imgArr.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CheckTicketTableViewCell") as! CheckTicketTableViewCell
-        if indexPath.row == 0{
-            cell.checkTicketImageView.image = #imageLiteral(resourceName: "baking-img.png")
-        }else{
-            cell.checkTicketImageView.image = #imageLiteral(resourceName: "space-img.png")
-        }
+        cell.checkTicketImageView.kf.setImage(with: URL(string: imgArr[indexPath.row]),placeholder: UIImage())
         return cell
     }
     
@@ -55,7 +56,11 @@ class CheckTicketViewController: UIViewController,UITableViewDelegate,UITableVie
     }
     
     func orderdetaillist(){
-        
+        OrderService.orderdetaillist(order_idx: myTicketIdx){ arr in
+            self.imgArr = arr
+          
+            self.tableView.reloadData()
+        }
     }
 
     
