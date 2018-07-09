@@ -60,6 +60,8 @@
 		22E8F7EA20EBF90D00735276 /* WithdrawalSucessPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E8F7E920EBF90D00735276 /* WithdrawalSucessPopUpViewController.swift */; };
 		9308BCA6A6E7FEDA2CAE42E1 /* Pods_MeowBox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 287C0D40915BBAC2BD0D00E3 /* Pods_MeowBox.framework */; };
 		CC05673A20E8EC4B00AEDF24 /* Order.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC05673920E8EC4B00AEDF24 /* Order.storyboard */; };
+		CC2DBE6420F388C3007F61D2 /* LatestAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2DBE6320F388C3007F61D2 /* LatestAddress.swift */; };
+		CC2DBE6620F389A6007F61D2 /* LatestAddressData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2DBE6520F389A6007F61D2 /* LatestAddressData.swift */; };
 		CC336E1E20F2746E00073E96 /* Ticketed.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC336E1D20F2746D00073E96 /* Ticketed.swift */; };
 		CC336E2020F276C400073E96 /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC336E1F20F276C400073E96 /* Ticket.swift */; };
 		CC336E2220F2772500073E96 /* OrderList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC336E2120F2772500073E96 /* OrderList.swift */; };
@@ -150,6 +152,8 @@
 		287C0D40915BBAC2BD0D00E3 /* Pods_MeowBox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeowBox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F03CE3F3C4107E59BCDF87A /* Pods-MeowBox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeowBox.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeowBox/Pods-MeowBox.release.xcconfig"; sourceTree = "<group>"; };
 		CC05673920E8EC4B00AEDF24 /* Order.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Order.storyboard; sourceTree = "<group>"; };
+		CC2DBE6320F388C3007F61D2 /* LatestAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestAddress.swift; sourceTree = "<group>"; };
+		CC2DBE6520F389A6007F61D2 /* LatestAddressData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestAddressData.swift; sourceTree = "<group>"; };
 		CC336E1D20F2746D00073E96 /* Ticketed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticketed.swift; sourceTree = "<group>"; };
 		CC336E1F20F276C400073E96 /* Ticket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
 		CC336E2120F2772500073E96 /* OrderList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderList.swift; sourceTree = "<group>"; };
@@ -286,6 +290,8 @@
 				CC794FDB20F327D500B8EEEE /* OrderListData.swift */,
 				CC794FDD20F32D1300B8EEEE /* OrderDetailList.swift */,
 				CC794FE120F3482100B8EEEE /* Cat.swift */,
+				CC2DBE6320F388C3007F61D2 /* LatestAddress.swift */,
+				CC2DBE6520F389A6007F61D2 /* LatestAddressData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -598,6 +604,7 @@
 				222B5DCA20E8BB6F003F0A8C /* APIService.swift in Sources */,
 				CCCA9DF420F0EE5B004319E5 /* NoticeTableViewCell.swift in Sources */,
 				22A86ED620EBE84C00B17661 /* TicketCancelPopUpViewController.swift in Sources */,
+				CC2DBE6620F389A6007F61D2 /* LatestAddressData.swift in Sources */,
 				CC794FDC20F327D500B8EEEE /* OrderListData.swift in Sources */,
 				22D3B21320EFE10A00DE37F4 /* MeowBoxReviewCollectionViewCell.swift in Sources */,
 				22109A8220EAAAFC00E463C2 /* MyPage1ViewController.swift in Sources */,
@@ -625,6 +632,7 @@
 				22A86ED420EBE13600B17661 /* OrderPagePopUpViewController.swift in Sources */,
 				22156DBE20EF85380014491E /* MeowBoxDetailTableViewCell.swift in Sources */,
 				CC336E2020F276C400073E96 /* Ticket.swift in Sources */,
+				CC2DBE6420F388C3007F61D2 /* LatestAddress.swift in Sources */,
 				CCF0947620F1C3BB0029567B /* SignService.swift in Sources */,
 				2259035120EE6E3300094935 /* MeowBoxDetailViewController.swift in Sources */,
 			);
