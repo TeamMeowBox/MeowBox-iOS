@@ -335,7 +335,7 @@
         <!--Main Bottom View Controller-->
         <scene sceneID="BwC-gA-Tks">
             <objects>
-                <viewController storyboardIdentifier="MainBottomViewController" id="oHw-be-E6c" customClass="MainBottomViewController" customModule="MeowBox" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainBottomViewController" modalPresentationStyle="overCurrentContext" id="oHw-be-E6c" customClass="MainBottomViewController" customModule="MeowBox" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fwx-dJ-HZK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
