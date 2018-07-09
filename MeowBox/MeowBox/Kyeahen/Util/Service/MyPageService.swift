@@ -37,15 +37,11 @@ struct MyPageService: APIService {
                 
                     do {
                         print("X진입")
-                        
-                        print(gsno(JSON(value)["result"]["flag"].string))
 
                         let myPageNoneTicketData = try decoder.decode(MyPageNoneTicketData.self, from: value)
-                                                print(gsno(JSON(value).string))
         
                         if myPageNoneTicketData.status == true {
                             if myPageNoneTicketData.message == "success" {
-                                userdefault.set(gsno(JSON(value)["result"]["flag"].string), forKey: "flag")
                                 print("X성공")
                                 completion(myPageNoneTicketData.result)
                             }
@@ -95,11 +91,10 @@ struct MyPageService: APIService {
                         print("O진입")
                         
                         let myPageTicketData = try decoder.decode(MyPageTicketData.self, from: value)
-                        print(gsno(JSON(value).string))
                         
                         if myPageTicketData.status == true {
                             if myPageTicketData.message == "success" {
-                                userdefault.set(gsno(JSON(value)["result"]["flag"].string), forKey: "flag")
+
                                 print("O성공")
                                 completion(myPageTicketData.result)
                             }
@@ -122,7 +117,105 @@ struct MyPageService: APIService {
                 break
             }
         }
+    }
+    
+    //MARK: 마이페이지 - Q&A
+    static func Question_Answer(completion: @escaping (QuestionAnswer)->Void) {
         
+        
+        let URL = url("/mypage/qna")
+        
+        let userdefault = UserDefaults.standard
+        guard let token = userdefault.string(forKey: "token") else { return }
+        
+        let token_header = [ "authorization" : token ]
+        
+        Alamofire.request(URL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: token_header).responseData() { res in
+            
+            switch res.result {
+                
+            case .success:
+                
+                if let value = res.result.value {
+                    
+                    print("접근")
+                    let decoder = JSONDecoder()
+                    
+                    do {
+                        print("진입")
+                        
+                        let questionData = try decoder.decode(QuestionAnswerData.self, from: value)
+
+                        
+                        if questionData.status == true {
+                            if questionData.message == "success" {
+
+                                print("성공")
+                                completion(questionData.result)
+                            }
+                                
+                            else {
+                                print("실패")
+                            }
+                        }
+                        
+                    } catch {
+                        print("예외 발생")
+                        
+                    }
+                    
+                }
+                break
+                
+            case .failure(let err):
+                print(err.localizedDescription)
+                break
+            }
+        }
+        
+    }
+    
+    //MARK: 마이페이지 - 미유박스에 제안
+    static func saveFeedback(title: String, content: String, completion: @escaping ()->Void) {
+        
+        let URL = url("/mypage/feedback")
+        
+        let userdefault = UserDefaults.standard
+        guard let token = userdefault.string(forKey: "token") else { return }
+        
+        let token_header = [ "authorization" : token ]
+    
+        let body: [String: Any] = [
+            "title" : title,
+            "content" : content
+        ]
+        
+        Alamofire.request(URL, method: .post, parameters: body, encoding: JSONEncoding.default, headers: token_header).responseData() { res in
+            switch res.result {
+            case .success:
+                
+                print("미유박스 제안 접근")
+                if let value = res.result.value {
+                    
+                    print("미유박스 제안 접근 진입")
+                    let message = JSON(value)["message"].string
+                    print(message)
+                    
+                    if message == "success" {
+                        print("제안 성공")
+                        completion()
+                    }
+                }
+                
+                break
+                
+                
+            case .failure(let err):
+                
+                print(err.localizedDescription)
+                break
+            }
+        }
         
     }
     

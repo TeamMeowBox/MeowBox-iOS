@@ -31,7 +31,7 @@ class MyPage1BoxViewController: UIViewController {
     //MARK: *서버 통신*
     //TODO: 고양이 이름, 유저이름 넣기
     func myPageNoneTicketInit() {
-        
+        print("서버통신")
         MyPageService.myPageNoneTicketInit{ (myPageNoneTicketData) in
             
             self.myPageNoneTickets = myPageNoneTicketData
