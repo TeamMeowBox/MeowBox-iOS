@@ -1,5 +1,5 @@
 //
-//  OrderList.swift
+//  OrderListData.swift
 //  MeowBox
 //
 //  Created by 장한솔 on 2018. 7. 9..
@@ -8,7 +8,6 @@
 
 import Foundation
 
-struct OrderList: Codable{
-    var ticket: Ticket?
-    var ticketed: [Ticketed]
+struct OrderListData: Codable{
+    var result: OrderList
 }

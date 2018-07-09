@@ -63,8 +63,8 @@ struct OrderService : APIService{
     static func orderlist(completion: @escaping (_ ticket: Ticket?,_ ticketeds: [Ticketed])->Void){
         let userDefault = UserDefaults.standard
         
-        guard let token = userDefault.string(forKey: "token") else { return }
-       
+        //guard let token = userDefault.string(forKey: "token") else { return }
+       let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImtrbW1AbmF2ZS5jb20iLCJ1c2VyX2lkeCI6NywiaWF0IjoxNTMxMTAyMTM4LCJleHAiOjE1MzM2OTQxMzh9.sUJ-i5IF8oWhG3x-0fmQ0-xZH_qxeWKmQdiA-9QHaSw"
         let headers = ["authorization": token]
         
         let URL = url("/order/order_list")
@@ -78,16 +78,16 @@ struct OrderService : APIService{
                             
                             let decoder = JSONDecoder()
                             print("-----주문내역------")
-                            print(JSON(value)["ticket"]["product"].string)
-                            print(JSON(value)["ticketed"][0]["product"].string)
+                            print(JSON(value)["result"]["ticket"]["product"].string)
+//                            print(JSON(value)["ticketed"][0]["product"].string)
                             do{
-                                let orderList = try decoder.decode(OrderList.self, from: value)
+                                let orderlistData = try decoder.decode(OrderListData.self, from: value)
                                 
                                 print("주문내역 가져오기 성공!")
-                                if let ticket = orderList.ticket{
-                                    completion(ticket, orderList.ticketed)
+                                if let ticket = orderlistData.result.ticket{
+                                    completion(ticket, orderlistData.result.ticketed)
                                 }else{
-                                    completion(nil, orderList.ticketed)
+                                    completion(nil, orderlistData.result.ticketed)
                                 }
                                 
                             }catch{

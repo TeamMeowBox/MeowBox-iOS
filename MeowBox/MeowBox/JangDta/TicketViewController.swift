@@ -25,13 +25,11 @@ class TicketViewController: UIViewController,UITableViewDelegate,UITableViewData
         
         orderlist()
         
-        if myTicket == nil{
-            print("no using ticket")
-        }else{
-            usingTicketView.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "one-ticket-pink"))
-            usingTicketNameLabel.text = myTicket?.product
-            usingTicketTermLabel.text = myTicket?.term
-        }
+//        if myTicket == nil{
+//            print("no using ticket")
+//        }else{
+//
+//        }
         
         
         tableView.delegate = self
@@ -98,6 +96,13 @@ class TicketViewController: UIViewController,UITableViewDelegate,UITableViewData
         OrderService.orderlist { (ticket, ticketedArr) in
             self.myTicket = ticket
             self.myTicketedArr = ticketedArr
+            
+            self.usingTicketView.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "one-ticket-pink"))
+            print(self.myTicket?.product)
+            self.usingTicketNameLabel.text = self.myTicket?.product
+            self.usingTicketTermLabel.text = self.myTicket?.term
+            
+            self.tableView.reloadData()
         }
     }
     
