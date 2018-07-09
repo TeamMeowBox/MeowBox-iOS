@@ -38,6 +38,8 @@ class OrderWithInfo4ViewController: UIViewController {
         radioInit()
         addScrollViewEndEditing()
         labelFontInit()
+        
+        recentaddress()
     }
     
     @objc func selectionChanged() {
@@ -132,6 +134,19 @@ class OrderWithInfo4ViewController: UIViewController {
                 self.present(alertView, animated: true, completion: nil)
             }
             
+        }
+    }
+    
+    func recentaddress(){
+        OrderService.recentaddress { (address) in
+            if address == nil{
+                let alertView = UIAlertController(title: "없음", message: "이전에 주문한 배송지가 없습니다.", preferredStyle: .alert)
+                let ok = UIAlertAction(title: "확인", style: .default, handler: nil)
+                alertView.addAction(ok)
+                self.present(alertView, animated: true, completion: nil)
+            }else{
+                print("성공성공성공성공")
+            }
         }
     }
     

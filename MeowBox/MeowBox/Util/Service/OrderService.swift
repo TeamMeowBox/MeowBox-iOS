@@ -162,6 +162,49 @@ struct OrderService : APIService{
     
     
     // MARK: 최근 배송지 불러오기
-    
+    static func recentaddress(completion: @escaping (LatestAddress?)->Void){
+        let userDefault = UserDefaults.standard
+        
+        guard let token = userDefault.string(forKey: "token") else { return }
+        
+        let headers = ["authorization": token]
+        
+        let URL = url("/order/order_page")
+        
+        
+        Alamofire.request(URL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: headers).responseData(){ res in
+            switch res.result{
+            case .success:
+                if let value = res.result.value{
+                    if let message = JSON(value)["message"].string{
+                        print(message)
+                        if message == "success"{ // 최근 주문지 불러오기 성공
+                            print("최근 주문지 불러오기 성공!")
+                            
+                            let decoder = JSONDecoder()
+                            do{ // result가 제대로 있는 경우 ( 이전 배송지가 있음 )
+                                let latestAddressData = try decoder.decode(LatestAddressData.self, from: value)
+                                
+                                completion(latestAddressData.result)
+
+                            }catch{ // result가 내가 원하는 data class 가 아님 ( 이전 배송지가 없음 )
+                                completion(nil)
+                            }
+                            
+                            
+                            
+                        }else{
+                            print("fail...")
+                        }
+                    }
+                }
+                
+                break
+            case .failure(let err):
+                print(err.localizedDescription)
+                break
+            }
+        }
+    }
     
 }
