@@ -13,12 +13,6 @@
 		2200E30B20F1D9850030A7E9 /* MyPageNoneTicket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200E30A20F1D9850030A7E9 /* MyPageNoneTicket.swift */; };
 		2200E30D20F27C090030A7E9 /* MyPageTicketData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200E30C20F27C090030A7E9 /* MyPageTicketData.swift */; };
 		2200E30F20F27C210030A7E9 /* MyPageTicket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200E30E20F27C210030A7E9 /* MyPageTicket.swift */; };
-		2200E31120F2F6D80030A7E9 /* QuestionAnswerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200E31020F2F6D80030A7E9 /* QuestionAnswerData.swift */; };
-		2200E31320F2F6E60030A7E9 /* QuestionAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200E31220F2F6E60030A7E9 /* QuestionAnswer.swift */; };
-		2200E31520F2F8B20030A7E9 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200E31420F2F8B20030A7E9 /* Product.swift */; };
-		2200E31720F2F97C0030A7E9 /* Delivery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200E31620F2F97C0030A7E9 /* Delivery.swift */; };
-		2200E31920F2FF8C0030A7E9 /* Packing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200E31820F2FF8C0030A7E9 /* Packing.swift */; };
-		2200E31B20F2FFC70030A7E9 /* Subcribe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200E31A20F2FFC70030A7E9 /* Subcribe.swift */; };
 		2200E31D20F309A40030A7E9 /* AccountData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200E31C20F309A40030A7E9 /* AccountData.swift */; };
 		2200E31F20F309AC0030A7E9 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2200E31E20F309AC0030A7E9 /* Account.swift */; };
 		22109A8020EAAA3200E463C2 /* MyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22109A7F20EAAA3200E463C2 /* MyPage.storyboard */; };
@@ -104,12 +98,6 @@
 		2200E30A20F1D9850030A7E9 /* MyPageNoneTicket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageNoneTicket.swift; sourceTree = "<group>"; };
 		2200E30C20F27C090030A7E9 /* MyPageTicketData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageTicketData.swift; sourceTree = "<group>"; };
 		2200E30E20F27C210030A7E9 /* MyPageTicket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageTicket.swift; sourceTree = "<group>"; };
-		2200E31020F2F6D80030A7E9 /* QuestionAnswerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionAnswerData.swift; sourceTree = "<group>"; };
-		2200E31220F2F6E60030A7E9 /* QuestionAnswer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionAnswer.swift; sourceTree = "<group>"; };
-		2200E31420F2F8B20030A7E9 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
-		2200E31620F2F97C0030A7E9 /* Delivery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delivery.swift; sourceTree = "<group>"; };
-		2200E31820F2FF8C0030A7E9 /* Packing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Packing.swift; sourceTree = "<group>"; };
-		2200E31A20F2FFC70030A7E9 /* Subcribe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subcribe.swift; sourceTree = "<group>"; };
 		2200E31C20F309A40030A7E9 /* AccountData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountData.swift; sourceTree = "<group>"; };
 		2200E31E20F309AC0030A7E9 /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		22109A7F20EAAA3200E463C2 /* MyPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyPage.storyboard; sourceTree = "<group>"; };
@@ -218,12 +206,6 @@
 				2200E30A20F1D9850030A7E9 /* MyPageNoneTicket.swift */,
 				2200E30C20F27C090030A7E9 /* MyPageTicketData.swift */,
 				2200E30E20F27C210030A7E9 /* MyPageTicket.swift */,
-				2200E31020F2F6D80030A7E9 /* QuestionAnswerData.swift */,
-				2200E31220F2F6E60030A7E9 /* QuestionAnswer.swift */,
-				2200E31420F2F8B20030A7E9 /* Product.swift */,
-				2200E31620F2F97C0030A7E9 /* Delivery.swift */,
-				2200E31820F2FF8C0030A7E9 /* Packing.swift */,
-				2200E31A20F2FFC70030A7E9 /* Subcribe.swift */,
 				2200E31C20F309A40030A7E9 /* AccountData.swift */,
 				2200E31E20F309AC0030A7E9 /* Account.swift */,
 			);
@@ -580,17 +562,14 @@
 				2200E30B20F1D9850030A7E9 /* MyPageNoneTicket.swift in Sources */,
 				222B5DC820E8BB56003F0A8C /* ExtensionControl.swift in Sources */,
 				222B5DCC20E8BB99003F0A8C /* Order.swift in Sources */,
-				2200E31120F2F6D80030A7E9 /* QuestionAnswerData.swift in Sources */,
 				CC5CE21D20E9D28D00FCE6AD /* OrderWithInfo4ViewController.swift in Sources */,
 				CC794FDE20F32D1300B8EEEE /* OrderDetailList.swift in Sources */,
 				CC54E41820ECA1DC007C5C4E /* QuestionHeaderTableViewCell.swift in Sources */,
 				22BB241720EDCC0D00FD04E9 /* MyPageToSViewController.swift in Sources */,
-				2200E31720F2F97C0030A7E9 /* Delivery.swift in Sources */,
 				22BEB4F620EDC63D0030E81B /* MyPage1TicketViewController.swift in Sources */,
 				CC4AD42120EE20A700C31E53 /* CheckTicketTableViewCell.swift in Sources */,
 				2200E30D20F27C090030A7E9 /* MyPageTicketData.swift in Sources */,
 				2200E2FE20F086E30030A7E9 /* MainBottomViewController.swift in Sources */,
-				2200E31B20F2FFC70030A7E9 /* Subcribe.swift in Sources */,
 				2200E30F20F27C210030A7E9 /* MyPageTicket.swift in Sources */,
 				CC4493BD20EBCBC60095D118 /* Order1ContainerViewController.swift in Sources */,
 				22D3B21520EFE13A00DE37F4 /* MeowBoxReviewTableViewCell.swift in Sources */,
@@ -606,7 +585,6 @@
 				CC7DB55520EDE3CC00286E29 /* MainCollectionViewCell.swift in Sources */,
 				CC693A1320EE0BED00DA0935 /* TicketTableViewCell.swift in Sources */,
 				CCCA9DF220F0E930004319E5 /* NoticeViewController.swift in Sources */,
-				2200E31520F2F8B20030A7E9 /* Product.swift in Sources */,
 				CCF0947820F1D6F30029567B /* CatService.swift in Sources */,
 				222B5DCA20E8BB6F003F0A8C /* APIService.swift in Sources */,
 				CCCA9DF420F0EE5B004319E5 /* NoticeTableViewCell.swift in Sources */,
@@ -629,9 +607,7 @@
 				22E8F7EA20EBF90D00735276 /* WithdrawalSucessPopUpViewController.swift in Sources */,
 				CC336E1E20F2746E00073E96 /* Ticketed.swift in Sources */,
 				CC44CBB820EB2235007466D8 /* QuestionViewController.swift in Sources */,
-				2200E31320F2F6E60030A7E9 /* QuestionAnswer.swift in Sources */,
 				2200E31F20F309AC0030A7E9 /* Account.swift in Sources */,
-				2200E31920F2FF8C0030A7E9 /* Packing.swift in Sources */,
 				CC54E41620EC9892007C5C4E /* QuestionTableViewCell.swift in Sources */,
 				22156DC020EF85570014491E /* MeowBoxDetailCollectionViewCell.swift in Sources */,
 				CC4AD41F20EE1D0700C31E53 /* CheckTicketViewController.swift in Sources */,

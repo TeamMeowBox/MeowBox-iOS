@@ -131,68 +131,6 @@ struct MyPageService: APIService {
         }
     }
     
-    //MARK: 마이페이지 - Q&A
-    static func Question_Answer(completion: @escaping (QuestionAnswer)->Void) {
-        
-        
-        let URL = url("/mypage/qna")
-        
-        let userdefault = UserDefaults.standard
-        guard let token = userdefault.string(forKey: "token") else { return }
-        
-        let token_header = [ "authorization" : token ]
-        
-        Alamofire.request(URL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: token_header).responseData() { res in
-            
-            switch res.result {
-                
-            case .success:
-                
-                if let value = res.result.value {
-                    
-                    print("접근")
-                    let decoder = JSONDecoder()
-                    
-                    do {
-                        print("진입")
-                        
-                        let questionData = try decoder.decode(QuestionAnswerData.self, from: value)
-
-                        
-                        if questionData.status == true {
-                            
-                            let message = JSON(value)["message"].string
-                            print(message)
-                            if questionData.message == "success" {
-
-                                print("성공")
-                                completion(questionData.result)
-                            }
-                            else {
-                                print("실패")
-                            }
-                        }
-                        
-                        else {
-                            print("서버 에러")
-                        }
-                        
-                    } catch {
-                        print("예외 발생")
-                        
-                    }
-                    
-                }
-                break
-                
-            case .failure(let err):
-                print(err.localizedDescription)
-                break
-            }
-        }
-        
-    }
-    
     //MARK: 마이페이지 - 미유박스에 제안
     static func saveFeedback(title: String, content: String, completion: @escaping ()->Void) {
         
@@ -216,22 +154,26 @@ struct MyPageService: APIService {
                     
                     print("미유박스 제안 접근")
                     
-                    let status = JSON(value)["status"]
-                    if status == true {
-                        
-                        let message = JSON(value)["message"].string
-                        print(message)
-                        
-                        if message == "success" {
-                            print("제안 성공")
-                            completion()
-                        }
-                        else {
-                            print("제안 실패")
-                        }
-                    }
-                    else {
-                        print("서버 에러")
+                    do {
+                        let status = JSON(value)["status"]
+                            if status == true {
+                                
+                                let message = JSON(value)["message"].string
+                                print(message)
+                                
+                                if message == "success" {
+                                    print("제안 성공")
+                                    completion()
+                                }
+                                else {
+                                    print("제안 실패")
+                                }
+                            }
+                            else {
+                                print("서버 에러")
+                            }
+                    }catch {
+                        ("예외 발생")
                     }
                 }
                 
@@ -245,6 +187,55 @@ struct MyPageService: APIService {
             }
         }
         
+    }
+    
+    //MARK: 마이페이지 - 계정 설정 화면
+    static func myAccountInit(completion: @escaping (Account)->Void) {
+        let URL = url("/mypage/account_setting/account")
+        
+        Alamofire.request(URL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).responseData() { res in
+            switch res.result { 
+            case .success:
+                
+                if let value = res.result.value {
+                    
+                    print("계정설정 접근")
+                    let decoder = JSONDecoder()
+                    
+                    do {
+                        print("계정설정 진입")
+                        let accountData = try decoder.decode(AccountData.self, from: value)
+                        
+                        if accountData.status == true {
+                            
+                            let message = JSON(value)["message"].string
+                            print(message)
+                            if accountData.message == "success" {
+                                print("계정 설정 성공")
+                                completion(accountData.result)
+                            }
+                            else {
+                                print("계정 설정 실패")
+                            }
+                            
+                        }
+                        else {
+                            print("서버 에러")
+                        }
+                        
+                    } catch {
+                        print("서버 에러")
+                    }
+                    
+                }
+                
+                break
+            case .failure(let err):
+                print(err.localizedDescription)
+                break
+            }
+        }
+
     }
     
     
