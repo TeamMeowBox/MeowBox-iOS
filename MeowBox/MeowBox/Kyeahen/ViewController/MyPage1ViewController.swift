@@ -25,6 +25,7 @@ class MyPage1ViewController: UIViewController {
     @IBOutlet weak var sideBarProfileImageView: UIImageView!
     @IBOutlet weak var catNameLabel: UILabel!
     @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet weak var butlerLabel: UILabel!
     
     var sideBarIsVisible = false
     
@@ -309,8 +310,20 @@ class MyPage1ViewController: UIViewController {
         MyPageService.myPageNoneTicketInit{ (myPageNoneTicketData) in
             
             self.myPageNoneTickets = myPageNoneTicketData
-            self.catNameLabel.text = self.myPageNoneTickets?.catinfo
-            self.userNameLabel.text = self.userdefault.string(forKey: "name")
+            
+            let catinfo = myPageNoneTicketData.catinfo
+            
+            if catinfo == "-1" {
+                
+                self.catNameLabel.text = self.userdefault.string(forKey: "name")
+                self.butlerLabel.isHidden = true
+                self.userNameLabel.isHidden = true
+                
+            }
+            else {
+                self.catNameLabel.text = catinfo
+                self.userNameLabel.text = self.userdefault.string(forKey: "name")
+            }
         }
     }
     

@@ -41,14 +41,20 @@ struct MyPageService: APIService {
                         let myPageNoneTicketData = try decoder.decode(MyPageNoneTicketData.self, from: value)
         
                         if myPageNoneTicketData.status == true {
+                            
+                            let message = JSON(value)["message"].string
+                            print(message)
                             if myPageNoneTicketData.message == "success" {
                                 print("X성공")
                                 completion(myPageNoneTicketData.result)
                             }
-                            
                             else {
                                 print("X실패")
                             }
+                        }
+                        
+                        else {
+                            print("서버 에러")
                         }
                         
                     } catch {
@@ -93,15 +99,21 @@ struct MyPageService: APIService {
                         let myPageTicketData = try decoder.decode(MyPageTicketData.self, from: value)
                         
                         if myPageTicketData.status == true {
+                            
+                            let message = JSON(value)["message"].string
+                            print(message)
                             if myPageTicketData.message == "success" {
 
                                 print("O성공")
                                 completion(myPageTicketData.result)
                             }
-                                
                             else {
                                 print("O실패")
                             }
+                        }
+                        
+                        else {
+                            print("서버 에러")
                         }
                         
                     } catch {
@@ -148,15 +160,21 @@ struct MyPageService: APIService {
 
                         
                         if questionData.status == true {
+                            
+                            let message = JSON(value)["message"].string
+                            print(message)
                             if questionData.message == "success" {
 
                                 print("성공")
                                 completion(questionData.result)
                             }
-                                
                             else {
                                 print("실패")
                             }
+                        }
+                        
+                        else {
+                            print("서버 에러")
                         }
                         
                     } catch {
@@ -193,17 +211,27 @@ struct MyPageService: APIService {
         Alamofire.request(URL, method: .post, parameters: body, encoding: JSONEncoding.default, headers: token_header).responseData() { res in
             switch res.result {
             case .success:
-                
-                print("미유박스 제안 접근")
+            
                 if let value = res.result.value {
                     
-                    print("미유박스 제안 접근 진입")
-                    let message = JSON(value)["message"].string
-                    print(message)
+                    print("미유박스 제안 접근")
                     
-                    if message == "success" {
-                        print("제안 성공")
-                        completion()
+                    let status = JSON(value)["status"]
+                    if status == true {
+                        
+                        let message = JSON(value)["message"].string
+                        print(message)
+                        
+                        if message == "success" {
+                            print("제안 성공")
+                            completion()
+                        }
+                        else {
+                            print("제안 실패")
+                        }
+                    }
+                    else {
+                        print("서버 에러")
                     }
                 }
                 
