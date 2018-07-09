@@ -84,6 +84,8 @@
 		CC5CE21F20E9D3B500FCE6AD /* OrderCompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5CE21E20E9D3B500FCE6AD /* OrderCompleteViewController.swift */; };
 		CC693A1120EE080E00DA0935 /* TicketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC693A1020EE080E00DA0935 /* TicketViewController.swift */; };
 		CC693A1320EE0BED00DA0935 /* TicketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC693A1220EE0BED00DA0935 /* TicketTableViewCell.swift */; };
+		CC794FDC20F327D500B8EEEE /* OrderListData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC794FDB20F327D500B8EEEE /* OrderListData.swift */; };
+		CC794FDE20F32D1300B8EEEE /* OrderDetailList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC794FDD20F32D1300B8EEEE /* OrderDetailList.swift */; };
 		CC7DB55520EDE3CC00286E29 /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7DB55420EDE3CC00286E29 /* MainCollectionViewCell.swift */; };
 		CCB12E5B20E90C6B00C5D4B8 /* OrderWithInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB12E5A20E90C6B00C5D4B8 /* OrderWithInfoViewController.swift */; };
 		CCCA9DF220F0E930004319E5 /* NoticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCA9DF120F0E930004319E5 /* NoticeViewController.swift */; };
@@ -176,6 +178,8 @@
 		CC5CE21E20E9D3B500FCE6AD /* OrderCompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCompleteViewController.swift; sourceTree = "<group>"; };
 		CC693A1020EE080E00DA0935 /* TicketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketViewController.swift; sourceTree = "<group>"; };
 		CC693A1220EE0BED00DA0935 /* TicketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketTableViewCell.swift; sourceTree = "<group>"; };
+		CC794FDB20F327D500B8EEEE /* OrderListData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListData.swift; sourceTree = "<group>"; };
+		CC794FDD20F32D1300B8EEEE /* OrderDetailList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailList.swift; sourceTree = "<group>"; };
 		CC7DB55420EDE3CC00286E29 /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
 		CCB12E5A20E90C6B00C5D4B8 /* OrderWithInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderWithInfoViewController.swift; sourceTree = "<group>"; };
 		CCCA9DF120F0E930004319E5 /* NoticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeViewController.swift; sourceTree = "<group>"; };
@@ -292,6 +296,8 @@
 				CC336E1D20F2746D00073E96 /* Ticketed.swift */,
 				CC336E1F20F276C400073E96 /* Ticket.swift */,
 				CC336E2120F2772500073E96 /* OrderList.swift */,
+				CC794FDB20F327D500B8EEEE /* OrderListData.swift */,
+				CC794FDD20F32D1300B8EEEE /* OrderDetailList.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -576,6 +582,7 @@
 				222B5DCC20E8BB99003F0A8C /* Order.swift in Sources */,
 				2200E31120F2F6D80030A7E9 /* QuestionAnswerData.swift in Sources */,
 				CC5CE21D20E9D28D00FCE6AD /* OrderWithInfo4ViewController.swift in Sources */,
+				CC794FDE20F32D1300B8EEEE /* OrderDetailList.swift in Sources */,
 				CC54E41820ECA1DC007C5C4E /* QuestionHeaderTableViewCell.swift in Sources */,
 				22BB241720EDCC0D00FD04E9 /* MyPageToSViewController.swift in Sources */,
 				2200E31720F2F97C0030A7E9 /* Delivery.swift in Sources */,
@@ -604,6 +611,7 @@
 				222B5DCA20E8BB6F003F0A8C /* APIService.swift in Sources */,
 				CCCA9DF420F0EE5B004319E5 /* NoticeTableViewCell.swift in Sources */,
 				22A86ED620EBE84C00B17661 /* TicketCancelPopUpViewController.swift in Sources */,
+				CC794FDC20F327D500B8EEEE /* OrderListData.swift in Sources */,
 				22D3B21320EFE10A00DE37F4 /* MeowBoxReviewCollectionViewCell.swift in Sources */,
 				22109A8220EAAAFC00E463C2 /* MyPage1ViewController.swift in Sources */,
 				229BCBAB20E9BBC7005E3B9F /* SignInViewController.swift in Sources */,
