@@ -84,7 +84,6 @@
 		CC794FDC20F327D500B8EEEE /* OrderListData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC794FDB20F327D500B8EEEE /* OrderListData.swift */; };
 		CC794FDE20F32D1300B8EEEE /* OrderDetailList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC794FDD20F32D1300B8EEEE /* OrderDetailList.swift */; };
 		CC794FE220F3482100B8EEEE /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC794FE120F3482100B8EEEE /* Cat.swift */; };
-		CC794FE420F35F0800B8EEEE /* meow_box_splash.json in Resources */ = {isa = PBXBuildFile; fileRef = CC794FE320F35F0700B8EEEE /* meow_box_splash.json */; };
 		CC7DB55520EDE3CC00286E29 /* MainCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7DB55420EDE3CC00286E29 /* MainCollectionViewCell.swift */; };
 		CCB12E5B20E90C6B00C5D4B8 /* OrderWithInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB12E5A20E90C6B00C5D4B8 /* OrderWithInfoViewController.swift */; };
 		CCCA9DF220F0E930004319E5 /* NoticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCA9DF120F0E930004319E5 /* NoticeViewController.swift */; };
@@ -177,7 +176,6 @@
 		CC794FDB20F327D500B8EEEE /* OrderListData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListData.swift; sourceTree = "<group>"; };
 		CC794FDD20F32D1300B8EEEE /* OrderDetailList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailList.swift; sourceTree = "<group>"; };
 		CC794FE120F3482100B8EEEE /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
-		CC794FE320F35F0700B8EEEE /* meow_box_splash.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = meow_box_splash.json; path = ../../../../Downloads/meow_box_splash.json; sourceTree = "<group>"; };
 		CC7DB55420EDE3CC00286E29 /* MainCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewCell.swift; sourceTree = "<group>"; };
 		CCB12E5A20E90C6B00C5D4B8 /* OrderWithInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderWithInfoViewController.swift; sourceTree = "<group>"; };
 		CCCA9DF120F0E930004319E5 /* NoticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeViewController.swift; sourceTree = "<group>"; };
@@ -258,7 +256,6 @@
 				222B5DC320E8BB10003F0A8C /* Util */,
 				222B5DB520E8BA28003F0A8C /* Assets.xcassets */,
 				222B5DBA20E8BA28003F0A8C /* Info.plist */,
-				CC794FE320F35F0700B8EEEE /* meow_box_splash.json */,
 			);
 			path = MeowBox;
 			sourceTree = "<group>";
@@ -503,7 +500,6 @@
 				229407C020EA182D00AB2B0C /* NotoSansMonoCJKkr-Bold.otf in Resources */,
 				22B9EF4720EA039D00A2A9FD /* Roboto-Medium.ttf in Resources */,
 				222B5DB420E8BA26003F0A8C /* Main.storyboard in Resources */,
-				CC794FE420F35F0800B8EEEE /* meow_box_splash.json in Resources */,
 				229407BB20EA182D00AB2B0C /* NotoSansCJKkr-Regular.otf in Resources */,
 				229407BA20EA182D00AB2B0C /* NotoSansMonoCJKkr-Regular.otf in Resources */,
 				229407B820EA182D00AB2B0C /* NotoSansCJKkr-Thin.otf in Resources */,
