@@ -568,7 +568,9 @@
                         <viewLayoutGuide key="safeArea" id="Cwr-vo-UMf"/>
                     </view>
                     <connections>
+                        <outlet property="checkView" destination="Jkz-Pe-7TQ" id="gxG-oQ-Knj"/>
                         <outlet property="contentTextView" destination="L9T-Rk-U1C" id="9HY-Eo-RQk"/>
+                        <outlet property="okBtn" destination="4tn-M2-6jj" id="DBI-I7-aCR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZaV-c0-D4P" userLabel="First Responder" sceneMemberID="firstResponder"/>
