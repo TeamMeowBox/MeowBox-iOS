@@ -25,8 +25,20 @@ class MyPage1TicketViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("111")
         myPageTicketInit()
-        
+        print("2222")
+
+
+    }
+    
+         //Do any additional setup after loading the view.
+    
+//
+//    override func viewWillAppear(_ animated: Bool) {
+//
+//        myPageTicketInit()
+//
 //        if ticket == "3박스" {
 //            if use == "1박스" {
 //                let newProgress: CGFloat = progressView.progress == 0.333 ? 0.0 : 0.333
@@ -38,7 +50,7 @@ class MyPage1TicketViewController: UIViewController {
 //                progressView.animateTo(progress: newProgress)
 //            }
 //            else {
-//                let newProgress: CGFloat = progressView.progress == 0.0 ? 0.0 : 0.0
+//                let _: CGFloat = progressView.progress == 0.0 ? 0.0 : 0.0
 //
 //            }
 //
@@ -56,56 +68,12 @@ class MyPage1TicketViewController: UIViewController {
 //            }
 //
 //            else {
-//                let newProgress: CGFloat = progressView.progress == 0.0 ? 0.0 : 0.0
+//                let _: CGFloat = progressView.progress == 0.0 ? 0.0 : 0.0
 //            }
 //
 //        }
-        
-
-    }
-    
-         //Do any additional setup after loading the view.
-    
-    
-    override func viewWillAppear(_ animated: Bool) {
-
-        myPageTicketInit()
-        
-        if ticket == "3박스" {
-            if use == "1박스" {
-                let newProgress: CGFloat = progressView.progress == 0.333 ? 0.0 : 0.333
-                progressView.animateTo(progress: newProgress)
-                
-            }
-            else if use == "2박스" {
-                let newProgress: CGFloat = progressView.progress == 0.672 ? 0.0 : 0.672
-                progressView.animateTo(progress: newProgress)
-            }
-            else {
-                let _: CGFloat = progressView.progress == 0.0 ? 0.0 : 0.0
-                
-            }
-            
-        }
-        else if ticket == "6박스" {
-            
-            if use == "2박스" {
-                let newProgress: CGFloat = progressView.progress == 0.333 ? 0.0 : 0.333
-                progressView.animateTo(progress: newProgress)
-                
-            }
-            else if use == "4박스" {
-                let newProgress: CGFloat = progressView.progress == 0.672 ? 0.0 : 0.672
-                progressView.animateTo(progress: newProgress)
-            }
-                
-            else {
-                let _: CGFloat = progressView.progress == 0.0 ? 0.0 : 0.0
-            }
-            
-        }
-        
-    }
+//
+//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -116,13 +84,56 @@ class MyPage1TicketViewController: UIViewController {
     func myPageTicketInit() {
         MyPageService.MyPageTicketInit { (myPageTicketData) in
             
-            self.myPageTickets = myPageTicketData
+            print("컨테이너 서버 진입")
             
+            self.myPageTickets = myPageTicketData
             self.ticketLabel.text = myPageTicketData.ticket
             self.useLabel.text = myPageTicketData.use
+    
             
-            self.ticket = myPageTicketData.ticket
-            self.use = myPageTicketData.use
+//            let newProgress: CGFloat = self.progressView.progress == 0.333 ? 0.0 : 0.333
+//            self.progressView.animateTo(progress: newProgress)
+            
+            if myPageTicketData.ticket == "3박스" {
+                if myPageTicketData.use == "1박스" {
+                    let newProgress: CGFloat = self.progressView.progress == 0.333 ? 0.0 : 0.333
+                    self.progressView.animateTo(progress: newProgress)
+                    
+                }
+                else if myPageTicketData.use == "2박스" {
+                    let newProgress: CGFloat = self.progressView.progress == 0.672 ? 0.0 : 0.672
+                    self.progressView.animateTo(progress: newProgress)
+                }
+                else if myPageTicketData.use == "3박스" {
+                    let newProgress: CGFloat = self.progressView.progress == 1 ? 0.0 : 1
+                    self.progressView.animateTo(progress: newProgress)
+                }
+                else {
+                    let newProgress: CGFloat = self.progressView.progress == 0.0 ? 0.0 : 0.0
+                    
+                }
+                
+            }
+            else if myPageTicketData.ticket == "6박스" {
+                
+                if myPageTicketData.use == "2박스" {
+                    let newProgress: CGFloat = self.progressView.progress == 0.333 ? 0.0 : 0.333
+                    self.progressView.animateTo(progress: newProgress)
+                    
+                }
+                else if myPageTicketData.use == "4박스" {
+                    let newProgress: CGFloat = self.progressView.progress == 0.672 ? 0.0 : 0.672
+                    self.progressView.animateTo(progress: newProgress)
+                }
+                else if myPageTicketData.use == "6박스" {
+                    let newProgress: CGFloat = self.progressView.progress == 1 ? 0.0 : 1
+                    self.progressView.animateTo(progress: newProgress)
+                }
+                else {
+                    let newProgress: CGFloat = self.progressView.progress == 0.0 ? 0.0 : 0.0
+                }
+                
+            }
             
         }
     }
