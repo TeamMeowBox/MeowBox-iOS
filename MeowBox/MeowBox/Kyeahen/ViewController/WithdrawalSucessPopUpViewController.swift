@@ -17,6 +17,7 @@ class WithdrawalSucessPopUpViewController: UIViewController {
     
     @IBOutlet weak var okBtn: UIButton!
     
+    let userDefault = UserDefaults.standard
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -62,6 +63,7 @@ class WithdrawalSucessPopUpViewController: UIViewController {
     
     //MARK: 확인 하기 액션
     @IBAction func okAction(_ sender: Any) {
+        userDefault.set("", forKey: "token")
         let mainNaviVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainNaviVC")
         
         self.present(mainNaviVC, animated: true, completion: nil)
