@@ -193,7 +193,12 @@ struct MyPageService: APIService {
     static func myAccountInit(completion: @escaping (Account)->Void) {
         let URL = url("/mypage/account_setting/account")
         
-        Alamofire.request(URL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).responseData() { res in
+        let userdefault = UserDefaults.standard
+        guard let token = userdefault.string(forKey: "token") else { return }
+        
+        let token_header = [ "authorization" : token ]
+        
+        Alamofire.request(URL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: token_header).responseData() { res in
             switch res.result { 
             case .success:
                 
@@ -204,8 +209,10 @@ struct MyPageService: APIService {
                     
                     do {
                         print("계정설정 진입")
+                        
                         let accountData = try decoder.decode(AccountData.self, from: value)
                         
+                        print(gsno(JSON(value)["status"].string))
                         if accountData.status == true {
                             
                             let message = JSON(value)["message"].string

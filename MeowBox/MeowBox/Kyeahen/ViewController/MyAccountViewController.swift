@@ -27,6 +27,9 @@ class MyAccountViewController: UIViewController {
     @IBOutlet weak var phoneTextField: UITextField!
     @IBOutlet weak var catNameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var smallSizeBtn: UIButton!
+    @IBOutlet weak var mediumSizeBtn: UIButton!
+    @IBOutlet weak var bigSizeBtn: UIButton!
     
     let imagePicker : UIImagePickerController = UIImagePickerController()
     let datePicker = UIDatePicker()
@@ -93,6 +96,16 @@ class MyAccountViewController: UIViewController {
             self.catNameTextField.text = accountData.cat_name
             self.dateTextField.text = accountData.birthday
             self.infoEtcTextView.text = accountData.caution
+            
+            if accountData.size == "1" {
+                self.smallSizeBtn.setImage(#imageLiteral(resourceName: "small-radio-btn-pink"), for: .normal)
+            }
+            else if accountData.size == "2" {
+                self.mediumSizeBtn.setImage(#imageLiteral(resourceName: "medium-radio-btn-pink"), for: .normal)
+            }
+            else {
+                self.bigSizeBtn.setImage(#imageLiteral(resourceName: "large-radio-btn-pink"), for: .normal)
+            }
         }
     }
     
