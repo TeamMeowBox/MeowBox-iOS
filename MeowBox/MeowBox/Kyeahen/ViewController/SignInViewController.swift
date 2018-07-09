@@ -73,7 +73,20 @@ class SignInViewController: UIViewController, APIService {
     //TODO: 서버 통신
     @IBAction func SignInAction(_ sender: Any) {
         
-        signup()
+        if nameTextField.text == "" || phoneTextField.text == "" || emailTextField.text == "" || pwdTextField.text == "" {
+            
+            let checkPopUp = UIStoryboard(name: "Sign", bundle: nil).instantiateViewController(withIdentifier: SignUpCheckPopUpViewController.reuseIdentifier) as! SignUpCheckPopUpViewController
+            
+            self.addChildViewController(checkPopUp)
+            checkPopUp.view.frame = self.view.frame
+            self.view.addSubview(checkPopUp.view)
+            
+            checkPopUp.didMove(toParentViewController: self)
+            
+        }
+        else {
+           signup()
+        }
         
     }
     
