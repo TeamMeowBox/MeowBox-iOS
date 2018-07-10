@@ -81,8 +81,8 @@ class OrderWithInfo4ViewController: UIViewController {
         
         setOrderSetting()
         
-        guard let first = userDefault.string(forKey: "amIfirst") else {return }
-        print("amIfirst: "+first)
+//        guard let first = userDefault.string(forKey: "amIfirst") else {return }
+//        print("amIfirst: "+first)
         
             let controller = Html5InicisViewController()
             self.navigationController?.pushViewController(controller, animated: true)
@@ -153,8 +153,9 @@ class OrderWithInfo4ViewController: UIViewController {
         print("price : "+gsno(userDefault.string(forKey: "order_price")))
         print("payment : "+gsno(userDefault.string(forKey: "payment_method")))
         
+        guard let orderAdd = orderAddress else { return }
         
-        OrderService.order(name: gsno(nameTextField.text), address: self.orderAddress!, phone_number: gsno(phoneTextField.text), product: gsno(userDefault.string(forKey: "order_product")), price: gsno(userDefault.string(forKey: "order_price")), email: gsno(emailTextField.text), payment_method: gsno(userDefault.string(forKey: "payment_method"))){ message in
+        OrderService.order(name: gsno(nameTextField.text), address: orderAdd, phone_number: gsno(phoneTextField.text), product: gsno(userDefault.string(forKey: "order_product")), price: gsno(userDefault.string(forKey: "order_price")), email: gsno(emailTextField.text), payment_method: gsno(userDefault.string(forKey: "payment_method"))){ message in
             if message == "success"{
 
             }else if message == "failure"{
@@ -210,6 +211,7 @@ class OrderWithInfo4ViewController: UIViewController {
         OrderService.isordersuccess { (message) in
             if message == "success"{
                 self.order()
+                
                 self.parentVC?.changeVC(num: 5)
             }else{
                 

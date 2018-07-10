@@ -24,6 +24,10 @@ struct OrderService : APIService{
         
         let URL = url("/order/order_page")
         
+        let random = arc4random()
+        
+        userDefault.set(String(random), forKey: "random_key")
+        
         let body: [String: Any] = [
             "name": name,
             "address": address,
