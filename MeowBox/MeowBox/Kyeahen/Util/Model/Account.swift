@@ -13,9 +13,9 @@ struct Account: Codable {
     let user_name: String
     let email: String
     let phone_number: String
-    let image_profile: String?
+    let image_profile: String
     let cat_name: String?
-    let size: String?
+    let size: Int?
     let birthday: String?
     let caution: String?
 }

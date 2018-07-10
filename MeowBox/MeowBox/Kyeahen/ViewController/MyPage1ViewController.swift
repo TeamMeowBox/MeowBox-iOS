@@ -37,7 +37,7 @@ class MyPage1ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                             print("11\(userdefault.string(forKey: "flag"))")
+        print("#####\(userdefault.string(forKey: "flag"))")
         //container view
         setupView()
         
@@ -199,6 +199,7 @@ class MyPage1ViewController: UIViewController {
     
     //MARK: 내 계정 설정 액션
     @IBAction func myAccountSettingAction(_ sender: Any) {
+
         let myAccountNaviVC = UIStoryboard(name: "MyPage", bundle: nil).instantiateViewController(withIdentifier: "MyAccountNaviVC")
         
         self.present(myAccountNaviVC, animated: true, completion: nil)

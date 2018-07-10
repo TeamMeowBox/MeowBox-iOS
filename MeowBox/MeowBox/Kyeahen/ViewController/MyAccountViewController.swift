@@ -38,11 +38,12 @@ class MyAccountViewController: UIViewController {
     @IBOutlet weak var dateTextField: UITextField!
     
     var accounts: Account?
-    var size: String = ""
+    var size: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("졸려")
         myAccountInit()
         
         initDatePicker()
@@ -90,22 +91,28 @@ class MyAccountViewController: UIViewController {
     
     func myAccountInit() {
         MyPageService.myAccountInit() { (accountData) in
-            self.nameTextField.text = accountData.user_name
-            self.emailTextField.text = accountData.email
-            self.phoneTextField.text = accountData.phone_number
+            print("통신 시작")
+            self.nameTextField.text = self.gsno(accountData.user_name)
+            self.emailTextField.text = self.gsno(accountData.email)
+            self.phoneTextField.text = self.gsno(accountData.phone_number)
+            self.profileImageView.kf.setImage(with: URL(string: accountData.image_profile),placeholder: UIImage())
+            self.catNameTextField.text = self.gsno(accountData.cat_name)
+            self.dateTextField.text = self.gsno(accountData.birthday)
+            self.infoEtcTextView.text = self.gsno(accountData.caution)
             
-            self.catNameTextField.text = accountData.cat_name
-            self.dateTextField.text = accountData.birthday
-            self.infoEtcTextView.text = accountData.caution
-            
-            if accountData.size == "1" {
+            if accountData.size == 1 {
                 self.smallSizeBtn.setImage(#imageLiteral(resourceName: "small-radio-btn-pink"), for: .normal)
             }
-            else if accountData.size == "2" {
+            else if accountData.size == 2 {
                 self.mediumSizeBtn.setImage(#imageLiteral(resourceName: "medium-radio-btn-pink"), for: .normal)
             }
-            else {
+            else if accountData.size == 3 {
                 self.bigSizeBtn.setImage(#imageLiteral(resourceName: "large-radio-btn-pink"), for: .normal)
+            }
+            else {
+                self.smallSizeBtn.setImage(#imageLiteral(resourceName: "small-radio-btn-gray"), for: UIControlState.normal)
+                self.mediumSizeBtn.setImage(#imageLiteral(resourceName: "medium-radio-btn-gray"), for: UIControlState.normal)
+                self.bigSizeBtn.setImage(#imageLiteral(resourceName: "large-radio-btn-gray"), for: UIControlState.normal)
             }
         }
     }
@@ -114,7 +121,7 @@ class MyAccountViewController: UIViewController {
     @IBAction func smallSizeAction(_ sender: UIButton) {
         
         if sender == smallSizeBtn {
-            size = "1"
+            size = 1
             smallSizeBtn.isSelected = !smallSizeBtn.isSelected
             smallSizeBtn.setImage(#imageLiteral(resourceName: "small-radio-btn-pink"), for: UIControlState.normal)
             mediumSizeBtn.setImage(#imageLiteral(resourceName: "medium-radio-btn-gray"), for: UIControlState.normal)
@@ -122,7 +129,7 @@ class MyAccountViewController: UIViewController {
         }
             
         else {
-            size = "null"
+            size = 0
             smallSizeBtn.isSelected = !smallSizeBtn.isSelected
             smallSizeBtn.setImage(#imageLiteral(resourceName: "small-radio-btn-gray"), for: UIControlState.normal)
         }
@@ -133,7 +140,7 @@ class MyAccountViewController: UIViewController {
     @IBAction func mediumSizeAction(_ sender: UIButton) {
         
         if sender == mediumSizeBtn {
-            size = "2"
+            size = 2
             mediumSizeBtn.isSelected = !mediumSizeBtn.isSelected
             mediumSizeBtn.setImage(#imageLiteral(resourceName: "medium-radio-btn-pink"), for: UIControlState.normal)
             smallSizeBtn.setImage(#imageLiteral(resourceName: "small-radio-btn-gray"), for: UIControlState.normal)
@@ -141,7 +148,7 @@ class MyAccountViewController: UIViewController {
         }
             
         else {
-            size = "null"
+            size = 0
             mediumSizeBtn.isSelected = !mediumSizeBtn.isSelected
             mediumSizeBtn.setImage(#imageLiteral(resourceName: "small-radio-btn-gray"), for: UIControlState.normal)
         }
@@ -153,7 +160,7 @@ class MyAccountViewController: UIViewController {
     @IBAction func largeSizeAction(_ sender: UIButton) {
         
         if sender == bigSizeBtn {
-            size = "3"
+            size = 3
             bigSizeBtn.isSelected = !bigSizeBtn.isSelected
             bigSizeBtn.setImage(#imageLiteral(resourceName: "large-radio-btn-pink"), for: UIControlState.normal)
             mediumSizeBtn.setImage(#imageLiteral(resourceName: "medium-radio-btn-gray"), for: UIControlState.normal)
@@ -161,7 +168,7 @@ class MyAccountViewController: UIViewController {
         }
             
         else {
-            size = "null"
+            size = 0
             bigSizeBtn.isSelected = !bigSizeBtn.isSelected
             bigSizeBtn.setImage(#imageLiteral(resourceName: "large-radio-btn-gray"), for: UIControlState.normal)
         }
@@ -177,8 +184,7 @@ class MyAccountViewController: UIViewController {
     }
     
     func updateAccount() {
-//
-//        if let img = profileImageView.image {
+
         print(gsno(nameTextField.text))
             MyPageService.updateAccount(user_name: gsno(nameTextField.text), user_phone: gsno(phoneTextField.text), user_email: gsno(emailTextField.text), image_profile: profileImageView.image!, cat_name: gsno(catNameTextField.text), cat_size: size, cat_birthday: gsno(dateTextField.text), cat_caution: gsno(infoEtcTextView.text)) {
                 
@@ -187,17 +193,7 @@ class MyAccountViewController: UIViewController {
                     self.dismiss(animated: true, completion: nil)
                 
             }
-//        }
-//        else {
-//            MyPageService.updateAccountX(user_name: gsno(nameTextField.text), user_phone: gsno(phoneTextField.text), user_email: gsno(emailTextField.text), image_profile: profileImageView.image!, cat_name: gsno(catNameTextField.text), cat_size: size, cat_birthday: gsno(dateTextField.text), cat_caution: gsno(infoEtcTextView.text)) {
-//                
-//                print("수정 완료!")
-//                
-//                self.dismiss(animated: true, completion: nil)
-//                
-//            }
-//            
-//        }
+
     }
     
     
