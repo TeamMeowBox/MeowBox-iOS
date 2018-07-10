@@ -180,6 +180,9 @@
                                             <state key="normal" title="미유박스 주문하기">
                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </state>
+                                            <connections>
+                                                <action selector="bottomOrderButton:" destination="8et-LN-MJo" eventType="touchUpInside" id="yZV-S8-oOR"/>
+                                            </connections>
                                         </button>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="MeowBoxDetailTableViewCell" rowHeight="1050" id="KCh-7N-x8Z" customClass="MeowBoxDetailTableViewCell" customModule="MeowBox" customModuleProvider="target">

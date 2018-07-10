@@ -1582,6 +1582,9 @@
                                     <constraint firstAttribute="width" secondItem="wuw-eq-nmY" secondAttribute="height" multiplier="58:17" id="Owh-ia-AAW"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="story-order-btn"/>
+                                <connections>
+                                    <action selector="boxOrderAction:" destination="48G-7V-PYh" eventType="touchUpInside" id="zkV-xR-MbV"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

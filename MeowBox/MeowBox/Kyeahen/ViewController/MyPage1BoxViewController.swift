@@ -27,6 +27,14 @@ class MyPage1BoxViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    //MARK: 박스 주문하기
+    @IBAction func boxOrderAction(_ sender: Any) {
+        let orderNaviVC = UIStoryboard(name: "Order", bundle: nil).instantiateViewController(withIdentifier: "OrderWithInfoNavigationController")
+        
+        self.present(orderNaviVC, animated: true, completion: nil)
+    }
+    
 
     //MARK: *서버 통신*
     //TODO: 고양이 이름, 유저이름 넣기

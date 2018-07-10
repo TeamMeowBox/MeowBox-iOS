@@ -10,6 +10,7 @@ import UIKit
 
 class MainBottomViewController: UIViewController,UIGestureRecognizerDelegate{
 
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var closeBtnView: UIView!
     @IBOutlet weak var catCountLabel: UILabel!
     
@@ -29,6 +30,7 @@ class MainBottomViewController: UIViewController,UIGestureRecognizerDelegate{
     @IBOutlet weak var insta3ImageView: UIImageView!
     @IBOutlet weak var insta4ImageView: UIImageView!
     
+    @IBOutlet weak var detailButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +42,10 @@ class MainBottomViewController: UIViewController,UIGestureRecognizerDelegate{
         let gesture1 = UITapGestureRecognizer(target: self, action:  #selector(self.closeViewAction))
     
         self.closeBtnView.addGestureRecognizer(gesture1)
-
+        
+        detailButton.isUserInteractionEnabled = true
+        
+        
         //프로필 이미지 동그랗게
         instaProfileImageView.layer.masksToBounds = true
         instaProfileImageView.layer.cornerRadius = instaProfileImageView.layer.frame.width/2
@@ -52,6 +57,17 @@ class MainBottomViewController: UIViewController,UIGestureRecognizerDelegate{
         instaProfile4ImageView.layer.cornerRadius = instaProfile4ImageView.layer.frame.width/2
 
         // Do any additional setup after loading the view.
+    }
+    
+    func handleButtonTap() {
+        print("test")
+    }
+
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        catCountInit()
+        instaInit()
     }
 
     override func didReceiveMemoryWarning() {
@@ -89,6 +105,21 @@ class MainBottomViewController: UIViewController,UIGestureRecognizerDelegate{
             }
         
     }
+    
+    //MARK: 미유박스 더 알아보기
+    @IBAction func moreButton(_ sender: Any) {
+        
+        
+    }
+    
+    //MARK: 미유박스 상세보기
+    @IBAction func detailButton(_ sender: Any) {
+        let detailVC = UIStoryboard(name: "MeowBox", bundle: nil).instantiateViewController(withIdentifier: "MeowBoxDetailNaviVC")
+        
+        self.present(detailVC, animated: true, completion: nil)
+    }
+    
+    
 
     //MARK: bottomView action
     @objc func closeViewAction(sender : UITapGestureRecognizer) {
