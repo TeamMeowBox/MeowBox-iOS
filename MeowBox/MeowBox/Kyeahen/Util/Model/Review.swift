@@ -11,7 +11,7 @@ import Foundation
 struct Review: Codable {
     
     let birthday: ReviewResult
-    let best7_image: ReviewResult
-    let best6_image: ReviewResult
+    let best_image_7: ReviewResult
+    let best_image_6: ReviewResult
 }
 

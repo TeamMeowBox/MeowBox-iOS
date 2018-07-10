@@ -12,8 +12,6 @@ class MeowBoxReviewCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var reviewImageView: UIImageView!
     @IBOutlet weak var reviewTag: UILabel!
-    
     @IBOutlet weak var reviewID: UILabel!
-    @IBOutlet weak var reviewPageControl: UIPageControl!
     
 }
