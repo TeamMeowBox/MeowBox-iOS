@@ -26,6 +26,7 @@ class MyPage1ViewController: UIViewController {
     @IBOutlet weak var catNameLabel: UILabel!
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var butlerLabel: UILabel!
+    @IBOutlet weak var loginInfoLabel: UILabel!
     
     var sideBarIsVisible = false
     
@@ -37,7 +38,9 @@ class MyPage1ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("#####\(userdefault.string(forKey: "flag"))")
+
+        loginCheck()
+        
         //container view
         setupView()
         
@@ -53,6 +56,18 @@ class MyPage1ViewController: UIViewController {
         sideBarProfileImageView.layer.cornerRadius = sideBarProfileImageView.layer.frame.width/2
         
         // Do any additional setup after loading the view.
+    }
+    
+    //MARK: 로그인 체크 함수
+    func loginCheck() {
+        
+        let name = gsno(userdefault.string(forKey: "name"))
+        if name != nil {
+            loginInfoLabel.text = "안녕하세요, \(name)님"
+        }
+        else {
+            loginInfoLabel.text = "로그인이 필요합니다."
+        }
     }
 
     override func didReceiveMemoryWarning() {

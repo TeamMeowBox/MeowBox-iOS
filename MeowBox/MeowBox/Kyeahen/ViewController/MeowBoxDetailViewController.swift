@@ -21,16 +21,20 @@ class MeowBoxDetailViewController: UIViewController, UITableViewDelegate, UITabl
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var detailTableView: UITableView!
     @IBOutlet weak var detailView: UIView!
-
+    @IBOutlet weak var loginInfoLabel: UILabel!
+    
     let logo : UIImage = UIImage(named: "meowbox-logo-pink.png")!
     let logoImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 128, height: 21))
     
     var sideBarIsVisible = false
     
     let tableImageArr = [ #imageLiteral(resourceName: "package-box-img"),]
+    let userDefault = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        loginCheck()
         
         hiddenImageView.isHidden = true
         
@@ -57,6 +61,18 @@ class MeowBoxDetailViewController: UIViewController, UITableViewDelegate, UITabl
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    //MARK: 로그인 체크 함수
+    func loginCheck() {
+        
+        let name = gsno(userDefault.string(forKey: "name"))
+        if name != nil {
+            loginInfoLabel.text = "안녕하세요, \(name)님"
+        }
+        else {
+            loginInfoLabel.text = "로그인이 필요합니다."
+        }
     }
     
 //MARK: TableView
