@@ -60,6 +60,10 @@ class MeowBoxReviewViewController: UIViewController, UITableViewDelegate, UITabl
 
         // Do any additional setup after loading the view.
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        loginCheck()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -70,11 +74,11 @@ class MeowBoxReviewViewController: UIViewController, UITableViewDelegate, UITabl
     func loginCheck() {
         
         let name = gsno(userDefault.string(forKey: "name"))
-        if name != nil {
-            loginInfoLabel.text = "안녕하세요, \(name)님"
+        if name == "" {
+            loginInfoLabel.text = "로그인이 필요합니다."
         }
         else {
-            loginInfoLabel.text = "로그인이 필요합니다."
+            loginInfoLabel.text = "안녕하세요, \(name)님"
         }
     }
     

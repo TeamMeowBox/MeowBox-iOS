@@ -59,10 +59,16 @@ class LogoutSucessPopUpViewController: UIViewController {
         });
     }
     
+    func remove_pref(remove_key : String){
+        UserDefaults.standard.removeObject(forKey: remove_key)
+        UserDefaults.standard.synchronize()
+    }
+
+    
     //MARK: 확인하기 액션
     @IBAction func sucessAction(_ sender: Any) {
         let mainNaviVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainNaviVC")
-        
+        remove_pref(remove_key: "name")
         self.present(mainNaviVC, animated: true, completion: nil)
     }
 
