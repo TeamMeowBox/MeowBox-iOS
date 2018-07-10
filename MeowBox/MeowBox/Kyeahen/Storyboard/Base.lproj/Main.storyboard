@@ -323,6 +323,7 @@
                         <outlet property="hiddenLeadingC" destination="BkD-lq-JOf" id="Ama-NK-j7a"/>
                         <outlet property="hiddenTrailingC" destination="LG6-jT-JI9" id="0f1-05-Wkc"/>
                         <outlet property="leadingC" destination="dw6-3s-pKW" id="I6R-15-0mn"/>
+                        <outlet property="loginInfoLabel" destination="od5-hP-7pP" id="jMN-Xw-CBx"/>
                         <outlet property="pageControl" destination="KR6-CY-5S5" id="D1I-lc-9dw"/>
                         <outlet property="profileImage" destination="wDv-H1-77o" id="PnJ-JA-Yct"/>
                         <outlet property="trailingC" destination="uXG-Lt-RsR" id="4jT-Hb-cnS"/>

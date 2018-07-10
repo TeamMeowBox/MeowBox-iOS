@@ -380,6 +380,7 @@
                         <outlet property="hiddenLeadingC" destination="khF-QL-jyE" id="Llv-1U-9Ka"/>
                         <outlet property="hiddenTrailingC" destination="ndV-Hd-g4Y" id="qJH-Jo-Q45"/>
                         <outlet property="leadingC" destination="li0-gV-k4y" id="Xid-TD-bHo"/>
+                        <outlet property="loginInfoLabel" destination="b2h-bW-vaO" id="fbK-OR-h6v"/>
                         <outlet property="profileImageView" destination="6x1-vv-hUQ" id="3Fp-wV-CxD"/>
                         <outlet property="trailingC" destination="lsR-IE-S2l" id="Nsf-kg-ZMk"/>
                     </connections>
@@ -826,6 +827,7 @@
                         <outlet property="hiddenLeadingC" destination="dn4-DZ-X0H" id="t4E-7H-tH6"/>
                         <outlet property="hiddenTrailingC" destination="cLK-n7-BU8" id="Dxl-87-htp"/>
                         <outlet property="leadingC" destination="0PL-Ps-FfJ" id="s0C-kX-Q4F"/>
+                        <outlet property="loginInfoLabel" destination="KYB-N8-5oL" id="V2B-LD-UvT"/>
                         <outlet property="profileImageView" destination="x2e-mF-wQb" id="ijk-gQ-Eh8"/>
                         <outlet property="reviewHeaderImageView" destination="Yl3-eT-bzD" id="hpe-Qc-Vvk"/>
                         <outlet property="reviewTableView" destination="HSn-WE-eyP" id="qxY-zM-LXK"/>

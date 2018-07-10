@@ -405,6 +405,7 @@
                         <outlet property="hiddenLeadingC" destination="ZTg-7v-rig" id="Xae-qp-jGq"/>
                         <outlet property="hiddenTrailingC" destination="Kxr-Xl-cgr" id="BMe-1Z-QFa"/>
                         <outlet property="leadingC" destination="jfo-GT-Mf4" id="Xow-kK-ICU"/>
+                        <outlet property="loginInfoLabel" destination="XmL-1y-7G1" id="xgQ-dC-BtF"/>
                         <outlet property="myPageContainerView" destination="G6F-Ch-FU1" id="iD9-2j-fv3"/>
                         <outlet property="myPageView" destination="IpN-X8-ydz" id="Xb5-pA-IFr"/>
                         <outlet property="profileImageView" destination="SXz-x2-NbE" id="227-Jt-FoJ"/>

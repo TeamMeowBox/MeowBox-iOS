@@ -28,8 +28,7 @@ class MainViewController: UIViewController,UICollectionViewDelegate,UICollection
     
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var bottomBtnView: UIView!
-    
-    
+    @IBOutlet weak var loginInfoLabel: UILabel!
     
     var sideBarIsVisible = false //메뉴 상태 여부
     var panGestureRecognizer: UIPanGestureRecognizer!
@@ -45,6 +44,8 @@ class MainViewController: UIViewController,UICollectionViewDelegate,UICollection
         //playLaunch()
         
         userDefault.set("yes", forKey: "amIfirst")
+        
+        loginCheck()
         
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -85,6 +86,18 @@ class MainViewController: UIViewController,UICollectionViewDelegate,UICollection
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    //MARK: 로그인 체크 함수
+    func loginCheck() {
+        
+        let name = gsno(userDefault.string(forKey: "name"))
+        if name != nil {
+            loginInfoLabel.text = "안녕하세요, \(name)님"
+        }
+        else {
+            loginInfoLabel.text = "로그인이 필요합니다."
+        }
     }
     
     //MARK: 네비게이션 바 투명하게 하는 함수
