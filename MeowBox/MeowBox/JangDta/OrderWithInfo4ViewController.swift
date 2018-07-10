@@ -34,6 +34,7 @@ class OrderWithInfo4ViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     
     @IBOutlet weak var totalPriceLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -50,6 +51,8 @@ class OrderWithInfo4ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        print("willAppear!!!!!!!!!!!!!")
         
         //recentaddress()
         guard let first = userDefault.string(forKey: "amIfirst") else {return }
@@ -81,15 +84,18 @@ class OrderWithInfo4ViewController: UIViewController {
         
         setOrderSetting()
         
+        
+//        let navi = UIStoryboard(name: "Order", bundle: nil).instantiateViewController(withIdentifier: "iamportNavi") as! UINavigationController
+        
         let controller = Html5InicisViewController()
         
         self.navigationController?.pushViewController(controller, animated: true)
-        
+        //navi?.pushViewController(controller, animated: true)
         //order()
     }
     
     @IBAction func backWithInfo3(_ sender: Any) {
-        parentVC?.changeVC(num: 3)
+        parentVC?.changeVC(num: 33)
     }
     
     private func selectionListInit(){
