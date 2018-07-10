@@ -130,8 +130,6 @@ class MeowBoxReviewViewController: UIViewController, UITableViewDelegate, UITabl
         
     }
     
-    
-    
     //MARK: 로그인 액션
     @IBAction func loginAction(_ sender: Any) {
         
@@ -228,13 +226,7 @@ class MeowBoxReviewViewController: UIViewController, UITableViewDelegate, UITabl
             cell.reviewintroLabel.text = reviews?.birthday.comment
             cell.reviewCollectionView.tag = indexPath.row
             cell.reviews = self.reviews
-            
-            let collectionCell = cell.reviewCollectionView.dequeueReusableCell(withReuseIdentifier: "MeowBoxReviewCollectionViewCell", for: indexPath) as! MeowBoxReviewCollectionViewCell
-            
-            collectionCell.reviewImageView.kf.setImage(with: URL(string: (reviews?.birthday.image_list[indexPath.row])!), placeholder: UIImage())
-            collectionCell.reviewID.text = reviews?.birthday.insta_id[indexPath.row]
-            collectionCell.reviewTag.text = reviews?.birthday.hashtag[indexPath.row]
-    
+
             return cell
             
         }
@@ -242,8 +234,8 @@ class MeowBoxReviewViewController: UIViewController, UITableViewDelegate, UITabl
             let cell = tableView.dequeueReusableCell(withIdentifier: "MeowBoxReviewTableViewCell", for: indexPath) as! MeowBoxReviewTableViewCell
             
             cell.reviewBackgroundImageView.backgroundColor = #colorLiteral(red: 0.8980392157, green: 0.7058823529, blue: 0.7019607843, alpha: 1)
-            cell.reviewTitleLabel.text = reviews?.best7_image.title
-            cell.reviewintroLabel.text = reviews?.best7_image.comment
+            cell.reviewTitleLabel.text = reviews?.best_image_7.title
+            cell.reviewintroLabel.text = reviews?.best_image_7.comment
             cell.reviewCollectionView.tag = indexPath.row
             
             return cell
@@ -252,8 +244,8 @@ class MeowBoxReviewViewController: UIViewController, UITableViewDelegate, UITabl
             let cell = tableView.dequeueReusableCell(withIdentifier: "MeowBoxReviewTableViewCell", for: indexPath) as! MeowBoxReviewTableViewCell
             
             cell.reviewBackgroundImageView.backgroundColor = #colorLiteral(red: 0.8980392157, green: 0.7058823529, blue: 0.7019607843, alpha: 1)
-            cell.reviewTitleLabel.text = reviews?.best6_image.title
-            cell.reviewintroLabel.text = reviews?.best6_image.comment
+            cell.reviewTitleLabel.text = reviews?.best_image_6.title
+            cell.reviewintroLabel.text = reviews?.best_image_6.comment
             cell.reviewCollectionView.tag = indexPath.row
             
             return cell

@@ -9,40 +9,33 @@
 import UIKit
 import Kingfisher
 
-class MeowBoxReviewTableViewCell: UITableViewCell{
+class MeowBoxReviewTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource {
     
     @IBOutlet weak var reviewBackgroundImageView: UIImageView!
     @IBOutlet weak var reviewTitleLabel: UILabel!
     @IBOutlet weak var reviewintroLabel: UILabel!
-    @IBOutlet weak var reviewCollectionView: UICollectionView! {
-        didSet {
-            reviewCollectionView.dataSource = self
-        }
-    }
-    
+    @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var reviewCollectionView: UICollectionView!
+
     let collectImageArr = [#imageLiteral(resourceName: "package-box-img"),#imageLiteral(resourceName: "package-box-detail-img"),#imageLiteral(resourceName: "package-box-img")]
     
     var reviews: Review?
+    var currentPages = 0
 
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        reviewInit()
+        
+        reviewCollectionView.delegate = self
+        reviewCollectionView.dataSource = self
         reviewCollectionView.backgroundColor = UIColor.clear
         // Initialization code
+        
+        //MARK: CollectionView
+        
+        
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
-
-}
-
-extension MeowBoxReviewTableViewCell: UICollectionViewDataSource {
-    
-    //MARK: CollectionView
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -58,12 +51,6 @@ extension MeowBoxReviewTableViewCell: UICollectionViewDataSource {
             if let cell: MeowBoxReviewCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "MeowBoxReviewCollectionViewCell", for: indexPath) as? MeowBoxReviewCollectionViewCell
             {
                 
-                //                if reviews?.birthday.image_list[indexPath.row] == "" {
-                //                    cell.reviewImageView.image = #imageLiteral(resourceName: "meowbox-logo-pink")
-                //                }
-                //
-                //                cell.reviewImageView.kf.setImage(with: URL(string: (reviews?.birthday.image_list[indexPath.row])!), placeholder: #imageLiteral(resourceName: "meowbox-logo-pink"))
-                //
                 if let url = URL(string: gsno(reviews?.birthday.image_list[indexPath.row])){
                     cell.reviewImageView.kf.setImage(with: url)
                 } else {
@@ -71,7 +58,6 @@ extension MeowBoxReviewTableViewCell: UICollectionViewDataSource {
                 }
                 cell.reviewTag.text = reviews?.birthday.hashtag[indexPath.row]
                 cell.reviewID.text = reviews?.birthday.insta_id[indexPath.row]
-                cell.reviewPageControl.currentPage = indexPath.row
                 
                 return cell
             }
@@ -82,19 +68,13 @@ extension MeowBoxReviewTableViewCell: UICollectionViewDataSource {
             if let cell: MeowBoxReviewCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "MeowBoxReviewCollectionViewCell", for: indexPath) as? MeowBoxReviewCollectionViewCell
             {
                 
-                //                if reviews?.best7_image.image_list[indexPath.row] == "" {
-                //                    cell.reviewImageView.image = #imageLiteral(resourceName: "meowbox-logo-pink")
-                //                }
-                //                cell.reviewImageView.kf.setImage(with: URL(string: (reviews?.best7_image.image_list[indexPath.row])!), placeholder: #imageLiteral(resourceName: "meowbox-logo-pink"))
-                
-                if let url = URL(string: gsno(reviews?.best7_image.image_list[indexPath.row])){
+                if let url = URL(string: gsno(reviews?.best_image_7.image_list[indexPath.row])){
                     cell.reviewImageView.kf.setImage(with: url)
                 } else {
                     
                 }
-                cell.reviewTag.text = reviews?.best7_image.hashtag[indexPath.row]
-                cell.reviewID.text = reviews?.best7_image.insta_id[indexPath.row]
-                cell.reviewPageControl.currentPage = indexPath.row
+                cell.reviewTag.text = reviews?.best_image_7.hashtag[indexPath.row]
+                cell.reviewID.text = reviews?.best_image_7.insta_id[indexPath.row]
                 
                 return cell
             }
@@ -105,21 +85,13 @@ extension MeowBoxReviewTableViewCell: UICollectionViewDataSource {
             if let cell: MeowBoxReviewCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "MeowBoxReviewCollectionViewCell", for: indexPath) as? MeowBoxReviewCollectionViewCell
             {
                 
-                //                if reviews?.best6_image.image_list[indexPath.row] == "" {
-                //                    cell.reviewImageView.image = #imageLiteral(resourceName: "meowbox-logo-pink")
-                //                }
-                //
-                //                cell.reviewImageView.kf.setImage(with: URL(string: (reviews?.best6_image.image_list[indexPath.row])!), placeholder: #imageLiteral(resourceName: "meowbox-logo-pink"))
-                
-                if let url = URL(string: gsno(reviews?.best6_image.image_list[indexPath.row])){
+                if let url = URL(string: gsno(reviews?.best_image_6.image_list[indexPath.row])){
                     cell.reviewImageView.kf.setImage(with: url)
                 } else {
                     
                 }
-                
-                cell.reviewTag.text = reviews?.best6_image.hashtag[indexPath.row]
-                cell.reviewID.text = reviews?.best6_image.insta_id[indexPath.row]
-                cell.reviewPageControl.currentPage = indexPath.row
+                cell.reviewTag.text = reviews?.best_image_6.hashtag[indexPath.row]
+                cell.reviewID.text = reviews?.best_image_6.insta_id[indexPath.row]
                 
                 return cell
             }
@@ -127,20 +99,35 @@ extension MeowBoxReviewTableViewCell: UICollectionViewDataSource {
         }
     }
     
+    //ScrollView delegate method
+    func scrollViewDidScroll(_ scrollView: UIScrollView)
+    {
+        let pageWidth = scrollView.frame.width
+        self.currentPages = Int((scrollView.contentOffset.x + pageWidth / 2) / pageWidth)
+        self.pageControl.currentPage = self.currentPages
+    }
+    
+ 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
     
-}
 
-extension UITableViewCell {
-    func gsno(_ value: String?) -> String { //String 옵셔널 벗기기
-        return value ?? ""
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+
+        // Configure the view for the selected state
     }
     
-    func gino(_ value: Int?) -> Int { //Int 옵셔널 벗기기
-        return value ?? 0
+    //MARK: 리뷰 통신
+    func reviewInit() {
+        ReviewService.reviewInit { (reviewData) in
+            self.reviews = reviewData
+            self.reviewCollectionView.reloadData()
+        }
     }
+    
+
 }
 
 extension MeowBoxReviewTableViewCell: UICollectionViewDelegateFlowLayout {

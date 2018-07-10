@@ -14,7 +14,10 @@ class MeowBoxDetailTableViewCell: UITableViewCell,UICollectionViewDataSource, UI
     @IBOutlet weak var detailImageView: UIImageView!
     @IBOutlet weak var detailContent: UITextView!
     @IBOutlet weak var detailCollectionView: UICollectionView!
-
+    @IBOutlet weak var pageControl: UIPageControl!
+    
+    var currentPages = 0
+    
     
     let collectImageArr = [#imageLiteral(resourceName: "package-box-img"),#imageLiteral(resourceName: "package-box-detail-img"),#imageLiteral(resourceName: "package-box-img")]
     let indicatorArr = [#imageLiteral(resourceName: "indicator-first"), #imageLiteral(resourceName: "indicator-second"), #imageLiteral(resourceName: "indicator-third")]
@@ -62,6 +65,14 @@ class MeowBoxDetailTableViewCell: UITableViewCell,UICollectionViewDataSource, UI
         return cell
         }
         return UICollectionViewCell()
+    }
+    
+    //ScrollView delegate method
+    func scrollViewDidScroll(_ scrollView: UIScrollView)
+    {
+        let pageWidth = scrollView.frame.width
+        self.currentPages = Int((scrollView.contentOffset.x + pageWidth / 2) / pageWidth)
+        self.pageControl.currentPage = self.currentPages
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

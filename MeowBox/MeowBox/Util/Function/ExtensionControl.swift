@@ -38,6 +38,17 @@ extension UIViewController {
     }
 }
 
+extension UITableViewCell {
+    func gsno(_ value: String?) -> String { //String 옵셔널 벗기기
+        return value ?? ""
+    }
+    
+    func gino(_ value: Int?) -> Int { //Int 옵셔널 벗기기
+        return value ?? 0
+    }
+}
+
+
 extension UIView {
     func shake() {
         self.transform = CGAffineTransform(translationX: 20, y: 0)
