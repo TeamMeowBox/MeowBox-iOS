@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 struct Review: Codable {
     
     let birthday: ReviewResult

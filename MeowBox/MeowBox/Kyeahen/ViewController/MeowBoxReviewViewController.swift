@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class MeowBoxReviewViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -25,13 +26,16 @@ class MeowBoxReviewViewController: UIViewController, UITableViewDelegate, UITabl
     @IBOutlet var reviewView: UIView!
     
     var sideBarIsVisible = false
-
     
     let logo : UIImage = UIImage(named: "meowbox-logo-pink.png")!
     let logoImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 128, height: 21))
     
+    var reviews: Review?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        reviewInit()
         
         //tableview
         reviewTableView.delegate = self
@@ -146,7 +150,7 @@ class MeowBoxReviewViewController: UIViewController, UITableViewDelegate, UITabl
     //MARK: 미유박스 이야기 액션
     @IBAction func storyAction(_ sender: Any) {
     }
-    
+
     //MARK: 생일축하해!박스 액션
     @IBAction func birthBoxAction(_ sender: Any) {
     }
@@ -209,33 +213,61 @@ class MeowBoxReviewViewController: UIViewController, UITableViewDelegate, UITabl
     
     //섹션에 몇개의 데이터를 보여줄 것인지
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 3
     }
     
     //로우에 어떤 데이터를 보여줄건지
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if indexPath.row == 0 {
-            
+        
             let cell = tableView.dequeueReusableCell(withIdentifier: "MeowBoxReviewTableViewCell", for: indexPath) as! MeowBoxReviewTableViewCell
             
             cell.reviewBackgroundImageView.image = #imageLiteral(resourceName: "birthday-background-img")
-            cell.reviewTitleLabel.text = "이달의 소중한 탄생"
-            cell.reviewintroLabel.text = "7월에 태어난 아이들을 함께 축하해줘요!짝짝짝"
+            cell.reviewTitleLabel.text = reviews?.birthday.title
+            cell.reviewintroLabel.text = reviews?.birthday.comment
+            cell.reviewCollectionView.tag = indexPath.row
+            cell.reviews = self.reviews
             
+            let collectionCell = cell.reviewCollectionView.dequeueReusableCell(withReuseIdentifier: "MeowBoxReviewCollectionViewCell", for: indexPath) as! MeowBoxReviewCollectionViewCell
+            
+            collectionCell.reviewImageView.kf.setImage(with: URL(string: (reviews?.birthday.image_list[indexPath.row])!), placeholder: UIImage())
+            collectionCell.reviewID.text = reviews?.birthday.insta_id[indexPath.row]
+            collectionCell.reviewTag.text = reviews?.birthday.hashtag[indexPath.row]
+    
             return cell
             
+        }
+        else if indexPath.row == 1 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "MeowBoxReviewTableViewCell", for: indexPath) as! MeowBoxReviewTableViewCell
+            
+            cell.reviewBackgroundImageView.backgroundColor = #colorLiteral(red: 0.8980392157, green: 0.7058823529, blue: 0.7019607843, alpha: 1)
+            cell.reviewTitleLabel.text = reviews?.best7_image.title
+            cell.reviewintroLabel.text = reviews?.best7_image.comment
+            cell.reviewCollectionView.tag = indexPath.row
+            
+            return cell
         }
         else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "MeowBoxReviewTableViewCell", for: indexPath) as! MeowBoxReviewTableViewCell
             
             cell.reviewBackgroundImageView.backgroundColor = #colorLiteral(red: 0.8980392157, green: 0.7058823529, blue: 0.7019607843, alpha: 1)
-            cell.reviewTitleLabel.text = "이달의 소중한 탄생"
-            cell.reviewintroLabel.text = "7월에 태어난 아이들을 함께 축하해줘요!짝짝짝"
+            cell.reviewTitleLabel.text = reviews?.best6_image.title
+            cell.reviewintroLabel.text = reviews?.best6_image.comment
+            cell.reviewCollectionView.tag = indexPath.row
             
             return cell
         }
     }
+    
+    //MARK: 리뷰 통신
+    func reviewInit() {
+        ReviewService.reviewInit { (reviewData) in
+            self.reviews = reviewData
+            self.reviewTableView.reloadData()
+        }
+    }
+
     
     //MARK: 맨 위로 가기 액션
     @IBAction func topAction(_ sender: Any) {

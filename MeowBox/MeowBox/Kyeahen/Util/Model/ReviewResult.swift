@@ -14,4 +14,5 @@ struct ReviewResult: Codable {
     let hashtag: [String]
     let insta_id: [String]
     let comment: String
+    let title: String
 }
