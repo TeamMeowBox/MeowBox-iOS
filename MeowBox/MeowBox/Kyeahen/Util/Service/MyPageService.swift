@@ -215,7 +215,6 @@ struct MyPageService: APIService {
                         
                         print(gsno(JSON(value)["status"].string))
                         if accountData.status == true {
-                            
                             let message = JSON(value)["message"].string
                             print(message)
                             if accountData.message == "success" {
@@ -347,7 +346,7 @@ struct MyPageService: APIService {
     
     
     //MARK: 마이페이지 - 계정 설정 변경(사진 유)
-    static func updateAccount(user_name: String, user_phone: String, user_email: String, image_profile: UIImage, cat_name: String, cat_size: String, cat_birthday: String, cat_caution: String, completion: @escaping ()-> Void) {
+    static func updateAccount(user_name: String, user_phone: String, user_email: String, image_profile: UIImage, cat_name: String, cat_size: Int, cat_birthday: String, cat_caution: String, completion: @escaping ()-> Void) {
 
         let URL = url("/mypage/account_setting/account")
 
@@ -360,7 +359,7 @@ struct MyPageService: APIService {
         let userEmailData = user_email.data(using: .utf8)
         let profileImageData = UIImageJPEGRepresentation(image_profile, 0.3)
         let catNameData = cat_name.data(using: .utf8)
-        let catSizeData = cat_size.data(using: .utf8)
+//        let catSizeData = cat_size.data(using: .utf8)
         let catBirthData = cat_birthday.data(using: .utf8)
         let catCautionData = cat_caution.data(using: .utf8)
 
@@ -371,7 +370,7 @@ struct MyPageService: APIService {
             multipartFormData.append(userEmailData!, withName: "user_email")
             multipartFormData.append(profileImageData!, withName: "image_profile", fileName: "photo.jpg", mimeType: "image/jpeg")
             multipartFormData.append(catNameData!, withName: "cat_name")
-            multipartFormData.append(catSizeData!, withName: "cat_size")
+            multipartFormData.append("\(cat_size)".data(using: .utf8)!, withName: "cat_size")
             multipartFormData.append(catBirthData!, withName: "cat_birthday")
             multipartFormData.append(catCautionData!, withName: "cat_caution")
 
