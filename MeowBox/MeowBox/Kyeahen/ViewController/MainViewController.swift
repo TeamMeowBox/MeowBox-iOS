@@ -82,6 +82,10 @@ class MainViewController: UIViewController,UICollectionViewDelegate,UICollection
         // Do any additional setup after loading the view, typically from a nib.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        loginCheck()
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -92,11 +96,11 @@ class MainViewController: UIViewController,UICollectionViewDelegate,UICollection
     func loginCheck() {
         
         let name = gsno(userDefault.string(forKey: "name"))
-        if name != nil {
-            loginInfoLabel.text = "안녕하세요, \(name)님"
+        if name == "" {
+            loginInfoLabel.text = "로그인이 필요합니다."
         }
         else {
-            loginInfoLabel.text = "로그인이 필요합니다."
+            loginInfoLabel.text = "안녕하세요, \(name)님"
         }
     }
     

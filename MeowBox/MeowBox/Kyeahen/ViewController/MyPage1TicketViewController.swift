@@ -24,15 +24,10 @@ class MyPage1TicketViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print("111")
-        myPageTicketInit()
-        print("2222")
 
+        myPageTicketInit()
 
     }
-    
-         //Do any additional setup after loading the view.
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -82,7 +77,7 @@ class MyPage1TicketViewController: UIViewController {
                     
                 }
                 else if myPageTicketData.use == "3박스" {
-                    let newProgress: CGFloat = self.progressView.progress == 0.450 ? 0.0 : 0.450
+                    let newProgress: CGFloat = self.progressView.progress == 0.5 ? 0.0 : 0.5
                     self.progressView.animateTo(progress: newProgress)
                 }
                     
@@ -91,7 +86,7 @@ class MyPage1TicketViewController: UIViewController {
                     self.progressView.animateTo(progress: newProgress)
                 }
                 else if myPageTicketData.use == "5박스" {
-                    let newProgress: CGFloat = self.progressView.progress == 0.8 ? 0.0 : 0.8
+                    let newProgress: CGFloat = self.progressView.progress == 0.84 ? 0.0 : 0.84
                     self.progressView.animateTo(progress: newProgress)
                 }
                 else if myPageTicketData.use == "6박스" {

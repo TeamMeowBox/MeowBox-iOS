@@ -23,6 +23,7 @@ class Order1ContainerViewController: UIViewController {
     @IBOutlet weak var hiddenTrailingC: NSLayoutConstraint!
     
     @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var loginInfoLabel: UILabel!
     
     var myCatName = ""
     
@@ -30,6 +31,8 @@ class Order1ContainerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        loginCheck()
 
         self.navigationItem.backBarButtonItem = barBtn
         hiddenImageView.isHidden = true
@@ -45,6 +48,22 @@ class Order1ContainerViewController: UIViewController {
         }
         
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        loginCheck()
+    }
+    
+    //MARK: 로그인 체크 함수
+    func loginCheck() {
+        
+        let name = gsno(userDefault.string(forKey: "name"))
+        if name == "" {
+            loginInfoLabel.text = "로그인이 필요합니다."
+        }
+        else {
+            loginInfoLabel.text = "안녕하세요, \(name)님"
+        }
     }
     
     private lazy var withInfoVC1: OrderWithInfoViewController = {

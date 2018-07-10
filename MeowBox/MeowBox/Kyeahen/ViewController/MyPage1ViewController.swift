@@ -58,15 +58,19 @@ class MyPage1ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        loginCheck()
+    }
+    
     //MARK: 로그인 체크 함수
     func loginCheck() {
         
         let name = gsno(userdefault.string(forKey: "name"))
-        if name != nil {
-            loginInfoLabel.text = "안녕하세요, \(name)님"
+        if name == "" {
+            loginInfoLabel.text = "로그인이 필요합니다."
         }
         else {
-            loginInfoLabel.text = "로그인이 필요합니다."
+            loginInfoLabel.text = "안녕하세요, \(name)님"
         }
     }
 

@@ -1431,6 +1431,7 @@
                         <outlet property="hiddenLeadingC" destination="Ct0-qY-Hqz" id="aG0-hb-4RD"/>
                         <outlet property="hiddenTrailingC" destination="HOS-aP-San" id="0m5-vm-N2l"/>
                         <outlet property="leadingC" destination="bu5-Hq-6Wl" id="F5H-BC-Ul6"/>
+                        <outlet property="loginInfoLabel" destination="mAV-wC-JJ9" id="Kdv-TF-DgZ"/>
                         <outlet property="profileImageView" destination="fOO-rz-omX" id="DF1-fe-X4b"/>
                         <outlet property="trailingC" destination="7WY-sj-vxH" id="yxp-Ah-kkg"/>
                         <segue destination="KBN-mz-GlR" kind="show" id="shC-3Y-WcO"/>
