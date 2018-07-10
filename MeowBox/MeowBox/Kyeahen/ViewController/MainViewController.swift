@@ -42,6 +42,8 @@ class MainViewController: UIViewController,UICollectionViewDelegate,UICollection
         
         //playLaunch()
         
+        userDefault.set("yes", forKey: "amIfirst")
+        
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.decelerationRate = UIScrollViewDecelerationRateFast

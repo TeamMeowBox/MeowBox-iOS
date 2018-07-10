@@ -211,6 +211,7 @@ struct OrderService : APIService{
     
     // MARK: 결제 갔다 올 때
     static func isordersuccess(completion: @escaping (_ message: String)->Void){
+        
         let userDefault = UserDefaults.standard
         
         guard let token = userDefault.string(forKey: "token") else { return }
@@ -218,11 +219,13 @@ struct OrderService : APIService{
         
         let headers = ["authorization": token]
         
-        let URL = url("/order/check_order")
+        let URL = url("/order/order_result/check_order")
         
         let body: [String: Any] = [
             "random_key" : random_key
         ]
+        
+        print("확인 시 작 !!!!")
         
         Alamofire.request(URL, method: .post, parameters: body, encoding: JSONEncoding.default, headers: headers).responseData() { res in
             switch res.result{
@@ -234,10 +237,11 @@ struct OrderService : APIService{
                             print("주문 성공 여부 성공!")
                             
                             if JSON(value)["result"]["order_result"].bool == true{
+                                userDefault.set("no", forKey: "amIfirst")
                                 completion("success")
-                            }else{
-                                completion("failure")
                             }
+                                print("주문 취소했거나 그냥 들어왔어 너")
+                                completion("failure")
                             
                             
                         }else{

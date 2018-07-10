@@ -51,14 +51,20 @@ class OrderWithInfo4ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        recentaddress()
+        //recentaddress()
+        guard let first = userDefault.string(forKey: "amIfirst") else {return }
+        print("amIfirst: "+first)
+        if userDefault.string(forKey: "amIfirst") == "yes"{
+            isordersuccess()
+        }
+        
         
         guard let price = userDefault.string(forKey: "order_price") else{ return }
         print(price)
         
         totalPriceLabel.text = price+" 원"
         
-        isordersuccess()
+        
     }
     
     @objc func selectionChanged() {
@@ -75,8 +81,11 @@ class OrderWithInfo4ViewController: UIViewController {
         
         setOrderSetting()
         
-        let controller = Html5InicisViewController()
-        self.navigationController?.pushViewController(controller, animated: true)
+        guard let first = userDefault.string(forKey: "amIfirst") else {return }
+        print("amIfirst: "+first)
+        
+            let controller = Html5InicisViewController()
+            self.navigationController?.pushViewController(controller, animated: true)
         
         //order()
     }
@@ -145,9 +154,6 @@ class OrderWithInfo4ViewController: UIViewController {
         print("payment : "+gsno(userDefault.string(forKey: "payment_method")))
         
         
-
-
-        
         OrderService.order(name: gsno(nameTextField.text), address: self.orderAddress!, phone_number: gsno(phoneTextField.text), product: gsno(userDefault.string(forKey: "order_product")), price: gsno(userDefault.string(forKey: "order_price")), email: gsno(emailTextField.text), payment_method: gsno(userDefault.string(forKey: "payment_method"))){ message in
             if message == "success"{
 
@@ -200,8 +206,10 @@ class OrderWithInfo4ViewController: UIViewController {
     }
     
     func isordersuccess(){
+        print("*******isordersuccess********")
         OrderService.isordersuccess { (message) in
             if message == "success"{
+                self.order()
                 self.parentVC?.changeVC(num: 5)
             }else{
                 
