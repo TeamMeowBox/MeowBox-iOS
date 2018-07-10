@@ -64,3 +64,9 @@ extension NSObject {
         return String(describing: self)
     }
 }
+
+extension UINavigationController {
+    var rootViewController : UIViewController? {
+        return viewControllers.first
+    }
+}

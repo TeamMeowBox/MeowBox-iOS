@@ -106,6 +106,10 @@ class Order1ContainerViewController: UIViewController {
         case 5:
             add(asChildViewController: withInfoVC5)
             break
+        case 33:
+            remove(asChildViewController: withInfoVC4)
+            add(asChildViewController: withInfoVC3)
+            withInfoVC3.scrollView.setContentOffset(.zero, animated: true)
         default:
             add(asChildViewController: withInfoVC1)
             break
@@ -134,6 +138,7 @@ class Order1ContainerViewController: UIViewController {
         
         // Notify Child View Controller
         viewController.removeFromParentViewController()
+        
         
     }
     
