@@ -209,4 +209,13 @@ class MeowBoxDetailViewController: UIViewController, UITableViewDelegate, UITabl
         self.present(myPageNaviVC, animated: true, completion: nil)
     }
     
+    //MARK: 미유박스 주문하기
+    @IBAction func bottomOrderButton(_ sender: Any) {
+        let orderNaviVC = UIStoryboard(name: "Order", bundle: nil).instantiateViewController(withIdentifier: "OrderWithInfoNavigationController")
+        
+        self.present(orderNaviVC, animated: true, completion: nil)
+        
+    }
+    
+    
 }
