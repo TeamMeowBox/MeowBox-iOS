@@ -319,8 +319,8 @@
                                     <constraint firstAttribute="trailing" secondItem="PsT-SA-Ktt" secondAttribute="trailing" id="vg3-9d-CMV"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6p5-2q-PRN">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="796"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6p5-2q-PRN">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="1730"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                         </subviews>
@@ -384,7 +384,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P5Q-ka-9CL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="396" y="-5.3973013493253381"/>
+            <point key="canvasLocation" x="395.5" y="-6"/>
         </scene>
         <!--Meow Box Review View Controller-->
         <scene sceneID="TjL-IY-BEL">
@@ -763,8 +763,8 @@
                                     <constraint firstItem="HSn-WE-eyP" firstAttribute="top" secondItem="9S3-XL-x9s" secondAttribute="top" id="kv4-nd-LVo"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ik2-Jw-vsU">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="1193"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ik2-Jw-vsU">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="820"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                         </subviews>

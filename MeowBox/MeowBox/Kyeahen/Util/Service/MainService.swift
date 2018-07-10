@@ -71,7 +71,7 @@ struct MainService: APIService {
         
     }
     
-    //Main: 인스타 크롤링
+    //MARK: 인스타 크롤링
     static func instaInit(completion: @escaping ([Insta])->Void) {
         
         let URL = url("/home/monthlyBox_detail/crawling")

@@ -10,18 +10,17 @@ import Foundation
 import Alamofire
 import Kingfisher
 import SwiftyJSON
+import UIKit
 
 struct ReviewService: APIService {
     
+    //MARK: 테이블 뷰 후기
     static func reviewInit(completion: @escaping (Review)-> Void) {
         let URL = url("/home/review")
         
         let userdefault = UserDefaults.standard
-        guard let token = userdefault.string(forKey: "token") else { return }
         
-        let token_header = [ "authorization" : token ]
-        
-        Alamofire.request(URL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: token_header).responseData() { res in
+        Alamofire.request(URL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: nil).responseData() { res in
             
             switch res.result {
                 
@@ -68,5 +67,5 @@ struct ReviewService: APIService {
         }
     }
     
-    
 }
+
