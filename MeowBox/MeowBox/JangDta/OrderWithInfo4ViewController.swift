@@ -47,7 +47,7 @@ class OrderWithInfo4ViewController: UIViewController {
         
         
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -81,11 +81,9 @@ class OrderWithInfo4ViewController: UIViewController {
         
         setOrderSetting()
         
-//        guard let first = userDefault.string(forKey: "amIfirst") else {return }
-//        print("amIfirst: "+first)
+        let controller = Html5InicisViewController()
         
-            let controller = Html5InicisViewController()
-            self.navigationController?.pushViewController(controller, animated: true)
+        self.navigationController?.pushViewController(controller, animated: true)
         
         //order()
     }
@@ -157,14 +155,14 @@ class OrderWithInfo4ViewController: UIViewController {
         
         OrderService.order(name: gsno(nameTextField.text), address: orderAdd, phone_number: gsno(phoneTextField.text), product: gsno(userDefault.string(forKey: "order_product")), price: gsno(userDefault.string(forKey: "order_price")), email: gsno(emailTextField.text), payment_method: gsno(userDefault.string(forKey: "payment_method"))){ message in
             if message == "success"{
-
+                
             }else if message == "failure"{
                 let alertView = UIAlertController(title: "주문 실패", message: "ㅜㅜㅜㅜㅜㅜ", preferredStyle: .alert)
                 let ok = UIAlertAction(title: "확인", style: .default, handler: nil)
                 alertView.addAction(ok)
                 self.present(alertView, animated: true, completion: nil)
             }
-
+            
         }
     }
     
@@ -199,11 +197,15 @@ class OrderWithInfo4ViewController: UIViewController {
     func setOrderSetting(){
         orderAddress = "\(gsno(addressTextField1.text)) \(gsno(addressTextField2.text))"
         
-        
+        print("***************1*************")
         userDefault.set(gsno(nameTextField.text), forKey: "order_name")
+        print("***************2*************")
         userDefault.set(orderAddress, forKey: "order_address")
+        print("***************3*************")
         userDefault.set(gsno(phoneTextField.text), forKey: "order_phone_number")
+        print("***************4*************")
         userDefault.set(gsno(emailTextField.text), forKey: "order_email")
+        print("***************5*************")
     }
     
     func isordersuccess(){

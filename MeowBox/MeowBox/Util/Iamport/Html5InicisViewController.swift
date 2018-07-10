@@ -37,17 +37,16 @@ class Html5InicisViewController: UIViewController {
             .setWebView(self.webView)               // 현재 Controller에 있는 WebView 지정
             .setRedirectUrl("http://13.209.220.1:3000/order/order_result")                    // m_redirect_url 주소
         
-        
-        guard let price = userDefault.string(forKey: "order_price") else{ return }
+        //guard let price = userDefault.string(forKey: "order_price") else{ return }
         guard let email = userDefault.string(forKey: "order_email") else{ return }
         guard let name = userDefault.string(forKey: "order_name") else{ return }
         guard let phone = userDefault.string(forKey: "order_phone_number") else{ return }
         guard let address = userDefault.string(forKey: "order_address") else{ return }
 
         
-        guard let token = userDefault.string(forKey: "token") else{ return }
+        //guard let token = userDefault.string(forKey: "token") else{ return }
         guard let cat_idx = userDefault.string(forKey: "cat_idx") else{ return }
-
+        
         let random = arc4random()
         
         userDefault.set(String(random), forKey: "random_key")

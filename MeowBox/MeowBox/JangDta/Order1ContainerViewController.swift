@@ -70,6 +70,7 @@ class Order1ContainerViewController: UIViewController {
     
     private lazy var withInfoVC4: OrderWithInfo4ViewController = {
         var viewController = UIStoryboard(name: "Order", bundle: nil).instantiateViewController(withIdentifier: "OrderWithInfo4ViewController") as! OrderWithInfo4ViewController
+
         viewController.parentVC = self
         self.addChildViewController(viewController)
         return viewController
@@ -94,7 +95,7 @@ class Order1ContainerViewController: UIViewController {
             withInfoVC2.scrollView.setContentOffset(.zero, animated: true)
             break
         case 3:
-            remove(asChildViewController: withInfoVC4)
+//            remove(asChildViewController: withInfoVC4)
             add(asChildViewController: withInfoVC3)
             withInfoVC3.scrollView.setContentOffset(.zero, animated: true)
             break
