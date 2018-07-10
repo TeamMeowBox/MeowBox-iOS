@@ -71,5 +71,62 @@ struct MainService: APIService {
         
     }
     
+    //Main: 인스타 크롤링
+    static func instaInit(completion: @escaping ([Insta])->Void) {
+        
+        let URL = url("/home/monthlyBox_detail/crawling")
+        
+        let userdefault = UserDefaults.standard
+        guard let token = userdefault.string(forKey: "token") else { return }
+        
+        let token_header = [ "authorization" : token ]
+        
+        Alamofire.request(URL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: token_header).responseData() { res in
+            
+            switch res.result {
+                
+            case .success:
+                
+                if let value = res.result.value {
+                    
+                    print("인스타 접근")
+                    let decoder = JSONDecoder()
+                    
+                    do {
+                        print("인스타 진입")
+                        
+                        let instaData = try decoder.decode(InstaData.self, from: value)
+                        
+                        if instaData.status == true {
+                            
+                            let message = JSON(value)["message"].string
+                            print(message)
+                            if instaData.message == "success" {
+                                print("인스타 성공")
+                                completion(instaData.result)
+                            }
+                            else {
+                                print("인스타 실패")
+                            }
+                        }
+                            
+                        else {
+                            print("서버 에러")
+                        }
+                        
+                    } catch {
+                        print("예외 발생")
+                        
+                    }
+                    
+                }
+                break
+                
+            case .failure(let err):
+                print(err.localizedDescription)
+                break
+            }
+        }
+    }
     
 }
