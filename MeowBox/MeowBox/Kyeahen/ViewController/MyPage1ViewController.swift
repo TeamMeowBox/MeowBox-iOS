@@ -297,8 +297,7 @@ class MyPage1ViewController: UIViewController {
     }
     
     func setupView() {
-//        myPageContainerView.translatesAutoresizingMaskIntoConstraints = false
-////        myPageContainerView.topAnchor.constraint(equalTo: menuBar.bottomAnchor).isActive = true
+        
         updateView()
     }
 
@@ -314,16 +313,18 @@ class MyPage1ViewController: UIViewController {
             
             let catinfo = myPageNoneTicketData.catinfo
             
+            let name = self.gsno(self.userdefault.string(forKey: "name"))
+            
             if catinfo == "-1" {
                 
-                self.catNameLabel.text = self.userdefault.string(forKey: "name")
+                self.catNameLabel.text = name + "님"
                 self.butlerLabel.isHidden = true
                 self.userNameLabel.isHidden = true
                 
             }
             else {
                 self.catNameLabel.text = catinfo
-                self.userNameLabel.text = self.userdefault.string(forKey: "name")
+                self.userNameLabel.text = name + "님"
             }
         }
     }
