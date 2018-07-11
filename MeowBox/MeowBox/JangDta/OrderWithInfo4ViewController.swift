@@ -185,10 +185,11 @@ class OrderWithInfo4ViewController: UIViewController {
     func recentaddress(){
         OrderService.recentaddress { (address) in
             if address == nil{
-                let alertView = UIAlertController(title: "없음", message: "이전에 주문한 배송지가 없습니다.", preferredStyle: .alert)
-                let ok = UIAlertAction(title: "확인", style: .default, handler: nil)
-                alertView.addAction(ok)
-                self.present(alertView, animated: true, completion: nil)
+                self.showToast(message: "이전에 주문한 배송지 없음")
+//                let alertView = UIAlertController(title: "없음", message: "이전에 주문한 배송지가 없습니다.", preferredStyle: .alert)
+//                let ok = UIAlertAction(title: "확인", style: .default, handler: nil)
+//                alertView.addAction(ok)
+//                self.present(alertView, animated: true, completion: nil)
             }else{
                 self.latest = address
                 

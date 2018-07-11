@@ -197,8 +197,6 @@ struct OrderService : APIService{
                                 completion(nil)
                             }
                             
-                            
-                            
                         }else{
                             print("fail...")
                         }

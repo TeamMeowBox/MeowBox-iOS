@@ -93,6 +93,7 @@ extension Html5InicisViewController: UIWebViewDelegate {
                 let statusCode = httpResponse.statusCode
                 switch statusCode {
                 case 200:
+//                    print("yongbeom:\(String(describing: httpResponse.url))")
                     resultData = [
                         "isSuccess": "OK"
                     ]
