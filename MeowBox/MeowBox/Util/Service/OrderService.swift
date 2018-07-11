@@ -290,9 +290,9 @@ struct OrderService : APIService{
                             let decoder = JSONDecoder()
                             do{
                                 let data = try decoder.decode(Overlap.self, from: value)
-                                if data.result == ""{
+                                if data.result == "1"{
                                     completion("success")
-                                }else{
+                                }else if data.result == "-1"{
                                     completion("failure")
                                 }
                                 
