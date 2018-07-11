@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class MeowBoxDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -35,6 +36,7 @@ class MeowBoxDetailViewController: UIViewController, UITableViewDelegate, UITabl
         super.viewDidLoad()
         
         loginCheck()
+        profileImageCheck()
         
         hiddenImageView.isHidden = true
         
@@ -55,16 +57,26 @@ class MeowBoxDetailViewController: UIViewController, UITableViewDelegate, UITabl
         //프로필 이미지 동그랗게
         profileImageView.layer.masksToBounds = true
         profileImageView.layer.cornerRadius = profileImageView.layer.frame.width/2
+        profileImageView.kf.setImage(with: URL(string: gsno(userDefault.string(forKey: "image_profile"))), placeholder: UIImage())
 
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        profileImageCheck()
         loginCheck()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    //MARK: 프로필 이미지 체크 함수
+    func profileImageCheck() {
+        let pImage = gsno(userDefault.string(forKey: "image_profile"))
+        if pImage == "" {
+            profileImageView.image = #imageLiteral(resourceName: "sidebar-default-img")
+        }
     }
     
     //MARK: 로그인 체크 함수

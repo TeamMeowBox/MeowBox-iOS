@@ -38,6 +38,7 @@ class MeowBoxReviewViewController: UIViewController, UITableViewDelegate, UITabl
         
         reviewInit()
         loginCheck()
+        profileImageCheck()
         
         //tableview
         reviewTableView.delegate = self
@@ -57,18 +58,29 @@ class MeowBoxReviewViewController: UIViewController, UITableViewDelegate, UITabl
         //프로필 이미지 동그랗게
         profileImageView.layer.masksToBounds = true
         profileImageView.layer.cornerRadius = profileImageView.layer.frame.width/2
-
+        profileImageView.kf.setImage(with: URL(string: gsno(userDefault.string(forKey: "image_profile"))), placeholder: UIImage())
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        reviewInit()
         loginCheck()
+        profileImageCheck()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    //MARK: 프로필 이미지 체크 함수
+    func profileImageCheck() {
+        let pImage = gsno(userDefault.string(forKey: "image_profile"))
+        if pImage == "" {
+            profileImageView.image = #imageLiteral(resourceName: "sidebar-default-img")
+        }
+    }
+    
     
     //MARK: 로그인 체크 함수
     func loginCheck() {

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class Order1ContainerViewController: UIViewController {
     
@@ -33,6 +34,7 @@ class Order1ContainerViewController: UIViewController {
         super.viewDidLoad()
         
         loginCheck()
+        profileImageCheck()
         
         self.navigationItem.backBarButtonItem = barBtn
         hiddenImageView.isHidden = true
@@ -40,22 +42,28 @@ class Order1ContainerViewController: UIViewController {
         //프로필 이미지 동그랗게
         profileImageView.layer.masksToBounds = true
         profileImageView.layer.cornerRadius = profileImageView.layer.frame.width/2
+        profileImageView.kf.setImage(with: URL(string: gsno(userDefault.string(forKey: "image_profile"))), placeholder: UIImage())
         
         if userDefault.string(forKey: "cat_idx") == "-1"{
             add(asChildViewController: withInfoVC1)
         }else{
             add(asChildViewController: withInfoVC3)
         }
-        
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         loginCheck()
+        profileImageCheck()
         
     }
     
-    
+    //MARK: 프로필 이미지 체크 함수
+    func profileImageCheck() {
+        let pImage = gsno(userDefault.string(forKey: "image_profile"))
+        if pImage == "" {
+            profileImageView.image = #imageLiteral(resourceName: "sidebar-default-img")
+        }
+    }
     
     //MARK: 로그인 체크 함수
     func loginCheck() {
@@ -231,9 +239,21 @@ class Order1ContainerViewController: UIViewController {
     //MARK: 로그인 액션
     @IBAction func loginAction(_ sender: Any) {
         
-        let loginNaviVC = UIStoryboard(name: "Sign", bundle: nil).instantiateViewController(withIdentifier: "LoginNaviVC")
+        guard let hasToken = userDefault.string(forKey: "token") else { return }
         
-        self.present(loginNaviVC, animated: true, completion: nil)
+        print("hasToken: "+hasToken)
+        if hasToken == ""{
+            let loginNaviVC = UIStoryboard(name: "Sign", bundle: nil).instantiateViewController(withIdentifier: "LoginNaviVC")
+            
+            self.present(loginNaviVC, animated: true, completion: nil)
+        }else{
+            let popUPVC = UIStoryboard(name: "Sign", bundle: nil).instantiateViewController(withIdentifier: "LoginMainPopUpViewController") as! LoginMainPopUpViewController
+            self.addChildViewController(popUPVC)
+            popUPVC.view.frame = self.view.frame
+            self.view.addSubview(popUPVC.view)
+            popUPVC.didMove(toParentViewController: self)
+        }
+        
     }
     
     //MARK: 홈 액션
