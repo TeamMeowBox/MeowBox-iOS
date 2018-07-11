@@ -24,10 +24,6 @@ struct OrderService : APIService{
         
         let URL = url("/order/order_page")
         
-        let random = arc4random()
-        
-        userDefault.set(String(random), forKey: "random_key")
-        
         let body: [String: Any] = [
             "name": name,
             "address": address,
@@ -232,14 +228,14 @@ struct OrderService : APIService{
         let userDefault = UserDefaults.standard
         
         guard let token = userDefault.string(forKey: "token") else { return }
-        guard let random_key = userDefault.string(forKey: "random_key") else{ return }
+        guard let myorderidx = userDefault.string(forKey: "myorderidx") else{ return }
         
         let headers = ["authorization": token]
         
         let URL = url("/order/order_result/check_order")
         
         let body: [String: Any] = [
-            "random_key" : random_key
+            "merchant_uid" : myorderidx
         ]
         
         
