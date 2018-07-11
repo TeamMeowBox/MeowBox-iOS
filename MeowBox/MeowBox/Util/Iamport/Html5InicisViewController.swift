@@ -35,7 +35,7 @@ class Html5InicisViewController: UIViewController {
             .setIdName(nil)                         // 상점아이디 ({PG사명}.{상점아이디}으로 생성시 사용)
             .setPayMethod(.card)                    // 결제 형식
             .setWebView(self.webView)               // 현재 Controller에 있는 WebView 지정
-            .setRedirectUrl("http://13.209.220.1:3000/order/order_result")                    // m_redirect_url 주소
+            .setRedirectUrl("http://13.124.92.40:3000/order/order_result")                    // m_redirect_url 주소
         //
         //guard let price = userDefault.string(forKey: "order_price") else{ return }
         guard let email = userDefault.string(forKey: "order_email") else{ return }
