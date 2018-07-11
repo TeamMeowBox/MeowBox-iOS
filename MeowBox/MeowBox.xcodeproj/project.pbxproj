@@ -74,6 +74,9 @@
 		CC336E1E20F2746E00073E96 /* Ticketed.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC336E1D20F2746D00073E96 /* Ticketed.swift */; };
 		CC336E2020F276C400073E96 /* Ticket.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC336E1F20F276C400073E96 /* Ticket.swift */; };
 		CC336E2220F2772500073E96 /* OrderList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC336E2120F2772500073E96 /* OrderList.swift */; };
+		CC35D3E220F5D503006FC289 /* QnAData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC35D3E120F5D503006FC289 /* QnAData.swift */; };
+		CC35D3E420F5D532006FC289 /* QnA.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC35D3E320F5D532006FC289 /* QnA.swift */; };
+		CC35D3E620F5D56A006FC289 /* QnAList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC35D3E520F5D56A006FC289 /* QnAList.swift */; };
 		CC4493BD20EBCBC60095D118 /* Order1ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4493BC20EBCBC60095D118 /* Order1ContainerViewController.swift */; };
 		CC44CBB420EB2174007466D8 /* Mypage2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC44CBB320EB2174007466D8 /* Mypage2.storyboard */; };
 		CC44CBB620EB21EB007466D8 /* SuggestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC44CBB520EB21EB007466D8 /* SuggestViewController.swift */; };
@@ -177,6 +180,9 @@
 		CC336E1D20F2746D00073E96 /* Ticketed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticketed.swift; sourceTree = "<group>"; };
 		CC336E1F20F276C400073E96 /* Ticket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticket.swift; sourceTree = "<group>"; };
 		CC336E2120F2772500073E96 /* OrderList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderList.swift; sourceTree = "<group>"; };
+		CC35D3E120F5D503006FC289 /* QnAData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QnAData.swift; sourceTree = "<group>"; };
+		CC35D3E320F5D532006FC289 /* QnA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QnA.swift; sourceTree = "<group>"; };
+		CC35D3E520F5D56A006FC289 /* QnAList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QnAList.swift; sourceTree = "<group>"; };
 		CC4493BC20EBCBC60095D118 /* Order1ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order1ContainerViewController.swift; sourceTree = "<group>"; };
 		CC44CBB320EB2174007466D8 /* Mypage2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mypage2.storyboard; sourceTree = "<group>"; };
 		CC44CBB520EB21EB007466D8 /* SuggestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestViewController.swift; sourceTree = "<group>"; };
@@ -322,6 +328,9 @@
 				CC794FE120F3482100B8EEEE /* Cat.swift */,
 				CC2DBE6320F388C3007F61D2 /* LatestAddress.swift */,
 				CC2DBE6520F389A6007F61D2 /* LatestAddressData.swift */,
+				CC35D3E120F5D503006FC289 /* QnAData.swift */,
+				CC35D3E320F5D532006FC289 /* QnA.swift */,
+				CC35D3E520F5D56A006FC289 /* QnAList.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -636,6 +645,8 @@
 				CC5CE21B20E9C40D00FCE6AD /* OrderWithInfo3ViewController.swift in Sources */,
 				CCDD5E7820E945C100A989CB /* OrderWithInfo2ViewController.swift in Sources */,
 				CC693A1120EE080E00DA0935 /* TicketViewController.swift in Sources */,
+				CC35D3E220F5D503006FC289 /* QnAData.swift in Sources */,
+				CC35D3E420F5D532006FC289 /* QnA.swift in Sources */,
 				CCF0947A20F1EE460029567B /* OrderService.swift in Sources */,
 				22A86ED220EBD81D00B17661 /* LoginPopUp1ViewController.swift in Sources */,
 				CC44CBBA20EB2307007466D8 /* SettingViewController.swift in Sources */,
@@ -670,17 +681,14 @@
 				CC5CE21F20E9D3B500FCE6AD /* OrderCompleteViewController.swift in Sources */,
 				22A86EDA20EBF09500B17661 /* LogoutSucessPopUpViewController.swift in Sources */,
 				CC44CBB620EB21EB007466D8 /* SuggestViewController.swift in Sources */,
+				CC35D3E620F5D56A006FC289 /* QnAList.swift in Sources */,
 				22E8F7EA20EBF90D00735276 /* WithdrawalSucessPopUpViewController.swift in Sources */,
 				221560F620F3E51100EA5C2B /* MainService.swift in Sources */,
 				CC336E1E20F2746E00073E96 /* Ticketed.swift in Sources */,
 				CC44CBB820EB2235007466D8 /* QuestionViewController.swift in Sources */,
 				221560F820F3E5EE00EA5C2B /* CatCountData.swift in Sources */,
-
-
 				CCC82BFF20F4753A007A23F3 /* RemoteViewController.swift in Sources */,
-
 				2215610220F47B4300EA5C2B /* ReviewService.swift in Sources */,
-
 				2200E31F20F309AC0030A7E9 /* Account.swift in Sources */,
 				CC54E41620EC9892007C5C4E /* QuestionTableViewCell.swift in Sources */,
 				22156DC020EF85570014491E /* MeowBoxDetailCollectionViewCell.swift in Sources */,

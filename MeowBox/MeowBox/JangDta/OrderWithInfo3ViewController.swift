@@ -89,7 +89,7 @@ class OrderWithInfo3ViewController: UIViewController {
     }
     
     @objc func selectionChanged() {
-        print("selected: \(selectionList.selectedIndex ?? 9999)")
+        //print("selected: \(selectionList.selectedIndex ?? 9999)")
         
         if selectionList.selectedIndex == 0{
             selectProduct = "1"

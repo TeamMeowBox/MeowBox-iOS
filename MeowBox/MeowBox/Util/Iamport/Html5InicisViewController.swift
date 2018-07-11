@@ -58,7 +58,7 @@ class Html5InicisViewController: UIViewController {
         // 결제 정보 데이타
         let parameters: IAMPortParameters = [
             "merchant_uid": merchant,
-            "name": "탈모샴푸",
+            "name": "미유박스",
             "amount": "100",
             "buyer_email": email,
             "buyer_name": name,

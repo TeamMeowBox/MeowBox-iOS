@@ -35,6 +35,7 @@ class OrderWithInfo4ViewController: UIViewController {
     
     @IBOutlet weak var totalPriceLabel: UILabel!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -56,15 +57,13 @@ class OrderWithInfo4ViewController: UIViewController {
         
         //recentaddress()
         guard let first = userDefault.string(forKey: "amIfirst") else {return }
-        print("amIfirst: "+first)
-        if userDefault.string(forKey: "amIfirst") == "yes"{
+        //print("amIfirst: "+first)
+        if first == "yes"{
             isordersuccess()
         }
         
-        
         guard let price = userDefault.string(forKey: "order_price") else{ return }
-        print(price)
-        
+        //print(price)
         totalPriceLabel.text = price+" 원"
         
         
@@ -84,14 +83,23 @@ class OrderWithInfo4ViewController: UIViewController {
         
         setOrderSetting()
         
-        
 //        let navi = UIStoryboard(name: "Order", bundle: nil).instantiateViewController(withIdentifier: "iamportNavi") as! UINavigationController
         
-        let controller = Html5InicisViewController()
+        guard let payment = userDefault.string(forKey: "payment_method") else {return}
         
-        self.navigationController?.pushViewController(controller, animated: true)
-        //navi?.pushViewController(controller, animated: true)
-        //order()
+        if payment == "1"{ //  신용카드
+            
+            let controller = Html5InicisViewController()
+            
+            self.navigationController?.pushViewController(controller, animated: true)
+            //parentVC?.navigationController?.pushViewController(controller, animated: true)
+        }else if payment == "2"{ // 현금결제
+            let alertView = UIAlertController(title: "현금결제", message: "@@@@@@@", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "확인", style: .default, handler: nil)
+            alertView.addAction(ok)
+            self.present(alertView, animated: true, completion: nil)
+        }
+        
     }
     
     @IBAction func backWithInfo3(_ sender: Any) {
@@ -159,6 +167,8 @@ class OrderWithInfo4ViewController: UIViewController {
         
         guard let orderAdd = orderAddress else { return }
         
+    
+        
         OrderService.order(name: gsno(nameTextField.text), address: orderAdd, phone_number: gsno(phoneTextField.text), product: gsno(userDefault.string(forKey: "order_product")), price: gsno(userDefault.string(forKey: "order_price")), email: gsno(emailTextField.text), payment_method: gsno(userDefault.string(forKey: "payment_method"))){ message in
             if message == "success"{
                 
@@ -203,15 +213,11 @@ class OrderWithInfo4ViewController: UIViewController {
     func setOrderSetting(){
         orderAddress = "\(gsno(addressTextField1.text)) \(gsno(addressTextField2.text))"
         
-        print("***************1*************")
         userDefault.set(gsno(nameTextField.text), forKey: "order_name")
-        print("***************2*************")
         userDefault.set(orderAddress, forKey: "order_address")
-        print("***************3*************")
         userDefault.set(gsno(phoneTextField.text), forKey: "order_phone_number")
-        print("***************4*************")
         userDefault.set(gsno(emailTextField.text), forKey: "order_email")
-        print("***************5*************")
+        
     }
     
     func isordersuccess(){

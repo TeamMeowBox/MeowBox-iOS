@@ -798,7 +798,7 @@
                                                     <constraint firstAttribute="width" constant="244" id="nAq-xP-6iu"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="18"/>
-                                                <state key="normal" title="                                     다음 →">
+                                                <state key="normal" title="                                     완료">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
