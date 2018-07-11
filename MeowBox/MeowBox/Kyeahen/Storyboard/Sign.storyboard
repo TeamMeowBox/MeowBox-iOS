@@ -641,7 +641,6 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="PMH-1V-cuS" firstAttribute="bottom" secondItem="zvs-wV-wNV" secondAttribute="bottom" id="16v-Pb-4K9"/>
                             <constraint firstItem="n6W-k5-clr" firstAttribute="centerY" secondItem="zvs-wV-wNV" secondAttribute="centerY" id="XXc-If-obE"/>
@@ -653,7 +652,6 @@
                         <viewLayoutGuide key="safeArea" id="zvs-wV-wNV"/>
                     </view>
                     <connections>
-                        <outlet property="contentTextView" destination="kL7-ai-I5G" id="ijz-ub-Tfd"/>
                         <outlet property="okBtn" destination="IdS-rv-ipP" id="uM3-s2-M76"/>
                         <outlet property="popUpView" destination="n6W-k5-clr" id="abZ-zm-eBp"/>
                     </connections>

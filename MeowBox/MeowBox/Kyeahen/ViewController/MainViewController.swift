@@ -187,10 +187,11 @@ class MainViewController: UIViewController,UICollectionViewDelegate,UICollection
             
             self.present(loginNaviVC, animated: true, completion: nil)
         }else{
-            let alertView = UIAlertController(title: "로그인", message: "이미 로그인 된 상태입니다.", preferredStyle: .alert)
-            let ok = UIAlertAction(title: "확인", style: .default, handler: nil)
-            alertView.addAction(ok)
-            self.present(alertView, animated: true, completion: nil)
+            let popUPVC = UIStoryboard(name: "Sign", bundle: nil).instantiateViewController(withIdentifier: "LoginMainPopUpViewController") as! LoginMainPopUpViewController
+            self.addChildViewController(popUPVC)
+            popUPVC.view.frame = self.view.frame
+            self.view.addSubview(popUPVC.view)
+            popUPVC.didMove(toParentViewController: self)
         }
         
         
