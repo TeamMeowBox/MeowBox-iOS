@@ -94,10 +94,11 @@ class LoginViewController: UIViewController {
                 let mainVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainNaviVC")
                 self.present(mainVC, animated: true, completion: nil)
             }else if message == "failure"{
-                let alertView = UIAlertController(title: "로그인 실패", message: "아이디와 비밀번호를 확인해주세요", preferredStyle: .alert)
-                let ok = UIAlertAction(title: "확인", style: .default, handler: nil)
-                alertView.addAction(ok)
-                self.present(alertView, animated: true, completion: nil)
+                let popUPVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: LoginFailPopUpViewController.reuseIdentifier) as! LoginFailPopUpViewController
+                self.addChildViewController(popUPVC)
+                popUPVC.view.frame = self.view.frame
+                self.view.addSubview(popUPVC.view)
+                popUPVC.didMove(toParentViewController: self)
             }
             
         }

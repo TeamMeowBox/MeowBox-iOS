@@ -43,7 +43,7 @@
                                     <constraint firstAttribute="height" constant="17.300000000000001" id="bxI-F3-WcW"/>
                                 </constraints>
                                 <color key="tintColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" image="side-bar-back-btn2"/>
+                                <state key="normal" image="side-bar-back-btn4"/>
                                 <connections>
                                     <action selector="sideBarBackAction:" destination="8et-LN-MJo" eventType="touchUpInside" id="Ys6-ON-CeB"/>
                                 </connections>
@@ -427,7 +427,7 @@
                                     <constraint firstAttribute="height" constant="17.300000000000001" id="VKR-ej-ZQt"/>
                                 </constraints>
                                 <color key="tintColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" image="side-bar-back-btn2"/>
+                                <state key="normal" image="side-bar-back-btn4"/>
                                 <connections>
                                     <action selector="sideBarBackAction:" destination="fD7-XL-RjA" eventType="touchUpInside" id="Jum-xs-kB0"/>
                                 </connections>
@@ -800,9 +800,9 @@
                             <constraint firstItem="hBX-Kq-jCQ" firstAttribute="leading" secondItem="750-ug-udk" secondAttribute="leading" id="VhW-PT-njc"/>
                             <constraint firstItem="Sgg-d2-5EF" firstAttribute="leading" secondItem="Z7i-Zt-Db8" secondAttribute="leading" id="WFY-1m-k4k"/>
                             <constraint firstItem="9S3-XL-x9s" firstAttribute="bottom" secondItem="vXj-5K-lZb" secondAttribute="bottom" id="YFi-Bb-wgZ"/>
-                            <constraint firstItem="Ik2-Jw-vsU" firstAttribute="trailing" secondItem="5yD-5z-YCR" secondAttribute="trailing" id="cLK-n7-BU8"/>
+                            <constraint firstAttribute="trailing" secondItem="Ik2-Jw-vsU" secondAttribute="trailing" id="cLK-n7-BU8"/>
                             <constraint firstItem="750-ug-udk" firstAttribute="width" secondItem="750-ug-udk" secondAttribute="height" multiplier="25:4" id="dec-Wr-fwc"/>
-                            <constraint firstAttribute="leading" secondItem="Ik2-Jw-vsU" secondAttribute="leading" id="dn4-DZ-X0H"/>
+                            <constraint firstItem="Ik2-Jw-vsU" firstAttribute="leading" secondItem="5yD-5z-YCR" secondAttribute="leading" id="dn4-DZ-X0H"/>
                             <constraint firstItem="tFq-lI-g1b" firstAttribute="leading" secondItem="x2e-mF-wQb" secondAttribute="trailing" constant="150.65000000000001" id="eRB-oM-pLv"/>
                             <constraint firstItem="Z7i-Zt-Db8" firstAttribute="leading" secondItem="TCK-CJ-hxg" secondAttribute="leading" id="fOf-zp-FMK"/>
                             <constraint firstItem="Fcs-SE-JLr" firstAttribute="top" secondItem="KYB-N8-5oL" secondAttribute="bottom" constant="5.5" id="ggY-dy-nWg"/>
@@ -877,7 +877,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="side-bar-back-btn2" width="17" height="19"/>
+        <image name="side-bar-back-btn4" width="17" height="19"/>
         <image name="side-bar-btn-gray" width="20" height="16"/>
         <image name="sidebar-default-img" width="49" height="49"/>
         <image name="top-btn" width="135" height="33"/>
