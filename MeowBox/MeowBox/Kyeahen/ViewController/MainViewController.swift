@@ -8,6 +8,7 @@
 
 import UIKit
 import Lottie
+import Kingfisher
 
 class MainViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     
@@ -37,13 +38,13 @@ class MainViewController: UIViewController,UICollectionViewDelegate,UICollection
     let logoImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 128, height: 21))
     
 
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print(gsno(userDefault.string(forKey: "image_profile")))
         userDefault.set("yes", forKey: "amIfirst")
         
         loginCheck()
+        profileImageCheck()
         
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -62,6 +63,7 @@ class MainViewController: UIViewController,UICollectionViewDelegate,UICollection
         //프로필 이미지 동그랗게
         profileImage.layer.masksToBounds = true
         profileImage.layer.cornerRadius = profileImage.layer.frame.width/2
+        profileImage.kf.setImage(with: URL(string: gsno(userDefault.string(forKey: "image_profile"))), placeholder: UIImage())
         
         //bottomView click litener
         let gesture = UITapGestureRecognizer(target: self, action:  #selector(self.bottomViewAction))
@@ -82,6 +84,7 @@ class MainViewController: UIViewController,UICollectionViewDelegate,UICollection
     
     override func viewWillAppear(_ animated: Bool) {
         loginCheck()
+        profileImageCheck()
     }
     
     
@@ -99,6 +102,13 @@ class MainViewController: UIViewController,UICollectionViewDelegate,UICollection
         }
         else {
             loginInfoLabel.text = "안녕하세요, \(name)님"
+        }
+    }
+    
+    func profileImageCheck() {
+        let pImage = gsno(userDefault.string(forKey: "image_profile"))
+        if pImage == "" {
+            profileImage.image = #imageLiteral(resourceName: "sidebar-default-img")
         }
     }
     
