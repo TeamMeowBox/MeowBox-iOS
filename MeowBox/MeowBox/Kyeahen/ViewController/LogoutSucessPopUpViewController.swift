@@ -15,6 +15,8 @@ class LogoutSucessPopUpViewController: UIViewController {
     
     @IBOutlet weak var logoutSucessBtn: UIButton!
     
+    let userdefault = UserDefaults.standard
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -69,6 +71,7 @@ class LogoutSucessPopUpViewController: UIViewController {
     @IBAction func sucessAction(_ sender: Any) {
         let mainNaviVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainNaviVC")
         remove_pref(remove_key: "name")
+        remove_pref(remove_key: "image_profile")
         self.present(mainNaviVC, animated: true, completion: nil)
     }
 

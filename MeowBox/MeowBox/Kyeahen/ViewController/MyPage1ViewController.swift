@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import Kingfisher
 
 class MyPage1ViewController: UIViewController {
 
@@ -40,6 +41,7 @@ class MyPage1ViewController: UIViewController {
         super.viewDidLoad()
 
         loginCheck()
+        profileImageCheck()
         
         //container view
         setupView()
@@ -51,15 +53,28 @@ class MyPage1ViewController: UIViewController {
         //프로필 이미지 동그랗게
         profileImageView.layer.masksToBounds = true
         profileImageView.layer.cornerRadius = profileImageView.layer.frame.width/2
+        profileImageView.kf.setImage(with: URL(string: gsno(userdefault.string(forKey: "image_profile"))), placeholder: UIImage())
     
         sideBarProfileImageView.layer.masksToBounds = true
         sideBarProfileImageView.layer.cornerRadius = sideBarProfileImageView.layer.frame.width/2
+        sideBarProfileImageView.kf.setImage(with: URL(string: gsno(userdefault.string(forKey: "image_profile"))), placeholder: UIImage())
         
         // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
         loginCheck()
+        profileImageCheck()
+        sideBarProfileImageView.kf.setImage(with: URL(string: gsno(userdefault.string(forKey: "image_profile"))), placeholder: UIImage())
+        profileImageView.kf.setImage(with: URL(string: gsno(userdefault.string(forKey: "image_profile"))), placeholder: UIImage())
+    }
+    
+    //MARK: 프로필 이미지 체크 함수
+    func profileImageCheck() {
+        let pImage = gsno(userdefault.string(forKey: "image_profile"))
+        if pImage == "" {
+            profileImageView.image = #imageLiteral(resourceName: "sidebar-default-img")
+        }
     }
     
     //MARK: 로그인 체크 함수
@@ -347,7 +362,7 @@ class MyPage1ViewController: UIViewController {
             
             print(catinfo)
             
-            if catinfo == "-1" {
+            if catinfo == "-1" || catinfo == "" {
                 
                 self.catNameLabel.text = name + "님"
                 self.butlerLabel.isHidden = true

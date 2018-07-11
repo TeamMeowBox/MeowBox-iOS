@@ -39,11 +39,13 @@ class MyAccountViewController: UIViewController {
     
     var accounts: Account?
     var size: Int = 0
+    let userdefault = UserDefaults.standard
+    
+    var profileUrl: URL?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print("졸려")
+
         myAccountInit()
         
         initDatePicker()
@@ -149,6 +151,12 @@ class MyAccountViewController: UIViewController {
         
     }
     
+    func remove_pref(remove_key : String){
+        UserDefaults.standard.removeObject(forKey: remove_key)
+        UserDefaults.standard.synchronize()
+    }
+
+    
     func myAccountInit() {
         MyPageService.myAccountInit() { (accountData) in
             print("통신 시작")
@@ -159,6 +167,8 @@ class MyAccountViewController: UIViewController {
             self.catNameTextField.text = self.gsno(accountData.cat_name)
             self.dateTextField.text = self.gsno(accountData.birthday)
             self.infoEtcTextView.text = self.gsno(accountData.caution)
+            
+            self.userdefault.set(self.gsno(accountData.image_profile), forKey: "image_profile")
             
             if accountData.size == 1 {
                 self.smallSizeBtn.setImage(#imageLiteral(resourceName: "small-radio-btn-pink"), for: .normal)
@@ -188,6 +198,9 @@ class MyAccountViewController: UIViewController {
             MyPageService.updateAccount(user_name: gsno(nameTextField.text), user_phone: gsno(phoneTextField.text), user_email: gsno(emailTextField.text), image_profile: profileImageView.image!, cat_name: gsno(catNameTextField.text), cat_size: size, cat_birthday: gsno(dateTextField.text), cat_caution: gsno(infoEtcTextView.text)) {
     
                     let myPageNaviVC = UIStoryboard(name: "MyPage", bundle: nil).instantiateViewController(withIdentifier: "MyPageNaviVC")
+                
+//                self.userdefault.set(self.profileImageView.image, forKey: "image_profile")
+                
                     self.present(myPageNaviVC, animated: true, completion: nil)
                     print("수정 완료!")
         }
@@ -265,6 +278,31 @@ extension MyAccountViewController: UIImagePickerControllerDelegate, UINavigation
             profileImageView.image = editedImage
         } else if let originalImage: UIImage = info[UIImagePickerControllerOriginalImage] as? UIImage{
             profileImageView.image = originalImage
+        }
+        
+//        if let imageUrl = info[UIImagePickerControllerReferenceURL] as? URL{
+//            profileUrl = imageUrl
+//
+//
+//            print((profileUrl)!)
+//            self.userdefault.set((self.profileUrl)!, forKey: "image_profile")
+//
+//        }
+        
+        if let imgUrl = info[UIImagePickerControllerImageURL] as? URL{
+            let imgName = imgUrl.lastPathComponent
+            let documentDirectory = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first
+            let localPath = documentDirectory?.appending(imgName)
+            
+            let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+            let data = UIImagePNGRepresentation(image)! as NSData
+            data.write(toFile: localPath!, atomically: true)
+            //let imageData = NSData(contentsOfFile: localPath!)!
+            let photoURL = URL.init(fileURLWithPath: localPath!)//NSURL(fileURLWithPath: localPath!)
+            print(photoURL)
+            
+            self.userdefault.set(photoURL, forKey: "image_profile")
+            
         }
         
         self.dismiss(animated: true) {
