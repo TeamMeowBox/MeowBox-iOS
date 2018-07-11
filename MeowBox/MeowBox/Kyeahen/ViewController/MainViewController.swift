@@ -36,12 +36,14 @@ class MainViewController: UIViewController,UICollectionViewDelegate,UICollection
     let logo : UIImage = UIImage(named: "meowbox-logo-pink.png")!
     let logoImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 128, height: 21))
     
-    var boatAnimation : LOTAnimationView?
+    var animationView : LOTAnimationView?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //playLaunch()
+        playLaunch()
+//        sleep(3)
+//        animationView?.removeFromSuperview()
         
         userDefault.set("yes", forKey: "amIfirst")
         
@@ -329,18 +331,19 @@ class MainViewController: UIViewController,UICollectionViewDelegate,UICollection
     
     func playLaunch(){
         
-        boatAnimation = LOTAnimationView(name: "meow_box_splash")
+        animationView = LOTAnimationView(name: "meow_box_splash_4")
+        animationView?.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
+        animationView?.center = self.view.center
+        animationView?.contentMode = .scaleAspectFill
         
-        boatAnimation!.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        view.addSubview(animationView!)
         
-        boatAnimation!.contentMode = .scaleAspectFill
+        animationView?.play(completion: { (finished) in
+            if finished{
+                self.animationView?.removeFromSuperview()
+            }
+        })
         
-        boatAnimation!.frame = view.bounds
-        
-        view.addSubview(boatAnimation!)
-        
-        boatAnimation?.play()
-        sleep(4)
         
     }
 

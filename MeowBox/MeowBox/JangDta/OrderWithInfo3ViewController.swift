@@ -41,7 +41,9 @@ class OrderWithInfo3ViewController: UIViewController {
         userDefault.set(selectProduct, forKey: "order_product")
         userDefault.set(selectPrice, forKey: "order_price")
         print("3 ->  "+userDefault.string(forKey: "order_price")!)
-        parentVC?.changeVC(num: 4)
+        
+        checkoverlap()
+        
     }
     
     @IBAction func backWithInfo2(_ sender: Any) {
@@ -160,6 +162,20 @@ class OrderWithInfo3ViewController: UIViewController {
         box4View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "card-box-pink-1"))
         selectProduct = "7"
         selectPrice = "60000"
+    }
+    
+    
+    func checkoverlap(){
+        OrderService.checkoverlap { (message) in
+            if message == "success"{
+                self.parentVC?.changeVC(num: 4)
+            }else{
+                let alertView = UIAlertController(title: "정기권 중복", message: "정기권이 이미 있습니다.", preferredStyle: .alert)
+                let ok = UIAlertAction(title: "확인", style: .default, handler: nil)
+                alertView.addAction(ok)
+                self.present(alertView, animated: true, completion: nil)
+            }
+        }
     }
     
     

@@ -266,6 +266,60 @@ struct OrderService : APIService{
     
     
     
+    //MARK : 정기권 중복 여부 서비스
+    static func checkoverlap(completion: @escaping (_ message: String)->Void){
+        let userDefault = UserDefaults.standard
+        
+        guard let token = userDefault.string(forKey: "token") else { return }
+        guard let product = userDefault.string(forKey: "order_product") else { return }
+        
+        let headers = ["authorization": token]
+        
+        let URL = url("/order/order_page/product/"+product)
+        
+        
+        Alamofire.request(URL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: headers).responseData(){ res in
+            switch res.result{
+            case .success:
+                if let value = res.result.value{
+                    if let message = JSON(value)["message"].string{
+                        print(message)
+                        if message == "success"{ // 최근 주문지 불러오기 성공
+                            print("정기권 중복 여부 확인 성공!")
+                            
+                            let decoder = JSONDecoder()
+                            do{
+                                let data = try decoder.decode(Overlap.self, from: value)
+                                if data.result == ""{
+                                    completion("success")
+                                }else{
+                                    completion("failure")
+                                }
+                                
+                            }catch{
+                                print("catcch....")
+                            }
+                            
+                            
+                            
+
+                        }else{
+                            
+                        }
+                    }
+                }
+                
+                break
+            case .failure(let err):
+                print(err.localizedDescription)
+                break
+            }
+        }
+    }
+    
+
+    
+    
     
     //MARK : 자주 묻는 질문 서비스
     static func qna(completion: @escaping (QnAList?)->Void){

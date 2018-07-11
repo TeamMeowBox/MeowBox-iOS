@@ -77,6 +77,8 @@
 		CC35D3E220F5D503006FC289 /* QnAData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC35D3E120F5D503006FC289 /* QnAData.swift */; };
 		CC35D3E420F5D532006FC289 /* QnA.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC35D3E320F5D532006FC289 /* QnA.swift */; };
 		CC35D3E620F5D56A006FC289 /* QnAList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC35D3E520F5D56A006FC289 /* QnAList.swift */; };
+		CC35D3E820F5E0C4006FC289 /* Overlap.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC35D3E720F5E0C4006FC289 /* Overlap.swift */; };
+		CC35D3EE20F5E533006FC289 /* meow_box_splash_4.json in Resources */ = {isa = PBXBuildFile; fileRef = CC35D3ED20F5E533006FC289 /* meow_box_splash_4.json */; };
 		CC4493BD20EBCBC60095D118 /* Order1ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4493BC20EBCBC60095D118 /* Order1ContainerViewController.swift */; };
 		CC44CBB420EB2174007466D8 /* Mypage2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC44CBB320EB2174007466D8 /* Mypage2.storyboard */; };
 		CC44CBB620EB21EB007466D8 /* SuggestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC44CBB520EB21EB007466D8 /* SuggestViewController.swift */; };
@@ -183,6 +185,8 @@
 		CC35D3E120F5D503006FC289 /* QnAData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QnAData.swift; sourceTree = "<group>"; };
 		CC35D3E320F5D532006FC289 /* QnA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QnA.swift; sourceTree = "<group>"; };
 		CC35D3E520F5D56A006FC289 /* QnAList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QnAList.swift; sourceTree = "<group>"; };
+		CC35D3E720F5E0C4006FC289 /* Overlap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Overlap.swift; sourceTree = "<group>"; };
+		CC35D3ED20F5E533006FC289 /* meow_box_splash_4.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = meow_box_splash_4.json; path = ../../../../Downloads/meow_box_splash_4.json; sourceTree = "<group>"; };
 		CC4493BC20EBCBC60095D118 /* Order1ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order1ContainerViewController.swift; sourceTree = "<group>"; };
 		CC44CBB320EB2174007466D8 /* Mypage2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mypage2.storyboard; sourceTree = "<group>"; };
 		CC44CBB520EB21EB007466D8 /* SuggestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestViewController.swift; sourceTree = "<group>"; };
@@ -285,6 +289,7 @@
 		222B5DAD20E8BA26003F0A8C /* MeowBox */ = {
 			isa = PBXGroup;
 			children = (
+				CC35D3ED20F5E533006FC289 /* meow_box_splash_4.json */,
 				227DF56C20E908E200050EBC /* Kyeahen */,
 				CCB12E5E20E90D5B00C5D4B8 /* JangDta */,
 				222B5DAE20E8BA26003F0A8C /* AppDelegate.swift */,
@@ -331,6 +336,7 @@
 				CC35D3E120F5D503006FC289 /* QnAData.swift */,
 				CC35D3E320F5D532006FC289 /* QnA.swift */,
 				CC35D3E520F5D56A006FC289 /* QnAList.swift */,
+				CC35D3E720F5E0C4006FC289 /* Overlap.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -551,6 +557,7 @@
 				22B9EF4720EA039D00A2A9FD /* Roboto-Medium.ttf in Resources */,
 				222B5DB420E8BA26003F0A8C /* Main.storyboard in Resources */,
 				229407BB20EA182D00AB2B0C /* NotoSansCJKkr-Regular.otf in Resources */,
+				CC35D3EE20F5E533006FC289 /* meow_box_splash_4.json in Resources */,
 				229407BA20EA182D00AB2B0C /* NotoSansMonoCJKkr-Regular.otf in Resources */,
 				229407B820EA182D00AB2B0C /* NotoSansCJKkr-Thin.otf in Resources */,
 				22B9EF4B20EA07EC00A2A9FD /* MeowBox.storyboard in Resources */,
@@ -692,6 +699,7 @@
 				2200E31F20F309AC0030A7E9 /* Account.swift in Sources */,
 				CC54E41620EC9892007C5C4E /* QuestionTableViewCell.swift in Sources */,
 				22156DC020EF85570014491E /* MeowBoxDetailCollectionViewCell.swift in Sources */,
+				CC35D3E820F5E0C4006FC289 /* Overlap.swift in Sources */,
 				CC4AD41F20EE1D0700C31E53 /* CheckTicketViewController.swift in Sources */,
 				CCB12E5B20E90C6B00C5D4B8 /* OrderWithInfoViewController.swift in Sources */,
 				22A86ED420EBE13600B17661 /* OrderPagePopUpViewController.swift in Sources */,
