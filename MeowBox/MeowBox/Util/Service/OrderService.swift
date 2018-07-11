@@ -129,7 +129,7 @@ struct OrderService : APIService{
         let URL = url("/order/order_detail")
 
         let body: [String: Any] = [
-            "order_idx" : "12"
+            "order_idx" : order_idx
         ]
 
         Alamofire.request(URL, method: .post, parameters: body, encoding: JSONEncoding.default, headers: headers).responseData() { res in
@@ -353,6 +353,48 @@ struct OrderService : APIService{
                             
                             
                             
+                        }else{
+                            print("fail...")
+                        }
+                    }
+                }
+                
+                break
+            case .failure(let err):
+                print(err.localizedDescription)
+                break
+            }
+        }
+    }
+    
+    //MARK : 정기권 취소 서비스
+    static func cancelticket(completion: @escaping (_ message: String)->Void){
+        let userDefault = UserDefaults.standard
+        
+        print("정기권취소들어옴")
+        guard let token = userDefault.string(forKey: "token") else { return }
+        guard let idx = userDefault.string(forKey: "myticket_idx") else { return }
+        print("idx:"+idx)
+        
+        let headers = ["authorization": token]
+        
+        let URL = url("/order/order_list/"+idx)
+        
+        
+        Alamofire.request(URL, method: .delete, parameters: nil, encoding: JSONEncoding.default, headers: headers).responseData(){ res in
+            switch res.result{
+            case .success:
+                if let value = res.result.value{
+                    if let message = JSON(value)["message"].string{
+                        print(message)
+                        if message == "success"{ // 정기권 취소 성공
+                            
+                            let flag = JSON(value)["result"]["flag"].string
+                            userDefault.set(flag, forKey: "flag")
+                            print("정기권 취소 성공!")
+                            
+                            completion("success")
+
                         }else{
                             print("fail...")
                         }
