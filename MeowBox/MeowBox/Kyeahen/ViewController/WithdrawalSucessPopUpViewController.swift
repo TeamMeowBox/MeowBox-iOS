@@ -61,10 +61,18 @@ class WithdrawalSucessPopUpViewController: UIViewController {
         });
     }
     
+    func remove_pref(remove_key : String){
+        UserDefaults.standard.removeObject(forKey: remove_key)
+        UserDefaults.standard.synchronize()
+    }
+    
     //MARK: 확인 하기 액션
     @IBAction func okAction(_ sender: Any) {
         userDefault.set("", forKey: "token")
         let mainNaviVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainNaviVC")
+        
+        remove_pref(remove_key: "name")
+        remove_pref(remove_key: "image_profile")
         
         self.present(mainNaviVC, animated: true, completion: nil)
     }

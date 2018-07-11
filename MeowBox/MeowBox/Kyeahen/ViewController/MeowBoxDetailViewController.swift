@@ -43,9 +43,8 @@ class MeowBoxDetailViewController: UIViewController, UITableViewDelegate, UITabl
         //TableView
         detailTableView.delegate = self
         detailTableView.dataSource = self
-        detailTableView.contentInset = UIEdgeInsets(top: -64, left: 0, bottom: 0, right: 0)
+//        detailTableView.contentInset = UIEdgeInsets(top: -64, left: 0, bottom: 0, right: 0)
        
-        setNavigationBar()
         self.navigationItem.backBarButtonItem = barButton
         self.navigationItem.titleView = logoImageView
         
@@ -124,11 +123,9 @@ class MeowBoxDetailViewController: UIViewController, UITableViewDelegate, UITabl
     func setNavigationBar() {
         let bar: UINavigationBar! = self.navigationController?.navigationBar
         
-        bar.setBackgroundImage(UIImage(), for: .default)
-        
+        bar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         bar.shadowImage = UIImage()
-        //bar.backgroundColor = UIColor.clear
-        bar.isTranslucent = true
+        bar.backgroundColor = UIColor.clear
     }
     
     //MARK: 사이드바 액션
@@ -142,6 +139,8 @@ class MeowBoxDetailViewController: UIViewController, UITableViewDelegate, UITabl
             hiddenTrailingC.constant = -258
             leadingC.constant = 258
             trailingC.constant = -258
+            
+            setNavigationBar()
             
             sideBarIsVisible = true
             detailView.isUserInteractionEnabled = false
@@ -176,7 +175,9 @@ class MeowBoxDetailViewController: UIViewController, UITableViewDelegate, UITabl
             print("SideBar close")
         }
         
-        //네비게이션바 복원
+        //네비게이션바 투명 복원
+        self.navigationController?.navigationBar.shadowImage = UIColor( red: CGFloat(112/255.0), green: CGFloat(112/255.0), blue: CGFloat(112/255.0), alpha: CGFloat(0.2) ).as1ptImage()
+        self.navigationController?.navigationBar.barTintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         self.navigationItem.leftBarButtonItem = self.barButton
         self.navigationItem.titleView = logoImageView
         
@@ -248,9 +249,19 @@ class MeowBoxDetailViewController: UIViewController, UITableViewDelegate, UITabl
     //MARK: 마이페이지 액션
     @IBAction func myPageAction(_ sender: Any) {
         
-        let myPageNaviVC = UIStoryboard(name: "MyPage", bundle: nil).instantiateViewController(withIdentifier: "MyPageNaviVC")
-        
-        self.present(myPageNaviVC, animated: true, completion: nil)
+        if userDefault.string(forKey: "token") != ""{ // 로그인이 되어 있다면
+            let myPageNaviVC = UIStoryboard(name: "MyPage", bundle: nil).instantiateViewController(withIdentifier: "MyPageNaviVC")
+            
+            self.present(myPageNaviVC, animated: true, completion: nil)
+            
+        }else{ // 로그인 안 된 상태
+            let popUPVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: MyPagePopUpViewController.reuseIdentifier) as! MyPagePopUpViewController
+            self.addChildViewController(popUPVC)
+            popUPVC.view.frame = self.view.frame
+            self.view.addSubview(popUPVC.view)
+            popUPVC.didMove(toParentViewController: self)
+        }
+
     }
     
     //MARK: 미유박스 주문하기
