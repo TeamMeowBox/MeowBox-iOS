@@ -389,6 +389,168 @@
             </objects>
             <point key="canvasLocation" x="394.39999999999998" y="-6.2968515742128943"/>
         </scene>
+        <!--Story View Controller-->
+        <scene sceneID="A26-O1-mim">
+            <objects>
+                <viewController storyboardIdentifier="StoryViewController" id="apS-fp-lyW" customClass="StoryViewController" customModule="MeowBox" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hAM-Pw-7k6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IQ4-CG-tum">
+                                <rect key="frame" x="21" y="64" width="49" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="hhU-Aa-7p9"/>
+                                    <constraint firstAttribute="width" secondItem="IQ4-CG-tum" secondAttribute="height" multiplier="1:1" id="ulI-cR-CSf"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zdv-zb-SG0">
+                                <rect key="frame" x="220.5" y="80" width="16" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="7yy-L9-4mu"/>
+                                    <constraint firstAttribute="width" secondItem="zdv-zb-SG0" secondAttribute="height" multiplier="16:17" id="ogZ-tP-s5N"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="side-bar-back-btn4"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="로그인이 필요합니다." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sVi-WD-cAY">
+                                <rect key="frame" x="21" y="124" width="133" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23" id="Pjg-Ld-57Q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="15"/>
+                                <color key="textColor" red="0.29803921568627451" green="0.30588235294117649" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8NR-q7-lcz">
+                                <rect key="frame" x="21" y="155" width="218" height="0.5"/>
+                                <color key="backgroundColor" red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="8NR-q7-lcz" secondAttribute="height" multiplier="218:0.5" id="9Wn-g8-75A"/>
+                                    <constraint firstAttribute="height" constant="0.5" id="EJv-6v-Bnp"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AXu-Mr-Kdc">
+                                <rect key="frame" x="21" y="190" width="160" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="Cog-9v-325"/>
+                                    <constraint firstAttribute="height" constant="24" id="HOy-KL-kHK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="20"/>
+                                <state key="normal" title="로그인">
+                                    <color key="titleColor" red="0.29803921568627451" green="0.30588235294117649" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginAction:" destination="apS-fp-lyW" eventType="touchUpInside" id="Qty-Y7-1FE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jOX-du-sD0">
+                                <rect key="frame" x="21" y="261" width="160" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="Hnd-uh-Zug"/>
+                                    <constraint firstAttribute="width" constant="160" id="xae-qu-nwT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NotoSansCJKkr-Bold" family="Noto Sans CJK KR" pointSize="20"/>
+                                <state key="normal" title="홈">
+                                    <color key="titleColor" red="0.29803921568627451" green="0.30588235294117649" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zch-lZ-EMe">
+                                <rect key="frame" x="21" y="317.5" width="160" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="VQE-d8-eG5"/>
+                                    <constraint firstAttribute="width" constant="160" id="uS7-jo-a3a"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="20"/>
+                                <state key="normal" title="미유박스 이야기">
+                                    <color key="titleColor" red="0.29803921568627451" green="0.30588235294117649" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SWL-92-dH3">
+                                <rect key="frame" x="21" y="359.5" width="160" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="4g4-bV-bGb"/>
+                                    <constraint firstAttribute="width" constant="160" id="enD-KU-P4D"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="20"/>
+                                <state key="normal" title="생일축하해! 박스">
+                                    <color key="titleColor" red="0.29803921568627451" green="0.30588235294117649" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5rQ-yQ-UZm">
+                                <rect key="frame" x="21" y="402" width="160" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="4X6-Mo-rTm"/>
+                                    <constraint firstAttribute="width" constant="160" id="GR4-0K-zSe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="20"/>
+                                <state key="normal" title="주문하기">
+                                    <color key="titleColor" red="0.29803921568627451" green="0.30588235294117649" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qP0-b8-AcK">
+                                <rect key="frame" x="21" y="444" width="160" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="MSd-vK-uRh"/>
+                                    <constraint firstAttribute="height" constant="24" id="fGj-hf-sqn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="20"/>
+                                <state key="normal" title="집사들의 후기">
+                                    <color key="titleColor" red="0.29803921568627451" green="0.30588235294117649" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8HY-u9-B7W">
+                                <rect key="frame" x="21" y="500.5" width="160" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="U3t-hf-tgX"/>
+                                    <constraint firstAttribute="height" constant="24" id="q5n-Ct-hM6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="20"/>
+                                <state key="normal" title="마이페이지">
+                                    <color key="titleColor" red="0.29803921568627451" green="0.30588235294117649" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="AXu-Mr-Kdc" firstAttribute="leading" secondItem="8NR-q7-lcz" secondAttribute="leading" id="3lJ-JY-cFV"/>
+                            <constraint firstItem="jOX-du-sD0" firstAttribute="top" secondItem="AXu-Mr-Kdc" secondAttribute="bottom" constant="47.18" id="6CU-ld-O8E"/>
+                            <constraint firstItem="AXu-Mr-Kdc" firstAttribute="top" secondItem="8NR-q7-lcz" secondAttribute="bottom" constant="34.5" id="A8D-ph-GSR"/>
+                            <constraint firstItem="zdv-zb-SG0" firstAttribute="leading" secondItem="IQ4-CG-tum" secondAttribute="trailing" constant="150.65000000000001" id="Bu8-gc-CGI"/>
+                            <constraint firstItem="SWL-92-dH3" firstAttribute="top" secondItem="Zch-lZ-EMe" secondAttribute="bottom" constant="17.77" id="CGQ-8e-BNg"/>
+                            <constraint firstItem="jOX-du-sD0" firstAttribute="leading" secondItem="AXu-Mr-Kdc" secondAttribute="leading" id="FVP-ZR-Wqe"/>
+                            <constraint firstItem="5rQ-yQ-UZm" firstAttribute="top" secondItem="SWL-92-dH3" secondAttribute="bottom" constant="17.77" id="FVp-eb-KV7"/>
+                            <constraint firstItem="8NR-q7-lcz" firstAttribute="leading" secondItem="sVi-WD-cAY" secondAttribute="leading" id="O46-wA-AHg"/>
+                            <constraint firstItem="IQ4-CG-tum" firstAttribute="top" secondItem="n6J-gE-zur" secondAttribute="top" id="OCz-nZ-AuN"/>
+                            <constraint firstItem="sVi-WD-cAY" firstAttribute="top" secondItem="IQ4-CG-tum" secondAttribute="bottom" constant="11" id="QJG-qK-e6F"/>
+                            <constraint firstItem="Zch-lZ-EMe" firstAttribute="leading" secondItem="jOX-du-sD0" secondAttribute="leading" id="Ud5-L4-A87"/>
+                            <constraint firstItem="8HY-u9-B7W" firstAttribute="top" secondItem="qP0-b8-AcK" secondAttribute="bottom" constant="32.609999999999999" id="UoV-W9-PmX"/>
+                            <constraint firstItem="8NR-q7-lcz" firstAttribute="top" secondItem="sVi-WD-cAY" secondAttribute="bottom" constant="8" id="Vh7-y5-Ze1"/>
+                            <constraint firstItem="Zch-lZ-EMe" firstAttribute="top" secondItem="jOX-du-sD0" secondAttribute="bottom" constant="32.359999999999999" id="c11-9S-eFQ"/>
+                            <constraint firstItem="5rQ-yQ-UZm" firstAttribute="leading" secondItem="SWL-92-dH3" secondAttribute="leading" id="hgx-bp-2yz"/>
+                            <constraint firstItem="qP0-b8-AcK" firstAttribute="top" secondItem="5rQ-yQ-UZm" secondAttribute="bottom" constant="17.77" id="i4T-ns-Ojl"/>
+                            <constraint firstItem="sVi-WD-cAY" firstAttribute="leading" secondItem="IQ4-CG-tum" secondAttribute="leading" id="iI3-BX-TXf"/>
+                            <constraint firstItem="zdv-zb-SG0" firstAttribute="centerY" secondItem="IQ4-CG-tum" secondAttribute="centerY" id="kwA-5E-JnB"/>
+                            <constraint firstItem="qP0-b8-AcK" firstAttribute="leading" secondItem="5rQ-yQ-UZm" secondAttribute="leading" id="l39-yY-S0f"/>
+                            <constraint firstItem="8HY-u9-B7W" firstAttribute="leading" secondItem="qP0-b8-AcK" secondAttribute="leading" id="rh9-lP-VrH"/>
+                            <constraint firstItem="IQ4-CG-tum" firstAttribute="leading" secondItem="n6J-gE-zur" secondAttribute="leading" constant="21" id="tcO-QD-9IK"/>
+                            <constraint firstItem="SWL-92-dH3" firstAttribute="leading" secondItem="Zch-lZ-EMe" secondAttribute="leading" id="uti-TF-8MK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="n6J-gE-zur"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="xfX-uR-GpC">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="side-bar-btn-gray" id="5Mp-Wc-qeA"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="barButton" destination="5Mp-Wc-qeA" id="cs3-Hb-PxF"/>
+                        <outlet property="loginStatusLabel" destination="sVi-WD-cAY" id="Wtr-YY-pOT"/>
+                        <outlet property="profileImageView" destination="IQ4-CG-tum" id="2ty-4r-f1U"/>
+                        <outlet property="sideBarBackBtn" destination="zdv-zb-SG0" id="MdS-GT-E0I"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IHl-Mc-osp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2486" y="-4"/>
+        </scene>
         <!--Meow Box Review View Controller-->
         <scene sceneID="TjL-IY-BEL">
             <objects>
@@ -874,6 +1036,200 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h5G-jM-zIV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-364" y="1787"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="B8x-Yf-IB1">
+            <objects>
+                <navigationController storyboardIdentifier="StoryNaviVC" automaticallyAdjustsScrollViewInsets="NO" id="cl7-kf-ZvG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="WJV-Ze-Xgm">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="apS-fp-lyW" kind="relationship" relationship="rootViewController" id="6mU-Jt-fbm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hfQ-vO-0vT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1642" y="-4"/>
+        </scene>
+        <!--Birth View Controller-->
+        <scene sceneID="1hE-aH-1kQ">
+            <objects>
+                <viewController storyboardIdentifier="BirthViewController" id="dYi-0n-u7E" customClass="BirthViewController" customModule="MeowBox" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xbc-kS-6Bw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oO1-OF-23O">
+                                <rect key="frame" x="21" y="64" width="49" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="cDI-Uf-lS2"/>
+                                    <constraint firstAttribute="width" secondItem="oO1-OF-23O" secondAttribute="height" multiplier="1:1" id="qAS-4K-Hkx"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Vh-oF-4OL">
+                                <rect key="frame" x="220.5" y="80" width="16" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="0Vh-oF-4OL" secondAttribute="height" multiplier="16:17" id="rBe-tA-KgN"/>
+                                    <constraint firstAttribute="height" constant="17" id="zPt-eG-uOt"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="side-bar-back-btn4"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="로그인이 필요합니다." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYM-V8-3n6">
+                                <rect key="frame" x="21" y="124" width="133" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23" id="Ycc-Oo-Sjk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="15"/>
+                                <color key="textColor" red="0.29803921570000003" green="0.30588235289999999" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m8Q-fV-Vxr">
+                                <rect key="frame" x="21" y="155" width="218" height="0.5"/>
+                                <color key="backgroundColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="m8Q-fV-Vxr" secondAttribute="height" multiplier="218:0.5" id="g4q-0Y-MZb"/>
+                                    <constraint firstAttribute="height" constant="0.5" id="ron-vR-VxM"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oOY-ZY-dGH">
+                                <rect key="frame" x="21" y="190" width="160" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="gY0-lE-iXd"/>
+                                    <constraint firstAttribute="height" constant="24" id="s9o-ba-dmF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="20"/>
+                                <state key="normal" title="로그인">
+                                    <color key="titleColor" red="0.29803921570000003" green="0.30588235289999999" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sFI-50-zLD">
+                                <rect key="frame" x="21" y="261" width="160" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="ASY-4I-k6d"/>
+                                    <constraint firstAttribute="height" constant="24" id="Kxr-er-vxj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NotoSansCJKkr-Bold" family="Noto Sans CJK KR" pointSize="20"/>
+                                <state key="normal" title="홈">
+                                    <color key="titleColor" red="0.29803921570000003" green="0.30588235289999999" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YLd-Ap-pZN">
+                                <rect key="frame" x="21" y="317.5" width="160" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="YHH-x4-vzt"/>
+                                    <constraint firstAttribute="width" constant="160" id="pXN-iH-vUh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="20"/>
+                                <state key="normal" title="미유박스 이야기">
+                                    <color key="titleColor" red="0.29803921570000003" green="0.30588235289999999" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tbj-gR-ZiY">
+                                <rect key="frame" x="21" y="359.5" width="160" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="X3Y-DJ-O0C"/>
+                                    <constraint firstAttribute="width" constant="160" id="jgz-cA-gHE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="20"/>
+                                <state key="normal" title="생일축하해! 박스">
+                                    <color key="titleColor" red="0.29803921570000003" green="0.30588235289999999" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ucq-Nq-GKw">
+                                <rect key="frame" x="21" y="402" width="160" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="6L8-f4-ZRX"/>
+                                    <constraint firstAttribute="width" constant="160" id="9Nl-HZ-WI3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="20"/>
+                                <state key="normal" title="주문하기">
+                                    <color key="titleColor" red="0.29803921570000003" green="0.30588235289999999" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Msw-1a-au7">
+                                <rect key="frame" x="21" y="444" width="160" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="EJw-WN-Ijx"/>
+                                    <constraint firstAttribute="height" constant="24" id="ccF-OL-YbC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="20"/>
+                                <state key="normal" title="집사들의 후기">
+                                    <color key="titleColor" red="0.29803921570000003" green="0.30588235289999999" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wpz-6U-cNw">
+                                <rect key="frame" x="21" y="500.5" width="160" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="8fm-AO-j9S"/>
+                                    <constraint firstAttribute="height" constant="24" id="bmL-Pg-zKS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="20"/>
+                                <state key="normal" title="마이페이지">
+                                    <color key="titleColor" red="0.29803921570000003" green="0.30588235289999999" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sFI-50-zLD" firstAttribute="leading" secondItem="oOY-ZY-dGH" secondAttribute="leading" id="4yY-tH-fgt"/>
+                            <constraint firstItem="oOY-ZY-dGH" firstAttribute="top" secondItem="m8Q-fV-Vxr" secondAttribute="bottom" constant="34.5" id="58F-MV-cQO"/>
+                            <constraint firstItem="sFI-50-zLD" firstAttribute="top" secondItem="oOY-ZY-dGH" secondAttribute="bottom" constant="47.18" id="8Xo-4s-V3F"/>
+                            <constraint firstItem="YLd-Ap-pZN" firstAttribute="leading" secondItem="sFI-50-zLD" secondAttribute="leading" id="8oA-vS-iQV"/>
+                            <constraint firstItem="Msw-1a-au7" firstAttribute="top" secondItem="Ucq-Nq-GKw" secondAttribute="bottom" constant="17.77" id="Jcd-5z-HtL"/>
+                            <constraint firstItem="YLd-Ap-pZN" firstAttribute="top" secondItem="sFI-50-zLD" secondAttribute="bottom" constant="32.359999999999999" id="L9S-0G-Rok"/>
+                            <constraint firstItem="fYM-V8-3n6" firstAttribute="leading" secondItem="oO1-OF-23O" secondAttribute="leading" id="SVq-Ao-oUr"/>
+                            <constraint firstItem="fYM-V8-3n6" firstAttribute="top" secondItem="oO1-OF-23O" secondAttribute="bottom" constant="11" id="aL3-Vz-BKF"/>
+                            <constraint firstItem="oO1-OF-23O" firstAttribute="top" secondItem="i4x-5N-wwc" secondAttribute="top" id="bpj-z5-IWK"/>
+                            <constraint firstItem="oO1-OF-23O" firstAttribute="leading" secondItem="i4x-5N-wwc" secondAttribute="leading" constant="21" id="eaV-pS-7Dk"/>
+                            <constraint firstItem="Tbj-gR-ZiY" firstAttribute="leading" secondItem="YLd-Ap-pZN" secondAttribute="leading" id="fB5-Xd-PPu"/>
+                            <constraint firstItem="0Vh-oF-4OL" firstAttribute="leading" secondItem="oO1-OF-23O" secondAttribute="trailing" constant="150.65000000000001" id="iZy-GU-VG4"/>
+                            <constraint firstItem="Wpz-6U-cNw" firstAttribute="leading" secondItem="Msw-1a-au7" secondAttribute="leading" id="iy3-lT-FZf"/>
+                            <constraint firstItem="Msw-1a-au7" firstAttribute="leading" secondItem="Ucq-Nq-GKw" secondAttribute="leading" id="jNZ-bx-pqs"/>
+                            <constraint firstItem="Ucq-Nq-GKw" firstAttribute="top" secondItem="Tbj-gR-ZiY" secondAttribute="bottom" constant="17.77" id="jX2-4j-XNB"/>
+                            <constraint firstItem="Ucq-Nq-GKw" firstAttribute="leading" secondItem="Tbj-gR-ZiY" secondAttribute="leading" id="klQ-1s-TIE"/>
+                            <constraint firstItem="m8Q-fV-Vxr" firstAttribute="leading" secondItem="fYM-V8-3n6" secondAttribute="leading" id="nlw-ci-vse"/>
+                            <constraint firstItem="0Vh-oF-4OL" firstAttribute="centerY" secondItem="oO1-OF-23O" secondAttribute="centerY" id="qER-VS-R8Y"/>
+                            <constraint firstItem="m8Q-fV-Vxr" firstAttribute="top" secondItem="fYM-V8-3n6" secondAttribute="bottom" constant="8" id="rei-xN-7Dv"/>
+                            <constraint firstItem="Wpz-6U-cNw" firstAttribute="top" secondItem="Msw-1a-au7" secondAttribute="bottom" constant="32.609999999999999" id="uRj-7X-vDe"/>
+                            <constraint firstItem="Tbj-gR-ZiY" firstAttribute="top" secondItem="YLd-Ap-pZN" secondAttribute="bottom" constant="17.77" id="v2d-Js-2wL"/>
+                            <constraint firstItem="oOY-ZY-dGH" firstAttribute="leading" secondItem="m8Q-fV-Vxr" secondAttribute="leading" id="wjL-3q-ZR9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="i4x-5N-wwc"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="YbG-Xa-blz">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="side-bar-btn-gray" id="HRI-Ef-DX8"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="barButton" destination="HRI-Ef-DX8" id="a4H-lF-zcG"/>
+                        <outlet property="loginStatusLabel" destination="fYM-V8-3n6" id="iin-fr-7aY"/>
+                        <outlet property="profileImageView" destination="oO1-OF-23O" id="daJ-x4-Ku0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fI3-al-kAT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2486" y="976"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1sR-8b-1qE">
+            <objects>
+                <navigationController storyboardIdentifier="BirthNaviVC" automaticallyAdjustsScrollViewInsets="NO" id="qg2-Hl-AX2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZtM-yt-PD7">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dYi-0n-u7E" kind="relationship" relationship="rootViewController" id="wgR-kB-H8c"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="svg-05-1Iv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1641" y="976"/>
         </scene>
     </scenes>
     <resources>

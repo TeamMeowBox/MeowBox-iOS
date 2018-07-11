@@ -240,9 +240,18 @@ class MeowBoxReviewViewController: UIViewController, UITableViewDelegate, UITabl
     
     //MARK: 마이페이지 액션
     @IBAction func myPageAction(_ sender: Any) {
-        let myPageNaviVC = UIStoryboard(name: "MyPage", bundle: nil).instantiateViewController(withIdentifier: "MyPageNaviVC")
-        
-        self.present(myPageNaviVC, animated: true, completion: nil)
+        if userDefault.string(forKey: "token") != ""{ // 로그인이 되어 있다면
+            let myPageNaviVC = UIStoryboard(name: "MyPage", bundle: nil).instantiateViewController(withIdentifier: "MyPageNaviVC")
+            
+            self.present(myPageNaviVC, animated: true, completion: nil)
+            
+        }else{ // 로그인 안 된 상태
+            let popUPVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: MyPagePopUpViewController.reuseIdentifier) as! MyPagePopUpViewController
+            self.addChildViewController(popUPVC)
+            popUPVC.view.frame = self.view.frame
+            self.view.addSubview(popUPVC.view)
+            popUPVC.didMove(toParentViewController: self)
+        }
     }
     
 //MRAK: TableView
