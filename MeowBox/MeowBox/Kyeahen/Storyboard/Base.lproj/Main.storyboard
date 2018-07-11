@@ -42,7 +42,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="17.300000000000001" id="ufP-Us-e0n"/>
                                 </constraints>
-                                <state key="normal" image="side-bar-back-btn2"/>
+                                <state key="normal" image="side-bar-back-btn4"/>
                                 <connections>
                                     <action selector="sideBarBackAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OYk-5W-BeV"/>
                                 </connections>
@@ -1164,7 +1164,7 @@
         <image name="home-meowbox-more-btn" width="178" height="33"/>
         <image name="home-v-img" width="10" height="6"/>
         <image name="instagram_frame" width="166" height="210"/>
-        <image name="side-bar-back-btn2" width="17" height="19"/>
+        <image name="side-bar-back-btn4" width="17" height="19"/>
         <image name="side-bar-btn-gray" width="20" height="16"/>
         <image name="sidebar-default-img" width="49" height="49"/>
     </resources>

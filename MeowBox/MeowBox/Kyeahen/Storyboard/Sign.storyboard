@@ -660,6 +660,89 @@
             </objects>
             <point key="canvasLocation" x="764" y="851"/>
         </scene>
+        <!--Login Fail Pop Up View Controller-->
+        <scene sceneID="fJL-wy-QJn">
+            <objects>
+                <viewController storyboardIdentifier="LoginFailPopUpViewController" id="Ttl-EZ-83H" customClass="LoginFailPopUpViewController" customModule="MeowBox" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IkC-Y6-P8y">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Yl6-iF-opT">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AQ2-AH-1qL">
+                                <rect key="frame" x="26" y="246.5" width="319" height="194"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="로그인 실패" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A9i-DU-Gj6">
+                                        <rect key="frame" x="14.5" y="27" width="294" height="26"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="A9i-DU-Gj6" secondAttribute="height" multiplier="147:13" id="7eN-Se-VRu"/>
+                                            <constraint firstAttribute="height" constant="26" id="cMC-xS-3Db"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="NotoSansCJKkr-Bold" family="Noto Sans CJK KR" pointSize="22"/>
+                                        <color key="textColor" red="0.29803921570000003" green="0.30588235289999999" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="아이디와 비밀번호를 확인해주세요." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zb7-B6-wuz">
+                                        <rect key="frame" x="14.5" y="68" width="294" height="75"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="zb7-B6-wuz" secondAttribute="height" multiplier="98:25" id="L9F-g0-LWe"/>
+                                            <constraint firstAttribute="height" constant="75" id="Xaz-8r-rtR"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.29803921570000003" green="0.30588235289999999" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VTD-uH-7bu">
+                                        <rect key="frame" x="0.0" y="148" width="319" height="46"/>
+                                        <color key="backgroundColor" red="0.85490196080000003" green="0.5450980392" blue="0.5450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="46" id="nzb-wH-8iK"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="15"/>
+                                        <state key="normal" title="확인 하기">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="okAction:" destination="Ttl-EZ-83H" eventType="touchUpInside" id="wgJ-8h-oQG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="AQ2-AH-1qL" secondAttribute="height" multiplier="19:14" constant="55.714285714285722" id="7iF-HO-wYz"/>
+                                    <constraint firstItem="zb7-B6-wuz" firstAttribute="top" secondItem="A9i-DU-Gj6" secondAttribute="bottom" constant="15" id="HCV-jo-knH"/>
+                                    <constraint firstItem="A9i-DU-Gj6" firstAttribute="top" secondItem="AQ2-AH-1qL" secondAttribute="top" constant="27" id="RwW-q5-WM1"/>
+                                    <constraint firstItem="A9i-DU-Gj6" firstAttribute="centerX" secondItem="AQ2-AH-1qL" secondAttribute="centerX" constant="2" id="TF6-EZ-xED"/>
+                                    <constraint firstAttribute="bottom" secondItem="VTD-uH-7bu" secondAttribute="bottom" id="Tgg-tX-qTC"/>
+                                    <constraint firstAttribute="trailing" secondItem="VTD-uH-7bu" secondAttribute="trailing" id="TsS-dA-ECy"/>
+                                    <constraint firstAttribute="height" constant="194" id="d6D-2B-Rwz"/>
+                                    <constraint firstItem="zb7-B6-wuz" firstAttribute="centerX" secondItem="AQ2-AH-1qL" secondAttribute="centerX" constant="2" id="jW0-PY-h2B"/>
+                                    <constraint firstItem="VTD-uH-7bu" firstAttribute="leading" secondItem="AQ2-AH-1qL" secondAttribute="leading" id="mhV-MN-wAL"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="AQ2-AH-1qL" firstAttribute="centerX" secondItem="CFg-mu-b6c" secondAttribute="centerX" constant="-2" id="0Vz-sP-dzo"/>
+                            <constraint firstItem="AQ2-AH-1qL" firstAttribute="centerY" secondItem="CFg-mu-b6c" secondAttribute="centerY" id="Uqi-UZ-ZO2"/>
+                            <constraint firstItem="Yl6-iF-opT" firstAttribute="bottom" secondItem="CFg-mu-b6c" secondAttribute="bottom" id="eMJ-pL-Qa6"/>
+                            <constraint firstItem="Yl6-iF-opT" firstAttribute="trailing" secondItem="CFg-mu-b6c" secondAttribute="trailing" id="k4S-Ob-LJM"/>
+                            <constraint firstItem="Yl6-iF-opT" firstAttribute="leading" secondItem="CFg-mu-b6c" secondAttribute="leading" id="lgK-HG-7BD"/>
+                            <constraint firstItem="Yl6-iF-opT" firstAttribute="top" secondItem="IkC-Y6-P8y" secondAttribute="top" id="oFJ-aH-Nfi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="CFg-mu-b6c"/>
+                    </view>
+                    <connections>
+                        <outlet property="okBtn" destination="VTD-uH-7bu" id="5qC-0I-z0z"/>
+                        <outlet property="popView" destination="AQ2-AH-1qL" id="3l4-OF-jbn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DGI-ql-tVL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1497" y="851"/>
+        </scene>
     </scenes>
     <resources>
         <image name="back-btn" width="14" height="16"/>
