@@ -13,6 +13,7 @@ class TicketTableViewCell: UITableViewCell {
     @IBOutlet weak var ticketView: UIView!
     @IBOutlet weak var ticketNameLabel: UILabel!
     @IBOutlet weak var ticketTermLabel: UILabel!
+    @IBOutlet weak var termImage: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

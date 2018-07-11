@@ -82,9 +82,15 @@ class TicketViewController: UIViewController,UITableViewDelegate,UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TicketTableViewCell") as! TicketTableViewCell
-        cell.ticketView.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "ticket-gray.png"))
+        cell.ticketView.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "ticket-gray-1"))
         cell.ticketNameLabel.text = myTicketedArr[indexPath.row].product
         cell.ticketTermLabel.text = myTicketedArr[indexPath.row].term
+        
+        if myTicketedArr[indexPath.row].flag == "0"{
+            cell.termImage.image = #imageLiteral(resourceName: "once-label-pink")
+        }else{
+            cell.termImage.image = #imageLiteral(resourceName: "months-label-gray")
+        }
         
         return cell
     }
@@ -98,7 +104,7 @@ class TicketViewController: UIViewController,UITableViewDelegate,UITableViewData
             self.myTicket = ticket
             self.myTicketedArr = ticketedArr
             
-            self.usingTicketView.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "one-ticket-pink"))
+            self.usingTicketView.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "ticket-pink"))
             print(self.myTicket?.product)
             self.usingTicketNameLabel.text = self.myTicket?.product
             self.usingTicketTermLabel.text = self.myTicket?.term
