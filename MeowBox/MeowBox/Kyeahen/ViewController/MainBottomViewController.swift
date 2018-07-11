@@ -31,6 +31,8 @@ class MainBottomViewController: UIViewController,UIGestureRecognizerDelegate{
     @IBOutlet weak var insta4ImageView: UIImageView!
     
     @IBOutlet weak var detailButton: UIButton!
+    @IBOutlet weak var monthTextView: UITextView!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,6 +58,13 @@ class MainBottomViewController: UIViewController,UIGestureRecognizerDelegate{
         instaProfile4ImageView.layer.masksToBounds = true
         instaProfile4ImageView.layer.cornerRadius = instaProfile4ImageView.layer.frame.width/2
 
+        
+        monthTextView.text =
+        """
+        시원한 바다같은, 7월의 박스!
+        'Under The Sea' 패키지를 만나보세요.
+        """
+        
         // Do any additional setup after loading the view.
     }
     

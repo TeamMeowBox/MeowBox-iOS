@@ -89,34 +89,6 @@ class MyAccountViewController: UIViewController {
         openGallery()
     }
     
-    func myAccountInit() {
-        MyPageService.myAccountInit() { (accountData) in
-            print("통신 시작")
-            self.nameTextField.text = self.gsno(accountData.user_name)
-            self.emailTextField.text = self.gsno(accountData.email)
-            self.phoneTextField.text = self.gsno(accountData.phone_number)
-            self.profileImageView.kf.setImage(with: URL(string: accountData.image_profile),placeholder: UIImage())
-            self.catNameTextField.text = self.gsno(accountData.cat_name)
-            self.dateTextField.text = self.gsno(accountData.birthday)
-            self.infoEtcTextView.text = self.gsno(accountData.caution)
-            
-            if accountData.size == 1 {
-                self.smallSizeBtn.setImage(#imageLiteral(resourceName: "small-radio-btn-pink"), for: .normal)
-            }
-            else if accountData.size == 2 {
-                self.mediumSizeBtn.setImage(#imageLiteral(resourceName: "medium-radio-btn-pink"), for: .normal)
-            }
-            else if accountData.size == 3 {
-                self.bigSizeBtn.setImage(#imageLiteral(resourceName: "large-radio-btn-pink"), for: .normal)
-            }
-            else {
-                self.smallSizeBtn.setImage(#imageLiteral(resourceName: "small-radio-btn-gray"), for: UIControlState.normal)
-                self.mediumSizeBtn.setImage(#imageLiteral(resourceName: "medium-radio-btn-gray"), for: UIControlState.normal)
-                self.bigSizeBtn.setImage(#imageLiteral(resourceName: "large-radio-btn-gray"), for: UIControlState.normal)
-            }
-        }
-    }
-    
     //MARK: 마른 사이즈 액션
     @IBAction func smallSizeAction(_ sender: UIButton) {
         
@@ -177,6 +149,33 @@ class MyAccountViewController: UIViewController {
         
     }
     
+    func myAccountInit() {
+        MyPageService.myAccountInit() { (accountData) in
+            print("통신 시작")
+            self.nameTextField.text = self.gsno(accountData.user_name)
+            self.emailTextField.text = self.gsno(accountData.email)
+            self.phoneTextField.text = self.gsno(accountData.phone_number)
+            self.profileImageView.kf.setImage(with: URL(string: accountData.image_profile),placeholder: UIImage())
+            self.catNameTextField.text = self.gsno(accountData.cat_name)
+            self.dateTextField.text = self.gsno(accountData.birthday)
+            self.infoEtcTextView.text = self.gsno(accountData.caution)
+            
+            if accountData.size == 1 {
+                self.smallSizeBtn.setImage(#imageLiteral(resourceName: "small-radio-btn-pink"), for: .normal)
+            }
+            else if accountData.size == 2 {
+                self.mediumSizeBtn.setImage(#imageLiteral(resourceName: "medium-radio-btn-pink"), for: .normal)
+            }
+            else if accountData.size == 3 {
+                self.bigSizeBtn.setImage(#imageLiteral(resourceName: "large-radio-btn-pink"), for: .normal)
+            }
+            else {
+                self.smallSizeBtn.setImage(#imageLiteral(resourceName: "small-radio-btn-gray"), for: UIControlState.normal)
+                self.mediumSizeBtn.setImage(#imageLiteral(resourceName: "medium-radio-btn-gray"), for: UIControlState.normal)
+                self.bigSizeBtn.setImage(#imageLiteral(resourceName: "large-radio-btn-gray"), for: UIControlState.normal)
+            }
+        }
+    }
     
     //MARK: 글 저장
     @IBAction func saveAccount(_ sender: Any) {
@@ -187,16 +186,12 @@ class MyAccountViewController: UIViewController {
 
         print(gsno(nameTextField.text))
             MyPageService.updateAccount(user_name: gsno(nameTextField.text), user_phone: gsno(phoneTextField.text), user_email: gsno(emailTextField.text), image_profile: profileImageView.image!, cat_name: gsno(catNameTextField.text), cat_size: size, cat_birthday: gsno(dateTextField.text), cat_caution: gsno(infoEtcTextView.text)) {
-                
+    
+                    let myPageNaviVC = UIStoryboard(name: "MyPage", bundle: nil).instantiateViewController(withIdentifier: "MyPageNaviVC")
+                    self.present(myPageNaviVC, animated: true, completion: nil)
                     print("수정 완료!")
-                
-                    self.dismiss(animated: true, completion: nil)
-                
-            }
-
+        }
     }
-    
-    
 }
 
 //view bottom border 관련 extension

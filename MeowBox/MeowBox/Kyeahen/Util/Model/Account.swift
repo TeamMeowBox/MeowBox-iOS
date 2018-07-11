@@ -18,5 +18,6 @@ struct Account: Codable {
     let size: Int?
     let birthday: String?
     let caution: String?
+    let cat_idx: Int?
 }
 
