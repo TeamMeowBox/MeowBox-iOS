@@ -79,6 +79,7 @@
 		CC35D3E620F5D56A006FC289 /* QnAList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC35D3E520F5D56A006FC289 /* QnAList.swift */; };
 		CC35D3E820F5E0C4006FC289 /* Overlap.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC35D3E720F5E0C4006FC289 /* Overlap.swift */; };
 		CC35D3EE20F5E533006FC289 /* meow_box_splash_4.json in Resources */ = {isa = PBXBuildFile; fileRef = CC35D3ED20F5E533006FC289 /* meow_box_splash_4.json */; };
+		CC35D3F020F5EFFC006FC289 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC35D3EF20F5EFFC006FC289 /* LaunchViewController.swift */; };
 		CC4493BD20EBCBC60095D118 /* Order1ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4493BC20EBCBC60095D118 /* Order1ContainerViewController.swift */; };
 		CC44CBB420EB2174007466D8 /* Mypage2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC44CBB320EB2174007466D8 /* Mypage2.storyboard */; };
 		CC44CBB620EB21EB007466D8 /* SuggestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC44CBB520EB21EB007466D8 /* SuggestViewController.swift */; };
@@ -187,6 +188,7 @@
 		CC35D3E520F5D56A006FC289 /* QnAList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QnAList.swift; sourceTree = "<group>"; };
 		CC35D3E720F5E0C4006FC289 /* Overlap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Overlap.swift; sourceTree = "<group>"; };
 		CC35D3ED20F5E533006FC289 /* meow_box_splash_4.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = meow_box_splash_4.json; path = ../../../../Downloads/meow_box_splash_4.json; sourceTree = "<group>"; };
+		CC35D3EF20F5EFFC006FC289 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		CC4493BC20EBCBC60095D118 /* Order1ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order1ContainerViewController.swift; sourceTree = "<group>"; };
 		CC44CBB320EB2174007466D8 /* Mypage2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mypage2.storyboard; sourceTree = "<group>"; };
 		CC44CBB520EB21EB007466D8 /* SuggestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestViewController.swift; sourceTree = "<group>"; };
@@ -462,6 +464,7 @@
 				CC4AD42020EE20A700C31E53 /* CheckTicketTableViewCell.swift */,
 				CCCA9DF120F0E930004319E5 /* NoticeViewController.swift */,
 				CCCA9DF320F0EE5B004319E5 /* NoticeTableViewCell.swift */,
+				CC35D3EF20F5EFFC006FC289 /* LaunchViewController.swift */,
 			);
 			path = JangDta;
 			sourceTree = "<group>";
@@ -661,6 +664,7 @@
 				CC336E2220F2772500073E96 /* OrderList.swift in Sources */,
 				2200E30920F1D96A0030A7E9 /* MyPageNoneTicketData.swift in Sources */,
 				CC7DB55520EDE3CC00286E29 /* MainCollectionViewCell.swift in Sources */,
+				CC35D3F020F5EFFC006FC289 /* LaunchViewController.swift in Sources */,
 				CC693A1320EE0BED00DA0935 /* TicketTableViewCell.swift in Sources */,
 				CCCA9DF220F0E930004319E5 /* NoticeViewController.swift in Sources */,
 				CCF0947820F1D6F30029567B /* CatService.swift in Sources */,
