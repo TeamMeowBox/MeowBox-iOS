@@ -16,6 +16,8 @@ class TicketViewController: UIViewController,UITableViewDelegate,UITableViewData
     @IBOutlet weak var usingTicketNameLabel: UILabel!
     @IBOutlet weak var usingTicketTermLabel: UILabel!
     
+    @IBOutlet weak var subLableStack: UIStackView!
+    @IBOutlet weak var cancelOutlet: UIButton!
     var myTicket : Ticket?
     var myTicketedArr = [Ticketed]()
     
@@ -43,7 +45,8 @@ class TicketViewController: UIViewController,UITableViewDelegate,UITableViewData
         
         checkVC.myTicketName = usingTicketNameLabel.text!
         checkVC.myTicketTerm = usingTicketTermLabel.text!
-        checkVC.myTicketIdx = (self.myTicket?.idx)!
+        guard let idx = self.myTicket?.idx else { return }
+        checkVC.myTicketIdx = idx
 
         
         self.navigationController?.pushViewController(checkVC, animated: true)
@@ -96,18 +99,49 @@ class TicketViewController: UIViewController,UITableViewDelegate,UITableViewData
         return 170
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        OrderService.orderdetaillist(order_idx: myTicketedArr[indexPath.row].idx) { (arr) in
+            let checkVC = UIStoryboard(name: "Mypage2", bundle: nil).instantiateViewController(withIdentifier: "CheckTicketViewController") as! CheckTicketViewController
+            
+            checkVC.myTicketName = self.myTicketedArr[indexPath.row].product
+            checkVC.myTicketTerm = self.myTicketedArr[indexPath.row].term
+            checkVC.myTicketIdx = self.myTicketedArr[indexPath.row].idx
+            checkVC.imgArr = arr
+            
+            self.navigationController?.pushViewController(checkVC, animated: true)
+        }
+    }
+    
+    
+    
+    
+    
     func orderlist(){
         OrderService.orderlist { (ticket, ticketedArr) in
-            self.myTicket = ticket
-            self.myTicketedArr = ticketedArr
+            if ticket == nil{
+                self.myTicketedArr = ticketedArr
+                self.usingTicketView.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "order-no"))
+                self.usingTicketNameLabel.isHidden = true
+                self.usingTicketTermLabel.isHidden = true
+                self.subLableStack.isHidden = true
+                self.cancelOutlet.isHidden = true
+            }else{
+                self.myTicket = ticket
+                self.myTicketedArr = ticketedArr
+                
+                self.usingTicketView.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "ticket-pink"))
+                self.subLableStack.isHidden = false
+                self.cancelOutlet.isHidden = false
+                self.usingTicketNameLabel.isHidden = false
+                self.usingTicketTermLabel.isHidden = false
+                print(self.myTicket?.product)
+                self.usingTicketNameLabel.text = self.myTicket?.product
+                self.usingTicketTermLabel.text = self.myTicket?.term
+                
+                self.userDefault.set(self.myTicket?.idx, forKey: "myticket_idx")
+                // 정기권 취소 하려고 myticket_idx저장
+            }
             
-            self.usingTicketView.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "ticket-pink"))
-            print(self.myTicket?.product)
-            self.usingTicketNameLabel.text = self.myTicket?.product
-            self.usingTicketTermLabel.text = self.myTicket?.term
-            
-            self.userDefault.set(self.myTicket?.idx, forKey: "myticket_idx")
-            // 정기권 취소 하려고 myticket_idx저장
             
             self.tableView.reloadData()
         }

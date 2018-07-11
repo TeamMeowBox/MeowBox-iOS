@@ -110,6 +110,8 @@
 		CCF0947620F1C3BB0029567B /* SignService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF0947520F1C3BB0029567B /* SignService.swift */; };
 		CCF0947820F1D6F30029567B /* CatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF0947720F1D6F30029567B /* CatService.swift */; };
 		CCF0947A20F1EE460029567B /* OrderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCF0947920F1EE460029567B /* OrderService.swift */; };
+		CCFB9BF720F6780E0010FAEE /* OrderList2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFB9BF620F6780E0010FAEE /* OrderList2.swift */; };
+		CCFB9BF920F678D10010FAEE /* OrderListData2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCFB9BF820F678D10010FAEE /* OrderListData2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -220,6 +222,8 @@
 		CCF0947520F1C3BB0029567B /* SignService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignService.swift; sourceTree = "<group>"; };
 		CCF0947720F1D6F30029567B /* CatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatService.swift; sourceTree = "<group>"; };
 		CCF0947920F1EE460029567B /* OrderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderService.swift; sourceTree = "<group>"; };
+		CCFB9BF620F6780E0010FAEE /* OrderList2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderList2.swift; sourceTree = "<group>"; };
+		CCFB9BF820F678D10010FAEE /* OrderListData2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListData2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -341,6 +345,8 @@
 				CC35D3E320F5D532006FC289 /* QnA.swift */,
 				CC35D3E520F5D56A006FC289 /* QnAList.swift */,
 				CC35D3E720F5E0C4006FC289 /* Overlap.swift */,
+				CCFB9BF620F6780E0010FAEE /* OrderList2.swift */,
+				CCFB9BF820F678D10010FAEE /* OrderListData2.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -675,11 +681,13 @@
 				CCC82C0120F47587007A23F3 /* NiceViewController.swift in Sources */,
 				222B5DCA20E8BB6F003F0A8C /* APIService.swift in Sources */,
 				CCCA9DF420F0EE5B004319E5 /* NoticeTableViewCell.swift in Sources */,
+				CCFB9BF720F6780E0010FAEE /* OrderList2.swift in Sources */,
 				22A86ED620EBE84C00B17661 /* TicketCancelPopUpViewController.swift in Sources */,
 				CC2DBE6620F389A6007F61D2 /* LatestAddressData.swift in Sources */,
 				CCC82C0320F475B1007A23F3 /* Html5InicisViewController.swift in Sources */,
 				CC794FDC20F327D500B8EEEE /* OrderListData.swift in Sources */,
 				22D3B21320EFE10A00DE37F4 /* MeowBoxReviewCollectionViewCell.swift in Sources */,
+				CCFB9BF920F678D10010FAEE /* OrderListData2.swift in Sources */,
 				22109A8220EAAAFC00E463C2 /* MyPage1ViewController.swift in Sources */,
 				22FB614720F3960B00E77000 /* SignUpCheckPopUpViewController.swift in Sources */,
 				2215610420F47C9800EA5C2B /* InstaData.swift in Sources */,

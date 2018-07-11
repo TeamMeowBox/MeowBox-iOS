@@ -36,7 +36,7 @@ class Html5InicisViewController: UIViewController {
             .setPayMethod(.card)                    // 결제 형식
             .setWebView(self.webView)               // 현재 Controller에 있는 WebView 지정
             .setRedirectUrl("http://13.209.220.1:3000/order/order_result")                    // m_redirect_url 주소
-        
+        //
         //guard let price = userDefault.string(forKey: "order_price") else{ return }
         guard let email = userDefault.string(forKey: "order_email") else{ return }
         guard let name = userDefault.string(forKey: "order_name") else{ return }
@@ -45,19 +45,21 @@ class Html5InicisViewController: UIViewController {
 
         
         //guard let token = userDefault.string(forKey: "token") else{ return }
-        guard let cat_idx = userDefault.string(forKey: "cat_idx") else{ return }
+//        guard let cat_idx = userDefault.string(forKey: "cat_idx") else{ return }
+//
+//        let random = arc4random()
+//
+//        userDefault.set(String(random), forKey: "random_key")
+//        let merchant = cat_idx+"_\(random)"
+//        print("random:    \(random)")
+//        print(merchant)
         
-        let random = arc4random()
         
-        userDefault.set(String(random), forKey: "random_key")
-        let merchant = cat_idx+"_\(random)"
-        print("random:    \(random)")
-        print(merchant)
-        
+        print("myorderidx2:\(userDefault.integer(forKey: "myorderidx"))")
         
         // 결제 정보 데이타
         let parameters: IAMPortParameters = [
-            "merchant_uid": merchant,
+            "merchant_uid": userDefault.integer(forKey: "myorderidx"),
             "name": "미유박스",
             "amount": "100",
             "buyer_email": email,
@@ -86,6 +88,7 @@ class Html5InicisViewController: UIViewController {
 extension Html5InicisViewController: UIWebViewDelegate {
     func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
         // 해당 함수는 redirecURL의 결과를 직접 처리하고 할 때 사용하는 함수 (IAMPortPay.sharedInstance.configure m_redirect_url 값을 설정해야함.)
+        print("1111111111111111111111111111111111111")
         IAMPortPay.sharedInstance.webViewRedirectUrl(shouldStartLoadWith: request, parser: { (data, response, error) -> Any? in
             // Background Thread
             var resultData: [String: Any]?

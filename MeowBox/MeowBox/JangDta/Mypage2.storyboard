@@ -305,6 +305,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="cancelOutlet" destination="OY4-Mq-Jka" id="S3G-31-J9i"/>
+                        <outlet property="subLableStack" destination="gv6-LR-eB2" id="IKE-nc-63T"/>
                         <outlet property="tableView" destination="Lc0-HB-qHV" id="yzb-TS-yFZ"/>
                         <outlet property="usingTicketNameLabel" destination="siG-g7-lnP" id="Vf4-Gd-m34"/>
                         <outlet property="usingTicketTermLabel" destination="YEu-Eh-oYa" id="mdH-Uy-6XI"/>

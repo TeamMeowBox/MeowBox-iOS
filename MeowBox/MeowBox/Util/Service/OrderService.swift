@@ -46,6 +46,9 @@ struct OrderService : APIService{
                     if let message = JSON(value)["message"].string{
                         if message == "success"{ // 주문하기 성공
                             print("주문 성공!")
+                            guard let myorderidx = JSON(value)["result"]["order_idx"].int else {return}
+                            print("myorderidx:\(myorderidx)")
+                            userDefault.set(myorderidx, forKey: "myorderidx")
                             userDefault.set("success", forKey: "order_success")
                             completion("success")
                         }else if message == "bad_request"{
@@ -72,7 +75,7 @@ struct OrderService : APIService{
         let userDefault = UserDefaults.standard
         
         guard let token = userDefault.string(forKey: "token") else { return }
-//       let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImtrbW1AbmF2ZS5jb20iLCJ1c2VyX2lkeCI6NywiaWF0IjoxNTMxMTAyMTM4LCJleHAiOjE1MzM2OTQxMzh9.sUJ-i5IF8oWhG3x-0fmQ0-xZH_qxeWKmQdiA-9QHaSw"
+
         let headers = ["authorization": token]
         
         let URL = url("/order/order_list")
@@ -86,21 +89,32 @@ struct OrderService : APIService{
                             
                             let decoder = JSONDecoder()
                             print("-----주문내역------")
-                            print(JSON(value)["result"]["ticket"]["product"].string)
-//                            print(JSON(value)["ticketed"][0]["product"].string)
-                            do{
-                                let orderlistData = try decoder.decode(OrderListData.self, from: value)
+                            if JSON(value)["result"]["ticket"]["product"].string == nil{
+                                do{
+                                    let orderlistData2 = try decoder.decode(OrderListData2.self, from: value)
+                            
+                                        completion(nil, orderlistData2.result.ticketed)
                                 
-                                print("주문내역 가져오기 성공!")
-                                if let ticket = orderlistData.result.ticket{
-                                    completion(ticket, orderlistData.result.ticketed)
-                                }else{
-                                    completion(nil, orderlistData.result.ticketed)
+                                    
+                                }catch{
+                                    print("catch2")
                                 }
-                                
-                            }catch{
-                                print("catch!")
+                            }else{
+                                do{
+                                    let orderlistData = try decoder.decode(OrderListData.self, from: value)
+                                    
+                                    print("주문내역 가져오기 성공!")
+                                    if let ticket = orderlistData.result.ticket{
+                                        completion(ticket, orderlistData.result.ticketed)
+                                    }else{
+                                        completion(nil, orderlistData.result.ticketed)
+                                    }
+                                    
+                                }catch{
+                                    print("catch!")
+                                }
                             }
+                            
                             
                             
                         }else{

@@ -47,7 +47,8 @@ class CheckTicketViewController: UIViewController,UITableViewDelegate,UITableVie
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CheckTicketTableViewCell") as! CheckTicketTableViewCell
-        cell.checkTicketImageView.kf.setImage(with: URL(string: imgArr[indexPath.row]),placeholder: UIImage())
+        let size = self.imgArr.count
+        cell.checkTicketImageView.kf.setImage(with: URL(string: imgArr[size-indexPath.row-1]),placeholder: UIImage())
         return cell
     }
     

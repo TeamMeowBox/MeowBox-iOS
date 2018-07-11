@@ -88,10 +88,8 @@ class OrderWithInfo4ViewController: UIViewController {
         guard let payment = userDefault.string(forKey: "payment_method") else {return}
         
         if payment == "1"{ //  신용카드
+            order()
             
-            let controller = Html5InicisViewController()
-            
-            self.navigationController?.pushViewController(controller, animated: true)
             //parentVC?.navigationController?.pushViewController(controller, animated: true)
         }else if payment == "2"{ // 현금결제
             let alertView = UIAlertController(title: "현금결제", message: "@@@@@@@", preferredStyle: .alert)
@@ -171,6 +169,12 @@ class OrderWithInfo4ViewController: UIViewController {
         
         OrderService.order(name: gsno(nameTextField.text), address: orderAdd, phone_number: gsno(phoneTextField.text), product: gsno(userDefault.string(forKey: "order_product")), price: gsno(userDefault.string(forKey: "order_price")), email: gsno(emailTextField.text), payment_method: gsno(userDefault.string(forKey: "payment_method"))){ message in
             if message == "success"{
+                print("00000000000000000000000000000000000000000")
+                
+                let controller = Html5InicisViewController()
+                print("11111111111111111111111111111111111111111")
+                
+                self.navigationController?.pushViewController(controller, animated: true)
                 
             }else if message == "failure"{
                 let alertView = UIAlertController(title: "주문 실패", message: "ㅜㅜㅜㅜㅜㅜ", preferredStyle: .alert)
@@ -225,7 +229,7 @@ class OrderWithInfo4ViewController: UIViewController {
         print("*******isordersuccess********")
         OrderService.isordersuccess { (message) in
             if message == "success"{
-                self.order()
+                //self.order()
                 
                 self.parentVC?.changeVC(num: 5)
             }else{
