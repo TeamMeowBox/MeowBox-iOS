@@ -36,14 +36,10 @@ class MainViewController: UIViewController,UICollectionViewDelegate,UICollection
     let logo : UIImage = UIImage(named: "meowbox-logo-pink.png")!
     let logoImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 128, height: 21))
     
-    var animationView : LOTAnimationView?
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        playLaunch()
-//        sleep(3)
-//        animationView?.removeFromSuperview()
         
         userDefault.set("yes", forKey: "amIfirst")
         
@@ -329,23 +325,7 @@ class MainViewController: UIViewController,UICollectionViewDelegate,UICollection
         
     }
     
-    func playLaunch(){
-        
-        animationView = LOTAnimationView(name: "meow_box_splash_4")
-        animationView?.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
-        animationView?.center = self.view.center
-        animationView?.contentMode = .scaleAspectFill
-        
-        view.addSubview(animationView!)
-        
-        animationView?.play(completion: { (finished) in
-            if finished{
-                self.animationView?.removeFromSuperview()
-            }
-        })
-        
-        
-    }
+    
 
     
 }
