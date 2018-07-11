@@ -19,17 +19,12 @@ class TicketViewController: UIViewController,UITableViewDelegate,UITableViewData
     var myTicket : Ticket?
     var myTicketedArr = [Ticketed]()
     
+    let userDefault = UserDefaults.standard
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         orderlist()
-        
-//        if myTicket == nil{
-//            print("no using ticket")
-//        }else{
-//
-//        }
         
         
         tableView.delegate = self
@@ -49,6 +44,7 @@ class TicketViewController: UIViewController,UITableViewDelegate,UITableViewData
         checkVC.myTicketName = usingTicketNameLabel.text!
         checkVC.myTicketTerm = usingTicketTermLabel.text!
         checkVC.myTicketIdx = (self.myTicket?.idx)!
+
         
         self.navigationController?.pushViewController(checkVC, animated: true)
         
@@ -62,6 +58,7 @@ class TicketViewController: UIViewController,UITableViewDelegate,UITableViewData
     @IBAction func ticketCancelAction(_ sender: Any) {
         
         let cancelPopUp = UIStoryboard(name: "MyPage", bundle: nil).instantiateViewController(withIdentifier: TicketCancelPopUpViewController.reuseIdentifier) as! TicketCancelPopUpViewController
+        cancelPopUp.current_idx = (myTicket?.idx)!
         
         self.addChildViewController(cancelPopUp)
         cancelPopUp.view.frame = self.view.frame
@@ -108,6 +105,9 @@ class TicketViewController: UIViewController,UITableViewDelegate,UITableViewData
             print(self.myTicket?.product)
             self.usingTicketNameLabel.text = self.myTicket?.product
             self.usingTicketTermLabel.text = self.myTicket?.term
+            
+            self.userDefault.set(self.myTicket?.idx, forKey: "myticket_idx")
+            // 정기권 취소 하려고 myticket_idx저장
             
             self.tableView.reloadData()
         }

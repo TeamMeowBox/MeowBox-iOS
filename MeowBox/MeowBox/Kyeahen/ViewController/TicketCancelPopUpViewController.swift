@@ -15,6 +15,8 @@ class TicketCancelPopUpViewController: UIViewController {
     @IBOutlet weak var ticketView: UIView!
     @IBOutlet weak var ticketCloseBtn: UIButton!
     @IBOutlet weak var ticketEditBtn: UIButton!
+    
+    var current_idx = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -71,6 +73,20 @@ class TicketCancelPopUpViewController: UIViewController {
     //MARK: 입력하기 액션
     @IBAction func editAction(_ sender: Any) {
         //어디로 가는지?
+        cancelticket()
+    }
+    
+    func cancelticket(){
+        print("cancle ticket click")
+        OrderService.cancelticket { (message) in
+            if message == "success"{
+                let myPageNaviVC = UIStoryboard(name: "MyPage", bundle: nil).instantiateViewController(withIdentifier: "MyPageNaviVC")
+                
+                self.present(myPageNaviVC, animated: true, completion: nil)
+            }else{
+                
+            }
+        }
     }
     
 }
