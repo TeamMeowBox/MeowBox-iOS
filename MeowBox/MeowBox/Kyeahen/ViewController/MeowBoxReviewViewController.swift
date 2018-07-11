@@ -151,9 +151,21 @@ class MeowBoxReviewViewController: UIViewController, UITableViewDelegate, UITabl
     //MARK: 로그인 액션
     @IBAction func loginAction(_ sender: Any) {
         
-        let loginNaviVC = UIStoryboard(name: "Sign", bundle: nil).instantiateViewController(withIdentifier: "LoginNaviVC")
+        guard let hasToken = userDefault.string(forKey: "token") else { return }
         
-        self.present(loginNaviVC, animated: true, completion: nil)
+        print("hasToken: "+hasToken)
+        if hasToken == ""{
+            let loginNaviVC = UIStoryboard(name: "Sign", bundle: nil).instantiateViewController(withIdentifier: "LoginNaviVC")
+            
+            self.present(loginNaviVC, animated: true, completion: nil)
+        }else{
+            let popUPVC = UIStoryboard(name: "Sign", bundle: nil).instantiateViewController(withIdentifier: "LoginMainPopUpViewController") as! LoginMainPopUpViewController
+            self.addChildViewController(popUPVC)
+            popUPVC.view.frame = self.view.frame
+            self.view.addSubview(popUPVC.view)
+            popUPVC.didMove(toParentViewController: self)
+        }
+        
     }
     
     //MARK: 홈 액션
