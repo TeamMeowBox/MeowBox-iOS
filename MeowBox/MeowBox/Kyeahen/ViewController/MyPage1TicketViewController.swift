@@ -17,6 +17,7 @@ class MyPage1TicketViewController: UIViewController {
     @IBOutlet weak var useLabel: UILabel!
     @IBOutlet weak var firstLabel: UILabel!
     @IBOutlet weak var secondLabel: UILabel!
+    @IBOutlet weak var thirdLabel: UILabel!
     
     var myPageTickets: MyPageTicket?
     var ticket: String = ""
@@ -45,6 +46,11 @@ class MyPage1TicketViewController: UIViewController {
             self.useLabel.text = myPageTicketData.use
             
             if myPageTicketData.ticket == "3박스" {
+                
+                self.firstLabel.text = "1박스"
+                self.secondLabel.text = "2박스"
+                self.thirdLabel.text = myPageTicketData.use
+                
                 if myPageTicketData.use == "1박스" {
                     let newProgress: CGFloat = self.progressView.progress == 0.333 ? 0.0 : 0.333
                     self.progressView.animateTo(progress: newProgress)
@@ -65,6 +71,10 @@ class MyPage1TicketViewController: UIViewController {
                 
             }
             else if myPageTicketData.ticket == "6박스" {
+                
+                self.firstLabel.text = "2박스"
+                self.secondLabel.text = "4박스"
+                self.thirdLabel.text = myPageTicketData.use
                 
                 if myPageTicketData.use == "1박스" {
                     let newProgress: CGFloat = self.progressView.progress == 0.1665 ? 0.0 : 0.1665

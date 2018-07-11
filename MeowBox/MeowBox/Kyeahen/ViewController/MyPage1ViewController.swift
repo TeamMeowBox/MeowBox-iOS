@@ -331,8 +331,9 @@ class MyPage1ViewController: UIViewController {
             self.myPageNoneTickets = myPageNoneTicketData
             
             let catinfo = myPageNoneTicketData.catinfo
-            
             let name = self.gsno(self.userdefault.string(forKey: "name"))
+            
+            print(catinfo)
             
             if catinfo == "-1" {
                 
@@ -344,6 +345,8 @@ class MyPage1ViewController: UIViewController {
             else {
                 self.catNameLabel.text = catinfo
                 self.userNameLabel.text = name + "님"
+                self.butlerLabel.isHidden = false
+                self.userNameLabel.isHidden = false
             }
         }
     }
@@ -356,6 +359,23 @@ class MyPage1ViewController: UIViewController {
             self.myPageTicekets = myPageTicketData
             self.catNameLabel.text = self.myPageNoneTickets?.catinfo
             self.userNameLabel.text = self.userdefault.string(forKey: "name")
+            
+            let catinfo = myPageTicketData.catinfo
+            let name = self.gsno(self.userdefault.string(forKey: "name"))
+            
+            if catinfo == "-1" {
+                
+                self.catNameLabel.text = name + "님"
+                self.butlerLabel.isHidden = true
+                self.userNameLabel.isHidden = true
+                
+            }
+            else {
+                self.catNameLabel.text = catinfo
+                self.userNameLabel.text = name + "님"
+                self.butlerLabel.isHidden = false
+                self.userNameLabel.isHidden = false
+            }
         }
         
     }

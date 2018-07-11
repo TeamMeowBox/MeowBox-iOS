@@ -1508,15 +1508,30 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AaU-Jx-6TK">
-                                <rect key="frame" x="110" y="172" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="110.5" y="172" width="41.5" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="Gh4-Bd-Yaa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="16"/>
+                                <color key="textColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hF1-xt-Af0">
-                                <rect key="frame" x="223" y="172" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="223.5" y="172" width="41.5" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="HaN-2Y-Nnp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="16"/>
+                                <color key="textColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1f0-iT-twO">
+                                <rect key="frame" x="313.5" y="172" width="41.5" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="YZD-1I-oPC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="16"/>
+                                <color key="textColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -1537,7 +1552,9 @@
                             <constraint firstItem="u6G-gi-RQo" firstAttribute="centerY" secondItem="eDG-1S-Lza" secondAttribute="centerY" id="S1h-EW-LeO"/>
                             <constraint firstItem="9KI-D4-3uH" firstAttribute="top" secondItem="Nqr-CN-NIF" secondAttribute="top" id="SNo-UY-C4Q"/>
                             <constraint firstItem="O3Z-N4-NgF" firstAttribute="centerY" secondItem="eDG-1S-Lza" secondAttribute="centerY" id="TgG-SW-9QK"/>
+                            <constraint firstItem="1f0-iT-twO" firstAttribute="centerY" secondItem="hF1-xt-Af0" secondAttribute="centerY" id="Wte-9x-hfa"/>
                             <constraint firstItem="AaU-Jx-6TK" firstAttribute="centerX" secondItem="Nqr-CN-NIF" secondAttribute="centerX" id="Wvw-bH-RHj"/>
+                            <constraint firstItem="u22-Hz-qdE" firstAttribute="trailing" secondItem="1f0-iT-twO" secondAttribute="trailing" constant="20" id="Z38-Od-L6b"/>
                             <constraint firstItem="AaU-Jx-6TK" firstAttribute="top" secondItem="Nqr-CN-NIF" secondAttribute="bottom" constant="4" id="c1m-jy-J73"/>
                             <constraint firstItem="suI-Yw-Iey" firstAttribute="centerY" secondItem="eDG-1S-Lza" secondAttribute="centerY" id="cbu-Nd-KrG"/>
                             <constraint firstItem="0ZE-6a-ZDW" firstAttribute="top" secondItem="eDG-1S-Lza" secondAttribute="bottom" constant="3" id="ffh-E7-qn4"/>
@@ -1554,6 +1571,7 @@
                         <outlet property="firstLabel" destination="AaU-Jx-6TK" id="LLQ-5p-b7X"/>
                         <outlet property="progressView" destination="A4r-ip-Zhm" id="mg4-Hp-mlA"/>
                         <outlet property="secondLabel" destination="hF1-xt-Af0" id="4MF-H0-Cnv"/>
+                        <outlet property="thirdLabel" destination="1f0-iT-twO" id="4EG-M5-wfh"/>
                         <outlet property="ticketLabel" destination="eDG-1S-Lza" id="Pk6-q9-9nC"/>
                         <outlet property="useLabel" destination="O3Z-N4-NgF" id="hhT-Wi-8Mw"/>
                     </connections>
