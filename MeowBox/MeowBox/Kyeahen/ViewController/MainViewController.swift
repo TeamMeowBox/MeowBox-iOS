@@ -40,6 +40,7 @@ class MainViewController: UIViewController,UICollectionViewDelegate,UICollection
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(userDefault.string(forKey: "cat_idx"))
         print(gsno(userDefault.string(forKey: "image_profile")))
         userDefault.set("yes", forKey: "amIfirst")
         

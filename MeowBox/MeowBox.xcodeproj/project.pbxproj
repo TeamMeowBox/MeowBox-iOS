@@ -37,6 +37,8 @@
 		22576F9920F5F270000434BC /* LoginMainPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22576F9820F5F270000434BC /* LoginMainPopUpViewController.swift */; };
 		22576F9B20F5F613000434BC /* meow_box_splash_4.json in Resources */ = {isa = PBXBuildFile; fileRef = 22576F9A20F5F613000434BC /* meow_box_splash_4.json */; };
 		2259035120EE6E3300094935 /* MeowBoxDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2259035020EE6E3300094935 /* MeowBoxDetailViewController.swift */; };
+		2270205E20F69C09007FA297 /* StoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2270205D20F69C09007FA297 /* StoryViewController.swift */; };
+		2270206020F69C18007FA297 /* BirthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2270205F20F69C18007FA297 /* BirthViewController.swift */; };
 		227DF56B20E905FF00050EBC /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 227DF56A20E905FF00050EBC /* MainViewController.swift */; };
 		229407B820EA182D00AB2B0C /* NotoSansCJKkr-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 229407AF20EA182800AB2B0C /* NotoSansCJKkr-Thin.otf */; };
 		229407B920EA182D00AB2B0C /* NotoSansCJKkr-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 229407B020EA182900AB2B0C /* NotoSansCJKkr-Black.otf */; };
@@ -152,6 +154,8 @@
 		22576F9820F5F270000434BC /* LoginMainPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMainPopUpViewController.swift; sourceTree = "<group>"; };
 		22576F9A20F5F613000434BC /* meow_box_splash_4.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = meow_box_splash_4.json; sourceTree = "<group>"; };
 		2259035020EE6E3300094935 /* MeowBoxDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeowBoxDetailViewController.swift; sourceTree = "<group>"; };
+		2270205D20F69C09007FA297 /* StoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryViewController.swift; sourceTree = "<group>"; };
+		2270205F20F69C18007FA297 /* BirthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthViewController.swift; sourceTree = "<group>"; };
 		227DF56A20E905FF00050EBC /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		229407AF20EA182800AB2B0C /* NotoSansCJKkr-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Thin.otf"; sourceTree = "<group>"; };
 		229407B020EA182900AB2B0C /* NotoSansCJKkr-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansCJKkr-Black.otf"; sourceTree = "<group>"; };
@@ -438,6 +442,8 @@
 				22FB614620F3960B00E77000 /* SignUpCheckPopUpViewController.swift */,
 				22576F9820F5F270000434BC /* LoginMainPopUpViewController.swift */,
 				22F1941A20F68822008A2C48 /* CatHaveViewController.swift */,
+				2270205D20F69C09007FA297 /* StoryViewController.swift */,
+				2270205F20F69C18007FA297 /* BirthViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -706,6 +712,7 @@
 				2215610420F47C9800EA5C2B /* InstaData.swift in Sources */,
 				229BCBAB20E9BBC7005E3B9F /* SignInViewController.swift in Sources */,
 				222B5DAF20E8BA26003F0A8C /* AppDelegate.swift in Sources */,
+				2270205E20F69C09007FA297 /* StoryViewController.swift in Sources */,
 				2200E30720F1D8E00030A7E9 /* MyPageService.swift in Sources */,
 				22A86ED820EBEE4400B17661 /* LogoutPopUpViewController.swift in Sources */,
 				22B1179D20EC5EE7006B8536 /* MyAccountViewController.swift in Sources */,
@@ -725,6 +732,7 @@
 				221560F620F3E51100EA5C2B /* MainService.swift in Sources */,
 				CC336E1E20F2746E00073E96 /* Ticketed.swift in Sources */,
 				CC44CBB820EB2235007466D8 /* QuestionViewController.swift in Sources */,
+				2270206020F69C18007FA297 /* BirthViewController.swift in Sources */,
 				221560F820F3E5EE00EA5C2B /* CatCountData.swift in Sources */,
 				CCC82BFF20F4753A007A23F3 /* RemoteViewController.swift in Sources */,
 				2215610220F47B4300EA5C2B /* ReviewService.swift in Sources */,

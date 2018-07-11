@@ -396,6 +396,8 @@ struct MyPageService: APIService {
 
                                     if message == "success" {
                                         print("update 성공")
+                                        userdefault.set(JSON(value)["result"]["cat_idx"].string, forKey: "cat_idx")
+                                        
                                         completion()
                                     }
                                     else {
