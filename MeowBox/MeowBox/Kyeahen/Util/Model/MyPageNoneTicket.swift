@@ -10,6 +10,7 @@ import Foundation
 
 struct MyPageNoneTicket: Codable {
     
+    let image_profile: String
     let catinfo: String
     let flag: String
     let sendImage: String

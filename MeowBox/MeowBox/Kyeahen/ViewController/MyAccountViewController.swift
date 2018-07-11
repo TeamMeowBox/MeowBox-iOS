@@ -289,21 +289,20 @@ extension MyAccountViewController: UIImagePickerControllerDelegate, UINavigation
 //
 //        }
         
-        if let imgUrl = info[UIImagePickerControllerImageURL] as? URL{
-            let imgName = imgUrl.lastPathComponent
-            let documentDirectory = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first
-            let localPath = documentDirectory?.appending(imgName)
-            
-            let image = info[UIImagePickerControllerOriginalImage] as! UIImage
-            let data = UIImagePNGRepresentation(image)! as NSData
-            data.write(toFile: localPath!, atomically: true)
-            //let imageData = NSData(contentsOfFile: localPath!)!
-            let photoURL = URL.init(fileURLWithPath: localPath!)//NSURL(fileURLWithPath: localPath!)
-            print(photoURL)
-            
-            self.userdefault.set(photoURL, forKey: "image_profile")
-            
-        }
+//        if let imgUrl = info[UIImagePickerControllerImageURL] as? URL{
+//            let imgName = imgUrl.lastPathComponent
+//            let documentDirectory = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first
+//            let localPath = documentDirectory?.appending(imgName)
+//
+//            let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+//            let data = UIImagePNGRepresentation(image)! as NSData
+//            data.write(toFile: localPath!, atomically: true)
+//            //let imageData = NSData(contentsOfFile: localPath!)!
+//            let photoURL = URL.init(fileURLWithPath: localPath!)//NSURL(fileURLWithPath: localPath!)
+//            print(photoURL)
+//
+//            self.userdefault.set(photoURL, forKey: "image_profile")
+//        }
         
         self.dismiss(animated: true) {
             print("이미지 피커 사라짐")

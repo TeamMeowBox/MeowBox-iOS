@@ -53,11 +53,11 @@ class MyPage1ViewController: UIViewController {
         //프로필 이미지 동그랗게
         profileImageView.layer.masksToBounds = true
         profileImageView.layer.cornerRadius = profileImageView.layer.frame.width/2
-        profileImageView.kf.setImage(with: URL(string: gsno(userdefault.string(forKey: "image_profile"))), placeholder: UIImage())
-    
+//        profileImageView.kf.setImage(with: URL(string: gsno(userdefault.string(forKey: "image_profile"))), placeholder: UIImage())
+//
         sideBarProfileImageView.layer.masksToBounds = true
         sideBarProfileImageView.layer.cornerRadius = sideBarProfileImageView.layer.frame.width/2
-        sideBarProfileImageView.kf.setImage(with: URL(string: gsno(userdefault.string(forKey: "image_profile"))), placeholder: UIImage())
+//        sideBarProfileImageView.kf.setImage(with: URL(string: gsno(userdefault.string(forKey: "image_profile"))), placeholder: UIImage())
         
         // Do any additional setup after loading the view.
     }
@@ -65,8 +65,8 @@ class MyPage1ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         loginCheck()
         profileImageCheck()
-        sideBarProfileImageView.kf.setImage(with: URL(string: gsno(userdefault.string(forKey: "image_profile"))), placeholder: UIImage())
-        profileImageView.kf.setImage(with: URL(string: gsno(userdefault.string(forKey: "image_profile"))), placeholder: UIImage())
+//        sideBarProfileImageView.kf.setImage(with: URL(string: gsno(userdefault.string(forKey: "image_profile"))), placeholder: UIImage())
+//        profileImageView.kf.setImage(with: URL(string: gsno(userdefault.string(forKey: "image_profile"))), placeholder: UIImage())
     }
     
     //MARK: 프로필 이미지 체크 함수
@@ -359,6 +359,9 @@ class MyPage1ViewController: UIViewController {
             
             let catinfo = myPageNoneTicketData.catinfo
             let name = self.gsno(self.userdefault.string(forKey: "name"))
+            self.profileImageView.kf.setImage(with: URL(string: myPageNoneTicketData.image_profile), placeholder: UIImage())
+            self.sideBarProfileImageView.kf.setImage(with: URL(string: myPageNoneTicketData.image_profile), placeholder: UIImage())
+            self.userdefault.set(myPageNoneTicketData.image_profile, forKey: "image_profile")
             
             print(catinfo)
             
@@ -386,6 +389,9 @@ class MyPage1ViewController: UIViewController {
             self.myPageTicekets = myPageTicketData
             self.catNameLabel.text = self.myPageNoneTickets?.catinfo
             self.userNameLabel.text = self.userdefault.string(forKey: "name")
+            self.profileImageView.kf.setImage(with: URL(string: myPageTicketData.image_profile), placeholder: UIImage())
+            self.sideBarProfileImageView.kf.setImage(with: URL(string: myPageTicketData.image_profile), placeholder: UIImage())
+            self.userdefault.set(myPageTicketData.image_profile, forKey: "image_profile")
             
             let catinfo = myPageTicketData.catinfo
             let name = self.gsno(self.userdefault.string(forKey: "name"))

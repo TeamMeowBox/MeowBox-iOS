@@ -9,6 +9,8 @@
 import Foundation
 
 struct MyPageTicket: Codable {
+    
+    let image_profile: String
     let catinfo: String
     let flag: String
     let ticket: String
