@@ -46,6 +46,7 @@ struct OrderService : APIService{
                     if let message = JSON(value)["message"].string{
                         if message == "success"{ // 주문하기 성공
                             print("주문 성공!")
+                            userDefault.set("success", forKey: "order_success")
                             completion("success")
                         }else if message == "bad_request"{
                             completion("bad_request")
@@ -229,7 +230,6 @@ struct OrderService : APIService{
             "random_key" : random_key
         ]
         
-        print("확인 시 작 !!!!")
         
         Alamofire.request(URL, method: .post, parameters: body, encoding: JSONEncoding.default, headers: headers).responseData() { res in
             switch res.result{
@@ -261,6 +261,60 @@ struct OrderService : APIService{
             }
         }
     }
+    
+    
+    
+    
+    
+    
+    //MARK : 자주 묻는 질문 서비스
+    static func qna(completion: @escaping (QnAList?)->Void){
+        let userDefault = UserDefaults.standard
+        
+        guard let token = userDefault.string(forKey: "token") else { return }
+        
+        let headers = ["authorization": token]
+        
+        let URL = url("/mypage/qna")
+        
+        
+        Alamofire.request(URL, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: headers).responseData(){ res in
+            switch res.result{
+            case .success:
+                if let value = res.result.value{
+                    if let message = JSON(value)["message"].string{
+                        print(message)
+                        if message == "success"{ // 최근 주문지 불러오기 성공
+                            print("자주묻는질문 성공!")
+                            
+                            let decoder = JSONDecoder()
+                            do{
+                                let qnaData = try decoder.decode(QnAData.self, from: value)
+                                let qnaList = qnaData.result
+                               
+                                completion(qnaList)
+                            }catch{
+                                print("자주묻는질문catch...")
+                            }
+                            
+                            
+                            
+                        }else{
+                            print("fail...")
+                        }
+                    }
+                }
+                
+                break
+            case .failure(let err):
+                print(err.localizedDescription)
+                break
+            }
+        }
+    }
+    
+    
+    
     
     
 }

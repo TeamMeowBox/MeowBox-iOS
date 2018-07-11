@@ -33,7 +33,7 @@ class Order1ContainerViewController: UIViewController {
         super.viewDidLoad()
         
         loginCheck()
-
+        
         self.navigationItem.backBarButtonItem = barBtn
         hiddenImageView.isHidden = true
         
@@ -52,7 +52,10 @@ class Order1ContainerViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         loginCheck()
+        
     }
+    
+    
     
     //MARK: 로그인 체크 함수
     func loginCheck() {
@@ -89,7 +92,7 @@ class Order1ContainerViewController: UIViewController {
     
     private lazy var withInfoVC4: OrderWithInfo4ViewController = {
         var viewController = UIStoryboard(name: "Order", bundle: nil).instantiateViewController(withIdentifier: "OrderWithInfo4ViewController") as! OrderWithInfo4ViewController
-
+        
         viewController.parentVC = self
         self.addChildViewController(viewController)
         return viewController
@@ -114,11 +117,12 @@ class Order1ContainerViewController: UIViewController {
             withInfoVC2.scrollView.setContentOffset(.zero, animated: true)
             break
         case 3:
-//            remove(asChildViewController: withInfoVC4)
+            //            remove(asChildViewController: withInfoVC4)
             add(asChildViewController: withInfoVC3)
             withInfoVC3.scrollView.setContentOffset(.zero, animated: true)
             break
         case 4:
+            remove(asChildViewController: withInfoVC3)
             add(asChildViewController: withInfoVC4)
             withInfoVC4.scrollView.setContentOffset(.zero, animated: true)
             break
@@ -127,6 +131,7 @@ class Order1ContainerViewController: UIViewController {
             break
         case 33:
             remove(asChildViewController: withInfoVC4)
+            //add(asChildViewController: withInfoVC4)
             add(asChildViewController: withInfoVC3)
             withInfoVC3.scrollView.setContentOffset(.zero, animated: true)
         default:
@@ -201,7 +206,7 @@ class Order1ContainerViewController: UIViewController {
     @IBAction func sideBarBackBtnAction(_ sender: Any) {
         
         hiddenImageView.isHidden = true
-
+        
         hiddenLeadingC.constant = 0
         hiddenTrailingC.constant = 0
         leadingC.constant = 0
@@ -269,8 +274,8 @@ class Order1ContainerViewController: UIViewController {
         //네비게이션바 투명 복원
         self.navigationController?.navigationBar.shadowImage = UIColor( red: CGFloat(112/255.0), green: CGFloat(112/255.0), blue: CGFloat(112/255.0), alpha: CGFloat(0.2) ).as1ptImage()
         self.navigationController?.navigationBar.barTintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-            self.navigationItem.leftBarButtonItem = self.barBtn
-            self.navigationItem.title = "주문하기"
+        self.navigationItem.leftBarButtonItem = self.barBtn
+        self.navigationItem.title = "주문하기"
     }
     
     
@@ -294,6 +299,7 @@ class Order1ContainerViewController: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
         self.view.endEditing(true)
     }
+    
     
     
     
