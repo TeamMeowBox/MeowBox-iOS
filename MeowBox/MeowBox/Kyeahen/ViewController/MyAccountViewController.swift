@@ -179,13 +179,13 @@ class MyAccountViewController: UIViewController {
             
             self.userdefault.set(self.gsno(accountData.image_profile), forKey: "image_profile")
             
-            if accountData.size == 1 {
+            if accountData.size == 0 {
                 self.smallSizeBtn.setImage(#imageLiteral(resourceName: "small-radio-btn-pink"), for: .normal)
             }
-            else if accountData.size == 2 {
+            else if accountData.size == 1 {
                 self.mediumSizeBtn.setImage(#imageLiteral(resourceName: "medium-radio-btn-pink"), for: .normal)
             }
-            else if accountData.size == 3 {
+            else if accountData.size == 2 {
                 self.bigSizeBtn.setImage(#imageLiteral(resourceName: "large-radio-btn-pink"), for: .normal)
             }
             else {
