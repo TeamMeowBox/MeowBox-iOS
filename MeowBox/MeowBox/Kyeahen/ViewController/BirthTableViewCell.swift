@@ -9,7 +9,7 @@
 import UIKit
 
 class BirthTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource {
-    
+     
     @IBOutlet weak var tableViewLabel: UILabel!
     @IBOutlet weak var tableImageView: UIImageView!
     @IBOutlet weak var birthCollectionView: UICollectionView!

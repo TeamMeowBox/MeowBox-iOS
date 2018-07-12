@@ -195,10 +195,9 @@ class MyPage1ViewController: UIViewController {
     //MARK: 생일축하해!박스 액션
     @IBAction func birthBoxAction(_ sender: Any) {
         
+        let webtoonNaviVC = UIStoryboard(name: "MeowBox", bundle: nil).instantiateViewController(withIdentifier: "WebtoonNaviVC")
         
-        let birthNaviVC = UIStoryboard(name: "MeowBox", bundle: nil).instantiateViewController(withIdentifier: "BirthNaviVC")
-        
-        self.present(birthNaviVC, animated: true, completion: nil)
+        self.present(webtoonNaviVC, animated: true, completion: nil)
         
     }
     
