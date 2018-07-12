@@ -13,23 +13,24 @@ class MeowBoxDetailViewController: UIViewController, UITableViewDelegate, UITabl
 
     @IBOutlet weak var leadingC: NSLayoutConstraint!
     @IBOutlet weak var trailingC: NSLayoutConstraint!
-    @IBOutlet weak var hiddenLeadingC: NSLayoutConstraint!
-    @IBOutlet weak var hiddenTrailingC: NSLayoutConstraint!
-    @IBOutlet weak var hiddenImageView: UIImageView!
+//    @IBOutlet weak var hiddenLeadingC: NSLayoutConstraint!
+//    @IBOutlet weak var hiddenTrailingC: NSLayoutConstraint!
+//    @IBOutlet weak var hiddenImageView: UIImageView!
     
     @IBOutlet weak var barButton: UIBarButtonItem!
-    
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var detailTableView: UITableView!
     @IBOutlet weak var detailView: UIView!
     @IBOutlet weak var loginInfoLabel: UILabel!
+    @IBOutlet weak var firstLabel: UILabel!
+    
     
     let logo : UIImage = UIImage(named: "meowbox-logo-pink.png")!
     let logoImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 128, height: 21))
     
     var sideBarIsVisible = false
     
-    let tableImageArr = [ #imageLiteral(resourceName: "package-box-img"),]
+    let tableImageArr = [ #imageLiteral(resourceName: "package-box-img"),#imageLiteral(resourceName: "package-box-img"),#imageLiteral(resourceName: "package-box-img"),#imageLiteral(resourceName: "package-box-img"),#imageLiteral(resourceName: "package-box-img")]
     let userDefault = UserDefaults.standard
     
     override func viewDidLoad() {
@@ -38,7 +39,7 @@ class MeowBoxDetailViewController: UIViewController, UITableViewDelegate, UITabl
         loginCheck()
         profileImageCheck()
         
-        hiddenImageView.isHidden = true
+//        hiddenImageView.isHidden = true
         
         //TableView
         detailTableView.delegate = self
@@ -57,6 +58,12 @@ class MeowBoxDetailViewController: UIViewController, UITableViewDelegate, UITabl
         profileImageView.layer.masksToBounds = true
         profileImageView.layer.cornerRadius = profileImageView.layer.frame.width/2
         profileImageView.kf.setImage(with: URL(string: gsno(userDefault.string(forKey: "image_profile"))), placeholder: UIImage())
+        
+        firstLabel.text =
+        """
+        냥이들의 트로피칼 나이트
+        미유박스와 함께 한여름밤의 꿀을!
+        """
 
     }
     
@@ -103,20 +110,54 @@ class MeowBoxDetailViewController: UIViewController, UITableViewDelegate, UITabl
     
     //로우에 어떤 데이터를 보여줄건지
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MeowBoxDetailTableViewCell", for: indexPath) as! MeowBoxDetailTableViewCell
-
-        cell.detailTitle.text = "죠스 쿨링 모자"
-        cell.detailImageView.image = tableImageArr[indexPath.row]
-        cell.detailContent.text =
-            """
-            더운 여름을 시원한 바다로 만들어 줄
-            쿨 원단으로 만들어진 모자입니다.
-            귀여운 사진은 덤, 시원한 여름은 필수입니다.
-            """
         
-        return cell
+        if indexPath.row == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "MeowBoxDetailTableViewCell", for: indexPath) as! MeowBoxDetailTableViewCell
+
+            cell.detailTitle.text = "선글라스 & 모자"
+            cell.detailImageView.image = tableImageArr[indexPath.row]
+            cell.detailCollectionView.tag = indexPath.row
+            
+            return cell
+        }
+        else if indexPath.row == 1 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "MeowBoxDetailTableViewCell", for: indexPath) as! MeowBoxDetailTableViewCell
+            
+            cell.detailTitle.text = "장난감"
+            cell.detailImageView.image = tableImageArr[indexPath.row]
+            cell.detailCollectionView.tag = indexPath.row
+            
+            return cell
+        }
+        else if indexPath.row == 2 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "MeowBoxDetailTableViewCell", for: indexPath) as! MeowBoxDetailTableViewCell
+            
+            cell.detailTitle.text = "낚시대"
+            cell.detailImageView.image = tableImageArr[indexPath.row]
+            cell.detailCollectionView.tag = indexPath.row
+            
+            return cell
+        }
+        else if indexPath.row == 3 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "MeowBoxDetailTableViewCell", for: indexPath) as! MeowBoxDetailTableViewCell
+            
+            cell.detailTitle.text = "스크래쳐"
+            cell.detailImageView.image = tableImageArr[indexPath.row]
+            cell.detailCollectionView.tag = indexPath.row
+            
+            return cell
+        }
+        else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "MeowBoxDetailTableViewCell", for: indexPath) as! MeowBoxDetailTableViewCell
+            
+            cell.detailTitle.text = "간식"
+            cell.detailImageView.image = tableImageArr[indexPath.row]
+            cell.detailCollectionView.tag = indexPath.row
+            
+            return cell
+            
+        }
     }
-    
     
     //MARK: 네비게이션 바 투명하게 하는 함수
     func setNavigationBar() {
@@ -133,10 +174,10 @@ class MeowBoxDetailViewController: UIViewController, UITableViewDelegate, UITabl
         
         if !sideBarIsVisible { //메뉴 보여줘야함
             
-            hiddenImageView.isHidden = false
-
-            hiddenLeadingC.constant = 258
-            hiddenTrailingC.constant = -258
+//            hiddenImageView.isHidden = false
+//
+//            hiddenLeadingC.constant = 258
+//            hiddenTrailingC.constant = -258
             leadingC.constant = 258
             trailingC.constant = -258
             
@@ -159,10 +200,10 @@ class MeowBoxDetailViewController: UIViewController, UITableViewDelegate, UITabl
     //MARK: 사이드바 Back 액션
     @IBAction func sideBarBackAction(_ sender: Any) {
         
-        hiddenImageView.isHidden = true
-
-        hiddenLeadingC.constant = 0
-        hiddenTrailingC.constant = 0
+//        hiddenImageView.isHidden = true
+//
+//        hiddenLeadingC.constant = 0
+//        hiddenTrailingC.constant = 0
         leadingC.constant = 0
         trailingC.constant = 0
         
