@@ -89,20 +89,28 @@ class OrderWithInfo2ViewController: UIViewController {
     }
     
     func catsignUp(){
-        CatService.catSignup(name: catName, size: catSize, birthday: gsno(birthTextField.text), caution: gsno(specialTextView.text)){ message in
-            if message == "success"{
-
-                // 고양이 등록 완료 됬을 때 userdefault cat_idx 갱신해주기
-                
-                
-                self.parentVC?.changeVC(num: 3)
-            }else if message == "failure"{
-                let alertView = UIAlertController(title: "고양이 등록 실패", message: "ㅜㅜㅜ", preferredStyle: .alert)
-                let ok = UIAlertAction(title: "확인", style: .default, handler: nil)
-                alertView.addAction(ok)
-                self.present(alertView, animated: true, completion: nil)
+        if gsno(birthTextField.text) == ""{ // 생일을 입력 안 한 경우
+            let alertView = UIAlertController(title: "고양이 등록 실패", message: "고양이 생일을 입력해주세요", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "확인", style: .default, handler: nil)
+            alertView.addAction(ok)
+            self.present(alertView, animated: true, completion: nil)
+        }else{
+            CatService.catSignup(name: catName, size: catSize, birthday: gsno(birthTextField.text), caution: gsno(specialTextView.text)){ message in
+                if message == "success"{
+                    
+                    // 고양이 등록 완료 됬을 때 userdefault cat_idx 갱신해주기
+                    
+                    
+                    self.parentVC?.changeVC(num: 3)
+                }else if message == "failure"{
+                    let alertView = UIAlertController(title: "고양이 등록 실패", message: "ㅜㅜㅜ", preferredStyle: .alert)
+                    let ok = UIAlertAction(title: "확인", style: .default, handler: nil)
+                    alertView.addAction(ok)
+                    self.present(alertView, animated: true, completion: nil)
+                }
             }
         }
+        
     }
     
     @IBAction func goWithInfo3(_ sender: Any) {
