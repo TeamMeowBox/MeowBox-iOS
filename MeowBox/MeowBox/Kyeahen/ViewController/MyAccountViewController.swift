@@ -43,6 +43,7 @@ class MyAccountViewController: UIViewController {
     
     var profileUrl: URL?
     
+    @IBOutlet weak var scrollView: UIScrollView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -307,6 +308,18 @@ extension MyAccountViewController: UIImagePickerControllerDelegate, UINavigation
         self.dismiss(animated: true) {
             print("이미지 피커 사라짐")
         }
+    }
+    
+    func addScrollViewEndEditing(){
+        let singleTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(scrollTapMethod))
+        singleTapGestureRecognizer.numberOfTapsRequired = 1
+        singleTapGestureRecognizer.isEnabled = true
+        singleTapGestureRecognizer.cancelsTouchesInView = false
+        scrollView.addGestureRecognizer(singleTapGestureRecognizer)
+    }
+    
+    @objc func scrollTapMethod(sender: UITapGestureRecognizer) {
+        self.view.endEditing(true)
     }
     
 }

@@ -9,7 +9,7 @@
         <dict>
             <key>CFBundleURLSchemes</key>
             <array>
-                <string>YourSchemeName</string>
+                <string>MeowBox</string>
             </array>
         </dict>
     </array>
