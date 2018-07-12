@@ -54,6 +54,7 @@ class Html5InicisViewController: UIViewController {
 //        print("random:    \(random)")
 //        print(merchant)
         
+
         
         print("myorderidx2:\(userDefault.integer(forKey: "myorderidx"))")
         
