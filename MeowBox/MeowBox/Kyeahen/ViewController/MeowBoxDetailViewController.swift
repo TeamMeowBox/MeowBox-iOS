@@ -114,7 +114,6 @@ class MeowBoxDetailViewController: UIViewController, UITableViewDelegate, UITabl
             귀여운 사진은 덤, 시원한 여름은 필수입니다.
             """
         
-        
         return cell
     }
     
@@ -126,6 +125,7 @@ class MeowBoxDetailViewController: UIViewController, UITableViewDelegate, UITabl
         bar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         bar.shadowImage = UIImage()
         bar.backgroundColor = UIColor.clear
+
     }
     
     //MARK: 사이드바 액션

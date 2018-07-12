@@ -236,6 +236,10 @@ class MainViewController: UIViewController,UICollectionViewDelegate,UICollection
     
     //MARK: 미유박스 이야기 액션
     @IBAction func storyAction(_ sender: Any) {
+
+        let storyNaviVC = UIStoryboard(name: "MeowBox", bundle: nil).instantiateViewController(withIdentifier: "StoryNaviVC")
+        
+        self.present(storyNaviVC, animated: true, completion: nil)
         
     }
     
