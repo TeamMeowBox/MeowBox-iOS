@@ -46,6 +46,11 @@ struct OrderService : APIService{
                             print("myorderidx:\(myorderidx)")
                             userDefault.set(myorderidx, forKey: "myorderidx")
                             userDefault.set("success", forKey: "order_success")
+                            
+                            if product == "3" || product == "6"{
+                                userDefault.set(product, forKey: "flag")
+                            }
+                            
                             completion("success")
                         }else if message == "bad_request"{
                             completion("bad_request")

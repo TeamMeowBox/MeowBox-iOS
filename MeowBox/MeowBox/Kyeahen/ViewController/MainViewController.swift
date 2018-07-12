@@ -355,6 +355,7 @@ class MainViewController: UIViewController,UICollectionViewDelegate,UICollection
                 newPage = ceil(contentWidth / pageWidth) - 1.0
             }
         }
+        
         self.pageControl.currentPage = Int(newPage)
         let point = CGPoint (x: CGFloat(newPage * pageWidth), y: targetContentOffset.pointee.y)
         targetContentOffset.pointee = point
@@ -367,12 +368,7 @@ class MainViewController: UIViewController,UICollectionViewDelegate,UICollection
             self.barButton.tintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         }
         
-        
-        
     }
-    
-    
 
-    
 }
 

@@ -34,7 +34,6 @@ class SuggestViewController: UIViewController {
     
     @IBAction func suggestAction(_ sender: Any) {
         saveFeedback(title: gsno(detailSuggestionTextField.text), content: gsno(detailSuggestionTextView.text))
-        saveFeedback(title: gsno(detailSuggestionTextField.text), content: gsno(detailSuggestionTextView.text))
     }
     
     
