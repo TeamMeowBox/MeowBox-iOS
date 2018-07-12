@@ -50,10 +50,11 @@ class OrderWithInfo3ViewController: UIViewController {
         
         guard let hasCat = userDefault.string(forKey: "cat_idx") else { return }
         if hasCat != "-1"{
-            let alertView = UIAlertController(title: "고양이", message: "고양이가 이미 등록되어 있습니다", preferredStyle: .alert)
-            let ok = UIAlertAction(title: "확인", style: .default, handler: nil)
-            alertView.addAction(ok)
-            self.present(alertView, animated: true, completion: nil)
+            let popUPVC = UIStoryboard(name: "MyPage", bundle: nil).instantiateViewController(withIdentifier: CatHaveViewController.reuseIdentifier) as! CatHaveViewController
+            self.addChildViewController(popUPVC)
+            popUPVC.view.frame = self.view.frame
+            self.view.addSubview(popUPVC.view)
+            popUPVC.didMove(toParentViewController: self)
         }else{
             parentVC?.changeVC(num: 2)
         }
@@ -170,10 +171,11 @@ class OrderWithInfo3ViewController: UIViewController {
             if message == "success"{
                 self.parentVC?.changeVC(num: 4)
             }else{
-                let alertView = UIAlertController(title: "정기권 중복", message: "정기권이 이미 있습니다.", preferredStyle: .alert)
-                let ok = UIAlertAction(title: "확인", style: .default, handler: nil)
-                alertView.addAction(ok)
-                self.present(alertView, animated: true, completion: nil)
+                let popUPVC = UIStoryboard(name: "MyPage", bundle: nil).instantiateViewController(withIdentifier: TicketHaveViewController.reuseIdentifier) as! TicketHaveViewController
+                self.addChildViewController(popUPVC)
+                popUPVC.view.frame = self.view.frame
+                self.view.addSubview(popUPVC.view)
+                popUPVC.didMove(toParentViewController: self)
             }
         }
     }

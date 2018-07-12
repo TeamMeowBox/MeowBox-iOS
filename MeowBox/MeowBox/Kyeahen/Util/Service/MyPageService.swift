@@ -133,7 +133,7 @@ struct MyPageService: APIService {
     }
     
     //MARK: 마이페이지 - 미유박스에 제안
-    static func saveFeedback(title: String, content: String, completion: @escaping ()->Void) {
+    static func saveFeedback(title: String, content: String, completion: @escaping (_ message: String)->Void) {
         
         let URL = url("/mypage/feedback")
         
@@ -164,7 +164,7 @@ struct MyPageService: APIService {
                                 
                                 if message == "success" {
                                     print("제안 성공")
-                                    completion()
+                                    completion("success")
                                 }
                                 else {
                                     print("제안 실패")
