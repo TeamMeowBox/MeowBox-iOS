@@ -187,7 +187,7 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="325" height="667"/>
                                                         </imageView>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qY9-KQ-pyV">
-                                                            <rect key="frame" x="21" y="395" width="114" height="34"/>
+                                                            <rect key="frame" x="21" y="330" width="114" height="34"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="114" id="Cp3-s0-vy4"/>
                                                                 <constraint firstAttribute="height" constant="34" id="MRG-n4-rBT"/>
@@ -208,7 +208,7 @@
                                                     <constraint firstItem="FU6-bc-hYe" firstAttribute="height" secondItem="Hpd-Rf-UMl" secondAttribute="height" id="MPA-Pv-11B"/>
                                                     <constraint firstItem="qY9-KQ-pyV" firstAttribute="leading" secondItem="Hpd-Rf-UMl" secondAttribute="leading" constant="21" id="U9E-3a-6Ap"/>
                                                     <constraint firstItem="FU6-bc-hYe" firstAttribute="top" secondItem="Hpd-Rf-UMl" secondAttribute="top" id="VOz-Ea-rsM"/>
-                                                    <constraint firstItem="qY9-KQ-pyV" firstAttribute="top" secondItem="Hpd-Rf-UMl" secondAttribute="top" constant="395" id="uH6-xX-5nc"/>
+                                                    <constraint firstItem="qY9-KQ-pyV" firstAttribute="top" secondItem="Hpd-Rf-UMl" secondAttribute="top" constant="330" id="uH6-xX-5nc"/>
                                                     <constraint firstAttribute="bottom" secondItem="FU6-bc-hYe" secondAttribute="bottom" id="upV-Cy-Nha"/>
                                                     <constraint firstAttribute="trailing" secondItem="FU6-bc-hYe" secondAttribute="trailing" id="wPV-Ys-nhc"/>
                                                 </constraints>
@@ -440,7 +440,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="를 만났어요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="niF-3L-M66">
-                                                <rect key="frame" x="146.5" y="165" width="83.5" height="23"/>
+                                                <rect key="frame" x="147" y="165" width="83.5" height="23"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="23" id="2Sn-bq-9ik"/>
                                                 </constraints>
@@ -449,7 +449,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="소개합니다!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B7F-xf-sb1">
-                                                <rect key="frame" x="149" y="241" width="79" height="23"/>
+                                                <rect key="frame" x="149.5" y="241" width="79" height="23"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="23" id="rI0-eN-c8W"/>
                                                 </constraints>
