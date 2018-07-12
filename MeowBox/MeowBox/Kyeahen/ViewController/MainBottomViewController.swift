@@ -118,6 +118,9 @@ class MainBottomViewController: UIViewController,UIGestureRecognizerDelegate{
     //MARK: 미유박스 더 알아보기
     @IBAction func moreButton(_ sender: Any) {
         
+        let storyNaviVC = UIStoryboard(name: "MeowBox", bundle: nil).instantiateViewController(withIdentifier: "StoryNaviVC")
+        
+        self.present(storyNaviVC, animated: true, completion: nil)
         
     }
     

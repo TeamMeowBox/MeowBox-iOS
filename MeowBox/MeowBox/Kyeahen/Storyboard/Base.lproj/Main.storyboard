@@ -469,13 +469,13 @@
                                                 <color key="textColor" red="0.29803921568627451" green="0.30588235294117649" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6uu-E8-N0b">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_meow_box_one_img" translatesAutoresizingMaskIntoConstraints="NO" id="6uu-E8-N0b">
                                                 <rect key="frame" x="0.0" y="815" width="375" height="239.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="6uu-E8-N0b" secondAttribute="height" multiplier="375:239" id="zZj-5V-8bY"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gg4-Uh-B5l">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home-meow-box-two-img" translatesAutoresizingMaskIntoConstraints="NO" id="Gg4-Uh-B5l">
                                                 <rect key="frame" x="0.0" y="1391" width="375" height="239"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="Gg4-Uh-B5l" secondAttribute="height" multiplier="375:239" id="ASx-Mq-OpX"/>
@@ -1160,9 +1160,11 @@
     </scenes>
     <resources>
         <image name="home-dash-line" width="325" height="2"/>
+        <image name="home-meow-box-two-img" width="349" height="232"/>
         <image name="home-meowbox-detail-btn" width="178" height="33"/>
         <image name="home-meowbox-more-btn" width="178" height="33"/>
         <image name="home-v-img" width="10" height="6"/>
+        <image name="home_meow_box_one_img" width="347" height="231"/>
         <image name="instagram_frame" width="166" height="210"/>
         <image name="side-bar-back-btn4" width="17" height="19"/>
         <image name="side-bar-btn-gray" width="20" height="16"/>

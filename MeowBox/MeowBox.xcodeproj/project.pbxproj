@@ -73,6 +73,7 @@
 		22F0C05720F74A3800B99A54 /* StoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F0C05620F74A3800B99A54 /* StoryTableViewCell.swift */; };
 		22F0C05920F796C600B99A54 /* BirthTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F0C05820F796C600B99A54 /* BirthTableViewCell.swift */; };
 		22F0C05B20F7975800B99A54 /* BirthCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F0C05A20F7975800B99A54 /* BirthCollectionViewCell.swift */; };
+		22F0C05D20F7CA8D00B99A54 /* WebtoonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F0C05C20F7CA8D00B99A54 /* WebtoonViewController.swift */; };
 		22F1941520F6685A008A2C48 /* MyPagePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F1941420F6685A008A2C48 /* MyPagePopUpViewController.swift */; };
 		22F1941720F68437008A2C48 /* LoginFailPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F1941620F68437008A2C48 /* LoginFailPopUpViewController.swift */; };
 		22F1941920F686DA008A2C48 /* TicketHaveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F1941820F686DA008A2C48 /* TicketHaveViewController.swift */; };
@@ -193,6 +194,7 @@
 		22F0C05620F74A3800B99A54 /* StoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryTableViewCell.swift; sourceTree = "<group>"; };
 		22F0C05820F796C600B99A54 /* BirthTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthTableViewCell.swift; sourceTree = "<group>"; };
 		22F0C05A20F7975800B99A54 /* BirthCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthCollectionViewCell.swift; sourceTree = "<group>"; };
+		22F0C05C20F7CA8D00B99A54 /* WebtoonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebtoonViewController.swift; sourceTree = "<group>"; };
 		22F1941420F6685A008A2C48 /* MyPagePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPagePopUpViewController.swift; sourceTree = "<group>"; };
 		22F1941620F68437008A2C48 /* LoginFailPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFailPopUpViewController.swift; sourceTree = "<group>"; };
 		22F1941820F686DA008A2C48 /* TicketHaveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketHaveViewController.swift; sourceTree = "<group>"; };
@@ -453,6 +455,7 @@
 				22F0C05620F74A3800B99A54 /* StoryTableViewCell.swift */,
 				22F0C05820F796C600B99A54 /* BirthTableViewCell.swift */,
 				22F0C05A20F7975800B99A54 /* BirthCollectionViewCell.swift */,
+				22F0C05C20F7CA8D00B99A54 /* WebtoonViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -709,6 +712,7 @@
 				CCCA9DF220F0E930004319E5 /* NoticeViewController.swift in Sources */,
 				CCF0947820F1D6F30029567B /* CatService.swift in Sources */,
 				CCC82C0120F47587007A23F3 /* NiceViewController.swift in Sources */,
+				22F0C05D20F7CA8D00B99A54 /* WebtoonViewController.swift in Sources */,
 				222B5DCA20E8BB6F003F0A8C /* APIService.swift in Sources */,
 				CCCA9DF420F0EE5B004319E5 /* NoticeTableViewCell.swift in Sources */,
 				CCFB9BF720F6780E0010FAEE /* OrderList2.swift in Sources */,
@@ -906,11 +910,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7Y3DL2X5B3;
+				DEVELOPMENT_TEAM = S3H456VQ6Y;
 				INFOPLIST_FILE = MeowBox/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sopt.yeen.MeowBox;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sopt.yeen.MeowBox2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
@@ -925,11 +929,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7Y3DL2X5B3;
+				DEVELOPMENT_TEAM = S3H456VQ6Y;
 				INFOPLIST_FILE = MeowBox/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sopt.yeen.MeowBox;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sopt.yeen.MeowBox2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
