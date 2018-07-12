@@ -20,7 +20,7 @@ class OrderWithInfo3ViewController: UIViewController {
     let userDefault = UserDefaults.standard
     var selectProduct = "1"
     var selectPrice = "38500"
-
+    
     @IBOutlet weak var selectionList: SelectionList!
     @IBOutlet weak var scrollView: UIScrollView!
     override func viewDidLoad() {
@@ -97,9 +97,11 @@ class OrderWithInfo3ViewController: UIViewController {
         if selectionList.selectedIndex == 0{
             selectProduct = "1"
             selectPrice = "38500"
+            userDefault.set("7월 패키지 박스", forKey: "current_order_product")
         }else if selectionList.selectedIndex == 1{
             selectProduct = "2"
             selectPrice = "38500"
+            userDefault.set("고양이는 처음이지? 박스", forKey: "current_order_product")
         }
         box1View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "big-card-box-pink"))
         box2View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "card-box-white"))
@@ -143,6 +145,7 @@ class OrderWithInfo3ViewController: UIViewController {
         box4View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "card-box-white"))
         selectProduct = "3"
         selectPrice = "36500"
+        userDefault.set("3개월 정기권", forKey: "current_order_product")
     }
     
     @objc func select3View(){
@@ -153,6 +156,8 @@ class OrderWithInfo3ViewController: UIViewController {
         box4View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "card-box-white"))
         selectProduct = "6"
         selectPrice = "34500"
+        userDefault.set("6개월 정기권", forKey: "current_order_product")
+
     }
     
     @objc func select4View(){
@@ -163,6 +168,8 @@ class OrderWithInfo3ViewController: UIViewController {
         box4View.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "card-box-pink"))
         selectProduct = "7"
         selectPrice = "60000"
+        userDefault.set("생일축하해! 박스", forKey: "current_order_product")
+
     }
     
     
