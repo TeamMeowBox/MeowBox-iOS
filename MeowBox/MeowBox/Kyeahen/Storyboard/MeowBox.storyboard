@@ -1240,7 +1240,7 @@
                                             </constraints>
                                         </view>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="StoryTableViewCell" rowHeight="1705" id="FkL-62-p2I" customClass="StoryTableViewCell" customModule="MeowBox" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="StoryTableViewCell" rowHeight="1705" id="FkL-62-p2I" customClass="StoryTableViewCell" customModule="MeowBox" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="398.5" width="375" height="1705"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FkL-62-p2I" id="WBM-uX-dds">

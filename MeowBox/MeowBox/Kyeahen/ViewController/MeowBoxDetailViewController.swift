@@ -214,10 +214,19 @@ class MeowBoxDetailViewController: UIViewController, UITableViewDelegate, UITabl
     //MARK: 미유박스 이야기 액션
     @IBAction func storyAction(_ sender: Any) {
         
+        let storyNaviVC = UIStoryboard(name: "MeowBox", bundle: nil).instantiateViewController(withIdentifier: "StoryNaviVC")
+        
+        self.present(storyNaviVC, animated: true, completion: nil)
+        
     }
     
     //MARK: 생일축하해!박스 액션
     @IBAction func brithBoxAction(_ sender: Any) {
+        
+        let birthNaviVC = UIStoryboard(name: "MeowBox", bundle: nil).instantiateViewController(withIdentifier: "BirthNaviVC")
+        
+        self.present(birthNaviVC, animated: true, completion: nil)
+        
     }
     
     //MARK: 주문하기 액션

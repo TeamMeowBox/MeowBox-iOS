@@ -119,7 +119,6 @@ class BirthViewController: UIViewController {
         
         self.present(storyNaviVC, animated: true, completion: nil)
         
-        
     }
     
     //MARK: 생일축하해!박스 액션

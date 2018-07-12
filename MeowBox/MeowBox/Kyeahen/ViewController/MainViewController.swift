@@ -246,6 +246,11 @@ class MainViewController: UIViewController,UICollectionViewDelegate,UICollection
     //MARK: 생일축하해!박스 액션
     @IBAction func birthBoxAction(_ sender: Any) {
         
+        let birthNaviVC = UIStoryboard(name: "MeowBox", bundle: nil).instantiateViewController(withIdentifier: "BirthNaviVC")
+        
+        self.present(birthNaviVC, animated: true, completion: nil)
+        
+        
     }
     
     //MARK: 주문하기 액션
