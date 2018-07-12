@@ -13,9 +13,9 @@ class MeowBoxDetailViewController: UIViewController, UITableViewDelegate, UITabl
 
     @IBOutlet weak var leadingC: NSLayoutConstraint!
     @IBOutlet weak var trailingC: NSLayoutConstraint!
-//    @IBOutlet weak var hiddenLeadingC: NSLayoutConstraint!
-//    @IBOutlet weak var hiddenTrailingC: NSLayoutConstraint!
-//    @IBOutlet weak var hiddenImageView: UIImageView!
+    @IBOutlet weak var hiddenLeadingC: NSLayoutConstraint!
+    @IBOutlet weak var hiddenTrailingC: NSLayoutConstraint!
+    @IBOutlet weak var hiddenImageView: UIImageView!
     
     @IBOutlet weak var barButton: UIBarButtonItem!
     @IBOutlet weak var profileImageView: UIImageView!
@@ -23,6 +23,7 @@ class MeowBoxDetailViewController: UIViewController, UITableViewDelegate, UITabl
     @IBOutlet weak var detailView: UIView!
     @IBOutlet weak var loginInfoLabel: UILabel!
     @IBOutlet weak var firstLabel: UILabel!
+    @IBOutlet weak var bottomBtn: UIButton!
     
     
     let logo : UIImage = UIImage(named: "meowbox-logo-pink.png")!
@@ -30,7 +31,8 @@ class MeowBoxDetailViewController: UIViewController, UITableViewDelegate, UITabl
     
     var sideBarIsVisible = false
     
-    let tableImageArr = [ #imageLiteral(resourceName: "package-box-img"),#imageLiteral(resourceName: "package-box-img"),#imageLiteral(resourceName: "package-box-img"),#imageLiteral(resourceName: "package-box-img"),#imageLiteral(resourceName: "package-box-img")]
+    let tableImageArr = [#imageLiteral(resourceName: "sunglass-one-img-1"), #imageLiteral(resourceName: "toy-one-img-1"), #imageLiteral(resourceName: "fishing-rod-one-img-1"),#imageLiteral(resourceName: "scratcher-one-img-2") , #imageLiteral(resourceName: "snack-one-img-1")]
+
     let userDefault = UserDefaults.standard
     
     override func viewDidLoad() {
@@ -39,7 +41,7 @@ class MeowBoxDetailViewController: UIViewController, UITableViewDelegate, UITabl
         loginCheck()
         profileImageCheck()
         
-//        hiddenImageView.isHidden = true
+        hiddenImageView.isHidden = true
         
         //TableView
         detailTableView.delegate = self
@@ -116,7 +118,7 @@ class MeowBoxDetailViewController: UIViewController, UITableViewDelegate, UITabl
 
             cell.detailTitle.text = "선글라스 & 모자"
             cell.detailImageView.image = tableImageArr[indexPath.row]
-            cell.detailCollectionView.tag = indexPath.row
+            cell.tag = indexPath.row
             
             return cell
         }
@@ -125,7 +127,7 @@ class MeowBoxDetailViewController: UIViewController, UITableViewDelegate, UITabl
             
             cell.detailTitle.text = "장난감"
             cell.detailImageView.image = tableImageArr[indexPath.row]
-            cell.detailCollectionView.tag = indexPath.row
+            cell.tag = indexPath.row
             
             return cell
         }
@@ -134,7 +136,7 @@ class MeowBoxDetailViewController: UIViewController, UITableViewDelegate, UITabl
             
             cell.detailTitle.text = "낚시대"
             cell.detailImageView.image = tableImageArr[indexPath.row]
-            cell.detailCollectionView.tag = indexPath.row
+            cell.tag = indexPath.row
             
             return cell
         }
@@ -143,7 +145,7 @@ class MeowBoxDetailViewController: UIViewController, UITableViewDelegate, UITabl
             
             cell.detailTitle.text = "스크래쳐"
             cell.detailImageView.image = tableImageArr[indexPath.row]
-            cell.detailCollectionView.tag = indexPath.row
+            cell.tag = indexPath.row
             
             return cell
         }
@@ -152,7 +154,7 @@ class MeowBoxDetailViewController: UIViewController, UITableViewDelegate, UITabl
             
             cell.detailTitle.text = "간식"
             cell.detailImageView.image = tableImageArr[indexPath.row]
-            cell.detailCollectionView.tag = indexPath.row
+            cell.tag = indexPath.row
             
             return cell
             
@@ -174,10 +176,10 @@ class MeowBoxDetailViewController: UIViewController, UITableViewDelegate, UITabl
         
         if !sideBarIsVisible { //메뉴 보여줘야함
             
-//            hiddenImageView.isHidden = false
-//
-//            hiddenLeadingC.constant = 258
-//            hiddenTrailingC.constant = -258
+            hiddenImageView.isHidden = false
+
+            hiddenLeadingC.constant = 258
+            hiddenTrailingC.constant = -258
             leadingC.constant = 258
             trailingC.constant = -258
             
@@ -185,6 +187,7 @@ class MeowBoxDetailViewController: UIViewController, UITableViewDelegate, UITabl
             
             sideBarIsVisible = true
             detailView.isUserInteractionEnabled = false
+            bottomBtn.isUserInteractionEnabled = false
             self.navigationItem.leftBarButtonItem = nil
             self.navigationItem.titleView = nil
             
@@ -200,15 +203,16 @@ class MeowBoxDetailViewController: UIViewController, UITableViewDelegate, UITabl
     //MARK: 사이드바 Back 액션
     @IBAction func sideBarBackAction(_ sender: Any) {
         
-//        hiddenImageView.isHidden = true
-//
-//        hiddenLeadingC.constant = 0
-//        hiddenTrailingC.constant = 0
+        hiddenImageView.isHidden = true
+
+        hiddenLeadingC.constant = 0
+        hiddenTrailingC.constant = 0
         leadingC.constant = 0
         trailingC.constant = 0
         
         sideBarIsVisible = false
         detailView.isUserInteractionEnabled = true
+        bottomBtn.isUserInteractionEnabled = true
         
         UIView.animate(withDuration: 0.3, delay: 0.0, options: .curveEaseIn, animations: {
             self.view.layoutIfNeeded()

@@ -19,12 +19,20 @@ class BirthViewController: UIViewController, UITableViewDataSource, UITableViewD
     //sideBar var
     @IBOutlet weak var leadingC: NSLayoutConstraint!
     @IBOutlet weak var trailingC: NSLayoutConstraint!
+    @IBOutlet weak var hiddenLeadingC: NSLayoutConstraint!
+    @IBOutlet weak var hiddenTrailingC: NSLayoutConstraint!
+    @IBOutlet weak var hiddenImageView: UIImageView!
+    @IBOutlet weak var birthView: UIView!
+    @IBOutlet weak var bottomBtn: UIButton!
+    
 
     @IBOutlet weak var birthTableView: UITableView!
     
     let logo : UIImage = UIImage(named: "meowbox-logo-pink.png")!
     let logoImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 128, height: 21))
     let userDefault = UserDefaults.standard
+    
+    let birthArr = [#imageLiteral(resourceName: "ribbon_one_img-1"), #imageLiteral(resourceName: "cake-one-img-1"), #imageLiteral(resourceName: "birthday-toy-one-img-1"), #imageLiteral(resourceName: "scratcher-one-img-2"), #imageLiteral(resourceName: "snack-one-img-1")]
     
     var sideBarIsVisible = false
     
@@ -33,6 +41,8 @@ class BirthViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         loginCheck()
         profileImageCheck()
+        
+        hiddenImageView.isHidden = true
         
         //tableView
         self.birthTableView.dataSource = self
@@ -94,7 +104,7 @@ class BirthViewController: UIViewController, UITableViewDataSource, UITableViewD
         return 1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return birthArr.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -103,8 +113,8 @@ class BirthViewController: UIViewController, UITableViewDataSource, UITableViewD
             let cell = tableView.dequeueReusableCell(withIdentifier: BirthTableViewCell.reuseIdentifier, for: indexPath) as! BirthTableViewCell
             
             cell.tableViewLabel.text = "꼬깔모자 & 리본타이"
-            cell.tableImageView.image = #imageLiteral(resourceName: "birthday-background-img.png")
-            cell.birthCollectionView.tag = indexPath.row
+            cell.tableImageView.image = birthArr[indexPath.row]
+            cell.tag = indexPath.row
             
             return cell
         }
@@ -112,8 +122,8 @@ class BirthViewController: UIViewController, UITableViewDataSource, UITableViewD
             let cell = tableView.dequeueReusableCell(withIdentifier: BirthTableViewCell.reuseIdentifier, for: indexPath) as! BirthTableViewCell
             
             cell.tableViewLabel.text = "케이크 & 가랜드"
-            cell.tableImageView.image = #imageLiteral(resourceName: "birthday-background-img.png")
-            cell.birthCollectionView.tag = indexPath.row
+            cell.tableImageView.image = birthArr[indexPath.row]
+            cell.tag = indexPath.row
             
             return cell
         }
@@ -121,8 +131,8 @@ class BirthViewController: UIViewController, UITableViewDataSource, UITableViewD
             let cell = tableView.dequeueReusableCell(withIdentifier: BirthTableViewCell.reuseIdentifier, for: indexPath) as! BirthTableViewCell
             
             cell.tableViewLabel.text = "장난감"
-            cell.tableImageView.image = #imageLiteral(resourceName: "birthday-background-img.png")
-            cell.birthCollectionView.tag = indexPath.row
+            cell.tableImageView.image = birthArr[indexPath.row]
+            cell.tag = indexPath.row
             
             return cell
         }
@@ -130,8 +140,8 @@ class BirthViewController: UIViewController, UITableViewDataSource, UITableViewD
             let cell = tableView.dequeueReusableCell(withIdentifier: BirthTableViewCell.reuseIdentifier, for: indexPath) as! BirthTableViewCell
             
             cell.tableViewLabel.text = "스크래쳐"
-            cell.tableImageView.image = #imageLiteral(resourceName: "birthday-background-img.png")
-            cell.birthCollectionView.tag = indexPath.row
+            cell.tableImageView.image = birthArr[indexPath.row]
+            cell.tag = indexPath.row
             
             return cell
         }
@@ -139,8 +149,8 @@ class BirthViewController: UIViewController, UITableViewDataSource, UITableViewD
             let cell = tableView.dequeueReusableCell(withIdentifier: BirthTableViewCell.reuseIdentifier, for: indexPath) as! BirthTableViewCell
             
             cell.tableViewLabel.text = "간식"
-            cell.tableImageView.image = #imageLiteral(resourceName: "birthday-background-img.png")
-            cell.birthCollectionView.tag = indexPath.row
+            cell.tableImageView.image = birthArr[indexPath.row]
+            cell.tag = indexPath.row
             
             return cell
         }
@@ -182,10 +192,10 @@ class BirthViewController: UIViewController, UITableViewDataSource, UITableViewD
         
                 if !sideBarIsVisible { //메뉴 보여줘야함
         
-//                    hiddenImageView.isHidden = false
-//
-//                    hiddenLeadingC.constant = 258
-//                    hiddenTrailingC.constant = -258
+                    hiddenImageView.isHidden = false
+
+                    hiddenLeadingC.constant = 258
+                    hiddenTrailingC.constant = -258
                     leadingC.constant = 258
                     trailingC.constant = -258
         
@@ -195,8 +205,8 @@ class BirthViewController: UIViewController, UITableViewDataSource, UITableViewD
                     self.navigationItem.leftBarButtonItem = nil
                     self.navigationItem.titleView = nil
         
-//                    bottomBtnView.isUserInteractionEnabled = false
-//                    MainView.isUserInteractionEnabled = false
+                    bottomBtn.isUserInteractionEnabled = false
+                    birthView.isUserInteractionEnabled = false
         
         
                 }
@@ -211,17 +221,17 @@ class BirthViewController: UIViewController, UITableViewDataSource, UITableViewD
     //MARK: 사이드 바 내에 있는 BackBtn 액션
     @IBAction func sideBarBackAction(_ sender: Any) {
         
-//                hiddenImageView.isHidden = true
-//        
-//                hiddenLeadingC.constant = 0
-//                hiddenTrailingC.constant = 0
+                hiddenImageView.isHidden = true
+        
+                hiddenLeadingC.constant = 0
+                hiddenTrailingC.constant = 0
                 leadingC.constant = 0
                 trailingC.constant = 0
         
                 sideBarIsVisible = false
         
-//                bottomBtnView.isUserInteractionEnabled = true
-//                MainView.isUserInteractionEnabled = true
+                bottomBtn.isUserInteractionEnabled = true
+                birthView.isUserInteractionEnabled = true
         
         
                 UIView.animate(withDuration: 0.3, delay: 0.0, options: .curveEaseIn, animations: {
@@ -277,17 +287,17 @@ class BirthViewController: UIViewController, UITableViewDataSource, UITableViewD
     //MARK: 생일축하해!박스 액션
     @IBAction func birthBoxAction(_ sender: Any) {
         
-//                hiddenImageView.isHidden = true
-//
-//                hiddenLeadingC.constant = 0
-//                hiddenTrailingC.constant = 0
+                hiddenImageView.isHidden = true
+
+                hiddenLeadingC.constant = 0
+                hiddenTrailingC.constant = 0
                 leadingC.constant = 0
                 trailingC.constant = 0
         
                 sideBarIsVisible = false
         
-//                bottomBtnView.isUserInteractionEnabled = true
-//                MainView.isUserInteractionEnabled = true
+                bottomBtn.isUserInteractionEnabled = true
+                birthView.isUserInteractionEnabled = true
         
                 UIView.animate(withDuration: 0.3, delay: 0.0, options: .curveEaseIn, animations: {
                     self.view.layoutIfNeeded()
