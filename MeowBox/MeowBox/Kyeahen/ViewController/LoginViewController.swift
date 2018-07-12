@@ -94,7 +94,7 @@ class LoginViewController: UIViewController {
                 let mainVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainNaviVC")
                 self.present(mainVC, animated: true, completion: nil)
             }else if message == "failure"{
-                let popUPVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: LoginFailPopUpViewController.reuseIdentifier) as! LoginFailPopUpViewController
+                let popUPVC = UIStoryboard(name: "Sign", bundle: nil).instantiateViewController(withIdentifier: LoginFailPopUpViewController.reuseIdentifier) as! LoginFailPopUpViewController
                 self.addChildViewController(popUPVC)
                 popUPVC.view.frame = self.view.frame
                 self.view.addSubview(popUPVC.view)
