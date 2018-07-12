@@ -12,7 +12,7 @@ import Kingfisher
 
 class MainViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     
-    let imageArr = [#imageLiteral(resourceName: "package-box-img"),#imageLiteral(resourceName: "package-box-detail-img"),#imageLiteral(resourceName: "package-box-img"),#imageLiteral(resourceName: "package-box-detail-img"),#imageLiteral(resourceName: "package-box-img"),#imageLiteral(resourceName: "package-box-detail-img"),#imageLiteral(resourceName: "package-box-img"),#imageLiteral(resourceName: "package-box-detail-img")]
+    let imageArr = [#imageLiteral(resourceName: "home-package-box-img"),#imageLiteral(resourceName: "home-package-box-detail-img"),#imageLiteral(resourceName: "home-birthday-box-img"),#imageLiteral(resourceName: "home-birthday-box-detail-img"),#imageLiteral(resourceName: "home-coming-soon-img")]
     let userDefault = UserDefaults.standard
     
     @IBOutlet weak var collectionView: UICollectionView!
@@ -40,6 +40,7 @@ class MainViewController: UIViewController,UICollectionViewDelegate,UICollection
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.barButton.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         print(userDefault.string(forKey: "cat_idx"))
         print(gsno(userDefault.string(forKey: "image_profile")))
         userDefault.set("yes", forKey: "amIfirst")
@@ -350,6 +351,12 @@ class MainViewController: UIViewController,UICollectionViewDelegate,UICollection
         self.pageControl.currentPage = Int(newPage)
         let point = CGPoint (x: CGFloat(newPage * pageWidth), y: targetContentOffset.pointee.y)
         targetContentOffset.pointee = point
+        
+        if self.pageControl.currentPage == 0{
+            self.barButton.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        }else{
+            self.barButton.tintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        }
         
     }
     
