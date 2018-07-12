@@ -1179,6 +1179,7 @@
                         <outlet property="nameTextField" destination="c8y-1e-EKi" id="yMg-l4-8Ze"/>
                         <outlet property="phoneTextField" destination="t7q-dA-iFF" id="HS4-3t-0nh"/>
                         <outlet property="profileImageView" destination="4LI-NO-ceE" id="dUQ-5V-iL5"/>
+                        <outlet property="scrollView" destination="nQB-6a-g9D" id="GKL-DV-xsu"/>
                         <outlet property="smallSizeBtn" destination="jd8-EQ-9Xb" id="bK1-sk-b3n"/>
                     </connections>
                 </viewController>

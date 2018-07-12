@@ -13,6 +13,7 @@ class OrderWithInfoViewController: UIViewController {
     var parentVC : Order1ContainerViewController?
     let userDeafult = UserDefaults.standard
 
+    @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var changingLabel: UILabel!
     @IBOutlet weak var catNameTextField: UITextField!
     override func viewDidLoad() {
@@ -23,13 +24,15 @@ class OrderWithInfoViewController: UIViewController {
 
     @IBAction func goWithInfo2(_ sender: Any) {
         //parentVC?.myCatName = catNameTextField.text!
-        if let cName = catNameTextField.text{
-            Cat.shared.name = cName
-        }else{ // 고양이 이름 입력 안 한 경우
-            
+        
+        if catNameTextField.text == "" || catNameTextField.text == nil{
+            nextButton.shake()
+        }else{
+            Cat.shared.name = catNameTextField.text
+            parentVC?.changeVC(num: 2)
         }
         
-        parentVC?.changeVC(num: 2)
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){

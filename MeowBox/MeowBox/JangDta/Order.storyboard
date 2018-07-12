@@ -146,6 +146,7 @@
                     <connections>
                         <outlet property="catNameTextField" destination="vqF-Db-R63" id="LN0-ym-CdA"/>
                         <outlet property="changingLabel" destination="F4b-hO-XuE" id="Eur-Hg-lLm"/>
+                        <outlet property="nextButton" destination="pGB-Jx-JdF" id="Zkk-4J-aVz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8cr-HZ-RgE" userLabel="First Responder" sceneMemberID="firstResponder"/>
