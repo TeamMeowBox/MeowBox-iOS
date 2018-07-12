@@ -12,7 +12,6 @@ class MeowBoxDetailTableViewCell: UITableViewCell,UICollectionViewDataSource, UI
     
     @IBOutlet weak var detailTitle: UILabel!
     @IBOutlet weak var detailImageView: UIImageView!
-    @IBOutlet weak var detailContent: UITextView!
     @IBOutlet weak var detailCollectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
     
@@ -20,7 +19,6 @@ class MeowBoxDetailTableViewCell: UITableViewCell,UICollectionViewDataSource, UI
     
     
     let collectImageArr = [#imageLiteral(resourceName: "package-box-img"),#imageLiteral(resourceName: "package-box-detail-img"),#imageLiteral(resourceName: "package-box-img")]
-    let indicatorArr = [#imageLiteral(resourceName: "indicator-first"), #imageLiteral(resourceName: "indicator-second"), #imageLiteral(resourceName: "indicator-third")]
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -49,22 +47,62 @@ class MeowBoxDetailTableViewCell: UITableViewCell,UICollectionViewDataSource, UI
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if let cell: MeowBoxDetailCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "MeowBoxDetailCollectionViewCell", for: indexPath) as? MeowBoxDetailCollectionViewCell
-        {
-        cell.collectionImageView.image = collectImageArr[indexPath.row]
-        cell.collectionLabel.text = "시원해지는 원단"
-        cell.collectionTextView.text =
-            """
-            물에 닿으면 차가워지는 쿨 원단 소재.
-            모자를 물로 적시고 짜기만 하면
-            얼음처럼 시원해집니다.
-            """
-
-        cell.collectionPageControl.currentPage = indexPath.row
         
-        return cell
+        if tag == 0 {
+            if let cell: MeowBoxDetailCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "MeowBoxDetailCollectionViewCell", for: indexPath) as? MeowBoxDetailCollectionViewCell
+            {
+            cell.collectionImageView.image = collectImageArr[indexPath.row]
+            cell.collectionLabel.text = "시원해지는 원단"
+
+            
+            return cell
+            }
+            return UICollectionViewCell()
         }
-        return UICollectionViewCell()
+        else if tag == 1 {
+            if let cell: MeowBoxDetailCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "MeowBoxDetailCollectionViewCell", for: indexPath) as? MeowBoxDetailCollectionViewCell
+            {
+                cell.collectionImageView.image = collectImageArr[indexPath.row]
+                cell.collectionLabel.text = "시원해지는 원단"
+                
+                
+                return cell
+            }
+            return UICollectionViewCell()
+        }
+        else if tag == 2 {
+            if let cell: MeowBoxDetailCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "MeowBoxDetailCollectionViewCell", for: indexPath) as? MeowBoxDetailCollectionViewCell
+            {
+                cell.collectionImageView.image = collectImageArr[indexPath.row]
+                cell.collectionLabel.text = "시원해지는 원단"
+                
+                
+                return cell
+            }
+            return UICollectionViewCell()
+        }
+        else if tag == 3 {
+            if let cell: MeowBoxDetailCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "MeowBoxDetailCollectionViewCell", for: indexPath) as? MeowBoxDetailCollectionViewCell
+            {
+                cell.collectionImageView.image = collectImageArr[indexPath.row]
+                cell.collectionLabel.text = "시원해지는 원단"
+                
+                
+                return cell
+            }
+            return UICollectionViewCell()
+        }
+        else {
+            if let cell: MeowBoxDetailCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "MeowBoxDetailCollectionViewCell", for: indexPath) as? MeowBoxDetailCollectionViewCell
+            {
+                cell.collectionImageView.image = collectImageArr[indexPath.row]
+                cell.collectionLabel.text = "시원해지는 원단"
+                
+                
+                return cell
+            }
+            return UICollectionViewCell()
+        }
     }
     
     //ScrollView delegate method
@@ -84,7 +122,7 @@ class MeowBoxDetailTableViewCell: UITableViewCell,UICollectionViewDataSource, UI
 
 extension MeowBoxDetailTableViewCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: self.frame.width, height: (548/375)*self.frame.width)
+        return CGSize(width: self.frame.width, height: (291/375)*self.frame.width)
     }
 }
 
