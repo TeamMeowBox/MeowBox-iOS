@@ -34,12 +34,20 @@ class SuggestViewController: UIViewController {
     
     @IBAction func suggestAction(_ sender: Any) {
         saveFeedback(title: gsno(detailSuggestionTextField.text), content: gsno(detailSuggestionTextView.text))
+        saveFeedback(title: gsno(detailSuggestionTextField.text), content: gsno(detailSuggestionTextView.text))
     }
     
     
     func saveFeedback(title: String, content: String) {
-        MyPageService.saveFeedback(title: title, content: content) {
-            self.dismiss(animated: true, completion: nil)
+        MyPageService.saveFeedback(title: title, content: content) { message in
+            if message == "success"{
+                self.detailSuggestionTextField.text = ""
+                self.detailSuggestionTextView.text = ""
+                let alertView = UIAlertController(title: "좋은 의견 감사합니다!", message: "앞으로 더 나은\n미유박스가 될게요", preferredStyle: .alert)
+                let ok = UIAlertAction(title: "확인", style: .default, handler: nil)
+                alertView.addAction(ok)
+                self.present(alertView, animated: true, completion: nil)
+            }
         }
     }
     
