@@ -96,7 +96,7 @@ class MyAccountViewController: UIViewController {
     @IBAction func smallSizeAction(_ sender: UIButton) {
         
         if sender == smallSizeBtn {
-            size = 1
+            size = 0
             smallSizeBtn.isSelected = !smallSizeBtn.isSelected
             smallSizeBtn.setImage(#imageLiteral(resourceName: "small-radio-btn-pink"), for: UIControlState.normal)
             mediumSizeBtn.setImage(#imageLiteral(resourceName: "medium-radio-btn-gray"), for: UIControlState.normal)
@@ -104,7 +104,7 @@ class MyAccountViewController: UIViewController {
         }
             
         else {
-            size = 0
+            size = -1
             smallSizeBtn.isSelected = !smallSizeBtn.isSelected
             smallSizeBtn.setImage(#imageLiteral(resourceName: "small-radio-btn-gray"), for: UIControlState.normal)
         }
@@ -115,7 +115,7 @@ class MyAccountViewController: UIViewController {
     @IBAction func mediumSizeAction(_ sender: UIButton) {
         
         if sender == mediumSizeBtn {
-            size = 2
+            size = 1
             mediumSizeBtn.isSelected = !mediumSizeBtn.isSelected
             mediumSizeBtn.setImage(#imageLiteral(resourceName: "medium-radio-btn-pink"), for: UIControlState.normal)
             smallSizeBtn.setImage(#imageLiteral(resourceName: "small-radio-btn-gray"), for: UIControlState.normal)
@@ -123,7 +123,7 @@ class MyAccountViewController: UIViewController {
         }
             
         else {
-            size = 0
+            size = -1
             mediumSizeBtn.isSelected = !mediumSizeBtn.isSelected
             mediumSizeBtn.setImage(#imageLiteral(resourceName: "small-radio-btn-gray"), for: UIControlState.normal)
         }
@@ -135,7 +135,7 @@ class MyAccountViewController: UIViewController {
     @IBAction func largeSizeAction(_ sender: UIButton) {
         
         if sender == bigSizeBtn {
-            size = 3
+            size = 2
             bigSizeBtn.isSelected = !bigSizeBtn.isSelected
             bigSizeBtn.setImage(#imageLiteral(resourceName: "large-radio-btn-pink"), for: UIControlState.normal)
             mediumSizeBtn.setImage(#imageLiteral(resourceName: "medium-radio-btn-gray"), for: UIControlState.normal)
@@ -143,7 +143,7 @@ class MyAccountViewController: UIViewController {
         }
             
         else {
-            size = 0
+            size = -1
             bigSizeBtn.isSelected = !bigSizeBtn.isSelected
             bigSizeBtn.setImage(#imageLiteral(resourceName: "large-radio-btn-gray"), for: UIControlState.normal)
         }
@@ -157,10 +157,17 @@ class MyAccountViewController: UIViewController {
         UserDefaults.standard.synchronize()
     }
 
+    //MARK: 고양이 공백 체크
+    func catEmptyCheck() {
+        if catNameTextField.text == "" || dateTextField.text == "" || size == -1 {
+            catNameTextField.text = "-1"
+        }
+    }
     
     func myAccountInit() {
         MyPageService.myAccountInit() { (accountData) in
             print("통신 시작")
+            
             self.nameTextField.text = self.gsno(accountData.user_name)
             self.emailTextField.text = self.gsno(accountData.email)
             self.phoneTextField.text = self.gsno(accountData.phone_number)
@@ -168,6 +175,7 @@ class MyAccountViewController: UIViewController {
             self.catNameTextField.text = self.gsno(accountData.cat_name)
             self.dateTextField.text = self.gsno(accountData.birthday)
             self.infoEtcTextView.text = self.gsno(accountData.caution)
+            
             
             self.userdefault.set(self.gsno(accountData.image_profile), forKey: "image_profile")
             
@@ -194,16 +202,24 @@ class MyAccountViewController: UIViewController {
     }
     
     func updateAccount() {
-
-        print(gsno(nameTextField.text))
+        
+        if catNameTextField.text == "" || dateTextField.text == "" || size == -1 {
+            MyPageService.updateAccount(user_name: gsno(nameTextField.text), user_phone: gsno(phoneTextField.text), user_email: gsno(emailTextField.text), image_profile: profileImageView.image!, cat_name: "-1", cat_size: size, cat_birthday: gsno(dateTextField.text), cat_caution: gsno(infoEtcTextView.text)) {
+                
+                let myPageNaviVC = UIStoryboard(name: "MyPage", bundle: nil).instantiateViewController(withIdentifier: "MyPageNaviVC")
+                
+                self.present(myPageNaviVC, animated: true, completion: nil)
+                print("수정 완료!")
+            }
+        }
+        else {
             MyPageService.updateAccount(user_name: gsno(nameTextField.text), user_phone: gsno(phoneTextField.text), user_email: gsno(emailTextField.text), image_profile: profileImageView.image!, cat_name: gsno(catNameTextField.text), cat_size: size, cat_birthday: gsno(dateTextField.text), cat_caution: gsno(infoEtcTextView.text)) {
     
                     let myPageNaviVC = UIStoryboard(name: "MyPage", bundle: nil).instantiateViewController(withIdentifier: "MyPageNaviVC")
                 
-//                self.userdefault.set(self.profileImageView.image, forKey: "image_profile")
-                
                     self.present(myPageNaviVC, animated: true, completion: nil)
                     print("수정 완료!")
+            }
         }
     }
 }
