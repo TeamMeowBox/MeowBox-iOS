@@ -324,6 +324,13 @@ class MainViewController: UIViewController,UICollectionViewDelegate,UICollection
         
         cell.imageView.image = imageArr[indexPath.row]
         cell.button.setImage(#imageLiteral(resourceName: "home-detail-btn-gray"), for: .normal)
+        
+        if indexPath.row == 1 || indexPath.row == 2 || indexPath.row == 3{
+            cell.button.tintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        }else{
+            cell.button.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        }
+        
         return cell
     }
     
@@ -352,11 +359,15 @@ class MainViewController: UIViewController,UICollectionViewDelegate,UICollection
         let point = CGPoint (x: CGFloat(newPage * pageWidth), y: targetContentOffset.pointee.y)
         targetContentOffset.pointee = point
         
-        if self.pageControl.currentPage == 0{
+        let current = self.pageControl.currentPage
+        
+        if current == 0{
             self.barButton.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         }else{
             self.barButton.tintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         }
+        
+        
         
     }
     
