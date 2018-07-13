@@ -83,7 +83,7 @@ class OrderWithInfo4ViewController: UIViewController {
         
         setOrderSetting()
         
-//        let navi = UIStoryboard(name: "Order", bundle: nil).instantiateViewController(withIdentifier: "iamportNavi") as! UINavigationController
+        //        let navi = UIStoryboard(name: "Order", bundle: nil).instantiateViewController(withIdentifier: "iamportNavi") as! UINavigationController
         
         guard let payment = userDefault.string(forKey: "payment_method") else {return}
         
@@ -163,42 +163,56 @@ class OrderWithInfo4ViewController: UIViewController {
         print("price : "+gsno(userDefault.string(forKey: "order_price")))
         print("payment : "+gsno(userDefault.string(forKey: "payment_method")))
         
-        guard let orderAdd = orderAddress else { return }
-        
-    
-        
-        OrderService.order(name: gsno(nameTextField.text), address: orderAdd, phone_number: gsno(phoneTextField.text), product: gsno(userDefault.string(forKey: "order_product")), price: gsno(userDefault.string(forKey: "order_price")), email: gsno(emailTextField.text), payment_method: gsno(userDefault.string(forKey: "payment_method"))){ message in
-            if message == "success"{
-                print("00000000000000000000000000000000000000000")
-                
-                let controller = Html5InicisViewController()
-                print("11111111111111111111111111111111111111111")
-                
-                self.navigationController?.pushViewController(controller, animated: true)
-                
-            }else if message == "failure"{
-                let alertView = UIAlertController(title: "주문 실패", message: "ㅜㅜㅜㅜㅜㅜ", preferredStyle: .alert)
-                let ok = UIAlertAction(title: "확인", style: .default, handler: nil)
-                alertView.addAction(ok)
-                self.present(alertView, animated: true, completion: nil)
-            }
+        if (nameTextField.text?.isEmpty)! || (addressTextField1.text?.isEmpty)! || (addressTextField2.text?.isEmpty)! || (phoneTextField.text?.isEmpty)!{
+            let checkPopUp = UIStoryboard(name: "Sign", bundle: nil).instantiateViewController(withIdentifier: SignUpCheckPopUpViewController.reuseIdentifier) as! SignUpCheckPopUpViewController
             
+            self.addChildViewController(checkPopUp)
+            checkPopUp.view.frame = self.view.frame
+            self.view.addSubview(checkPopUp.view)
+            
+            checkPopUp.didMove(toParentViewController: self)
+        }else{
+            guard let orderAdd = orderAddress else { return }
+            
+            
+            
+            OrderService.order(name: gsno(nameTextField.text), address: orderAdd, phone_number: gsno(phoneTextField.text), product: gsno(userDefault.string(forKey: "order_product")), price: gsno(userDefault.string(forKey: "order_price")), email: gsno(emailTextField.text), payment_method: gsno(userDefault.string(forKey: "payment_method"))){ message in
+                if message == "success"{
+                    print("00000000000000000000000000000000000000000")
+                    
+                    let controller = Html5InicisViewController()
+                    
+                    self.navigationController?.pushViewController(controller, animated: true)
+                    
+                }else if message == "failure"{
+                    let alertView = UIAlertController(title: "주문 실패", message: "ㅜㅜㅜㅜㅜㅜ", preferredStyle: .alert)
+                    let ok = UIAlertAction(title: "확인", style: .default, handler: nil)
+                    alertView.addAction(ok)
+                    self.present(alertView, animated: true, completion: nil)
+                }
+                
+            }
         }
+        
+        
     }
     
     func recentaddress(){
         OrderService.recentaddress { (address) in
             if address == nil{
                 self.showToast(message: "이전에 주문한 배송지 없음")
-//                let alertView = UIAlertController(title: "없음", message: "이전에 주문한 배송지가 없습니다.", preferredStyle: .alert)
-//                let ok = UIAlertAction(title: "확인", style: .default, handler: nil)
-//                alertView.addAction(ok)
-//                self.present(alertView, animated: true, completion: nil)
+                //                let alertView = UIAlertController(title: "없음", message: "이전에 주문한 배송지가 없습니다.", preferredStyle: .alert)
+                //                let ok = UIAlertAction(title: "확인", style: .default, handler: nil)
+                //                alertView.addAction(ok)
+                //                self.present(alertView, animated: true, completion: nil)
             }else{
                 self.latest = address
                 
+                guard let myadd = self.latest?.address?.components(separatedBy: " ") else {return}
+                
                 self.nameTextField.text = self.latest?.name
-                self.addressTextField1.text = self.latest?.address
+                self.addressTextField1.text = myadd[0]
+                self.addressTextField2.text = myadd[1]
                 self.phoneTextField.text = self.latest?.phone_number
                 self.emailTextField.text = self.latest?.email
                 
