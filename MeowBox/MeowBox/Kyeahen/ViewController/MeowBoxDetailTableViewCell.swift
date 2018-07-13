@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MeowBoxDetailTableViewCell: UITableViewCell,UICollectionViewDataSource, UICollectionViewDelegate{
+class MeowBoxDetailTableViewCell: UITableViewCell,UICollectionViewDataSource, UICollectionViewDelegate, UIScrollViewDelegate{
     
     @IBOutlet weak var detailTitle: UILabel!
     @IBOutlet weak var detailImageView: UIImageView!
@@ -16,7 +16,6 @@ class MeowBoxDetailTableViewCell: UITableViewCell,UICollectionViewDataSource, UI
     @IBOutlet weak var pageControl: UIPageControl!
     
     var currentPages = 0
-    
     
     let sunglassArr = [#imageLiteral(resourceName: "sunglass-two-img.png"), #imageLiteral(resourceName: "sunglass-three-img.png"), #imageLiteral(resourceName: "sunglass-four-img.png")]
     let toyArr = [#imageLiteral(resourceName: "toy-two-img.png"), #imageLiteral(resourceName: "toy-three-img.png"), #imageLiteral(resourceName: "toy-four-img.png")]
@@ -64,8 +63,8 @@ class MeowBoxDetailTableViewCell: UITableViewCell,UICollectionViewDataSource, UI
         냥이의 사냥본능을 자극해요.
         """,
         """
-        엉키지 않는 긴 낚시줄과 길이 조절이 가능한 낚시대로
-        더 재밌고 편하게 놀아줄 수 있어요.
+        엉키지 않는 긴 낚시줄과 길이 조절이 가능한
+        낚시대로 더 재밌고 편하게 놀아줄 수 있어요.
         """
     ]
     
@@ -130,6 +129,7 @@ class MeowBoxDetailTableViewCell: UITableViewCell,UICollectionViewDataSource, UI
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         if tag == 0 {
+            currentPages = 0
             if let cell: MeowBoxDetailCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "MeowBoxDetailCollectionViewCell", for: indexPath) as? MeowBoxDetailCollectionViewCell
             {
             cell.collectionImageView.image = sunglassArr[indexPath.row]
@@ -140,6 +140,7 @@ class MeowBoxDetailTableViewCell: UITableViewCell,UICollectionViewDataSource, UI
             return UICollectionViewCell()
         }
         else if tag == 1 {
+    
             if let cell: MeowBoxDetailCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "MeowBoxDetailCollectionViewCell", for: indexPath) as? MeowBoxDetailCollectionViewCell
             {
                 cell.collectionImageView.image = toyArr[indexPath.row]
@@ -155,7 +156,6 @@ class MeowBoxDetailTableViewCell: UITableViewCell,UICollectionViewDataSource, UI
             {
                 cell.collectionImageView.image = fishArr[indexPath.row]
                 cell.collectionLabel.text = fishTextArr[indexPath.row]
-                
                 
                 return cell
             }
