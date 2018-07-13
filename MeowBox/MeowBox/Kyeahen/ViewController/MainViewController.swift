@@ -40,6 +40,7 @@ class MainViewController: UIViewController,UICollectionViewDelegate,UICollection
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.barButton.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         print(userDefault.string(forKey: "cat_idx"))
         print(gsno(userDefault.string(forKey: "image_profile")))
@@ -300,9 +301,21 @@ class MainViewController: UIViewController,UICollectionViewDelegate,UICollection
     
     //MARK: 상세보기 액션
     @IBAction func detailAction(_ sender: Any) {
-        let detailVC = UIStoryboard(name: "MeowBox", bundle: nil).instantiateViewController(withIdentifier: "MeowBoxDetailNaviVC")
         
-        self.present(detailVC, animated: true, completion: nil)
+        let current = self.pageControl.currentPage
+        
+        if current == 0 || current == 1{
+            let detailVC = UIStoryboard(name: "MeowBox", bundle: nil).instantiateViewController(withIdentifier: "MeowBoxDetailNaviVC")
+            
+            self.present(detailVC, animated: true, completion: nil)
+        }else if current == 2 || current == 3{
+            let birthNaviVC = UIStoryboard(name: "MeowBox", bundle: nil).instantiateViewController(withIdentifier: "BirthNaviVC")
+            
+            self.present(birthNaviVC, animated: true, completion: nil)
+        }
+        
+        
+        
     }
     
     
@@ -321,14 +334,21 @@ class MainViewController: UIViewController,UICollectionViewDelegate,UICollection
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainCollectionViewCell", for: indexPath) as! MainCollectionViewCell
         
-        cell.imageView.image = imageArr[indexPath.row]
-        cell.button.setImage(#imageLiteral(resourceName: "home-detail-btn-gray"), for: .normal)
-        
-        if indexPath.row == 1 || indexPath.row == 2 || indexPath.row == 3{
-            cell.button.tintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        if indexPath.row != 4{
+            cell.imageView.image = imageArr[indexPath.row]
+            cell.button.setImage(#imageLiteral(resourceName: "home-detail-btn-gray"), for: .normal)
+            
+            if indexPath.row == 1 || indexPath.row == 2 || indexPath.row == 3{
+                cell.button.tintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+            }else{
+                cell.button.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+            }
         }else{
-            cell.button.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+            cell.imageView.image = imageArr[indexPath.row]
+            cell.button.isHidden = true
         }
+        
+        
         
         return cell
     }
