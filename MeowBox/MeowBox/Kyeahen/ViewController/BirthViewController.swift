@@ -116,7 +116,6 @@ class BirthViewController: UIViewController, UITableViewDataSource, UITableViewD
             cell.tableViewLabel.text = "꼬깔모자 & 리본타이"
             cell.tableImageView.image = birthArr[indexPath.row]
             cell.tablePageControl.currentPage = 0
-            cell.birthCollectionView.reloadData()
             cell.tag = indexPath.row
             
             return cell
@@ -127,7 +126,6 @@ class BirthViewController: UIViewController, UITableViewDataSource, UITableViewD
             cell.tableViewLabel.text = "케이크 & 가랜드"
             cell.tableImageView.image = birthArr[indexPath.row]
             cell.tablePageControl.currentPage = 0
-            cell.birthCollectionView.reloadData()
             cell.tag = indexPath.row
             
             return cell
@@ -138,7 +136,6 @@ class BirthViewController: UIViewController, UITableViewDataSource, UITableViewD
             cell.tableViewLabel.text = "장난감"
             cell.tableImageView.image = birthArr[indexPath.row]
             cell.tablePageControl.currentPage = 0
-            cell.birthCollectionView.reloadData()
             cell.tag = indexPath.row
             
             return cell
@@ -149,7 +146,6 @@ class BirthViewController: UIViewController, UITableViewDataSource, UITableViewD
             cell.tableViewLabel.text = "스크래쳐"
             cell.tableImageView.image = birthArr[indexPath.row]
             cell.tablePageControl.currentPage = 0
-            cell.birthCollectionView.reloadData()
             cell.tag = indexPath.row
             
             return cell
@@ -160,12 +156,19 @@ class BirthViewController: UIViewController, UITableViewDataSource, UITableViewD
             cell.tableViewLabel.text = "간식"
             cell.tableImageView.image = birthArr[indexPath.row]
             cell.tablePageControl.currentPage = 0
-            cell.birthCollectionView.reloadData()
             cell.tag = indexPath.row
             
             return cell
         }
     }
+    
+//
+//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//        let cell = birthTableView.dequeueReusableCell(withIdentifier: BirthTableViewCell.reuseIdentifier) as! BirthTableViewCell
+//
+//        let pageWidth = cell.birthCollectionView.frame.width
+//        cell.tablePageControl.currentPage = Int((scrollView.contentOffset.x + pageWidth / 2) / pageWidth)
+//    }
     
     
     //MARK: 네비게이션 바 투명하게 하는 함수
