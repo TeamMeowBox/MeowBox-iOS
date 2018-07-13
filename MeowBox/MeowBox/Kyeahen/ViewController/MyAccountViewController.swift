@@ -9,7 +9,7 @@
 import UIKit
 import Kingfisher
 
-class MyAccountViewController: UIViewController, UITextFieldDelegate,UITextViewDelegate {
+class MyAccountViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var infoView1: UIView!
     @IBOutlet weak var infoNameView: UIView!
@@ -82,7 +82,6 @@ class MyAccountViewController: UIViewController, UITextFieldDelegate,UITextViewD
         emailTextField.delegate = self
         phoneTextField.delegate = self
         catNameTextField.delegate = self
-        infoEtcTextView.delegate = self
         
     }
     
@@ -92,15 +91,6 @@ class MyAccountViewController: UIViewController, UITextFieldDelegate,UITextViewD
         self.view.endEditing(true)
         return false
     }
-    
-    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-        if(text == "\n") {
-            textView.resignFirstResponder()
-            return false
-        }
-        return true
-    }
-
     
 
     override func didReceiveMemoryWarning() {
