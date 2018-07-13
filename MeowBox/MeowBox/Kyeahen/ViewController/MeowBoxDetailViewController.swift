@@ -118,6 +118,7 @@ class MeowBoxDetailViewController: UIViewController, UITableViewDelegate, UITabl
 
             cell.detailTitle.text = "선글라스 & 모자"
             cell.detailImageView.image = tableImageArr[indexPath.row]
+            cell.pageControl.currentPage = 0
             cell.tag = indexPath.row
             
             return cell
@@ -127,6 +128,7 @@ class MeowBoxDetailViewController: UIViewController, UITableViewDelegate, UITabl
             
             cell.detailTitle.text = "장난감"
             cell.detailImageView.image = tableImageArr[indexPath.row]
+            cell.pageControl.currentPage = 0
             cell.tag = indexPath.row
             
             return cell
@@ -136,6 +138,7 @@ class MeowBoxDetailViewController: UIViewController, UITableViewDelegate, UITabl
             
             cell.detailTitle.text = "낚시대"
             cell.detailImageView.image = tableImageArr[indexPath.row]
+            cell.pageControl.currentPage = 0
             cell.tag = indexPath.row
             
             return cell
@@ -145,6 +148,7 @@ class MeowBoxDetailViewController: UIViewController, UITableViewDelegate, UITabl
             
             cell.detailTitle.text = "스크래쳐"
             cell.detailImageView.image = tableImageArr[indexPath.row]
+            cell.pageControl.currentPage = 0
             cell.tag = indexPath.row
             
             return cell
@@ -154,6 +158,7 @@ class MeowBoxDetailViewController: UIViewController, UITableViewDelegate, UITabl
             
             cell.detailTitle.text = "간식"
             cell.detailImageView.image = tableImageArr[indexPath.row]
+            cell.pageControl.currentPage = 0
             cell.tag = indexPath.row
             
             return cell
