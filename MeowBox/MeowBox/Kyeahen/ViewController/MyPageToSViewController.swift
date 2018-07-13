@@ -17,9 +17,6 @@ class MyPageToSViewController: UIViewController {
         super.viewDidLoad()
 
         
-        //navigation bar title color
-    self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : #colorLiteral(red: 0.4392156863, green: 0.4392156863, blue: 0.4392156863, alpha: 1)]
-        
         //navigation bar tint color
         self.navigationController?.navigationBar.barTintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         
