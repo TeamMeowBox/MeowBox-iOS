@@ -25,7 +25,8 @@ class OrderWithInfo3ViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        userDefault.set("7월 패키지 박스", forKey: "current_order_product")
+
         userDefault.set(selectProduct, forKey: "order_product")
         userDefault.set(selectPrice, forKey: "order_price")
 
