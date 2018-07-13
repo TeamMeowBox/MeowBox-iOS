@@ -9,7 +9,7 @@
 import UIKit
 import Kingfisher
 
-class MyAccountViewController: UIViewController, UITextFieldDelegate,UITextViewDelegate {
+class MyAccountViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var infoView1: UIView!
     @IBOutlet weak var infoNameView: UIView!
@@ -53,6 +53,8 @@ class MyAccountViewController: UIViewController, UITextFieldDelegate,UITextViewD
         
         initDatePicker()
         
+        addScrollViewEndEditing()
+        
         profileImageView.isUserInteractionEnabled = true
         
         //view bottom border
@@ -80,7 +82,6 @@ class MyAccountViewController: UIViewController, UITextFieldDelegate,UITextViewD
         emailTextField.delegate = self
         phoneTextField.delegate = self
         catNameTextField.delegate = self
-        infoEtcTextView.delegate = self
         
     }
     
@@ -90,15 +91,6 @@ class MyAccountViewController: UIViewController, UITextFieldDelegate,UITextViewD
         self.view.endEditing(true)
         return false
     }
-    
-    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-        if(text == "\n") {
-            textView.resignFirstResponder()
-            return false
-        }
-        return true
-    }
-
     
 
     override func didReceiveMemoryWarning() {
@@ -251,6 +243,19 @@ class MyAccountViewController: UIViewController, UITextFieldDelegate,UITextViewD
             }
         }
     }
+    
+    func addScrollViewEndEditing(){
+        let singleTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(scrollTapMethod))
+        singleTapGestureRecognizer.numberOfTapsRequired = 1
+        singleTapGestureRecognizer.isEnabled = true
+        singleTapGestureRecognizer.cancelsTouchesInView = false
+        scrollView.addGestureRecognizer(singleTapGestureRecognizer)
+    }
+    
+    @objc func scrollTapMethod(sender: UITapGestureRecognizer) {
+        self.view.endEditing(true)
+        self.scrollView.endEditing(true)
+    }
 }
 
 //view bottom border 관련 extension
@@ -355,21 +360,7 @@ extension MyAccountViewController: UIImagePickerControllerDelegate, UINavigation
         }
     }
     
-    func addScrollViewEndEditing(){
-        let singleTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(scrollTapMethod))
-        singleTapGestureRecognizer.numberOfTapsRequired = 1
-        singleTapGestureRecognizer.isEnabled = true
-        singleTapGestureRecognizer.cancelsTouchesInView = false
-        scrollView.addGestureRecognizer(singleTapGestureRecognizer)
-    }
-    
-    @objc func scrollTapMethod(sender: UITapGestureRecognizer) {
-        self.view.endEditing(true)
-        self.scrollView.endEditing(true)
-    }
-    
-    
-    
+
 }
 
 extension MyAccountViewController  {
