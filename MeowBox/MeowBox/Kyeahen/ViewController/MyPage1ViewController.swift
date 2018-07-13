@@ -65,6 +65,8 @@ class MyPage1ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         loginCheck()
         profileImageCheck()
+        
+        setupView()
 //        sideBarProfileImageView.kf.setImage(with: URL(string: gsno(userdefault.string(forKey: "image_profile"))), placeholder: UIImage())
 //        profileImageView.kf.setImage(with: URL(string: gsno(userdefault.string(forKey: "image_profile"))), placeholder: UIImage())
     }

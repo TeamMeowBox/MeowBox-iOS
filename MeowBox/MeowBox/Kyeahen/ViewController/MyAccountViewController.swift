@@ -176,7 +176,6 @@ class MyAccountViewController: UIViewController {
             self.dateTextField.text = self.gsno(accountData.birthday)
             self.infoEtcTextView.text = self.gsno(accountData.caution)
             
-            
             self.userdefault.set(self.gsno(accountData.image_profile), forKey: "image_profile")
             
             if accountData.size == 0 {
@@ -208,6 +207,8 @@ class MyAccountViewController: UIViewController {
                 
                 let myPageNaviVC = UIStoryboard(name: "MyPage", bundle: nil).instantiateViewController(withIdentifier: "MyPageNaviVC")
                 
+                self.userdefault.set(self.gsno(self.nameTextField.text), forKey: "name")
+                
                 self.present(myPageNaviVC, animated: true, completion: nil)
                 print("수정 완료!")
             }
@@ -216,6 +217,9 @@ class MyAccountViewController: UIViewController {
             MyPageService.updateAccount(user_name: gsno(nameTextField.text), user_phone: gsno(phoneTextField.text), user_email: gsno(emailTextField.text), image_profile: profileImageView.image!, cat_name: gsno(catNameTextField.text), cat_size: size, cat_birthday: gsno(dateTextField.text), cat_caution: gsno(infoEtcTextView.text)) {
     
                     let myPageNaviVC = UIStoryboard(name: "MyPage", bundle: nil).instantiateViewController(withIdentifier: "MyPageNaviVC")
+                
+                self.userdefault.set(self.gsno(self.nameTextField.text), forKey: "name")
+                self.userdefault.set(self.gsno(self.catNameTextField.text), forKey: "cat_name")
                 
                     self.present(myPageNaviVC, animated: true, completion: nil)
                     print("수정 완료!")
