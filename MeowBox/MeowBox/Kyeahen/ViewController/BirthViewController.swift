@@ -114,6 +114,7 @@ class BirthViewController: UIViewController, UITableViewDataSource, UITableViewD
             
             cell.tableViewLabel.text = "꼬깔모자 & 리본타이"
             cell.tableImageView.image = birthArr[indexPath.row]
+            cell.tablePageControl.currentPage = 0
             cell.tag = indexPath.row
             
             return cell
@@ -123,6 +124,7 @@ class BirthViewController: UIViewController, UITableViewDataSource, UITableViewD
             
             cell.tableViewLabel.text = "케이크 & 가랜드"
             cell.tableImageView.image = birthArr[indexPath.row]
+            cell.tablePageControl.currentPage = 0
             cell.tag = indexPath.row
             
             return cell
@@ -132,6 +134,7 @@ class BirthViewController: UIViewController, UITableViewDataSource, UITableViewD
             
             cell.tableViewLabel.text = "장난감"
             cell.tableImageView.image = birthArr[indexPath.row]
+            cell.tablePageControl.currentPage = 0
             cell.tag = indexPath.row
             
             return cell
@@ -141,6 +144,7 @@ class BirthViewController: UIViewController, UITableViewDataSource, UITableViewD
             
             cell.tableViewLabel.text = "스크래쳐"
             cell.tableImageView.image = birthArr[indexPath.row]
+            cell.tablePageControl.currentPage = 0
             cell.tag = indexPath.row
             
             return cell
@@ -150,6 +154,7 @@ class BirthViewController: UIViewController, UITableViewDataSource, UITableViewD
             
             cell.tableViewLabel.text = "간식"
             cell.tableImageView.image = birthArr[indexPath.row]
+            cell.tablePageControl.currentPage = 0
             cell.tag = indexPath.row
             
             return cell

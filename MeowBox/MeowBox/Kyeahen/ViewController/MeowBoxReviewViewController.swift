@@ -285,6 +285,7 @@ class MeowBoxReviewViewController: UIViewController, UITableViewDelegate, UITabl
             cell.reviewTitleLabel.text = reviews?.birthday.title
             cell.reviewintroLabel.text = reviews?.birthday.comment
             cell.reviewCollectionView.tag = indexPath.row
+            cell.pageControl.currentPage = 0
             cell.reviews = self.reviews
 
             return cell
@@ -296,6 +297,7 @@ class MeowBoxReviewViewController: UIViewController, UITableViewDelegate, UITabl
             cell.reviewBackgroundImageView.backgroundColor = #colorLiteral(red: 0.8980392157, green: 0.7058823529, blue: 0.7019607843, alpha: 1)
             cell.reviewTitleLabel.text = reviews?.best_image_7.title
             cell.reviewintroLabel.text = reviews?.best_image_7.comment
+            cell.pageControl.currentPage = 0
             cell.reviewCollectionView.tag = indexPath.row
             
             return cell
@@ -306,6 +308,7 @@ class MeowBoxReviewViewController: UIViewController, UITableViewDelegate, UITabl
             cell.reviewBackgroundImageView.backgroundColor = #colorLiteral(red: 0.8980392157, green: 0.7058823529, blue: 0.7019607843, alpha: 1)
             cell.reviewTitleLabel.text = reviews?.best_image_6.title
             cell.reviewintroLabel.text = reviews?.best_image_6.comment
+            cell.pageControl.currentPage = 0
             cell.reviewCollectionView.tag = indexPath.row
             
             return cell
