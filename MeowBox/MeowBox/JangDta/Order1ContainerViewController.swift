@@ -275,9 +275,9 @@ class Order1ContainerViewController: UIViewController {
     //MARK: 생일축하해!박스 액션
     @IBAction func birthBoxAction(_ sender: Any) {
     
-        let birthNaviVC = UIStoryboard(name: "MeowBox", bundle: nil).instantiateViewController(withIdentifier: "BirthNaviVC")
+        let webtoonNaviVC = UIStoryboard(name: "MeowBox", bundle: nil).instantiateViewController(withIdentifier: "WebtoonNaviVC")
         
-        self.present(birthNaviVC, animated: true, completion: nil)
+        self.present(webtoonNaviVC, animated: true, completion: nil)
     }
     
     //MARK: 주문하기 액션(기준)

@@ -119,6 +119,7 @@ class MeowBoxDetailViewController: UIViewController, UITableViewDelegate, UITabl
             cell.detailTitle.text = "선글라스 & 모자"
             cell.detailImageView.image = tableImageArr[indexPath.row]
             cell.pageControl.currentPage = 0
+            cell.detailCollectionView.reloadData()
             cell.tag = indexPath.row
             
             return cell
@@ -129,6 +130,7 @@ class MeowBoxDetailViewController: UIViewController, UITableViewDelegate, UITabl
             cell.detailTitle.text = "장난감"
             cell.detailImageView.image = tableImageArr[indexPath.row]
             cell.pageControl.currentPage = 0
+            cell.detailCollectionView.reloadData()
             cell.tag = indexPath.row
             
             return cell
@@ -139,6 +141,7 @@ class MeowBoxDetailViewController: UIViewController, UITableViewDelegate, UITabl
             cell.detailTitle.text = "낚시대"
             cell.detailImageView.image = tableImageArr[indexPath.row]
             cell.pageControl.currentPage = 0
+                        cell.detailCollectionView.reloadData()
             cell.tag = indexPath.row
             
             return cell
@@ -149,6 +152,7 @@ class MeowBoxDetailViewController: UIViewController, UITableViewDelegate, UITabl
             cell.detailTitle.text = "스크래쳐"
             cell.detailImageView.image = tableImageArr[indexPath.row]
             cell.pageControl.currentPage = 0
+            cell.detailCollectionView.reloadData()
             cell.tag = indexPath.row
             
             return cell
@@ -159,6 +163,7 @@ class MeowBoxDetailViewController: UIViewController, UITableViewDelegate, UITabl
             cell.detailTitle.text = "간식"
             cell.detailImageView.image = tableImageArr[indexPath.row]
             cell.pageControl.currentPage = 0
+            cell.detailCollectionView.reloadData()
             cell.tag = indexPath.row
             
             return cell
@@ -329,9 +334,19 @@ class MeowBoxDetailViewController: UIViewController, UITableViewDelegate, UITabl
     
     //MARK: 미유박스 주문하기
     @IBAction func bottomOrderButton(_ sender: Any) {
-        let orderNaviVC = UIStoryboard(name: "Order", bundle: nil).instantiateViewController(withIdentifier: "OrderWithInfoNavigationController")
-        
-        self.present(orderNaviVC, animated: true, completion: nil)
+        if userDefault.string(forKey: "token") != ""{ // 로그인이 되어 있다면
+            let orderNaviVC = UIStoryboard(name: "Order", bundle: nil).instantiateViewController(withIdentifier: "OrderWithInfoNavigationController")
+            
+            self.present(orderNaviVC, animated: true, completion: nil)
+            
+            
+        }else{ // 로그인 안 된 상태
+            let popUPVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginPopUp1ViewController") as! LoginPopUp1ViewController
+            self.addChildViewController(popUPVC)
+            popUPVC.view.frame = self.view.frame
+            self.view.addSubview(popUPVC.view)
+            popUPVC.didMove(toParentViewController: self)
+        }
         
     }
     

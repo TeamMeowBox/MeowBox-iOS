@@ -129,7 +129,6 @@ class BirthTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectio
             {
                 cell.collectionImageView.image = ribbonArr[indexPath.row]
                 cell.collectionLabel.text = ribbonTextArr[indexPath.row]
-            
                 
                 return cell
             }
