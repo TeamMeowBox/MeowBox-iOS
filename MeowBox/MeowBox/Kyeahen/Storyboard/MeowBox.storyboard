@@ -1163,8 +1163,8 @@
                                     <constraint firstItem="k7i-fg-OAF" firstAttribute="top" secondItem="Pyd-PY-J3c" secondAttribute="top" id="t2A-ue-SZf"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LdV-Dl-lwK">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="2233"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LdV-Dl-lwK">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="2232"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                         </subviews>

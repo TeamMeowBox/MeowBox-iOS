@@ -33,19 +33,39 @@ class SuggestViewController: UIViewController {
     
     
     @IBAction func suggestAction(_ sender: Any) {
+        if detailSuggestionTextView.text == "" || detailSuggestionTextField.text == "" {
+            let popUPVC = UIStoryboard(name: "MyPage", bundle: nil).instantiateViewController(withIdentifier: SuggestCheckPopUpViewController.reuseIdentifier) as! SuggestCheckPopUpViewController
+            self.addChildViewController(popUPVC)
+            popUPVC.view.frame = self.view.frame
+            self.view.addSubview(popUPVC.view)
+            popUPVC.didMove(toParentViewController: self)
+        }else {
         saveFeedback(title: gsno(detailSuggestionTextField.text), content: gsno(detailSuggestionTextView.text))
+        }
     }
+    
+//    func emptyCheck() {
+//        
+//        if detailSuggestionTextView.text == "" || detailSuggestionTextField.text == "" {
+//            let popUPVC = UIStoryboard(name: "MyPage", bundle: nil).instantiateViewController(withIdentifier: SuggestCheckPopUpViewController.reuseIdentifier) as! SuggestCheckPopUpViewController
+//            self.addChildViewController(popUPVC)
+//            popUPVC.view.frame = self.view.frame
+//            self.view.addSubview(popUPVC.view)
+//            popUPVC.didMove(toParentViewController: self)
+//        }
+//        
+//    }
     
     
     func saveFeedback(title: String, content: String) {
         MyPageService.saveFeedback(title: title, content: content) { message in
             if message == "success"{
-                self.detailSuggestionTextField.text = ""
-                self.detailSuggestionTextView.text = ""
-                let alertView = UIAlertController(title: "좋은 의견 감사합니다!", message: "앞으로 더 나은\n미유박스가 될게요", preferredStyle: .alert)
-                let ok = UIAlertAction(title: "확인", style: .default, handler: nil)
-                alertView.addAction(ok)
-                self.present(alertView, animated: true, completion: nil)
+                
+                let popUPVC = UIStoryboard(name: "MyPage", bundle: nil).instantiateViewController(withIdentifier: SuggestPopUpViewController.reuseIdentifier) as! SuggestPopUpViewController
+                self.addChildViewController(popUPVC)
+                popUPVC.view.frame = self.view.frame
+                self.view.addSubview(popUPVC.view)
+                popUPVC.didMove(toParentViewController: self)
             }
         }
     }

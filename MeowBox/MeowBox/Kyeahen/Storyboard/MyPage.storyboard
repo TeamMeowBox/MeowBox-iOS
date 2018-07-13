@@ -1874,6 +1874,172 @@
             </objects>
             <point key="canvasLocation" x="1118" y="2614"/>
         </scene>
+        <!--Suggest Pop Up View Controller-->
+        <scene sceneID="WL5-uh-P54">
+            <objects>
+                <viewController storyboardIdentifier="SuggestPopUpViewController" id="uBU-d9-UDL" customClass="SuggestPopUpViewController" customModule="MeowBox" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9QX-81-dRb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="j06-bT-BIu">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s6V-Cs-Q00">
+                                <rect key="frame" x="26" y="246.5" width="319" height="194"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="좋은 의견 감사합니다!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WUt-3P-O4X">
+                                        <rect key="frame" x="14.5" y="27" width="294" height="26"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="26" id="WCf-5x-rro"/>
+                                            <constraint firstAttribute="width" secondItem="WUt-3P-O4X" secondAttribute="height" multiplier="147:13" id="kdf-Rk-Vty"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="NotoSansCJKkr-Bold" family="Noto Sans CJK KR" pointSize="22"/>
+                                        <color key="textColor" red="0.29803921570000003" green="0.30588235289999999" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="앞으로 더 나은 미유박스가 되겠습니다" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VhV-3Y-GaQ">
+                                        <rect key="frame" x="14.5" y="68" width="294" height="75"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="VhV-3Y-GaQ" secondAttribute="height" multiplier="98:25" id="Uqb-5s-upO"/>
+                                            <constraint firstAttribute="height" constant="75" id="tMj-h8-7mh"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.29803921570000003" green="0.30588235289999999" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y99-4B-yEO">
+                                        <rect key="frame" x="0.0" y="148" width="319" height="46"/>
+                                        <color key="backgroundColor" red="0.85490196080000003" green="0.5450980392" blue="0.5450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="46" id="Ctp-Gq-JIM"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="15"/>
+                                        <state key="normal" title="확인 하기">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="dismissAction:" destination="uBU-d9-UDL" eventType="touchUpInside" id="5jX-5L-x4f"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="s6V-Cs-Q00" secondAttribute="height" multiplier="19:14" constant="55.714285714285722" id="1Qe-0M-W6r"/>
+                                    <constraint firstItem="y99-4B-yEO" firstAttribute="leading" secondItem="s6V-Cs-Q00" secondAttribute="leading" id="4tQ-s4-q9Z"/>
+                                    <constraint firstAttribute="trailing" secondItem="y99-4B-yEO" secondAttribute="trailing" id="IRm-qW-gxl"/>
+                                    <constraint firstAttribute="bottom" secondItem="y99-4B-yEO" secondAttribute="bottom" id="SDe-5o-DhJ"/>
+                                    <constraint firstAttribute="height" constant="194" id="ehp-6K-YEb"/>
+                                    <constraint firstItem="WUt-3P-O4X" firstAttribute="centerX" secondItem="s6V-Cs-Q00" secondAttribute="centerX" constant="2" id="gSJ-FS-df8"/>
+                                    <constraint firstItem="VhV-3Y-GaQ" firstAttribute="top" secondItem="WUt-3P-O4X" secondAttribute="bottom" constant="15" id="hVN-1g-gPC"/>
+                                    <constraint firstItem="WUt-3P-O4X" firstAttribute="top" secondItem="s6V-Cs-Q00" secondAttribute="top" constant="27" id="r6k-it-N4n"/>
+                                    <constraint firstItem="VhV-3Y-GaQ" firstAttribute="centerX" secondItem="s6V-Cs-Q00" secondAttribute="centerX" constant="2" id="wOs-nm-q4A"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="s6V-Cs-Q00" firstAttribute="centerY" secondItem="vXs-c4-Vmb" secondAttribute="centerY" id="0k5-fP-IV6"/>
+                            <constraint firstItem="j06-bT-BIu" firstAttribute="leading" secondItem="vXs-c4-Vmb" secondAttribute="leading" id="X2e-4E-o02"/>
+                            <constraint firstItem="j06-bT-BIu" firstAttribute="trailing" secondItem="vXs-c4-Vmb" secondAttribute="trailing" id="XKH-9g-JXl"/>
+                            <constraint firstItem="j06-bT-BIu" firstAttribute="top" secondItem="9QX-81-dRb" secondAttribute="top" id="aSO-WE-MMz"/>
+                            <constraint firstItem="j06-bT-BIu" firstAttribute="bottom" secondItem="vXs-c4-Vmb" secondAttribute="bottom" id="uwS-iB-xys"/>
+                            <constraint firstItem="s6V-Cs-Q00" firstAttribute="centerX" secondItem="vXs-c4-Vmb" secondAttribute="centerX" constant="-2" id="zV9-Po-82d"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vXs-c4-Vmb"/>
+                    </view>
+                    <connections>
+                        <outlet property="okBtn" destination="y99-4B-yEO" id="hEC-Ym-0CV"/>
+                        <outlet property="popView" destination="s6V-Cs-Q00" id="o2P-EB-q2A"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kp7-PF-mQg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1865" y="2614"/>
+        </scene>
+        <!--Suggest Check Pop Up View Controller-->
+        <scene sceneID="4VO-cH-Pzk">
+            <objects>
+                <viewController storyboardIdentifier="SuggestCheckPopUpViewController" id="caD-V7-KSS" customClass="SuggestCheckPopUpViewController" customModule="MeowBox" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fvD-eW-BZj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aLX-i2-e3K">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yQO-nx-Eoj">
+                                <rect key="frame" x="26" y="246.5" width="319" height="194"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="모든 항목을 입력해주세요" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q6a-5m-h6i">
+                                        <rect key="frame" x="14.5" y="27" width="294" height="26"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="q6a-5m-h6i" secondAttribute="height" multiplier="147:13" id="3cd-RY-HkY"/>
+                                            <constraint firstAttribute="height" constant="26" id="Q9M-LN-Neg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="NotoSansCJKkr-Bold" family="Noto Sans CJK KR" pointSize="22"/>
+                                        <color key="textColor" red="0.29803921570000003" green="0.30588235289999999" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="미유박스에게 의견을 보내주세요!" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4TO-rw-oUa">
+                                        <rect key="frame" x="14.5" y="68" width="294" height="75"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="75" id="GFy-EF-uO1"/>
+                                            <constraint firstAttribute="width" secondItem="4TO-rw-oUa" secondAttribute="height" multiplier="98:25" id="Gb3-sA-wgN"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.29803921570000003" green="0.30588235289999999" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="NotoSansCJKkr-Regular" family="Noto Sans CJK KR" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BC3-IH-vao">
+                                        <rect key="frame" x="0.0" y="148" width="319" height="46"/>
+                                        <color key="backgroundColor" red="0.85490196080000003" green="0.5450980392" blue="0.5450980392" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="46" id="LJL-KR-0bF"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="NotoSansCJKkr-Medium" family="Noto Sans CJK KR" pointSize="15"/>
+                                        <state key="normal" title="확인 하기">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="okAction:" destination="caD-V7-KSS" eventType="touchUpInside" id="zv5-xU-e0b"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="4TO-rw-oUa" firstAttribute="top" secondItem="q6a-5m-h6i" secondAttribute="bottom" constant="15" id="4Qr-P8-HVK"/>
+                                    <constraint firstAttribute="width" secondItem="yQO-nx-Eoj" secondAttribute="height" multiplier="19:14" constant="55.714285714285722" id="7Od-c4-83x"/>
+                                    <constraint firstItem="4TO-rw-oUa" firstAttribute="centerX" secondItem="yQO-nx-Eoj" secondAttribute="centerX" constant="2" id="CPN-aM-eab"/>
+                                    <constraint firstAttribute="bottom" secondItem="BC3-IH-vao" secondAttribute="bottom" id="F4T-uY-2AZ"/>
+                                    <constraint firstItem="q6a-5m-h6i" firstAttribute="top" secondItem="yQO-nx-Eoj" secondAttribute="top" constant="27" id="FL2-uI-r46"/>
+                                    <constraint firstAttribute="height" constant="194" id="SqZ-sb-GY8"/>
+                                    <constraint firstItem="q6a-5m-h6i" firstAttribute="centerX" secondItem="yQO-nx-Eoj" secondAttribute="centerX" constant="2" id="sr2-C0-oum"/>
+                                    <constraint firstItem="BC3-IH-vao" firstAttribute="leading" secondItem="yQO-nx-Eoj" secondAttribute="leading" id="uoT-65-TDe"/>
+                                    <constraint firstAttribute="trailing" secondItem="BC3-IH-vao" secondAttribute="trailing" id="yph-Mb-sgM"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="yQO-nx-Eoj" firstAttribute="centerY" secondItem="I7k-DW-IHu" secondAttribute="centerY" id="0C7-F0-7yF"/>
+                            <constraint firstItem="aLX-i2-e3K" firstAttribute="top" secondItem="fvD-eW-BZj" secondAttribute="top" id="6wR-3X-2Nk"/>
+                            <constraint firstItem="aLX-i2-e3K" firstAttribute="leading" secondItem="I7k-DW-IHu" secondAttribute="leading" id="FCh-ud-1kr"/>
+                            <constraint firstItem="yQO-nx-Eoj" firstAttribute="centerX" secondItem="I7k-DW-IHu" secondAttribute="centerX" constant="-2" id="UCK-Uk-llC"/>
+                            <constraint firstItem="aLX-i2-e3K" firstAttribute="bottom" secondItem="I7k-DW-IHu" secondAttribute="bottom" id="mub-M3-FO8"/>
+                            <constraint firstItem="aLX-i2-e3K" firstAttribute="trailing" secondItem="I7k-DW-IHu" secondAttribute="trailing" id="uII-tt-nI3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="I7k-DW-IHu"/>
+                    </view>
+                    <connections>
+                        <outlet property="okBtn" destination="BC3-IH-vao" id="4jV-FC-t6C"/>
+                        <outlet property="popView" destination="yQO-nx-Eoj" id="5dY-C8-1lL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5cV-ZY-BOq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2636" y="2614"/>
+        </scene>
     </scenes>
     <resources>
         <image name="camera-icon" width="38" height="38"/>

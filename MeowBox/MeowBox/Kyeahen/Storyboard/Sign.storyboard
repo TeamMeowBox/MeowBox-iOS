@@ -556,7 +556,6 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Jkz-Pe-7TQ" firstAttribute="centerX" secondItem="Cwr-vo-UMf" secondAttribute="centerX" constant="-2" id="2V2-FA-XOz"/>
                             <constraint firstItem="Jkz-Pe-7TQ" firstAttribute="centerY" secondItem="Cwr-vo-UMf" secondAttribute="centerY" id="E3c-rp-o46"/>

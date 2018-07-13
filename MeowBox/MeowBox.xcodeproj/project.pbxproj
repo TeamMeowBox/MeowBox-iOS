@@ -75,6 +75,8 @@
 		22F0C05B20F7975800B99A54 /* BirthCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F0C05A20F7975800B99A54 /* BirthCollectionViewCell.swift */; };
 		22F0C05D20F7CA8D00B99A54 /* WebtoonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F0C05C20F7CA8D00B99A54 /* WebtoonViewController.swift */; };
 		22F0C06020F8A11800B99A54 /* CatFailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F0C05E20F8A11800B99A54 /* CatFailViewController.swift */; };
+		22F0C06320F8D53C00B99A54 /* SuggestPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F0C06220F8D53C00B99A54 /* SuggestPopUpViewController.swift */; };
+		22F0C06520F8D7E700B99A54 /* SuggestCheckPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F0C06420F8D7E700B99A54 /* SuggestCheckPopUpViewController.swift */; };
 		22F1941520F6685A008A2C48 /* MyPagePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F1941420F6685A008A2C48 /* MyPagePopUpViewController.swift */; };
 		22F1941720F68437008A2C48 /* LoginFailPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F1941620F68437008A2C48 /* LoginFailPopUpViewController.swift */; };
 		22F1941920F686DA008A2C48 /* TicketHaveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F1941820F686DA008A2C48 /* TicketHaveViewController.swift */; };
@@ -197,6 +199,8 @@
 		22F0C05A20F7975800B99A54 /* BirthCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthCollectionViewCell.swift; sourceTree = "<group>"; };
 		22F0C05C20F7CA8D00B99A54 /* WebtoonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebtoonViewController.swift; sourceTree = "<group>"; };
 		22F0C05E20F8A11800B99A54 /* CatFailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFailViewController.swift; sourceTree = "<group>"; };
+		22F0C06220F8D53C00B99A54 /* SuggestPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestPopUpViewController.swift; sourceTree = "<group>"; };
+		22F0C06420F8D7E700B99A54 /* SuggestCheckPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestCheckPopUpViewController.swift; sourceTree = "<group>"; };
 		22F1941420F6685A008A2C48 /* MyPagePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPagePopUpViewController.swift; sourceTree = "<group>"; };
 		22F1941620F68437008A2C48 /* LoginFailPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFailPopUpViewController.swift; sourceTree = "<group>"; };
 		22F1941820F686DA008A2C48 /* TicketHaveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketHaveViewController.swift; sourceTree = "<group>"; };
@@ -459,6 +463,8 @@
 				22F0C05A20F7975800B99A54 /* BirthCollectionViewCell.swift */,
 				22F0C05C20F7CA8D00B99A54 /* WebtoonViewController.swift */,
 				22F0C05E20F8A11800B99A54 /* CatFailViewController.swift */,
+				22F0C06220F8D53C00B99A54 /* SuggestPopUpViewController.swift */,
+				22F0C06420F8D7E700B99A54 /* SuggestCheckPopUpViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -679,6 +685,7 @@
 				22E8F7E820EBF70A00735276 /* WithdrawalPopUpViewController.swift in Sources */,
 				2200E30B20F1D9850030A7E9 /* MyPageNoneTicket.swift in Sources */,
 				222B5DC820E8BB56003F0A8C /* ExtensionControl.swift in Sources */,
+				22F0C06320F8D53C00B99A54 /* SuggestPopUpViewController.swift in Sources */,
 				222B5DCC20E8BB99003F0A8C /* Order.swift in Sources */,
 				2215610620F47CA100EA5C2B /* Insta.swift in Sources */,
 				CC5CE21D20E9D28D00FCE6AD /* OrderWithInfo4ViewController.swift in Sources */,
@@ -757,6 +764,7 @@
 				2215610220F47B4300EA5C2B /* ReviewService.swift in Sources */,
 				2200E31F20F309AC0030A7E9 /* Account.swift in Sources */,
 				CC54E41620EC9892007C5C4E /* QuestionTableViewCell.swift in Sources */,
+				22F0C06520F8D7E700B99A54 /* SuggestCheckPopUpViewController.swift in Sources */,
 				22F0C05B20F7975800B99A54 /* BirthCollectionViewCell.swift in Sources */,
 				22156DC020EF85570014491E /* MeowBoxDetailCollectionViewCell.swift in Sources */,
 				CC35D3E820F5E0C4006FC289 /* Overlap.swift in Sources */,
@@ -914,11 +922,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7Y3DL2X5B3;
+
+				DEVELOPMENT_TEAM = S3H456VQ6Y;
+
 				INFOPLIST_FILE = MeowBox/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sopt.yeen.MeowBox;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sopt.yeen.MeowBox4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
@@ -933,11 +943,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7Y3DL2X5B3;
+
+				DEVELOPMENT_TEAM = S3H456VQ6Y;
+
 				INFOPLIST_FILE = MeowBox/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sopt.yeen.MeowBox;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sopt.yeen.MeowBox4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
