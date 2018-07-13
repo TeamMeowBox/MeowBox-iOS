@@ -519,7 +519,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="jQC-Ry-Raj">
-                                                <rect key="frame" x="22" y="471" width="331" height="112"/>
+                                                <rect key="frame" x="22" y="463" width="331" height="112"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="36,500 원/월" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ye-ml-jWT">
                                                         <rect key="frame" x="202" y="63" width="101" height="27"/>
@@ -554,7 +554,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="Res-gZ-agL">
-                                                <rect key="frame" x="22" y="591" width="331" height="112"/>
+                                                <rect key="frame" x="22" y="575" width="331" height="112"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="34,500 원/월" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eNL-YG-0Mc">
                                                         <rect key="frame" x="202" y="63" width="101" height="27"/>
@@ -617,7 +617,7 @@
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="yW7-0C-Je4">
-                                                <rect key="frame" x="22" y="711" width="331" height="112"/>
+                                                <rect key="frame" x="22" y="687" width="331" height="112"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="생일축하해! 박스" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="48P-c0-wta">
                                                         <rect key="frame" x="176.5" y="28" width="126.5" height="27"/>
@@ -670,19 +670,19 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="Rd6-Ep-AzT" firstAttribute="leading" secondItem="eWk-GD-Ba5" secondAttribute="leading" id="5VG-sX-1jC"/>
-                                            <constraint firstItem="Res-gZ-agL" firstAttribute="top" secondItem="jQC-Ry-Raj" secondAttribute="bottom" constant="8" id="5qM-v6-buR"/>
-                                            <constraint firstItem="yW7-0C-Je4" firstAttribute="top" secondItem="Res-gZ-agL" secondAttribute="bottom" constant="8" id="ATj-vc-dR1"/>
+                                            <constraint firstItem="Res-gZ-agL" firstAttribute="top" secondItem="jQC-Ry-Raj" secondAttribute="bottom" id="5qM-v6-buR"/>
+                                            <constraint firstItem="yW7-0C-Je4" firstAttribute="top" secondItem="Res-gZ-agL" secondAttribute="bottom" id="ATj-vc-dR1"/>
                                             <constraint firstItem="dL6-al-YCT" firstAttribute="top" secondItem="ce9-Ea-Oy3" secondAttribute="top" constant="22" id="Ag3-jb-a7b"/>
                                             <constraint firstAttribute="trailing" secondItem="dL6-al-YCT" secondAttribute="trailing" constant="16" id="CHy-cZ-1ZU"/>
                                             <constraint firstItem="Res-gZ-agL" firstAttribute="leading" secondItem="jQC-Ry-Raj" secondAttribute="leading" id="FK9-8u-ieu"/>
                                             <constraint firstItem="Fot-oW-18x" firstAttribute="top" secondItem="aws-Fe-q0T" secondAttribute="bottom" constant="8" id="FvF-ps-pI1"/>
                                             <constraint firstItem="aws-Fe-q0T" firstAttribute="top" secondItem="Rd6-Ep-AzT" secondAttribute="bottom" constant="38" id="J7W-21-Ku5"/>
                                             <constraint firstAttribute="trailing" secondItem="e8u-xj-6FY" secondAttribute="trailing" id="LmH-Eg-uyM"/>
-                                            <constraint firstItem="jQC-Ry-Raj" firstAttribute="top" secondItem="Fot-oW-18x" secondAttribute="bottom" constant="8" id="LtB-Vl-359"/>
+                                            <constraint firstItem="jQC-Ry-Raj" firstAttribute="top" secondItem="Fot-oW-18x" secondAttribute="bottom" id="LtB-Vl-359"/>
                                             <constraint firstItem="jQC-Ry-Raj" firstAttribute="leading" secondItem="Fot-oW-18x" secondAttribute="leading" id="TMK-cF-Bor"/>
                                             <constraint firstItem="e8u-xj-6FY" firstAttribute="centerY" secondItem="nv8-9u-RMS" secondAttribute="centerY" id="VtT-hs-8zb"/>
                                             <constraint firstItem="aws-Fe-q0T" firstAttribute="leading" secondItem="ce9-Ea-Oy3" secondAttribute="leading" constant="22" id="X2n-iW-EOL"/>
-                                            <constraint firstItem="nv8-9u-RMS" firstAttribute="top" secondItem="yW7-0C-Je4" secondAttribute="bottom" constant="57" id="XHS-gO-EB6"/>
+                                            <constraint firstItem="nv8-9u-RMS" firstAttribute="top" secondItem="yW7-0C-Je4" secondAttribute="bottom" constant="81" id="XHS-gO-EB6"/>
                                             <constraint firstItem="Rd6-Ep-AzT" firstAttribute="top" secondItem="eWk-GD-Ba5" secondAttribute="bottom" constant="8" id="ZHY-Rl-aqC"/>
                                             <constraint firstItem="eWk-GD-Ba5" firstAttribute="leading" secondItem="ce9-Ea-Oy3" secondAttribute="leading" constant="22" id="iax-p6-1Wj"/>
                                             <constraint firstAttribute="bottom" secondItem="e8u-xj-6FY" secondAttribute="bottom" id="jpg-Mr-EQV"/>
