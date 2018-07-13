@@ -53,6 +53,8 @@ class MyAccountViewController: UIViewController, UITextFieldDelegate,UITextViewD
         
         initDatePicker()
         
+        addScrollViewEndEditing()
+        
         profileImageView.isUserInteractionEnabled = true
         
         //view bottom border
@@ -251,6 +253,19 @@ class MyAccountViewController: UIViewController, UITextFieldDelegate,UITextViewD
             }
         }
     }
+    
+    func addScrollViewEndEditing(){
+        let singleTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(scrollTapMethod))
+        singleTapGestureRecognizer.numberOfTapsRequired = 1
+        singleTapGestureRecognizer.isEnabled = true
+        singleTapGestureRecognizer.cancelsTouchesInView = false
+        scrollView.addGestureRecognizer(singleTapGestureRecognizer)
+    }
+    
+    @objc func scrollTapMethod(sender: UITapGestureRecognizer) {
+        self.view.endEditing(true)
+        self.scrollView.endEditing(true)
+    }
 }
 
 //view bottom border 관련 extension
@@ -355,21 +370,7 @@ extension MyAccountViewController: UIImagePickerControllerDelegate, UINavigation
         }
     }
     
-    func addScrollViewEndEditing(){
-        let singleTapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(scrollTapMethod))
-        singleTapGestureRecognizer.numberOfTapsRequired = 1
-        singleTapGestureRecognizer.isEnabled = true
-        singleTapGestureRecognizer.cancelsTouchesInView = false
-        scrollView.addGestureRecognizer(singleTapGestureRecognizer)
-    }
-    
-    @objc func scrollTapMethod(sender: UITapGestureRecognizer) {
-        self.view.endEditing(true)
-        self.scrollView.endEditing(true)
-    }
-    
-    
-    
+
 }
 
 extension MyAccountViewController  {
