@@ -121,6 +121,25 @@ class StoryViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return cell
     }
     
+    //MARK: 박스 주문하기
+    
+    @IBAction func topOrderAction(_ sender: Any) {
+        if userDefault.string(forKey: "token") != ""{ // 로그인이 되어 있다면
+            let orderNaviVC = UIStoryboard(name: "Order", bundle: nil).instantiateViewController(withIdentifier: "OrderWithInfoNavigationController")
+            
+            self.present(orderNaviVC, animated: true, completion: nil)
+            
+            
+        }else{ // 로그인 안 된 상태
+            let popUPVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginPopUp1ViewController") as! LoginPopUp1ViewController
+            self.addChildViewController(popUPVC)
+            popUPVC.view.frame = self.view.frame
+            self.view.addSubview(popUPVC.view)
+            popUPVC.didMove(toParentViewController: self)
+        }
+    }
+    
+    
     //MARK: 미유박스 주문하기
     @IBAction func orderStoryAction(_ sender: Any) {
         

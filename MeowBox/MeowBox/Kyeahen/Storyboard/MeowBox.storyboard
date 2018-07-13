@@ -1078,13 +1078,37 @@
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="k7i-fg-OAF">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="2168"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <imageView key="tableHeaderView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="story_top_img-1" id="GcP-ZY-iy7">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="370.5"/>
+                                        <view key="tableHeaderView" contentMode="scaleToFill" id="mTo-KK-48D">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="369"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" red="0.8980392157" green="0.70588235290000001" blue="0.70196078429999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </imageView>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="story_top_img-1" translatesAutoresizingMaskIntoConstraints="NO" id="o9Z-Pz-Sak">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="369"/>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OvC-K8-SlO">
+                                                    <rect key="frame" x="20" y="262" width="115" height="33"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="OvC-K8-SlO" secondAttribute="height" multiplier="115:33" id="l1Q-MB-W1s"/>
+                                                        <constraint firstAttribute="height" constant="33" id="o3v-sv-iH9"/>
+                                                    </constraints>
+                                                    <state key="normal" image="story-order-btn"/>
+                                                    <connections>
+                                                        <action selector="topOrderAction:" destination="0bR-xD-sit" eventType="touchUpInside" id="ncR-Hm-uGt"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="o9Z-Pz-Sak" firstAttribute="leading" secondItem="OvC-K8-SlO" secondAttribute="trailing" constant="-135" id="CHI-UD-aAB"/>
+                                                <constraint firstAttribute="trailing" secondItem="o9Z-Pz-Sak" secondAttribute="trailing" id="DWt-Ej-CP0"/>
+                                                <constraint firstAttribute="bottom" secondItem="o9Z-Pz-Sak" secondAttribute="bottom" id="cyV-1S-23q"/>
+                                                <constraint firstItem="o9Z-Pz-Sak" firstAttribute="top" secondItem="mTo-KK-48D" secondAttribute="top" id="enV-EM-KWL"/>
+                                                <constraint firstItem="o9Z-Pz-Sak" firstAttribute="leading" secondItem="mTo-KK-48D" secondAttribute="leading" id="rsc-dS-fZO"/>
+                                                <constraint firstItem="OvC-K8-SlO" firstAttribute="top" secondItem="o9Z-Pz-Sak" secondAttribute="bottom" constant="-107" id="rv3-Tj-XnW"/>
+                                            </constraints>
+                                        </view>
                                         <view key="tableFooterView" contentMode="scaleToFill" id="pzG-nx-Ujz">
-                                            <rect key="frame" x="0.0" y="2103.5" width="375" height="68"/>
+                                            <rect key="frame" x="0.0" y="2102" width="375" height="68"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S1x-v3-bnH">
@@ -1107,14 +1131,14 @@
                                         </view>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="StoryTableViewCell" rowHeight="1705" id="FkL-62-p2I" customClass="StoryTableViewCell" customModule="MeowBox" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="398.5" width="375" height="1705"/>
+                                                <rect key="frame" x="0.0" y="397" width="375" height="1705"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FkL-62-p2I" id="WBM-uX-dds">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="1704.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Dbv-hW-uzA">
-                                                            <rect key="frame" x="0.0" y="0.0" width="375" height="1704.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="375" height="1705"/>
                                                         </imageView>
                                                     </subviews>
                                                     <constraints>
@@ -1140,7 +1164,7 @@
                                 </constraints>
                             </view>
                             <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LdV-Dl-lwK">
-                                <rect key="frame" x="0.0" y="533" width="375" height="1700"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="2233"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                         </subviews>
@@ -1868,6 +1892,7 @@
         <image name="side-bar-back-btn4" width="17" height="19"/>
         <image name="side-bar-btn-gray" width="20" height="16"/>
         <image name="sidebar-default-img" width="49" height="49"/>
+        <image name="story-order-btn" width="115" height="33"/>
         <image name="story_top_img-1" width="375" height="369"/>
         <image name="top-btn" width="135" height="33"/>
         <image name="webtoon" width="375" height="7080"/>

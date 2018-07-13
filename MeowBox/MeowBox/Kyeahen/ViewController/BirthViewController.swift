@@ -167,6 +167,8 @@ class BirthViewController: UIViewController, UITableViewDataSource, UITableViewD
         
     }
     
+ 
+    
     //MARK: 미유박스 주문하기
 
     @IBAction func bottomOrderAction(_ sender: Any) {
@@ -287,29 +289,9 @@ class BirthViewController: UIViewController, UITableViewDataSource, UITableViewD
     //MARK: 생일축하해!박스 액션
     @IBAction func birthBoxAction(_ sender: Any) {
         
-                hiddenImageView.isHidden = true
-
-                hiddenLeadingC.constant = 0
-                hiddenTrailingC.constant = 0
-                leadingC.constant = 0
-                trailingC.constant = 0
+        let webtoonNaviVC = UIStoryboard(name: "MeowBox", bundle: nil).instantiateViewController(withIdentifier: "WebtoonNaviVC")
         
-                sideBarIsVisible = false
-        
-                bottomBtn.isUserInteractionEnabled = true
-                birthView.isUserInteractionEnabled = true
-        
-                UIView.animate(withDuration: 0.3, delay: 0.0, options: .curveEaseIn, animations: {
-                    self.view.layoutIfNeeded()
-                }) { (animationComplete) in
-                    print("SideBar close")
-                }
-        
-        //네비게이션바 투명 복원
-        self.navigationController?.navigationBar.shadowImage = UIColor( red: CGFloat(112/255.0), green: CGFloat(112/255.0), blue: CGFloat(112/255.0), alpha: CGFloat(0.2) ).as1ptImage()
-        self.navigationController?.navigationBar.barTintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        self.navigationItem.leftBarButtonItem = self.barButton
-        self.navigationItem.titleView = logoImageView
+        self.present(webtoonNaviVC, animated: true, completion: nil)
         
     }
     
