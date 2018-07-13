@@ -30,6 +30,8 @@ class MyAccountViewController: UIViewController, UITextFieldDelegate,UITextViewD
     @IBOutlet weak var smallSizeBtn: UIButton!
     @IBOutlet weak var mediumSizeBtn: UIButton!
     @IBOutlet weak var bigSizeBtn: UIButton!
+    @IBOutlet weak var upLabel: UILabel!
+    @IBOutlet weak var saveBtn: UIButton!
     
     let imagePicker : UIImagePickerController = UIImagePickerController()
     let datePicker = UIDatePicker()
@@ -82,11 +84,20 @@ class MyAccountViewController: UIViewController, UITextFieldDelegate,UITextViewD
         
     }
     
+    
+   
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false
     }
     
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if(text == "\n") {
+            textView.resignFirstResponder()
+            return false
+        }
+        return true
+    }
 
     
 

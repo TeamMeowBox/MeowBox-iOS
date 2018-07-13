@@ -90,10 +90,11 @@ class OrderWithInfo2ViewController: UIViewController {
     
     func catsignUp(){
         if gsno(birthTextField.text) == ""{ // 생일을 입력 안 한 경우
-            let alertView = UIAlertController(title: "고양이 등록 실패", message: "고양이 생일을 입력해주세요", preferredStyle: .alert)
-            let ok = UIAlertAction(title: "확인", style: .default, handler: nil)
-            alertView.addAction(ok)
-            self.present(alertView, animated: true, completion: nil)
+            let popUPVC = UIStoryboard(name: "MyPage", bundle: nil).instantiateViewController(withIdentifier: CatFailViewController.reuseIdentifier) as! CatFailViewController
+            self.addChildViewController(popUPVC)
+            popUPVC.view.frame = self.view.frame
+            self.view.addSubview(popUPVC.view)
+            popUPVC.didMove(toParentViewController: self)
         }else{
             CatService.catSignup(name: catName, size: catSize, birthday: gsno(birthTextField.text), caution: gsno(specialTextView.text)){ message in
                 if message == "success"{

@@ -1179,8 +1179,10 @@
                         <outlet property="nameTextField" destination="c8y-1e-EKi" id="yMg-l4-8Ze"/>
                         <outlet property="phoneTextField" destination="t7q-dA-iFF" id="HS4-3t-0nh"/>
                         <outlet property="profileImageView" destination="4LI-NO-ceE" id="dUQ-5V-iL5"/>
+                        <outlet property="saveBtn" destination="VwA-zC-PTu" id="nxq-zz-ABL"/>
                         <outlet property="scrollView" destination="nQB-6a-g9D" id="GKL-DV-xsu"/>
                         <outlet property="smallSizeBtn" destination="jd8-EQ-9Xb" id="bK1-sk-b3n"/>
+                        <outlet property="upLabel" destination="WCN-p1-gXQ" id="KwY-TO-6VM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HKw-cW-wxE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1789,10 +1791,10 @@
             </objects>
             <point key="canvasLocation" x="1785" y="627"/>
         </scene>
-        <!--Cat Have View Controller-->
+        <!--Cat Fail View Controller-->
         <scene sceneID="th8-me-TZn">
             <objects>
-                <viewController storyboardIdentifier="CatHaveViewController" id="4NV-4W-Kgy" customClass="CatHaveViewController" customModule="MeowBox" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CatFailViewController" id="4NV-4W-Kgy" customClass="CatFailViewController" customModule="MeowBox" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7mG-G4-GgF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1804,7 +1806,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2QW-68-oLE">
                                 <rect key="frame" x="26" y="246.5" width="319" height="194"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이미 고양이 정보가 있어요!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HRQ-ql-fPK">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="고양이 등록을 실패했어요!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HRQ-ql-fPK">
                                         <rect key="frame" x="14.5" y="27" width="294" height="26"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="26" id="OeR-vo-ANo"/>
@@ -1814,7 +1816,7 @@
                                         <color key="textColor" red="0.29803921570000003" green="0.30588235289999999" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="smq-xE-jlO">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="고양이 생일을 입력해주세요" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="smq-xE-jlO">
                                         <rect key="frame" x="14.5" y="68" width="294" height="75"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="75" id="Kus-x9-XLg"/>
@@ -1835,7 +1837,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="okAction:" destination="4NV-4W-Kgy" eventType="touchUpInside" id="6qv-Da-jXq"/>
+                                            <action selector="closeAction:" destination="4NV-4W-Kgy" eventType="touchUpInside" id="okg-CV-neE"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1864,9 +1866,8 @@
                         <viewLayoutGuide key="safeArea" id="87Z-i1-Xjf"/>
                     </view>
                     <connections>
-                        <outlet property="okBtn" destination="BDS-VQ-Aek" id="pkr-8G-gYM"/>
-                        <outlet property="popView" destination="2QW-68-oLE" id="Why-qz-IT9"/>
-                        <outlet property="textView" destination="smq-xE-jlO" id="Bfy-oW-yC8"/>
+                        <outlet property="closeBtn" destination="BDS-VQ-Aek" id="zMC-Fk-lbN"/>
+                        <outlet property="popView" destination="2QW-68-oLE" id="pV5-Lz-K7W"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fzj-Cy-8nh" userLabel="First Responder" sceneMemberID="firstResponder"/>
