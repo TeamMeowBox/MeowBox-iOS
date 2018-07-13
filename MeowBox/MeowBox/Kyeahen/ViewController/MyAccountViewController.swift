@@ -9,7 +9,7 @@
 import UIKit
 import Kingfisher
 
-class MyAccountViewController: UIViewController {
+class MyAccountViewController: UIViewController, UITextFieldDelegate,UITextViewDelegate {
 
     @IBOutlet weak var infoView1: UIView!
     @IBOutlet weak var infoNameView: UIView!
@@ -73,8 +73,22 @@ class MyAccountViewController: UIViewController {
         profileImageView.layer.masksToBounds = true
         profileImageView.layer.cornerRadius = profileImageView.layer.frame.width/2
         
-        // Do any additional setup after loading the view.
+        //텍스트필드 delegate
+        nameTextField.delegate = self
+        emailTextField.delegate = self
+        phoneTextField.delegate = self
+        catNameTextField.delegate = self
+        infoEtcTextView.delegate = self
+        
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
+    
+
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -340,7 +354,10 @@ extension MyAccountViewController: UIImagePickerControllerDelegate, UINavigation
     
     @objc func scrollTapMethod(sender: UITapGestureRecognizer) {
         self.view.endEditing(true)
+        self.scrollView.endEditing(true)
     }
+    
+    
     
 }
 
