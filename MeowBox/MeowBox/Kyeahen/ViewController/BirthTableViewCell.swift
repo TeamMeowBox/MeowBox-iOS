@@ -183,9 +183,11 @@ class BirthTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectio
     //ScrollView delegate method
     func scrollViewDidScroll(_ scrollView: UIScrollView)
     {
-        let pageWidth = scrollView.frame.width
-        self.currentPage = Int((scrollView.contentOffset.x + pageWidth / 2) / pageWidth)
-        self.tablePageControl.currentPage = self.currentPage
+        if scrollView == self.birthCollectionView {
+            let pageWidth = scrollView.frame.width
+            self.currentPage = Int((scrollView.contentOffset.x + pageWidth / 2) / pageWidth)
+            self.tablePageControl.currentPage = self.currentPage
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

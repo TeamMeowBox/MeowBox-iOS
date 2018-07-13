@@ -288,7 +288,7 @@ class MeowBoxReviewViewController: UIViewController, UITableViewDelegate, UITabl
             cell.reviewBackgroundImageView.image = #imageLiteral(resourceName: "birthday-background-img")
             cell.reviewTitleLabel.text = reviews?.birthday.title
             cell.reviewintroLabel.text = reviews?.birthday.comment
-            cell.reviewCollectionView.tag = indexPath.row
+            cell.tag = indexPath.row
             cell.pageControl.currentPage = 0
             cell.reviews = self.reviews
 
@@ -302,7 +302,7 @@ class MeowBoxReviewViewController: UIViewController, UITableViewDelegate, UITabl
             cell.reviewTitleLabel.text = reviews?.best_image_7.title
             cell.reviewintroLabel.text = reviews?.best_image_7.comment
             cell.pageControl.currentPage = 0
-            cell.reviewCollectionView.tag = indexPath.row
+            cell.tag = indexPath.row
             
             return cell
         }
@@ -313,7 +313,7 @@ class MeowBoxReviewViewController: UIViewController, UITableViewDelegate, UITabl
             cell.reviewTitleLabel.text = reviews?.best_image_6.title
             cell.reviewintroLabel.text = reviews?.best_image_6.comment
             cell.pageControl.currentPage = 0
-            cell.reviewCollectionView.tag = indexPath.row
+            cell.tag = indexPath.row
             
             return cell
         }
