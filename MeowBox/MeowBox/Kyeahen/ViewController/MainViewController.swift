@@ -338,11 +338,15 @@ class MainViewController: UIViewController,UICollectionViewDelegate,UICollection
             cell.imageView.image = imageArr[indexPath.row]
             cell.button.setImage(#imageLiteral(resourceName: "home-detail-btn-gray"), for: .normal)
             
-            if indexPath.row == 1 || indexPath.row == 2 || indexPath.row == 3{
-                cell.button.tintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-            }else{
+            if indexPath.row == 0{
                 cell.button.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+                cell.button.isHidden = false
+            }else{
+                cell.button.tintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+                cell.button.isHidden = false
             }
+            
+            
         }else{
             cell.imageView.image = imageArr[indexPath.row]
             cell.button.isHidden = true
@@ -383,9 +387,12 @@ class MainViewController: UIViewController,UICollectionViewDelegate,UICollection
         
         if current == 0{
             self.barButton.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+            
         }else{
             self.barButton.tintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         }
+        
+        
         
     }
 
