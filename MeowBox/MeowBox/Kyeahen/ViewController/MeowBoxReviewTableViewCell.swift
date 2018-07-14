@@ -99,12 +99,21 @@ class MeowBoxReviewTableViewCell: UITableViewCell, UICollectionViewDelegate, UIC
         }
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        self.pageControl.currentPage = 0
+        self.reviewCollectionView.scrollToItem(at: IndexPath(row: 0, section: 0), at: .left, animated: false)
+    }
+    
     //ScrollView delegate method
     func scrollViewDidScroll(_ scrollView: UIScrollView)
     {
+        if scrollView == reviewCollectionView {
         let pageWidth = scrollView.frame.width
         self.currentPages = Int((scrollView.contentOffset.x + pageWidth / 2) / pageWidth)
         self.pageControl.currentPage = self.currentPages
+        }
     }
     
  
