@@ -92,10 +92,7 @@ class OrderWithInfo4ViewController: UIViewController {
             
             //parentVC?.navigationController?.pushViewController(controller, animated: true)
         }else if payment == "2"{ // 현금결제
-            let alertView = UIAlertController(title: "현금결제", message: "@@@@@@@", preferredStyle: .alert)
-            let ok = UIAlertAction(title: "확인", style: .default, handler: nil)
-            alertView.addAction(ok)
-            self.present(alertView, animated: true, completion: nil)
+            showToast(message: "서비스 준비중입니다.")
         }
         
     }
@@ -211,8 +208,13 @@ class OrderWithInfo4ViewController: UIViewController {
                 guard let myadd = self.latest?.address?.components(separatedBy: " ") else {return}
                 
                 self.nameTextField.text = self.latest?.name
-                self.addressTextField1.text = myadd[0]
-                self.addressTextField2.text = myadd[1]
+                if myadd.count == 2{
+                    self.addressTextField1.text = myadd[0]
+                    self.addressTextField2.text = myadd[1]
+                }else{
+                    self.addressTextField1.text = myadd[0]+" "+myadd[1]
+                }
+                
                 self.phoneTextField.text = self.latest?.phone_number
                 self.emailTextField.text = self.latest?.email
                 
