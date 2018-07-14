@@ -185,6 +185,14 @@ class MeowBoxDetailTableViewCell: UITableViewCell,UICollectionViewDataSource, UI
         }
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        self.pageControl.currentPage = 0
+        self.detailCollectionView.scrollToItem(at: IndexPath(row: 0, section: 0), at: .left, animated: false)
+    }
+    
+    
     //ScrollView delegate method
     func scrollViewDidScroll(_ scrollView: UIScrollView)
     {

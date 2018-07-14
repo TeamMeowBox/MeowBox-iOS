@@ -179,7 +179,14 @@ class BirthTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectio
         }
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        self.tablePageControl.currentPage = 0
+        self.birthCollectionView.scrollToItem(at: IndexPath(row: 0, section: 0), at: .left, animated: false)
+    }
     
+
     //ScrollView delegate method
     func scrollViewDidScroll(_ scrollView: UIScrollView)
     {
