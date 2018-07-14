@@ -42,7 +42,11 @@ class Html5InicisViewController: UIViewController {
         guard let name = userDefault.string(forKey: "order_name") else{ return }
         guard let phone = userDefault.string(forKey: "order_phone_number") else{ return }
         guard let address = userDefault.string(forKey: "order_address") else{ return }
-
+        guard let amount = userDefault.string(forKey: "order_price") else { return }
+        
+        let a = (Int)(amount)
+        let b = a!/100
+        let c = (String)(b)
         
         //guard let token = userDefault.string(forKey: "token") else{ return }
 //        guard let cat_idx = userDefault.string(forKey: "cat_idx") else{ return }
@@ -54,7 +58,6 @@ class Html5InicisViewController: UIViewController {
 //        print("random:    \(random)")
 //        print(merchant)
         
-
         
         print("myorderidx2:\(userDefault.integer(forKey: "myorderidx"))")
         
@@ -62,7 +65,7 @@ class Html5InicisViewController: UIViewController {
         let parameters: IAMPortParameters = [
             "merchant_uid": userDefault.integer(forKey: "myorderidx"),
             "name": userDefault.string(forKey: "current_order_product")!,
-            "amount": "100",
+            "amount": c,
             "buyer_email": email,
             "buyer_name": name,
             "buyer_tel": phone,
