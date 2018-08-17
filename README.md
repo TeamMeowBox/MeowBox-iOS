@@ -18,9 +18,7 @@
 - 초보자 박스(고양이를 처음 키우시는 고객을 위한 박스)
 
 
-## [ WorkFlow ]
-
-[WorkFlow PDF file](https://github.com/ruddls00114/MeowBox-Server/blob/master/public_data/MeowBox_WorkFlow.pdf)
+## [ WorkFlow ]             
 
 ![workflow](https://github.com/ruddls00114/MeowBox-Server/blob/master/public_data/images/meowbox_workflow.jpg)
 
