@@ -1,4 +1,4 @@
-# MeowBox-iOS
+# MeowBox - iOS
 
 **개발 기간 : 2018년 6월 30일  ~ 2018년 7월 14일**
 
@@ -7,7 +7,8 @@
 
 반려묘를 위한 수제 필수 용품과 간식을 정기 배송하는 서비스입니다.
 
-반려묘를 키우기 위해 필수적으로 구매해야 하는 물품들이 있습니다. 미유박스는 그 중에 4가지(간식, 장난감, 용품, 스크래처)를 정기 배송해주는 서비스 입니다.
+반려묘를 키우기 위해 필수적으로 구매해야 하는 물품들이 있습니다. 
+미유박스는 그 중에 4가지(간식, 장난감, 용품, 스크래처)를 정기 배송해주는 서비스 입니다.
 
 반려묘의 정보에 따른 박스구성이 배송됩니다. 
 
@@ -20,7 +21,7 @@
 
 ## [ WorkFlow ]             
 
-[MeowBox PDF file](https://github.com/TeamMeowBox/MeowBox-Server/blob/master/public_data/MeowBox.pdf)
+[MeowBox PDF file](https://github.com/TeamMeowBox/MeowBox-Server/blob/master/public_data/MeowBox.pdf) <br />
 ![workflow](https://github.com/TeamMeowBox/MeowBox-Server/blob/master/public_data/images/meowbox_workflow.jpg)
 
 
