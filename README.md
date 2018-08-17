@@ -4,7 +4,6 @@
 
 
 ## [ About ]
-----------
 
 반려묘를 위한 필수 용품과 수제 간식을 정기 배송하는 서비스입니다.
 
@@ -20,22 +19,20 @@
 
 
 ## [ WorkFlow ]
-----------
 
 [WorkFlow PDF file](https://github.com/ruddls00114/MeowBox-Server/blob/master/public_data/MeowBox_WorkFlow.pdf)
 
 ![workflow](https://github.com/ruddls00114/MeowBox-Server/blob/master/public_data/images/meowbox_workflow.jpg)
 
 
-##[ Develop Environment ]
-----------
+## [ Develop Environment ]
 
 - Language :  Swift 4.1
 - iOS Depolyment Target : 11.1
 
 
-##[ Library ]
-----------
+## [ Library ]
+
 1. Server
 - [Alamofire](https://github.com/Alamofire/Alamofire)
 - [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON)
