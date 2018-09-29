@@ -14,7 +14,7 @@ protocol APIService {
 
 extension APIService {
     static func url(_ path: String) -> String {
-        return "http://13.124.92.40:3000" + path
+        return "http://52.79.252.44:3000" + path
     }
     
     static func gsno(_ value: String?) -> String { //String 옵셔널 벗기기
