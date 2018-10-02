@@ -39,10 +39,12 @@
 - [Alamofire](https://github.com/Alamofire/Alamofire)
 - [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON)
 - [Kingfisher](https://github.com/onevcat/Kingfisher)
-- [SwiftyIamport](https://github.com/JosephNK/SwiftyIamport)
 
 2. Layout
 - [SelectionList](https://github.com/yonat/SelectionList)
 - [UITextView+Placeholder](https://github.com/devxoul/UITextView-Placeholder)
 - [GTProgressBar](https://github.com/gregttn/GTProgressBar)
 - [lottie-ios](https://github.com/airbnb/lottie-ios)
+
+3. Payment
+- [SwiftyIamport](https://github.com/JosephNK/SwiftyIamport)
